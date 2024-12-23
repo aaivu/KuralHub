@@ -1,53 +1,56 @@
 # CREMA-D (Crowd-sourced Emotional Multimodal Actors Dataset)
 
 ## Dataset Overview
-- **Name**: Crowd-sourced Emotional Multimodal Actors Dataset (CREMA-D)
-- **Institution**: University of Pennsylvania
-- **Year**: 2014
-- **Authors**: Cao, H., Cooper, D. G., Keutmann, M. K., Gur, R. C., Nenkova, A., & Verma, R.
 
-## Dataset Distribution
-- **Original Source**: [GitHub - CheyneyComputerScience/CREMA-D](https://github.com/CheyneyComputerScience/CREMA-D)
-- **Kaggle Mirror**: [https://www.kaggle.com/datasets/ejlok1/cremad](https://www.kaggle.com/datasets/ejlok1/cremad)
-  - This is a verified mirror of the original dataset
-  - Provides easier access through Kaggle's platform
-  - Contains identical content to the original dataset
+- **Name:** Crowd-sourced Emotional Multimodal Actors Dataset (CREMA-D)  
+- **Institution:** University of Pennsylvania  
+- **Year:** 2014  
+- **Authors:** Cao, H., Cooper, D. G., Keutmann, M. K., Gur, R. C., Nenkova, A., & Verma, R.  
+- **Homepage:** [CREMA-D GitHub](https://github.com/CheyneyComputerScience/CREMA-D)
 
 ## Dataset Content
-- **Total Clips**: 7,442 original clips
-- **Actors**: 91 total actors
-  - 48 male
-  - 43 female
-- **Age Range**: 20-74 years
-- **Demographics**: Diverse racial and ethnic backgrounds
+
+- **Duration:** 7,442 clips of emotional speech  
+- **Sessions:** Multiple recording sessions  
+- **Speakers:** 91 actors (48 male, 43 female)  
+- **Age Range:** 20–74 years  
+- **Diversity:** Varied race and ethnicity representation  
+- **Utterances:** 12 unique sentences in English  
 
 ## Technical Details
-- **Audio Format**: WAV files
-- **Video Format**: HD video recordings
-- **File Naming**: [ActorID]_[SentenceID]_[EmotionID]_[EmotionalIntensity]_[Statement]_[RepetitionID].wav
-- **Sentences**: 12 unique sentences in English
 
-## Emotional Labels
-- **6 Emotions**:
-  - Anger (ANG)
-  - Disgust (DIS)
-  - Fear (FEA)
-  - Happy (HAP)
-  - Neutral (NEU)
-  - Sad (SAD)
+- **Format:** Audio-visual recordings  
+- **Audio:** High-quality audio files  
+- **Video:** HD video with facial expressions  
+- **Quality:** Professional studio recordings  
+- **Data Types:** Audio, video, emotional ratings  
 
-## Validation
-- **Method**: Crowd-sourced evaluations
-- **Evaluators**: Multiple independent raters
-- **Rating**: Emotions rated for accuracy and intensity
+## Emotional Content
+
+- Primary Emotions:
+  - Anger  
+  - Disgust  
+  - Fear  
+  - Happy  
+  - Neutral  
+  - Sad  
+- Secondary Emotions:
+None specified  
 
 ## Research Impact
-- **Citations**: Over 585 citations
-- **Applications**: 
-  - Speech Emotion Recognition
-  - Multimodal Emotion Analysis
-  - Human-Computer Interaction
-  - Affective Computing Research
+
+- **Citations:** 585 (as of 2024)  
+- **Influential Citations:** 84  
+- **Publication:** IEEE Transactions on Affective Computing  
+- **DOI:** [10.1109/TAFFC.2014.2336244](https://doi.org/10.1109/TAFFC.2014.2336244)
+
+## Key Resources & Links
+
+- **Dataset Homepage:** [CREMA-D GitHub](https://github.com/CheyneyComputerScience/CREMA-D)  
+- **Original Paper:** [ACM Digital Library](https://dl.acm.org/doi/10.1145/3204949.3208121)  
+- **Kaggle Mirror:** [Kaggle Dataset](https://www.kaggle.com/datasets/ejlok1/cremad)  
+- **Data Access:** Through research request to the authors  
 
 ## Citation
-If you use this dataset in your research, please cite the original paper
+
+If you use this dataset in your research, please cite the original paper.  
