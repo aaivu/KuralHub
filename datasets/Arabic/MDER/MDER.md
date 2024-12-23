@@ -37,9 +37,9 @@
   - Fear  
 
 - **Secondary Labels**
-- Sentiment (Positive)  
-- Sentiment (Negative)  
-- Sentiment (Neutral)  
+  - Sentiment (Positive)  
+  - Sentiment (Negative)  
+  - Sentiment (Neutral)  
 
 ## Research Impact
 
