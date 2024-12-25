@@ -1,37 +1,37 @@
-# CaFE (Canadian French Emotional Speech Dataset)
+# EMOVO (Italian Emotional Speech Dataset)  
 
 ## Dataset Overview
 
-- **Name:** Canadian French Emotional Speech Dataset (CaFE)  
-- **Institution:** Université de Sherbrooke  
-- **Year:** 2018  
-- **Authors:** Gournay, P., Lahaie, O., & Lefebvre, R.  
-- **Homepage:** [CaFE Dataset](https://www.gel.usherbrooke.ca/audio/cafe.htm)  
+- **Name:** EMOVO (Italian Emotional Speech Database)  
+- **Institution:** University of Rome Tor Vergata  
+- **Year:** 2014  
+- **Authors:** Costantini, G., Iaderola, I., Paoloni, A., & Todisco, M.  
+- **Homepage:** [ACL Anthology](https://aclanthology.org/L14-1478/) 
 
 ## Dataset Content
 
-- **Duration:** Not specified  
-- **Sessions:** Multiple recording sessions  
-- **Speakers:** 12 actors (6 male, 6 female)  
-- **Sentences:** 6 different sentences  
-- **Utterances:** 936 total recordings  
-- **Language:** Canadian French  
+- **Duration:** 1 hour total (10 minutes per actor)  
+- **Sessions:** Single recording session  
+- **Speakers:** 6 actors (3 male, 3 female)  
+- **Sentences:** 14 different sentences  
+- **Utterances:** 588 total recordings  
+- **Language:** Italian  
 
 ## Technical Details
 
-- **Format:** High-resolution audio  
-- **Audio:** 192 kHz sampling rate  
-- **Bit Depth:** 24 bits per sample  
+- **Format:** WAV audio files  
+- **Audio:** 48 kHz sampling rate  
+- **Bit Depth:** 16 bits per sample  
 - **Recording:** Professional studio quality  
 - **Data Types:** Audio recordings  
 
 ## Emotional Content
 
-- **Primary Emotions:**
+- **Primary Emotions:**  
   - Anger  
   - Disgust  
   - Fear  
-  - Happy  
+  - Joy  
   - Neutral  
   - Sad  
   - Surprise  
@@ -40,17 +40,17 @@
 
 ## Research Impact
 
-- **Citations:** 46 (as of 2024)  
-- **Influential Citations:** Not specified  
-- **Publication:** ACM Multimedia Systems Conference  
-- **DOI:** [10.1145/3204949.3208121](https://dl.acm.org/doi/10.1145/3204949.3208121)  
+- **Citations:** 191 (as of 2024)  
+- **Influential Citations:** 20  
+- **Publication:** International Conference on Language Resources and Evaluation  
+- **Paper ID:** ACL: L14-1478  
 
 ## Key Resources & Links
 
-- **Dataset Homepage:** [CaFE Dataset](https://www.gel.usherbrooke.ca/audio/cafe.htm)  
-- **Original Paper:** [ACM Paper](https://dl.acm.org/doi/10.1145/3204949.3208121)  
+- **Dataset Paper:** [LREC Paper](http://www.lrec-conf.org/proceedings/lrec2014/pdf/591_Paper.pdf)  
+- **Original Publication:** LREC 2014 Conference  
 - **Data Access:** Through research request  
-
+- **Dataset download:** [Dagshub](https://dagshub.com/kingabzpro/EMOVO)
 ## Citation
 
 If you use this dataset in your research, please cite the original paper.
