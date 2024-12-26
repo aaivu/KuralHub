@@ -12,10 +12,10 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [ ] Albanian (sq)  
 - [x] Bengali (bn)  
 - [ ] Bosnian (bs)  
-- [ ] Bulgarian (bg)  
+- [ ] Bulgarian (bg) *(Not found)*  
 - [ ] Catalan (ca)  
 - [ ] Croatian (hr)  
-- [x] Czech (cs) *(Not found)*  
+- [ ] Czech (cs) *(Not found)*  
 - [x] Danish (da)  
 - [x] Dutch (nl)  
 - [x] English (en)  
@@ -30,7 +30,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [ ] Lithuanian (lt)  
 - [ ] Macedonian (mk)  
 - [ ] Marathi (mr)  
-- [ ] Norwegian (no)  
+- [ ] Norwegian (no) *(Not found)*  
 - [x] Persian (fa)  
 - [x] Polish (pl)  
 - [ ] Portuguese (pt)  
@@ -38,11 +38,12 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Romanian (ro)  
 - [ ] Russian (ru)  
 - [ ] Serbian (sr)  
-- [ ] Slovak (sk)  
+- [ ] Slovak (sk) *(Not found)*  
 - [ ] Slovenian (sl)  
 - [ ] Spanish (es)  
-- [ ] Swedish (sv)  
-- [ ] Urdu (ur)
+- [x] Swedish (sv)  
+- [ ] Ukrainian (uk) *(Not found)*  
+- [ ] Urdu (ur)  
 
 #### **Uralic Languages**  
 - [ ] Finnish (fi)  
@@ -78,6 +79,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 #### **Afro-Asiatic Languages**  
 - [x] Amharic (am)  
 - [x] Arabic (ar)  
+- [ ] Hebrew (he)  
 - [ ] Hausa (ha)  
 - [ ] Somali (so)  
 - [ ] Tigrinya (ti)  
@@ -102,6 +104,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 
 #### **Austronesian Languages**  
 - [x] Filipino (fil)  
+- [ ] Malay (ms)  
 - [ ] Maori (mi)  
 - [ ] Tahitian (ty)  
 - [ ] Malagasy (mg)  
@@ -109,7 +112,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 #### **Altaic Languages**  
 - [ ] Japanese (ja)  
 - [ ] Korean (ko)  
-- [ ] Mongolian (mn)
+- [ ] Mongolian (mn)  
       
 ---
 
