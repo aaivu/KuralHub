@@ -49,7 +49,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 #### **Uralic Languages**
 - [ ] Finnish (fi)
 - [ ] Hungarian (hu)
-- [ ] Estonian (et)
+- [x] Estonian (et)
 
 #### **Sino-Tibetan Languages**  
 - [ ] Burmese (my)  
@@ -101,7 +101,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [ ] Zulu (zu)  
 
 #### **Austronesian Languages**  
-- [ ] Filipino (fil)  
+- [x] Filipino (fil)  
 - [ ] Maori (mi)  
 - [ ] Tahitian (ty)  
 - [ ] Malagasy (mg)  
