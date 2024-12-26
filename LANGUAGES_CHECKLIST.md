@@ -70,7 +70,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 
 #### **Turkic Languages**  
 - [x] Azerbaijani (az) *(Not found)*  
-- [ ] Kazakh (kk)  
+- [x] Kazakh (kk)  
 - [x] Kyrgyz (ky) *(Not found)*  
 - [x] Turkish (tr)  
 - [x] Turkmen (tk) *(Not found)*  
