@@ -9,12 +9,12 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 ### **Global Language List**  
 
 #### **Indo-European Languages**  
-- [ ] Albanian (sq)  
+- [ ] Albanian (sq) *(Not found)*  
 - [x] Bengali (bn)  
 - [ ] Bosnian (bs)  
 - [ ] Bulgarian (bg) *(Not found)*  
-- [ ] Catalan (ca)  
-- [ ] Croatian (hr)  
+- [ ] Catalan (ca) *(Not found)*  
+- [ ] Croatian (hr) *(Not found)*  
 - [ ] Czech (cs) *(Not found)*  
 - [x] Danish (da)  
 - [x] Dutch (nl)  
@@ -24,11 +24,11 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Greek (el)  
 - [ ] Gujarati (gu)  
 - [ ] Hindi (hi)  
-- [ ] Icelandic (is)  
+- [ ] Icelandic (is) *(Not found)*  
 - [ ] Italian (it)  
-- [ ] Latvian (lv)  
-- [ ] Lithuanian (lt)  
-- [ ] Macedonian (mk)  
+- [ ] Latvian (lv) *(Not found)*  
+- [ ] Lithuanian (lt) *(Not found)*  
+- [ ] Macedonian (mk) *(Not found)*  
 - [ ] Marathi (mr)  
 - [ ] Norwegian (no) *(Not found)*  
 - [x] Persian (fa)  
@@ -39,7 +39,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [ ] Russian (ru)  
 - [ ] Serbian (sr)  
 - [ ] Slovak (sk) *(Not found)*  
-- [ ] Slovenian (sl)  
+- [ ] Slovenian (sl) *(Not found)*  
 - [ ] Spanish (es)  
 - [x] Swedish (sv)  
 - [ ] Ukrainian (uk) *(Not found)*  
