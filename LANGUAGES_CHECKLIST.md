@@ -42,8 +42,6 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [ ] Slovenian (sl)  
 - [ ] Spanish (es)  
 - [ ] Swedish (sv)  
-- [ ] Tamil (ta)  
-- [ ] Telugu (te)  
 - [ ] Urdu (ur)
 
 #### **Uralic Languages**
@@ -53,7 +51,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 
 #### **Sino-Tibetan Languages**  
 - [ ] Burmese (my)  
-- [ ] Chinese (Mandarin) (zh)  
+- [ ] Chinese/Mandarin (zh)  
 - [ ] Tibetan (bo)  
 - [ ] Hmong (hmn)  
 
@@ -86,7 +84,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [ ] Chichewa (ny)  
 - [ ] Fula (ff)  
 - [ ] Igbo (ig)  
-- [ ] Kinyarwanda (rw)  
+- [ ] Kinyarwanda/Rwanda (rw)  
 - [ ] Kirundi (rn)  
 - [ ] Lingala (ln)  
 - [ ] Sesotho (st)  
