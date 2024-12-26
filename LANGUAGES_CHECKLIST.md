@@ -10,15 +10,15 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 
 #### **Indo-European Languages**  
 - [ ] Albanian (sq)  
-- [ ] Bengali (bn)  
+- [x] Bengali (bn)  
 - [ ] Bosnian (bs)  
 - [ ] Bulgarian (bg)  
 - [ ] Catalan (ca)  
 - [ ] Croatian (hr)  
 - [ ] Czech (cs)  
-- [ ] Danish (da)  
-- [ ] Dutch (nl)  
-- [ ] English (en)  
+- [x] Danish (da)  
+- [x] Dutch (nl)  
+- [x] English (en)  
 - [ ] French (fr)  
 - [ ] German (de)  
 - [ ] Greek (el)  
@@ -44,7 +44,12 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [ ] Swedish (sv)  
 - [ ] Tamil (ta)  
 - [ ] Telugu (te)  
-- [ ] Urdu (ur)  
+- [ ] Urdu (ur)
+
+#### **Uralic Languages**
+- [ ] Finnish (fi)
+- [ ] Hungarian (hu)
+- [ ] Estonian (et)
 
 #### **Sino-Tibetan Languages**  
 - [ ] Burmese (my)  
@@ -71,8 +76,8 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [ ] Uzbek (uz)  
 
 #### **Afro-Asiatic Languages**  
-- [ ] Amharic (am)  
-- [ ] Arabic (ar)  
+- [x] Amharic (am)  
+- [x] Arabic (ar)  
 - [ ] Hausa (ha)  
 - [ ] Somali (so)  
 - [ ] Tigrinya (ti)  
