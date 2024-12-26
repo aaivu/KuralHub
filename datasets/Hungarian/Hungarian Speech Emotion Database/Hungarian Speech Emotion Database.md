@@ -2,22 +2,33 @@
 
 ## Dataset Overview
 - **Name**: Hungarian Speech Emotion Database
-- **Creation**: Jan 2010-Jul 2010
+- **Year**: 2011
+- **Institution**: BME Speech Research Laboratory
+- **Authors**: Klára Vicsi, György Szaszák, Henk Tamás
 
 ## Dataset Content
-- **Size**: 66,400 utterances
+- **Total Files**: 66,400 utterances
+- **Language**: Hungarian (monolingual)
+- **Type**: Emotionally labeled speech
 
 ## Technical Details
 - **Language**: Hungarian
+- **Type**: Speech recordings
+- **Format**: Audio and text
 
 ## Emotional Content
-- **Emotions**: Basic emotions (specific categories not detailed)
+- **Primary Emotions**:
+  - Basic emotion categories
+  - Labeled utterances
 
 ## Research Impact
-- **Access**: Restricted Use
+- **Applications**: Speech Emotion Recognition
+- **Usage**: Academic Non-Commercial use
+- **Resource ID**: 206
 
 ## Key Resources & Links
-- **Usage**: Restricted Use
+- **Dataset Access**: [BME Speech Lab](http://alpha.tmit.bme.hu/speech/)
+- **Repository**: META-SHARE
 
 ## Citation
-Contact dataset owners for guidelines.
+If you use this dataset in your research, please cite according to the repository guidelines.
