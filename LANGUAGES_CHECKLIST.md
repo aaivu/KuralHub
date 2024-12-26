@@ -9,13 +9,13 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 ### **Global Language List**  
 
 #### **Indo-European Languages**  
-- [ ] Albanian (sq) *(Not found)*  
+- [x] Albanian (sq) *(Not found)*  
 - [x] Bengali (bn)  
-- [ ] Bosnian (bs)  
-- [ ] Bulgarian (bg) *(Not found)*  
-- [ ] Catalan (ca) *(Not found)*  
-- [ ] Croatian (hr) *(Not found)*  
-- [ ] Czech (cs) *(Not found)*  
+- [x] Bosnian (bs) *(Not found)*  
+- [x] Bulgarian (bg) *(Not found)*  
+- [x] Catalan (ca) *(Not found)*  
+- [x] Croatian (hr) *(Not found)*  
+- [x] Czech (cs) *(Not found)*  
 - [x] Danish (da)  
 - [x] Dutch (nl)  
 - [x] English (en)  
@@ -24,13 +24,13 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Greek (el)  
 - [ ] Gujarati (gu)  
 - [ ] Hindi (hi)  
-- [ ] Icelandic (is) *(Not found)*  
+- [x] Icelandic (is) *(Not found)*  
 - [ ] Italian (it)  
-- [ ] Latvian (lv) *(Not found)*  
-- [ ] Lithuanian (lt) *(Not found)*  
-- [ ] Macedonian (mk) *(Not found)*  
+- [x] Latvian (lv) *(Not found)*  
+- [x] Lithuanian (lt) *(Not found)*  
+- [x] Macedonian (mk) *(Not found)*  
 - [ ] Marathi (mr)  
-- [ ] Norwegian (no) *(Not found)*  
+- [x] Norwegian (no) *(Not found)*  
 - [x] Persian (fa)  
 - [x] Polish (pl)  
 - [ ] Portuguese (pt)  
@@ -38,11 +38,11 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Romanian (ro)  
 - [ ] Russian (ru)  
 - [ ] Serbian (sr)  
-- [ ] Slovak (sk) *(Not found)*  
-- [ ] Slovenian (sl) *(Not found)*  
+- [x] Slovak (sk) *(Not found)*  
+- [x] Slovenian (sl) *(Not found)*  
 - [ ] Spanish (es)  
 - [x] Swedish (sv)  
-- [ ] Ukrainian (uk) *(Not found)*  
+- [x] Ukrainian (uk) *(Not found)*  
 - [ ] Urdu (ur)  
 
 #### **Uralic Languages**  
@@ -69,12 +69,16 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Vietnamese (vi)  
 
 #### **Turkic Languages**  
-- [ ] Azerbaijani (az)  
+- [x] Azerbaijani (az) *(Not found)*  
 - [ ] Kazakh (kk)  
-- [ ] Kyrgyz (ky)  
+- [x] Kyrgyz (ky) *(Not found)*  
 - [x] Turkish (tr)  
-- [ ] Turkmen (tk)  
-- [ ] Uzbek (uz)  
+- [x] Turkmen (tk) *(Not found)*  
+- [x] Uzbek (uz) *(Not found)*  
+
+#### **Caucasian Languages**  
+- [x] Georgian (ka) *(Not found)*  
+- [x] Armenian (hy) *(Not found)*  
 
 #### **Afro-Asiatic Languages**  
 - [x] Amharic (am)  
@@ -112,7 +116,10 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 #### **Altaic Languages**  
 - [ ] Japanese (ja)  
 - [ ] Korean (ko)  
-- [ ] Mongolian (mn)  
+- [x] Mongolian (mn) *(Not found)*  
+
+#### **Iranian Languages**  
+- [x] Tajik (tg) *(Not found)*  
       
 ---
 
