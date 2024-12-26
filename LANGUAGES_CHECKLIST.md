@@ -15,13 +15,13 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [ ] Bulgarian (bg)  
 - [ ] Catalan (ca)  
 - [ ] Croatian (hr)  
-- [ ] Czech (cs)  
+- [x] Czech (cs) *(Not found)*  
 - [x] Danish (da)  
 - [x] Dutch (nl)  
 - [x] English (en)  
 - [ ] French (fr)  
 - [ ] German (de)  
-- [ ] Greek (el)  
+- [x] Greek (el)  
 - [ ] Gujarati (gu)  
 - [ ] Hindi (hi)  
 - [ ] Icelandic (is)  
@@ -31,11 +31,11 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [ ] Macedonian (mk)  
 - [ ] Marathi (mr)  
 - [ ] Norwegian (no)  
-- [ ] Persian (fa)  
-- [ ] Polish (pl)  
+- [x] Persian (fa)  
+- [x] Polish (pl)  
 - [ ] Portuguese (pt)  
 - [ ] Punjabi (pa)  
-- [ ] Romanian (ro)  
+- [x] Romanian (ro)  
 - [ ] Russian (ru)  
 - [ ] Serbian (sr)  
 - [ ] Slovak (sk)  
@@ -44,16 +44,17 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [ ] Swedish (sv)  
 - [ ] Urdu (ur)
 
-#### **Uralic Languages**
-- [ ] Finnish (fi)
-- [ ] Hungarian (hu)
-- [x] Estonian (et)
+#### **Uralic Languages**  
+- [ ] Finnish (fi)  
+- [x] Hungarian (hu)  
+- [x] Estonian (et)  
 
 #### **Sino-Tibetan Languages**  
 - [ ] Burmese (my)  
 - [ ] Chinese/Mandarin (zh)  
 - [ ] Tibetan (bo)  
 - [ ] Hmong (hmn)  
+- [x] Thai (th)  
 
 #### **Dravidian Languages**  
 - [ ] Kannada (kn)  
@@ -64,12 +65,13 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 
 #### **Austroasiatic Languages**  
 - [ ] Khmer (km)  
-- [ ] Vietnamese (vi)  
+- [x] Vietnamese (vi)  
 
 #### **Turkic Languages**  
 - [ ] Azerbaijani (az)  
 - [ ] Kazakh (kk)  
 - [ ] Kyrgyz (ky)  
+- [x] Turkish (tr)  
 - [ ] Turkmen (tk)  
 - [ ] Uzbek (uz)  
 
@@ -107,8 +109,8 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 #### **Altaic Languages**  
 - [ ] Japanese (ja)  
 - [ ] Korean (ko)  
-- [ ] Mongolian (mn)  
-
+- [ ] Mongolian (mn)
+      
 ---
 
 ## **Missing Languages**  
