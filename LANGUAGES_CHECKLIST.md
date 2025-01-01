@@ -99,7 +99,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [ ] Fula (ff)  
 - [x] Igbo (ig) *(Not found)*
 - [x] Kinyarwanda/Rwanda (rw) *(Not found)* 
-- [ ] Kirundi (rn) *(Not found)* 
+- [x] Kirundi (rn) *(Not found)* 
 - [ ] Lingala (ln)  
 - [ ] Sesotho (st)  
 - [x] Shona (sn) *(Not found)* 
