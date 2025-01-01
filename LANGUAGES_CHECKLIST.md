@@ -50,7 +50,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Maithili (mai) *(Not found)*
 - [x] Bhojpuri (bho) *(Not found)*
 - [x] Nepali (ne) *(Not found)*
-- [ ] Afrikaans (af) *(Not found)*
+- [x] Afrikaans (af) *(Not found)*
 
 #### **Uralic Languages**  
 - [ ] Finnish (fi)  
