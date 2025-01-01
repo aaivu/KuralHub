@@ -22,19 +22,19 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [ ] French (fr)  
 - [ ] German (de)  
 - [x] Greek (el)  
-- [ ] Gujarati (gu)  
+- [x] Gujarati (gu) *(Not found)*  
 - [ ] Hindi (hi)  
 - [x] Icelandic (is) *(Not found)*  
 - [ ] Italian (it)  
 - [x] Latvian (lv) *(Not found)*  
 - [x] Lithuanian (lt) *(Not found)*  
 - [x] Macedonian (mk) *(Not found)*  
-- [ ] Marathi (mr)  
+- [x] Marathi (mr)  
 - [x] Norwegian (no) *(Not found)*  
 - [x] Persian (fa)  
 - [x] Polish (pl)  
 - [ ] Portuguese (pt)  
-- [ ] Punjabi (pa)  
+- [x] Punjabi (pa)  
 - [x] Romanian (ro)  
 - [ ] Russian (ru)  
 - [ ] Serbian (sr)  
@@ -43,7 +43,9 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [ ] Spanish (es)  
 - [x] Swedish (sv)  
 - [x] Ukrainian (uk) *(Not found)*  
-- [ ] Urdu (ur)  
+- [ ] Urdu (ur)
+- [x] Odia/Oriya (or)
+- [x] Sinhala (si) *(Not found)* 
 
 #### **Uralic Languages**  
 - [ ] Finnish (fi)  
@@ -58,10 +60,10 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Thai (th)  
 
 #### **Dravidian Languages**  
-- [ ] Kannada (kn)  
-- [ ] Malayalam (ml)  
-- [ ] Tamil (ta)  
-- [ ] Telugu (te)  
+- [x] Kannada (kn)  
+- [x] Malayalam (ml)  
+- [x] Tamil (ta)  
+- [x] Telugu (te)  
 - [ ] Tulu (tcy)  
 
 #### **Austroasiatic Languages**  
@@ -119,7 +121,8 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Mongolian (mn) *(Not found)*  
 
 #### **Iranian Languages**  
-- [x] Tajik (tg) *(Not found)*  
+- [x] Tajik (tg) *(Not found)*
+- [x] Pashto (ps) *(Not found)*
       
 ---
 
