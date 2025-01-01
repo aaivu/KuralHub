@@ -113,7 +113,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Yoruba (yo) *(Not found)*
 - [x] Zulu (zu) *(Not found)*
 - [x] Mandinka (mnk) *(Not found)*
-- [ ] Bambara (bm) *(Not found)*
+- [x] Bambara (bm) *(Not found)*
 
 #### **Austronesian Languages**  
 - [x] Filipino (fil)  
