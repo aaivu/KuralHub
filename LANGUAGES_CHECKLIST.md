@@ -44,7 +44,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Swedish (sv)  
 - [x] Ukrainian (uk) *(Not found)*  
 - [ ] Urdu (ur)
-- [x] Odia
+- [x] Odia/Oriya (or)
 
 #### **Uralic Languages**  
 - [ ] Finnish (fi)  
@@ -120,7 +120,8 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Mongolian (mn) *(Not found)*  
 
 #### **Iranian Languages**  
-- [x] Tajik (tg) *(Not found)*  
+- [x] Tajik (tg) *(Not found)*
+- [x] Pashto (ps) *(Not found)*
       
 ---
 
