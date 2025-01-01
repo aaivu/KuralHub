@@ -93,7 +93,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Hausa (ha) *(Not found)*
 - [x] Somali (so) *(Not found)*
 - [x] Tigrinya (ti) *(Not found)*
-- [ ] Oromo (om) *(Not found)*
+- [x] Oromo (om) *(Not found)*
 
 #### **Niger-Congo Languages**  
 - [x] Chichewa (ny) *(Not found)*
