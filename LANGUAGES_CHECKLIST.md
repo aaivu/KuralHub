@@ -119,7 +119,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 
 #### **Austronesian Languages**  
 - [x] Filipino (fil)  
-- [ ] Malay (ms)  
+- [x] Malay (ms)  
 - [ ] Maori (mi)  
 - [ ] Tahitian (ty)  
 - [x] Malagasy (mg) *(Not found)*
