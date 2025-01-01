@@ -136,6 +136,9 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 ### **Tai-Kadai**
 - [x] Thai (th)
 - [x] Lao (lo) *(Not found)*
+
+### **Quechuan**
+- [ ] Quechua (qu)
 ---
 
 ## **Missing Languages**  
