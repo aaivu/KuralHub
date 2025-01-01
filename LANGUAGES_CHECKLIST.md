@@ -125,8 +125,8 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Malagasy (mg) *(Not found)*
 
 #### **Altaic Languages**  
-- [ ] Japanese (ja)  
-- [ ] Korean (ko)  
+- [x] Japanese (ja)  
+- [x] Korean (ko)  
 - [x] Mongolian (mn) *(Not found)*  
 
 #### **Iranian Languages**  
@@ -139,7 +139,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 ---
 
 ## **Missing Languages**  
-If you notice any language missing from the list above, please add it here:  
+If you notice any language missing from the list above, please add:  
 - [ ] _Language Name (ISO Code)_  
 
 ---
