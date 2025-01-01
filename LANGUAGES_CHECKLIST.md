@@ -92,32 +92,35 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [ ] Hebrew (he)  
 - [x] Hausa (ha) *(Not found)*
 - [x] Somali (so) *(Not found)*
-- [ ] Tigrinya (ti)  
+- [x] Tigrinya (ti) *(Not found)*
+- [ ] Oromo (om) *(Not found)*
 
 #### **Niger-Congo Languages**  
-- [ ] Chichewa (ny)  
-- [ ] Fula (ff)  
+- [x] Chichewa (ny) *(Not found)*
+- [x] Fula (ff) *(Not found)*
 - [x] Igbo (ig) *(Not found)*
 - [x] Kinyarwanda/Rwanda (rw) *(Not found)* 
 - [x] Kirundi (rn) *(Not found)* 
-- [ ] Lingala (ln)  
+- [x] Lingala (ln) *(Not found)* 
 - [ ] Sesotho (st)  
 - [x] Shona (sn) *(Not found)* 
 - [x] Swahili (sw) *(Not found)* 
 - [ ] Tsonga (ts)  
-- [ ] Tswana (tn)  
+- [x] Tswana (tn) *(Not found)*  
 - [ ] Venda (ve)  
-- [ ] Wolof (wo)  
+- [x] Wolof (wo) *(Not found)* 
 - [x] Xhosa (xh) *(Not found)*   
 - [x] Yoruba (yo) *(Not found)*
 - [x] Zulu (zu) *(Not found)*
+- [x] Mandinka (mnk) *(Not found)*
+- [ ] Bambara (bm) *(Not found)*
 
 #### **Austronesian Languages**  
 - [x] Filipino (fil)  
 - [ ] Malay (ms)  
 - [ ] Maori (mi)  
 - [ ] Tahitian (ty)  
-- [ ] Malagasy (mg)  
+- [x] Malagasy (mg) *(Not found)*
 
 #### **Altaic Languages**  
 - [ ] Japanese (ja)  
