@@ -47,6 +47,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Odia/Oriya (or)
 - [x] Sinhala (si) *(Not found)*
 - [x] Assamese (as)
+- [x] Maithili (mai) *(Not found)*
 
 #### **Uralic Languages**  
 - [ ] Finnish (fi)  
