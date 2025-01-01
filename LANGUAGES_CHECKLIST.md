@@ -68,7 +68,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Malayalam (ml)  
 - [x] Tamil (ta)  
 - [x] Telugu (te)  
-- [ ] Tulu (tcy)  
+- [x] Tulu (tcy) *(Not found)*
 
 #### **Austroasiatic Languages**  
 - [x] Khmer/Cambodian (km) *(Not found)*
@@ -102,18 +102,20 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Kinyarwanda/Rwanda (rw) *(Not found)* 
 - [x] Kirundi (rn) *(Not found)* 
 - [x] Lingala (ln) *(Not found)* 
-- [ ] Sesotho (st)  
+- [x] Sesotho (st) *(Not found)* 
 - [x] Shona (sn) *(Not found)* 
 - [x] Swahili (sw) *(Not found)* 
-- [ ] Tsonga (ts)  
+- [x] Tsonga (ts) *(Not found)* 
 - [x] Tswana (tn) *(Not found)*  
-- [ ] Venda (ve)  
+- [x] Venda (ve) *(Not found)*  
 - [x] Wolof (wo) *(Not found)* 
 - [x] Xhosa (xh) *(Not found)*   
 - [x] Yoruba (yo) *(Not found)*
 - [x] Zulu (zu) *(Not found)*
 - [x] Mandinka (mnk) *(Not found)*
 - [x] Bambara (bm) *(Not found)*
+- [x] Ndebele (nd) *(Not found)*
+- [x] Sotho (st) *(Not found)*
 
 #### **Austronesian Languages**  
 - [x] Filipino (fil)  
