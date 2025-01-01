@@ -45,7 +45,8 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Ukrainian (uk) *(Not found)*  
 - [ ] Urdu (ur)
 - [x] Odia/Oriya (or)
-- [x] Sinhala (si) *(Not found)* 
+- [x] Sinhala (si) *(Not found)*
+- [x] Assamese (as)
 
 #### **Uralic Languages**  
 - [ ] Finnish (fi)  
