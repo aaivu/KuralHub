@@ -49,6 +49,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Assamese (as)
 - [x] Maithili (mai) *(Not found)*
 - [x] Bhojpuri (bho) *(Not found)*
+- [x] Nepali (ne) *(Not found)*
 
 #### **Uralic Languages**  
 - [ ] Finnish (fi)  
@@ -59,8 +60,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Burmese (my)  
 - [ ] Chinese/Mandarin (zh)  
 - [ ] Tibetan (bo)  
-- [ ] Hmong (hmn)  
-- [x] Thai (th)  
+- [x] Hmong (hmn) *(Not found)*
 
 #### **Dravidian Languages**  
 - [x] Kannada (kn)  
@@ -70,7 +70,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [ ] Tulu (tcy)  
 
 #### **Austroasiatic Languages**  
-- [ ] Khmer (km)  
+- [x] Khmer/Cambodian (km) *(Not found)*
 - [x] Vietnamese (vi)  
 
 #### **Turkic Languages**  
@@ -96,7 +96,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 #### **Niger-Congo Languages**  
 - [ ] Chichewa (ny)  
 - [ ] Fula (ff)  
-- [ ] Igbo (ig)  
+- [x] Igbo (ig) *(Not found)*
 - [ ] Kinyarwanda/Rwanda (rw)  
 - [ ] Kirundi (rn)  
 - [ ] Lingala (ln)  
@@ -108,7 +108,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [ ] Venda (ve)  
 - [ ] Wolof (wo)  
 - [ ] Xhosa (xh)  
-- [ ] Yoruba (yo)  
+- [x] Yoruba (yo) *(Not found)*
 - [ ] Zulu (zu)  
 
 #### **Austronesian Languages**  
@@ -126,7 +126,10 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 #### **Iranian Languages**  
 - [x] Tajik (tg) *(Not found)*
 - [x] Pashto (ps) *(Not found)*
-      
+
+### **Tai-Kadai**
+- [x] Thai (th)
+- [x] Lao (lo) *(Not found)*
 ---
 
 ## **Missing Languages**  
