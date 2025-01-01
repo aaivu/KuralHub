@@ -89,7 +89,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 #### **Afro-Asiatic Languages**  
 - [x] Amharic (am)  
 - [x] Arabic (ar)  
-- [ ] Hebrew (he)  
+- [x] Hebrew (he)  
 - [x] Hausa (ha) *(Not found)*
 - [x] Somali (so) *(Not found)*
 - [x] Tigrinya (ti) *(Not found)*
