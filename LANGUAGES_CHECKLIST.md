@@ -48,6 +48,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Sinhala (si) *(Not found)*
 - [x] Assamese (as)
 - [x] Maithili (mai) *(Not found)*
+- [x] Bhojpuri (bho) *(Not found)*
 
 #### **Uralic Languages**  
 - [ ] Finnish (fi)  
