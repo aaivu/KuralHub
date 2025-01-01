@@ -18,3 +18,6 @@ https://www.kaggle.com/datasets/sushmit0109/subescobangla-speech-emotion-dataset
 
 ## datasets/Burmese/BMISEC
 link not work, couldn't find in google
+
+## datasets/Danish/DES/DES.md
+link not work, couldn't find in google
