@@ -19,13 +19,13 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Danish (da)  
 - [x] Dutch (nl)  
 - [x] English (en)  
-- [ ] French (fr)  
-- [ ] German (de)  
+- [x] French (fr)  
+- [x] German (de)  
 - [x] Greek (el)  
 - [x] Gujarati (gu) *(Not found)*  
-- [ ] Hindi (hi)  
+- [x] Hindi (hi)  
 - [x] Icelandic (is) *(Not found)*  
-- [ ] Italian (it)  
+- [x] Italian (it)  
 - [x] Latvian (lv) *(Not found)*  
 - [x] Lithuanian (lt) *(Not found)*  
 - [x] Macedonian (mk) *(Not found)*  
@@ -33,17 +33,17 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Norwegian (no) *(Not found)*  
 - [x] Persian (fa)  
 - [x] Polish (pl)  
-- [ ] Portuguese (pt)  
+- [x] Portuguese (pt)  
 - [x] Punjabi (pa)  
 - [x] Romanian (ro)  
-- [ ] Russian (ru)  
-- [ ] Serbian (sr)  
+- [x] Russian (ru)  
+- [x] Serbian (sr)  
 - [x] Slovak (sk) *(Not found)*  
 - [x] Slovenian (sl) *(Not found)*  
-- [ ] Spanish (es)  
+- [x] Spanish (es)  
 - [x] Swedish (sv)  
 - [x] Ukrainian (uk) *(Not found)*  
-- [ ] Urdu (ur)
+- [x] Urdu (ur)
 - [x] Odia/Oriya (or)
 - [x] Sinhala (si) *(Not found)*
 - [x] Assamese (as)
