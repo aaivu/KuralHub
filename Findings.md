@@ -15,6 +15,8 @@ uzzal.sharma@dbuniversity.ac.in
 ## SUBESCO-Bangla Speech Emotion Dataset
 https://www.kaggle.com/datasets/sushmit0109/subescobangla-speech-emotion-dataset
 
+https://www.kaggle.com/datasets/ejlok1/cremad
+
 
 ## datasets/Burmese/BMISEC
 link not work, couldn't find in google
