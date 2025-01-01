@@ -54,7 +54,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Estonian (et)  
 
 #### **Sino-Tibetan Languages**  
-- [ ] Burmese (my)  
+- [x] Burmese (my)  
 - [ ] Chinese/Mandarin (zh)  
 - [ ] Tibetan (bo)  
 - [ ] Hmong (hmn)  
