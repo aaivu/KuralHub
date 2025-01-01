@@ -50,6 +50,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Maithili (mai) *(Not found)*
 - [x] Bhojpuri (bho) *(Not found)*
 - [x] Nepali (ne) *(Not found)*
+- [x] Afrikaans (af) *(Not found)*
 
 #### **Uralic Languages**  
 - [ ] Finnish (fi)  
@@ -89,27 +90,27 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Amharic (am)  
 - [x] Arabic (ar)  
 - [ ] Hebrew (he)  
-- [ ] Hausa (ha)  
-- [ ] Somali (so)  
+- [x] Hausa (ha) *(Not found)*
+- [x] Somali (so) *(Not found)*
 - [ ] Tigrinya (ti)  
 
 #### **Niger-Congo Languages**  
 - [ ] Chichewa (ny)  
 - [ ] Fula (ff)  
 - [x] Igbo (ig) *(Not found)*
-- [ ] Kinyarwanda/Rwanda (rw)  
-- [ ] Kirundi (rn)  
+- [x] Kinyarwanda/Rwanda (rw) *(Not found)* 
+- [x] Kirundi (rn) *(Not found)* 
 - [ ] Lingala (ln)  
 - [ ] Sesotho (st)  
-- [ ] Shona (sn)  
-- [ ] Swahili (sw)  
+- [x] Shona (sn) *(Not found)* 
+- [x] Swahili (sw) *(Not found)* 
 - [ ] Tsonga (ts)  
 - [ ] Tswana (tn)  
 - [ ] Venda (ve)  
 - [ ] Wolof (wo)  
-- [ ] Xhosa (xh)  
+- [x] Xhosa (xh) *(Not found)*   
 - [x] Yoruba (yo) *(Not found)*
-- [ ] Zulu (zu)  
+- [x] Zulu (zu) *(Not found)*
 
 #### **Austronesian Languages**  
 - [x] Filipino (fil)  
