@@ -60,7 +60,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 #### **Sino-Tibetan Languages**  
 - [x] Burmese (my)  
 - [x] Chinese/Mandarin (zh)  
-- [ ] Tibetan (bo)  
+- [x] Tibetan (bo)  
 - [x] Hmong (hmn) *(Not found)*
 
 #### **Dravidian Languages**  
