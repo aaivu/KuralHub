@@ -53,7 +53,7 @@ We aim to collect datasets for **Natural Language Processing (NLP)** and other t
 - [x] Afrikaans (af) *(Not found)*
 
 #### **Uralic Languages**  
-- [ ] Finnish (fi)  
+- [x] Finnish (fi)  
 - [x] Hungarian (hu)  
 - [x] Estonian (et)  
 
