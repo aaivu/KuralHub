@@ -27,3 +27,7 @@ link not work, couldn't find in google
 
 ## Wrong details
 datasets/Dutch/PICKA-NH/PICKA-NH.md
+
+## MediaTeam Speech Corpus: a first large Finnish emotional 
+E-mail: tapio.seppanen@ee.oulu.fi, juhani.toivanen@ee.oulu.fi, eero.vayrynen@ee.oulu.fi 
+
