@@ -44,3 +44,7 @@ OGVC (Online Gaming Voice Chat Corpus)
 
 ## Kannada
 https://zenodo.org/records/6345107
+
+
+## Kazakh-Russian Emotion Corpus
+∗ Corresponding author e-mail: nazerke.sultanova@sdu.edu.kz
