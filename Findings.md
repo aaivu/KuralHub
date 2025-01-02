@@ -17,6 +17,7 @@ https://www.kaggle.com/datasets/sushmit0109/subescobangla-speech-emotion-dataset
 
 https://www.kaggle.com/datasets/ejlok1/cremad
 
+https://www.kaggle.com/datasets/vishlb/speech-emotion-recognition-hindi
 
 ## datasets/Burmese/BMISEC
 link not work, couldn't find in google
