@@ -31,3 +31,6 @@ datasets/Dutch/PICKA-NH/PICKA-NH.md
 ## MediaTeam Speech Corpus: a first large Finnish emotional 
 E-mail: tapio.seppanen@ee.oulu.fi, juhani.toivanen@ee.oulu.fi, eero.vayrynen@ee.oulu.fi 
 
+## Analysis of an emotional speech corpus in Hebrew based on objective criteria
+ Holon Academic Institute of Technology, Holon, Israel
+e-mail: noamoto@wine.cteh.ac.il
