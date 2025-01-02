@@ -35,3 +35,7 @@ E-mail: tapio.seppanen@ee.oulu.fi, juhani.toivanen@ee.oulu.fi, eero.vayrynen@ee.
 ## Analysis of an emotional speech corpus in Hebrew based on objective criteria
  Holon Academic Institute of Technology, Holon, Israel
 e-mail: noamoto@wine.cteh.ac.il
+
+
+## Keio-ESD (Japanese Emotional Speech Database)
+https://research.nii.ac.jp/src/en/register.html
