@@ -41,3 +41,6 @@ e-mail: noamoto@wine.cteh.ac.il
 https://research.nii.ac.jp/src/en/register.html
 OGVC (Online Gaming Voice Chat Corpus)
 
+
+## Kannada
+https://zenodo.org/records/6345107
