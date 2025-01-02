@@ -39,3 +39,5 @@ e-mail: noamoto@wine.cteh.ac.il
 
 ## Keio-ESD (Japanese Emotional Speech Database)
 https://research.nii.ac.jp/src/en/register.html
+OGVC (Online Gaming Voice Chat Corpus)
+
