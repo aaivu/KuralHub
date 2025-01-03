@@ -48,3 +48,7 @@ https://zenodo.org/records/6345107
 
 ## Kazakh-Russian Emotion Corpus
 ∗ Corresponding author e-mail: nazerke.sultanova@sdu.edu.kz
+
+
+## Need to install client 
+https://pan.baidu.com/s/1JvaTabyKoQiWx2GtAIhpdw
