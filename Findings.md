@@ -63,3 +63,7 @@ PEMO: A New Validated Dataset for Punjabi Speech Emotion DetectionChaitanya Sing
 ## Dusha
 https://www.kaggle.com/datasets/sigireddybalasai/dusha-datasetcrowd 
 very high size
+
+
+##  Odisa
+http://www.speal.org/download-sitb-osed-dataset/
