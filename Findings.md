@@ -67,3 +67,9 @@ very high size
 
 ##  Odisa
 http://www.speal.org/download-sitb-osed-dataset/
+
+
+
+## Thai 
+https://github.com/vistec-AI/dataset-releases/releases/tag/v1
+size big
