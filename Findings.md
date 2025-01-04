@@ -73,3 +73,7 @@ http://www.speal.org/download-sitb-osed-dataset/
 ## Thai 
 https://github.com/vistec-AI/dataset-releases/releases/tag/v1
 size big
+
+
+## Vietnamese
+https://github.com/fiyud/Emotional-Vietnamese-Speech-Based-Depression-Diagnosis-Using-Dynamic-Attention-Mechanism?tab=readme-ov-file
