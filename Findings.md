@@ -52,3 +52,7 @@ https://zenodo.org/records/6345107
 
 ## Need to install client 
 https://pan.baidu.com/s/1JvaTabyKoQiWx2GtAIhpdw
+
+
+
+PEMO: A New Validated Dataset for Punjabi Speech Emotion DetectionChaitanya Singla1, Sukhdev Singh21Department of Computer Science, Punjabi University, PatialaPunjab, Indiachaitanya.singla246@gmail.com2Department of Computer Science, Multani Mal Modi College, PatialaPunjab, Indiatomrdev@gmail.com
