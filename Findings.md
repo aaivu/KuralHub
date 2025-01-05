@@ -92,3 +92,7 @@ BAVED: arabic https://www.kaggle.com/datasets/a13x10/basic-arabic-vocal-emotions
 
 Korean 
 https://github.com/emotiontts/emotiontts_open_db
+
+
+Quechua Collao
+https://figshare.com/articles/media/Quechua_Collao_for_Speech_Emotion_Recognition/20292516?file=37361143
