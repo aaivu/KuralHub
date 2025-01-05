@@ -77,3 +77,13 @@ size big
 
 ## Vietnamese
 https://github.com/fiyud/Emotional-Vietnamese-Speech-Based-Depression-Diagnosis-Using-Dynamic-Attention-Mechanism?tab=readme-ov-file
+
+
+
+
+
+---
+---
+
+Arabic
+https://www.kaggle.com/datasets/suso172/arabic-natural-audio-dataset
