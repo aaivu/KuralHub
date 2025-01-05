@@ -87,3 +87,4 @@ https://github.com/fiyud/Emotional-Vietnamese-Speech-Based-Depression-Diagnosis-
 
 Arabic
 https://www.kaggle.com/datasets/suso172/arabic-natural-audio-dataset
+BAVED: arabic https://www.kaggle.com/datasets/a13x10/basic-arabic-vocal-emotions-dataset
