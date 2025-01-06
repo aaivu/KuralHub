@@ -96,3 +96,43 @@ https://github.com/emotiontts/emotiontts_open_db
 
 Quechua Collao
 https://figshare.com/articles/media/Quechua_Collao_for_Speech_Emotion_Recognition/20292516?file=37361143
+
+
+
+
+---
+---
+
+
+Danish: http://universal.elra.info/product_info.php?products_id=78
+
+
+Dutch:  https://www.researchgate.net/profile/Mathijs-Vulpen/publication/237219755_Building_a_Dutch_Multimodal_Corpus_for_Emotion_Recognition/links/02e7e528cacec85dbf000000/Building-a-Dutch-Multimodal-Corpus-for-Emotion-Recognition.pdf?__cf_chl_tk=P5bWW8TpT460JHPrK8y_bNe8w2WIEvwgk0EqeqyEZio-1736206899-1.0.1.1-mEp_vSdT0r4ubqLSDXA.s_gFFuE78m6qfBWEefKMHgM
+
+
+
+Marathi: https://www.sciencedirect.com/science/article/abs/pii/S2212683X17301214
+http://joaasr.com/index.php/joaasr/article/view/936
+https://journals.scholarsportal.info/details/24727695/v2023inone/1_dadamsesitml.xml&sub=all
+
+
+Punjabi:
+Romanian:
+Serbian:
+Spanish:
+Swedish:
+Odia/Oriya:
+Assamese:
+Finnish:
+Hungarian:
+Burmese:
+Chinese/Mandarin:
+Tibetan:
+Vietnamese:
+Kazakh:
+Hebrew:
+Filipino:
+Malay:
+Maori:
+Tahitian:
+Japanese:
