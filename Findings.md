@@ -171,20 +171,31 @@ Kazakh: https://www.naturalspublishing.com/files/published/ber868j032e8z8.pdf
 
 
 
-Hebrew:
+Hebrew: https://www.researchgate.net/publication/265937100_Analysis_of_an_emotional_speech_corpus_in_Hebrew_based_on_objective_criteria
 
 
-Filipino:
+Filipino: https://www.researchgate.net/publication/331928798_Filipino_Emotion_Classification_in_Speech_Signals_based_on_Audio_Features_and_Transcribed_Text
+https://www.academia.edu/6242589/Filipino_Emotion_Classification_in_Speech_Signals_based_on_Audio_Features_and_Transcribed_Text
+
+Malay: https://ieeexplore.ieee.org/document/8067383/
+https://ieeexplore.ieee.org/document/9576788
 
 
-Malay:
+Maori: ???
 
 
-Maori:
-
-
-Tahitian:
+Tahitian: ???
 
 
 
-Japanese:
+Japanese: https://ieee-dataport.org/documents/jvnv-corpus-japanese-emotional-speech-verbal-content-and-nonverbal-expressions
+https://arxiv.org/pdf/2310.06072
+
+
+
+
+Toronto emotional speech set (TESS): https://www.kaggle.com/datasets/ejlok1/toronto-emotional-speech-set-tess
+
+MLEnd Spoken Numerals: https://www.kaggle.com/datasets/jesusrequena/mlend-spoken-numerals
+
+JL corpus: https://www.kaggle.com/datasets/tli725/jl-corpus
