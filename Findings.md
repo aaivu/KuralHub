@@ -186,6 +186,8 @@ Maori: ???
 
 Tahitian: ???
 
+Sinhala: https://www.researchgate.net/publication/387540586_Development_of_Sinhala_Speech_Emotion_Recognition_Models_using_Cross-lingual_and_Multi-lingual_Approaches
+https://ieeexplore.ieee.org/document/9605841
 
 
 Japanese: https://ieee-dataport.org/documents/jvnv-corpus-japanese-emotional-speech-verbal-content-and-nonverbal-expressions
