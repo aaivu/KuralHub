@@ -127,28 +127,64 @@ Romanian: https://www.proquest.com/docview/1117304170?sourcetype=Scholarly%20Jou
 
 
 
-Serbian:
+Serbian: https://live.european-language-grid.eu/catalogue/corpus/1480/download/
 
 
 Spanish: https://live.european-language-grid.eu/catalogue/corpus/2108/download/
-https://figshare.com/articles/dataset/EmoMatchSpanishDB/14215850 downloaded
+https://figshare.com/articles/dataset/EmoMatchSpanishDB/14215850 
 
-Swedish:
+Swedish: https://www.researchgate.net/publication/369960805_Acoustic_Features_Distinguishing_Emotions_in_Swedish_Speech
 
 
 
-Odia/Oriya:
-Assamese:
-Finnish:
-Hungarian:
-Burmese:
-Chinese/Mandarin:
-Tibetan:
-Vietnamese:
-Kazakh:
+Odia/Oriya: https://ieeexplore.ieee.org/document/10089254
+http://www.speal.org/sitb-osed/ downloaded to notebook 
+
+
+
+Assamese: https://indjst.org/download-article.php?Article_Unique_Id=INDJST13193&Full_Text_Pdf_Download=True
+
+Note: https://github.com/AI4Bharat/Rasa expressive TTS for Tamil, Assamese, Bengali 
+
+
+
+Finnish: https://www.academia.edu/18208612/MediaTeam_speech_corpus_a_first_large_Finnish_emotional_speech_database
+
+
+
+Hungarian: https://link.springer.com/chapter/10.1007/978-3-540-24842-2_11
+     SEWA DB: https://arxiv.org/pdf/1901.02839 ,https://db.sewaproject.eu/
+
+
+Burmese: https://ieeexplore.ieee.org/document/10182163
+https://www.researchgate.net/publication/372512790_BMISECCorpus_Of_Burmese_Emotional_Speech
+
+
+Tibetan: https://drpress.org/ojs/index.php/fcis/article/download/26720/26267/37130
+
+
+
+Vietnamese: https://www.researchgate.net/publication/382622286_VNEMOS_Vietnamese_Speech_Emotion_Inference_Using_Deep_Neural_Networks
+
+
+Kazakh: https://www.naturalspublishing.com/files/published/ber868j032e8z8.pdf
+
+
+
 Hebrew:
+
+
 Filipino:
+
+
 Malay:
+
+
 Maori:
+
+
 Tahitian:
+
+
+
 Japanese:
