@@ -117,7 +117,16 @@ https://journals.scholarsportal.info/details/24727695/v2023inone/1_dadamsesitml.
 
 
 Punjabi:
+https://data.mendeley.com/datasets/sdbc8f5b77/2 downloaded
+
+
+
+
+
 Romanian:
+
+
+
 Serbian:
 Spanish:
 Swedish:
