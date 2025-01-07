@@ -123,13 +123,20 @@ https://data.mendeley.com/datasets/sdbc8f5b77/2 downloaded
 
 
 
-Romanian:
+Romanian: https://www.proquest.com/docview/1117304170?sourcetype=Scholarly%20Journals
 
 
 
 Serbian:
-Spanish:
+
+
+Spanish: https://live.european-language-grid.eu/catalogue/corpus/2108/download/
+https://figshare.com/articles/dataset/EmoMatchSpanishDB/14215850 downloaded
+
 Swedish:
+
+
+
 Odia/Oriya:
 Assamese:
 Finnish:
