@@ -35,7 +35,7 @@ Southern Min Chinese
 
 
 
-## Yube
+## Yubee
 Hakka Chinese
 Jinyu Chinese
 Filipino
