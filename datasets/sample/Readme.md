@@ -13,10 +13,10 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 
 ## 📜 **Available Datasets**
 
-| Dataset Name | Type       | # Speakers | # Samples | License    | Access  | Research Paper         |
-|--------------|------------|------------|-----------|------------|---------|------------------------|
-| [Dataset 1](dataset1.md) | 🎙️ Audio   | X          | Y         | MIT/CC-BY  | 🔗 Open | [Link to Paper](paper1.com) |
-| [Dataset 2](dataset2.md) | 🎭 Multimodal | A          | B         | Restricted | 🔒 Request | [Link to Paper](paper2.com) |
+| Dataset Name | Type       | # Speakers | # Samples | License    | Access  | Research Paper         | Dataset Access |
+|--------------|------------|------------|-----------|------------|---------|------------------------|---------------------|
+| [Dataset 1](dataset1.md) | 🎙️ Audio   | X          | Y         | MIT/CC-BY  | 🔗 Open | [Link to Paper](paper1.md) | [Access Link](access1.md) |
+| [Dataset 2](dataset2.md) | 🎭 Multimodal | A          | B         | Restricted | 🔒 Request | [Link to Paper](paper2.md) | [Access Link](access2.md) |
 
 ---
 
