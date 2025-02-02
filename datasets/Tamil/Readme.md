@@ -3,6 +3,12 @@
 Welcome to the **Tamil** section of KuralNet!  
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Tamil**, along with metadata and access information.
 
+## 🌍 **Language Information**  
+- **🗣 Language Name:** Tamil  
+- **🌐 Language Family:** Dravidian  
+- **🔤 ISO Code:** ta
+- **📍 Major Spoken Countries:** India, Sri Lanka
+
 ---
 
 ## 📜 **Available Datasets**
