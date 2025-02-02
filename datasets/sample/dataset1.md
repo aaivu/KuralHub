@@ -6,41 +6,28 @@
 🔹 **Emotion Categories:** [e.g., Happy, Sad, Angry, Neutral]  
 🔹 **Size:** [Number of samples, speakers, duration]  
 🔹 **Recording Environment:** 🎤 Studio / 🎭 Acted / 🎙️ Spontaneous  
-🔹 **License:** [MIT, CC-BY, Dataset-Specific]  
+🔹 **License:** [MIT, CC-BY, Dataset-Specific, Not Specified]  
+🔹 **Access:** 🔒 Request | 🔗 Open
 
 ---
 
 ## 📜 **Dataset Overview**
-[Brief description of the dataset, its purpose, and how it was collected.]
-
-Example:  
-*"The RAVDESS dataset contains **7356 recordings** from **24 professional actors**, covering **8 emotions** (neutral, calm, happy, sad, angry, fearful, disgust, surprised). The recordings include speech and singing, making it a valuable resource for SER research."*
+[Short description of the dataset, its purpose, and how it was collected.]
 
 ---
 
 ## 📥 **Access & Download**
-🔗 **Official Website:** [Dataset Homepage]  
+🔗 **Official Website:** [Dataset Homepage, Not Specified]  
 📄 **Paper:** [DOI / ArXiv Link]  
-🗂️ **Download Link:** [Google Drive / Zenodo / Kaggle]  
+🗂️ **Download Link:** [Download | Request, Not Specified]  
 💾 **File Format:** `.wav`, `.csv`, `.json`, etc.  
-
-> ⚠️ **Note:** Some datasets require a request for access.
-
----
-
-## 📊 **Metadata Summary**
-| Feature            | Details |
-|--------------------|---------|
-| **# Speakers**     | X (Male), Y (Female) |
-| **# Samples**      | XXXX |
-| **Emotion Labels** | Happy, Sad, Angry, Neutral |
-| **Audio Quality**  | 16kHz / 44.1kHz |
-| **Duration**       | XX hours |
+📧 Contact: [mail](mailto:<mail>?subject=Dataset%20Access%20Request) </br>
+> ⚠️ **Note:** Fill the request process if the dataset is restricted.
 
 ---
 
 ## 📜 **Citation**
-If you use this dataset, **cite the original authors**:  
+If you're using this dataset, please cite both the original authors and our survey paper, as it contributed to making the dataset accessible.
 
 ```
 @article{dataset_author202X,
@@ -51,7 +38,11 @@ If you use this dataset, **cite the original authors**:
 }
 ```
 
+```
+TBD
+```
+
 ---
 
-🔍 **Back to [All Datasets](README.md)**  
+🔍 **Back to [All [Language] Datasets](Readme.md)**  
 📩 **Found an issue? [Submit an update](../../CONTRIBUTING.md)!**
