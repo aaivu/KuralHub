@@ -23,8 +23,6 @@ _Design and Development of a Multilingual Speech Corpus (TaMaR-EmoDB) for Emotio
 💾 **File Format:** `.wav` </br>
 📧 Contact: [rajeev@cet.ac.in](mailto:rajeev@cet.ac.in?subject=Dataset%20Access%20Request) </br>
 
-> ⚠️ **Note:** Fill the request process if the dataset is restricted.
-
 ---
 
 ## 📜 **Citation**
