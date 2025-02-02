@@ -21,6 +21,7 @@ Collected by the Emota team, this dataset contributes to Tamil Speech Emotion Re
 📄 **Paper:** [ACL Anthology](https://aclanthology.org/2025.chipsal-1.19.pdf)   </br>
 🗂️ **Download Link:** [Request](https://rtuthaya.staff.uom.lk/contact-for-resources)  </br>
 💾 **File Format:** `.wav` </br>
+📧 Contact: [rtuthaya@cse.mrt.ac.lk](mailto:rtuthaya@cse.mrt.ac.lk?subject=Dataset%20Access%20Request) </br>
 
 > ⚠️ **Note:** Please fill out the request form they provide to sign the dataset agreement, after which you can obtain the dataset from the team.
 
