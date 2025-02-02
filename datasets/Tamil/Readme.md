@@ -14,8 +14,9 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 ## 📜 **Available Datasets**
 | Dataset Name | Type | # Speakers | # Samples | License | Access | Research Paper | Dataset Access |
 |-------------|------|------------|-----------|---------|--------|-----------------|----------------|
-| [EmoTa](dataset1.md) | 🎙️ Audio | 22 | 936 | EmoTa Academic-Commercial | 🔗 Open | [Link to Paper](https://aclanthology.org/2025.chipsal-1.19.pdf) | [Access Link](https://rtuthaya.staff.uom.lk/contact-for-resources)
-
+| [EmoTa](EmoTa.md) | 🎙️ Audio | 22 | 936 | EmoTa Academic-Commercial | 🔗 Open | [Link to Paper](https://aclanthology.org/2025.chipsal-1.19.pdf) | [Access Link](https://rtuthaya.staff.uom.lk/contact-for-resources) | 
+| [TaMaR-EmoDB](TaMaR-EmoDB.md) | 🎙️ Audio | 12 | 1202 | Restricted | 🔒 Request | [Link to Paper](https://www.isca-archive.org/interspeech_2019/rajan19_interspeech.pdf) | TBD | 
+| [Ram, C. Sunitha, et al.](Ram_C_Sunitha_et_al.md) | 🎙️ Audio | TBD | 95 | Restricted | 🔒 Request | [Link to Paper](https://ieeexplore.ieee.org/document/6781245) | TBD | 
 ---
 
 ## 📥 **How to Use These Datasets**
