@@ -17,7 +17,7 @@ Marathi
 Telugu
 Western Punjabi
 Wu Chinese
-Tamil
+~~Tamil~~
 Turkish
 Korean
 Vietnamese
