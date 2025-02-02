@@ -7,6 +7,7 @@
 🔹 **Size:** Samples: 936, Speakers: 22, duration: 48min  </br>
 🔹 **Recording Environment:** 🎭 Acted </br>
 🔹 **License:** EmoTa Academic-Commercial </br>
+🔹 **Access:** 🔗 Open
 
 ---
 
@@ -50,6 +51,10 @@ If you're using this dataset, please cite both the original authors and our surv
     pages = "193--201",
     abstract = "This paper introduces EmoTa, the first emotional speech dataset in Tamil, designed to reflect the linguistic diversity of Sri Lankan Tamil speakers. EmoTa comprises 936 recorded utterances from 22 native Tamil speakers (11 male, 11 female), each articulating 19 semantically neutral sentences across five primary emotions: anger, happiness, sadness, fear, and neutrality. To ensure quality, inter-annotator agreement was assessed using Fleiss' Kappa, resulting in a substantial agreement score of 0.74. Initial evaluations using machine learning models, including XGBoost and Random Forest, yielded a high F1-score of 0.91 and 0.90 for emotion classification tasks. By releasing EmoTa, we aim to encourage further exploration of Tamil language processing and the development of innovative models for Tamil Speech Emotion Recognition."
 }
+```
+
+```
+TBD
 ```
 
 ---
