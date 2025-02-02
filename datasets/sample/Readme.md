@@ -3,6 +3,12 @@
 Welcome to the **[Language]** section of KuralNet!  
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **[Language]**, along with metadata and access information.
 
+## 🌍 **Language Information**  
+- **🗣 Language Name:** [Language]  
+- **🌐 Language Family:** [Language Family]  
+- **🔤 ISO Code:** [ISO Code]  
+- **📍 Major Spoken Countries:** [Country 1, Country 2, Country 3...]  
+
 ---
 
 ## 📜 **Available Datasets**
