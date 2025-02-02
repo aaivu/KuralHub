@@ -1,7 +1,7 @@
 ## Lux
 English
 Mandarin Chinese
-Hindi
+~~Hindi~~
 Spanish
 French
 Standard Arabic
