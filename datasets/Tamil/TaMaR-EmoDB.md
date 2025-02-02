@@ -1,13 +1,13 @@
 # 🎙️ TaMaR-EmoDB - Tamil
 
-🔹 **Dataset Name:** TaMaR-EmoDB
-🔹 **Language:** Tamil
-🔹 **Dataset Type:** 🎙️ Audio  
-🔹 **Emotion Categories:** Anger, Happy, Anxiety, Sad, Neutral
-🔹 **Size:** Samples: 1202, Speakers: 12, duration: approx 200min
-🔹 **Recording Environment:** 🎭 Acted
-🔹 **License:** Not Specified
-🔹 **Access:** 🔒 Request
+🔹 **Dataset Name:** TaMaR-EmoDB </br>
+🔹 **Language:** Tamil </br>
+🔹 **Dataset Type:** 🎙️ Audio  </br>
+🔹 **Emotion Categories:** Anger, Happy, Anxiety, Sad, Neutral </br>
+🔹 **Size:** Samples: 1202, Speakers: 12, duration: approx 200min </br>
+🔹 **Recording Environment:** 🎭 Acted </br>
+🔹 **License:** Not Specified </br>
+🔹 **Access:** 🔒 Request </br>
 
 ---
 
@@ -17,11 +17,11 @@ _Design and Development of a Multilingual Speech Corpus (TaMaR-EmoDB) for Emotio
 ---
 
 ## 📥 **Access & Download**
-🔗 **Official Website:** Not Found
-📄 **Paper:** [Paper Link](https://www.isca-archive.org/interspeech_2019/rajan19_interspeech.pdf)
-🗂️ **Download Link:** Not Found
-💾 **File Format:** `.wav`
-📧 Contact: [rajeev@cet.ac.in](mailto:rajeev@cet.ac.in?subject=Dataset%20Access%20Request)
+🔗 **Official Website:** Not Found </br>
+📄 **Paper:** [Paper Link](https://www.isca-archive.org/interspeech_2019/rajan19_interspeech.pdf) </br>
+🗂️ **Download Link:** Not Found </br>
+💾 **File Format:** `.wav` </br>
+📧 Contact: [rajeev@cet.ac.in](mailto:rajeev@cet.ac.in?subject=Dataset%20Access%20Request) </br>
 
 > ⚠️ **Note:** Fill the request process if the dataset is restricted.
 
@@ -31,13 +31,15 @@ _Design and Development of a Multilingual Speech Corpus (TaMaR-EmoDB) for Emotio
 If you're using this dataset, please cite both the original authors and our survey paper, as it contributed to making the dataset accessible.
 
 ```
-@article{dataset_author202X,
-  title={Dataset Title},
-  author={Author Name},
-  journal={Journal Name},
-  year={202X}
+@inproceedings{rajan2019design,
+  title={Design and Development of a Multi-Lingual Speech Corpora (TaMaR-EmoDB) for Emotion Analysis.},
+  author={Rajan, Rajeev and Haritha, UG and Sujitha, AC and Rejisha, TM},
+  booktitle={INTERSPEECH},
+  pages={3267--3271},
+  year={2019}
 }
 ```
+
 ```
 TBD
 ```
