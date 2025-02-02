@@ -13,7 +13,7 @@
 **KuralNet** is a **comprehensive repository** that reviews and benchmarks **Speech Emotion Recognition (SER) datasets** across multiple languages.  
 It provides **detailed metadata, access links, and benchmarks** using **fine-tuned monolingual models** for SER.
 
-**📄 Read the paper:** [ACL 2025 Paper Link](https://arxiv.org/abs/xxxx.xxxxx)
+**📄 Read the paper:** TBD
 
 ---
 
@@ -27,11 +27,11 @@ KuralNet/
 │   ├── spanish/
 │   │   ├── README.md
 │   │   ├── dataset1.md
-│── benchmarks/           # Fine-tuned model results
-│── scripts/              # Data processing and benchmark scripts
+│── scripts/              # Data loaders
 │── LICENSE               # License information
 │── README.md             # Main repo documentation
 │── CONTRIBUTING.md       # Contribution guidelines
+│── CODE_OF_CONDUCT.md    # Code of conduct
 │── requirements.txt      # Dependencies for processing scripts
 ```
 
@@ -80,12 +80,7 @@ We fine-tune **pre-trained SER models** on monolingual datasets and report their
 If you use KuralNet, **cite our work**:
 
 ```
-@article{kuralnet2025,
-  title={KuralNet: A Comprehensive Review of Speech Emotion Recognition (SER) Datasets},
-  author={Your Name et al.},
-  journal={ACL 2025},
-  year={2025}
-}
+TBD
 ```
 
 ---
