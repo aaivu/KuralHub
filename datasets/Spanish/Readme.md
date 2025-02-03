@@ -15,7 +15,7 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 
 | Dataset Name | Type       | # Speakers | # Samples | License    | Access  | Research Paper         | Dataset Access |
 |--------------|------------|------------|-----------|------------|---------|------------------------|---------------------|
-| [ESCorpus-PE](ESCorpus-PE.md) | 🎙️ Audio   | 80          | 3749         | -  | 🔗 Open | - | [Access Link](https://zenodo.org/records/5793223) |
+| [ESCorpus-PE](ESCorpus-PE.md) | 🎙️ Audio   | 80          | 3749         | CC BY 4.0  | 🔗 Open | - | [Access Link](https://zenodo.org/records/5793223) |
 | [MESD](MESD.md) | 🎙️ Audio | 11          | 432         | CC BY 4.0 | 🔗 Open | - | [Access Link](https://data.mendeley.com/datasets/cy34mh68j9/5) |
 
 ---
