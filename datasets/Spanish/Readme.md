@@ -16,7 +16,7 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 | Dataset Name | Type       | # Speakers | # Samples | License    | Access  | Research Paper         | Dataset Access |
 |--------------|------------|------------|-----------|------------|---------|------------------------|---------------------|
 | [ESCorpus-PE](ESCorpus-PE.md) | 🎙️ Audio   | 80          | 3749         | CC BY 4.0  | 🔗 Open | - | [Access Link](https://zenodo.org/records/5793223) |
-| [MESD](MESD.md) | 🎙️ Audio | 11          | 432         | CC BY 4.0 | 🔗 Open | - | [Access Link](https://data.mendeley.com/datasets/cy34mh68j9/5) |
+| [MESD](MESD.md) | 🎙️ Audio | 11          | 432         | CC BY 4.0 | 🔗 Open | [Paper Link](https://www.researchgate.net/publication/356814365_Mexican_Emotional_Speech_Database_Based_on_Semantic_Frequency_Familiarity_Concreteness_and_Cultural_Shaping_of_Affective_Prosody) | [Access Link](https://data.mendeley.com/datasets/cy34mh68j9/5) |
 
 ---
 
