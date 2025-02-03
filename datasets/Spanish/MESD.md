@@ -1,13 +1,13 @@
 # 🎙️ MESD - Spanish
 
-🔹 **Dataset Name:** Mexican Emotional Speech Database
-🔹 **Language:** Spanish  
-🔹 **Dataset Type:** 🎙️ Audio
-🔹 **Emotion Categories:** Happy, Sad, Angry, Neutral, Fear, Disgust
-🔹 **Size:** samples - 432, speakers - 11
-🔹 **Recording Environment:** 🎭 Acted 
-🔹 **License:** CC-BY 4.0
-🔹 **Access:** 🔗 Open
+🔹 **Dataset Name:** Mexican Emotional Speech Database </br>
+🔹 **Language:** Spanish   </br>
+🔹 **Dataset Type:** 🎙️ Audio </br>
+🔹 **Emotion Categories:** Happy, Sad, Angry, Neutral, Fear, Disgust </br>
+🔹 **Size:** samples - 432, speakers - 11 </br>
+🔹 **Recording Environment:** 🎭 Acted  </br>
+🔹 **License:** CC-BY 4.0 </br>
+🔹 **Access:** 🔗 Open </br>
 
 ---
 
@@ -17,10 +17,10 @@ The Mexican Emotional Speech Database (MESD) contains single-word utterances exp
 ---
 
 ## 📥 **Access & Download**
-🔗 **Official Website:** [Dataset Homepage](https://data.mendeley.com/datasets/cy34mh68j9/5)  
-📄 **Paper:** [Paper Link](https://www.researchgate.net/publication/356814365_Mexican_Emotional_Speech_Database_Based_on_Semantic_Frequency_Familiarity_Concreteness_and_Cultural_Shaping_of_Affective_Prosody)  
-🗂️ **Download Link:** [Download](https://data.mendeley.com/datasets/cy34mh68j9/5)  
-💾 **File Format:** `.wav`
+🔗 **Official Website:** [Dataset Homepage](https://data.mendeley.com/datasets/cy34mh68j9/5)   </br>
+📄 **Paper:** [Paper Link](https://www.researchgate.net/publication/356814365_Mexican_Emotional_Speech_Database_Based_on_Semantic_Frequency_Familiarity_Concreteness_and_Cultural_Shaping_of_Affective_Prosody)   </br>
+🗂️ **Download Link:** [Download](https://data.mendeley.com/datasets/cy34mh68j9/5)   </br>
+💾 **File Format:** `.wav` </br>
 
 ---
 
