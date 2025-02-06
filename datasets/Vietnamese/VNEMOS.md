@@ -6,7 +6,7 @@
 🔹 **Emotion Categories:** Happy, Sad, Angry, Neutral, Anxiety </br>
 🔹 **Size:** samples - 250, duration - 30min   </br>
 🔹 **Recording Environment:** 🎭 Acted and 🎙️ Spontaneous </br>  
-🔹 **License:** Not Specified </br>
+🔹 **License:** Not Specified 
 🔹 **Access:** 🔒 Request </br>
 
 ---
