@@ -5,8 +5,8 @@
 🔹 **Dataset Type:** 🎙️ Audio </br>
 🔹 **Emotion Categories:** Happy, Sad, Angry, Neutral, Anxiety </br>
 🔹 **Size:** samples - 250, duration - 30min   </br>
-🔹 **Recording Environment:** 🎭 Acted and 🎙️ Spontaneous </br>  
-🔹 **License:** Not Specified 
+🔹 **Recording Environment:** 🎭 Acted and 🎙️ Spontaneous   
+🔹 **License:** Not Specified </br>
 🔹 **Access:** 🔒 Request </br>
 
 ---
