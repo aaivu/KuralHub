@@ -17,10 +17,10 @@
 ---
 
 ## 📥 **Access & Download**
-🔗 **Official Website:** [Dataset Homepage, Not Specified]  
-📄 **Paper:** [DOI / ArXiv Link]  
-🗂️ **Download Link:** [Download | Request, Not Specified]  
-💾 **File Format:** `.wav`, `.csv`, `.json`, etc.  
+🔗 **Official Website:** [Dataset Homepage, Not Specified](...)  
+📄 **Paper:** [Paper Link](...)
+🗂️ **Download Link:** [Download | Request | Not Specified](..)
+💾 **File Format:** `.wav`, `.mp3`  
 📧 Contact: [mail](mailto:<mail>?subject=Dataset%20Access%20Request) </br>
 > ⚠️ **Note:** Fill the request process if the dataset is restricted.
 
