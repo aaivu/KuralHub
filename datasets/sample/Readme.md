@@ -1,13 +1,13 @@
 # 🗂️ Speech Emotion Recognition (SER) Datasets for [Language]
 
-Welcome to the **[Language]** section of KuralNet!  
+Welcome to the **[Language]** section of KuralNet!  <br/>
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **[Language]**, along with metadata and access information.
 
 ## 🌍 **Language Information**  
-- **🗣 Language Name:** [Language]  
-- **🌐 Language Family:** [Language Family]  
-- **🔤 ISO Code:** [ISO Code]  
-- **📍 Major Spoken Countries:** [Country 1, Country 2, Country 3...]  
+- **🗣 Language Name:** [Language]  <br/>
+- **🌐 Language Family:** [Language Family]  <br/>
+- **🔤 ISO Code:** [ISO Code]  <br/>
+- **📍 Major Spoken Countries:** [Country 1, Country 2, Country 3...]  <br/>
 
 ---
 
@@ -28,7 +28,7 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 ---
 
 ## 📌 **Contribute**
-If you know of **missing datasets** for [Language], feel free to submit an update!  
+If you know of **missing datasets** for [Language], feel free to submit an update!  <br/>
 📩 **[Contribution Guidelines](../../CONTRIBUTING.md)**
 
 ---
