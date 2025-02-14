@@ -10,7 +10,7 @@
 ---
 
 ## 🔥 **What is KuralHub?**
-**KuralNet** is a **comprehensive repository** that reviews and benchmarks **Speech Emotion Recognition (SER) datasets** across multiple languages.  
+**KuralHub** is a **comprehensive repository** that reviews and benchmarks **Speech Emotion Recognition (SER) datasets** across multiple languages.  
 It provides **detailed metadata, access links, and benchmarks** using **fine-tuned monolingual models** for SER.
 
 **📄 Read the paper:** TBD
