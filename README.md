@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎙️ KuralNet: A Comprehensive Review of Speech Emotion Recognition (SER) Datasets  
+# 🎙️ KuralHub: A Comprehensive Review of Speech Emotion Recognition (SER) Datasets  
 
 [![Latest Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/aaivu/KuralNet)  [![ACL Paper](https://img.shields.io/badge/ACL-Paper-orange)](https://arxiv.org/abs/xxxx.xxxxx)  [![License](https://img.shields.io/github/license/aaivu/KuralNet)](LICENSE)  [![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen)](CONTRIBUTING.md)  
 
@@ -9,8 +9,8 @@
 
 ---
 
-## 🔥 **What is KuralNet?**
-**KuralNet** is a **comprehensive repository** that reviews and benchmarks **Speech Emotion Recognition (SER) datasets** across multiple languages.  
+## 🔥 **What is KuralHub?**
+**KuralHub** is a **comprehensive repository** that reviews and benchmarks **Speech Emotion Recognition (SER) datasets** across multiple languages.  
 It provides **detailed metadata, access links, and benchmarks** using **fine-tuned monolingual models** for SER.
 
 **📄 Read the paper:** TBD
