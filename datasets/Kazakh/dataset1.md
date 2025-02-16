@@ -1,27 +1,27 @@
-# 🎙️ [Dataset Name] - [Language]
+# 🎙️ KazEmoTTS - Kazakh
 
-🔹 **Dataset Name:** [Full dataset name]  <br/> 
-🔹 **Language:** [Language Name]  <br/> 
-🔹 **Dataset Type:** 🎙️ Audio / 📄 Text / 🎭 Multimodal <br/>  
-🔹 **Emotion Categories:** [e.g., Happy, Sad, Angry, Neutral]  <br/> 
-🔹 **Size:** [Number of samples, speakers, duration]  <br/> 
-🔹 **Recording Environment:** 🎤 Studio / 🎭 Acted / 🎙️ Spontaneous  <br/> 
-🔹 **License:** [MIT, CC-BY, Dataset-Specific, Not Specified]  <br/> 
-🔹 **Access:** 🔒 Request | 🔗 Open <br/> 
+🔹 **Dataset Name:** Kazakh Emotional Text-to-Speech Synthesis  <br/> 
+🔹 **Language:** Kazakh  <br/> 
+🔹 **Dataset Type:** 🎙️ Audio + 📄 Text <br/>
+🔹 **Emotion Categories:** Happy, Sad, Angry, Neutral, Scared, and Surprised  <br/> 
+🔹 **Size:** Number of samples: 54,760, speakers: 3(2M,1F), duration: 74.85h  <br/> 
+🔹 **Recording Environment:** 🎤 Studio  <br/> 
+🔹 **License:** CC-BY 4.0  <br/> 
+🔹 **Access:** 🔒 Request <br/> 
 
 ---
 
 ## 📜 **Dataset Overview**
-[Short description of the dataset, its purpose, and how it was collected.]
+KazEmoTTS is a specialized dataset designed for Kazakh emotional text-to-speech (TTS) synthesis. It comprises 54,760 audio-text pairs totaling 74.85 hours of speech, recorded by three narrators (one female and two male) covering six emotions: "neutral," "angry," "happy," "sad," "scared," and "surprised" 148. The dataset is structured to include diverse vocal expressions, with the female narrator contributing 34.23 hours and the male narrators 40.62 hours combined
 
 ---
 
 ## 📥 **Access & Download**
-🔗 **Official Website:** [Dataset Homepage, Not Specified](...)  <br/> 
-📄 **Paper:** [Paper Link](...) <br/> 
-🗂️ **Download Link:** [Download | Request | Not Specified](..) <br/> 
-💾 **File Format:** `.wav`, `.mp3`  <br/> 
-📧 Contact: [mail](mailto:<mail>?subject=Dataset%20Access%20Request) </br>
+🔗 **Official Website:** Not Specified <br/> 
+📄 **Paper:** [Paper Link](https://arxiv.org/pdf/2404.01033) <br/> 
+🗂️ **Download Link:** [Request](https://docs.google.com/forms/d/e/1FAIpQLSeTg88cvRbZkR5Go1p0IkQxFnOJv2KL6j2WVcsa6ut4XzQp5g/viewform) <br/> 
+💾 **File Format:** `.wav`  <br/> 
+📧 Contact: Not Specified </br>
 > ⚠️ **Note:** Fill the request process if the dataset is restricted.
 
 ---
@@ -30,11 +30,11 @@
 If you're using this dataset, please cite both the original authors and our survey paper, as it contributed to making the dataset accessible.
 
 ```
-@article{dataset_author202X,
-  title={Dataset Title},
-  author={Author Name},
-  journal={Journal Name},
-  year={202X}
+@article{abilbekov2024kazemotts,
+  title={KazEmoTTS: A Dataset for Kazakh Emotional Text-to-Speech Synthesis},
+  author={Abilbekov, Adal and Mussakhojayeva, Saida and Yeshpanov, Rustem and Varol, Huseyin Atakan},
+  journal={arXiv preprint arXiv:2404.01033},
+  year={2024}
 }
 ```
 

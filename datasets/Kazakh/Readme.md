@@ -1,13 +1,13 @@
-# 🗂️ Speech Emotion Recognition (SER) Datasets for [Language]
+# 🗂️ Speech Emotion Recognition (SER) Datasets for Kazakh
 
-Welcome to the **[Language]** section of KuralNet!  <br/>
-This directory contains **Speech Emotion Recognition (SER) datasets** available for **[Language]**, along with metadata and access information.
+Welcome to the **Kazakh** section of KuralNet!  <br/>
+This directory contains **Speech Emotion Recognition (SER) datasets** available for **Kazakh**, along with metadata and access information.
 
 ## 🌍 **Language Information**  
-- **🗣 Language Name:** [Language]  <br/>
-- **🌐 Language Family:** [Language Family]  <br/>
-- **🔤 ISO Code:** [ISO Code]  <br/>
-- **📍 Major Spoken Countries:** [Country 1, Country 2, Country 3...]  <br/>
+- **🗣 Language Name:** Kazakh  <br/>
+- **🌐 Language Family:** Turkic (Kipchak branch)  <br/>
+- **🔤 ISO Code:** kk  <br/>
+- **📍 Major Spoken Countries:** Kazakhstan, Russia, China, Uzbekistan  <br/>
 
 ---
 
@@ -15,8 +15,8 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 
 | Dataset Name | Type       | # Speakers | # Samples | License    | Access  | Research Paper         | Dataset Access |
 |--------------|------------|------------|-----------|------------|---------|------------------------|---------------------|
-| [Dataset 1](dataset1.md) | 🎙️ Audio   | X          | Y         | MIT/CC-BY  | 🔗 Open | [Link to Paper](paper1.md) | [Access Link](access1.md) |
-| [Dataset 2](dataset2.md) | 🎭 Multimodal | A          | B         | Restricted | 🔒 Request | [Link to Paper](paper2.md) | [Access Link](access2.md) |
+| [KazEmoTTS](dataset1.md) | 🎙️ Audio + 📜 Text  | 3 | 54,760         | CC BY 4.0  | 🔒 Request | [Link to Paper](https://arxiv.org/pdf/2404.01033) | [Access Link](https://docs.google.com/forms/d/e/1FAIpQLSeTg88cvRbZkR5Go1p0IkQxFnOJv2KL6j2WVcsa6ut4XzQp5g/viewform) |
+| [Dataset 2](dataset2.md) | 🎭 Multimodal | A          | B         | Restricted | 🔗 Open | [Link to Paper](paper2.md) | [Access Link](access2.md) |
 
 ---
 
@@ -28,7 +28,7 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 ---
 
 ## 📌 **Contribute**
-If you know of **missing datasets** for [Language], feel free to submit an update!  <br/>
+If you know of **missing datasets** for Kazakh, feel free to submit an update!  <br/>
 📩 **[Contribution Guidelines](../../CONTRIBUTING.md)**
 
 ---
