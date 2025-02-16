@@ -1,9 +1,9 @@
 # 🎙️ Emolah - Malay
 
-🔹 **Dataset Name:** Emolah  
+🔹 **Dataset Name:** Emolah  <br/>
 🔹 **Language:** Malay  
 🔹 **Dataset Type:** 🎙️ Audio  
-🔹 **Emotion Categories:** Happy, Sad, Angry, Neutral
+🔹 **Emotion Categories:** Happy, Sad, Angry, Neutral <br/>
 🔹 **Size:** duration - 4 hours and 13 seconds  
 🔹 **Recording Environment:** 🎙️ Spontaneous  
 🔹 **License:** Creative Commons Attribution License  
