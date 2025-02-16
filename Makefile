@@ -29,10 +29,13 @@ sync:
 test:
 	. .venv/bin/activate && pytest src/
 
+test_all:
+	export ENVIRONMENT=local && . .venv/bin/activate && pytest src/
+
 lint:
 	. .venv/bin/activate && flake8 src/
 
-format-check:
+format_check:
 	. .venv/bin/activate && black --check --line-length 79 src/ && isort --check src/
 
 format:
