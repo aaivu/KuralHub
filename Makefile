@@ -38,6 +38,12 @@ format-check:
 format:
 	. .venv/bin/activate && black --line-length 79 src/ && isort src/
 
+download_dataset:
+	. .venv/bin/activate && python3 -m src.scripts.download_datasets
+
+meta_extract:
+	. .venv/bin/activate && python3 -m src.scripts.meta_extractor
+
 clear:
 	@echo "Cleaning up..."
 	rm -rf __pycache__ .pytest_cache dist build *.egg-info
