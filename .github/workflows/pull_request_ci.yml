@@ -1,0 +1,37 @@
+name: CI/CD
+
+on:
+  pull_request:
+    branches:
+      - main
+
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  pull_request_checks:
+    runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'package_development')
+
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.11'
+
+      - name: Set up environment
+        run: |
+          sudo apt-get update && sudo apt-get install -y make
+          make setup
+
+      - name: Run lint checks
+        run: make lint
+      
+      - name: Run tests
+        run: make test
