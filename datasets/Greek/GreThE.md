@@ -40,5 +40,5 @@ If you're using this dataset, please cite both the original authors and our surv
 
 ---
 
-🔍 **Back to [All [Language] Datasets](Readme.md)**  <br/> 
+🔍 **Back to [All Greek Datasets](Readme.md)**  <br/> 
 📩 **Found an issue? [Submit an update](../../CONTRIBUTING.md)!**
