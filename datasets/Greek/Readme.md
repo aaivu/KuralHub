@@ -16,7 +16,7 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 | Dataset Name | Type       | # Speakers | # Samples | License    | Access  | Research Paper         | Dataset Access |
 |--------------|------------|------------|-----------|------------|---------|------------------------|---------------------|
 | [AESSD](AESSD.md) | 🎙️ Audio   | 5          | 500         | Not Specified  | 🔗 Open | [Paper Link 1](https://ieeexplore.ieee.org/abstract/document/8501881), [Paper Link 2](https://aes2.org/publications/elibrary-page/?id=19585) | [Access Link](https://mega.nz/folder/0ShVXY7C#-73kVoK05OjTPEA95UUvMw) |
-<!-- | [Dataset 2](dataset2.md) | 🎭 Multimodal | A          | B         | Restricted | 🔒 Request | [Link to Paper](paper2.md) | [Access Link](access2.md) | -->
+| [SEWA](SEWA.md) | 🎭 Multimodal | 398         | 1990        | Dataset-Specific - [SEWA EULA](https://db.sewaproject.eu/media/doc/eula.pdf)|🔒Request | [Link to Paper](http://arxiv.org/pdf/1901.02839) | [Request Link](https://db.sewaproject.eu/) |
 
 ---
 
