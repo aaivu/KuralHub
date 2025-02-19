@@ -14,17 +14,6 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 ## 📜 **Available Datasets**
 > **⚠️ Oops! It looks like there are currently no available SER datasets for Sinhala.**  
 > Stay tuned for updates or consider contributing your own work! 🚀📚
-<!-- | Dataset Name | Type       | # Speakers | # Samples | License    | Access  | Research Paper         | Dataset Access |
-|--------------|------------|------------|-----------|------------|---------|------------------------|---------------------|
-| [Dataset 1](dataset1.md) | 🎙️ Audio   | X          | Y         | MIT/CC-BY  | 🔗 Open | [Link to Paper](paper1.md) | [Access Link](access1.md) |
-| [Dataset 2](dataset2.md) | 🎭 Multimodal | A          | B         | Restricted | 🔒 Request | [Link to Paper](paper2.md) | [Access Link](access2.md) |
-
----
-
-## 📥 **How to Use These Datasets**
-1. Browse individual dataset details in their respective `.md` files.
-2. Follow access instructions to download or request datasets.
-3. Check licensing before using for research or commercial purposes. -->
 
 ---
 
