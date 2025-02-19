@@ -21,7 +21,7 @@ The SEWA dataset is a multimodal dataset designed for emotion recognition and an
 📄 **Paper:** [Paper Link](http://arxiv.org/pdf/1901.02839) <br/> 
 🗂️ **Download Link:** [Request Access](https://db.sewaproject.eu/) <br/> 
 💾 **File Format:** `.wav` <br/> 
-📧 Contact: [mail](mailto:sewa@mahnob-db.eu) </br>
+📧 Contact: [mail](mailto:sewa@mahnob-db.eu?subject=Dataset%20Access%20Request) </br>
 > ⚠️ **Note:** Fill the request process if the dataset is restricted.
 
 ---
