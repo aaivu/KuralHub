@@ -1,148 +1,127 @@
-# import torch
-# import torch.optim as optim
-# from sklearn.metrics import accuracy_score
-# from torch.optim.lr_scheduler import ReduceLROnPlateau
-# from torch.utils.data import DataLoader
+import os
 
-# from src.model.model import SpeechModelConfig, Wav2VecModel
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from torch.optim.lr_scheduler import ReduceLROnPlateau
 
+from src.model.base_models import Wav2Vec2FeatureExtractor
+from src.model.model import SERBenchmarkModel
+from src.utils.constant import DATASET
+from src.utils.data_loader import get_dataloader
+from src.utils.dataset import SpeechEmotionDataset
 
-# def train(model, train_loader, optimizer, criterion, scheduler, device):
-#     model.train()
-#     running_loss = 0
-#     all_preds = []
-#     all_labels = []
-
-#     for batch_idx, (audio, labels) in enumerate(train_loader):
-#         audio, labels = audio.to(device), labels.to(device)
-
-#         optimizer.zero_grad()
-#         outputs = model(audio)
-
-#         loss = criterion(outputs, labels)
-#         loss.backward()
-#         optimizer.step()
-
-#         running_loss += loss.item()
-#         _, preds = torch.max(outputs, 1)
-#         all_preds.extend(preds.cpu().numpy())
-#         all_labels.extend(labels.cpu().numpy())
-
-#     accuracy = accuracy_score(all_labels, all_preds)
-#     avg_loss = running_loss / len(train_loader)
-
-#     scheduler.step(avg_loss)  # Update the learning rate scheduler
-#     return avg_loss, accuracy
+BATCH_SIZE = int(os.getenv("BATCH_SIZE", 32))
+LEARNING_RATE = float(os.getenv("LEARNING_RATE", 0.001))
+EPOCHS = int(os.getenv("EPOCHS", 50))
+EARLY_STOPPING_PATIENCE = int(os.getenv("EARLY_STOPPING_PATIENCE", 5))
+CHECKPOINT_PATH = os.getenv("CHECKPOINT_PATH", "./checkpoints/model.pth")
 
 
-# def evaluate(model, eval_loader, criterion, device):
-#     model.eval()
-#     running_loss = 0
-#     all_preds = []
-#     all_labels = []
+def train(
+    model,
+    dataloaders,
+    criterion,
+    optimizer,
+    scheduler,
+    device,
+    EPOCHS,
+    EARLY_STOPPING_PATIENCE,
+    CHECKPOINT_PATH,
+):
+    best_loss = float("inf")
+    patience_counter = 0
 
-#     with torch.no_grad():
-#         for batch_idx, (audio, labels) in enumerate(eval_loader):
-#             audio, labels = audio.to(device), labels.to(device)
+    for epoch in range(EPOCHS):
+        print(f"\nEpoch {epoch+1}/{EPOCHS}")
 
-#             outputs = model(audio)
-#             loss = criterion(outputs, labels)
+        for phase in ["train", "val"]:
+            if phase not in dataloaders:
+                continue
 
-#             running_loss += loss.item()
-#             _, preds = torch.max(outputs, 1)
-#             all_preds.extend(preds.cpu().numpy())
-#             all_labels.extend(labels.cpu().numpy())
+            model.train() if phase == "train" else model.eval()
+            running_loss = 0.0
 
-#     accuracy = accuracy_score(all_labels, all_preds)
-#     avg_loss = running_loss / len(eval_loader)
+            for batch in dataloaders[phase]:
+                labels, audio = batch["audio"], batch["labels"]
+                audio, labels = audio.to(device), labels.to(device)
+                print("Audio shape:", audio.shape)
+                optimizer.zero_grad()
 
-#     return avg_loss, accuracy
+                with torch.set_grad_enabled(phase == "train"):
+                    outputs = model(audio[0])
+                    outputs = torch.softmax(outputs, dim=1)
+                    labels = labels.long()
+                    print("Outputs shape:", outputs.shape)
+                    print("Labels shape:", labels.shape)
 
+                    loss = criterion(outputs[0].long(), labels)
 
-# def main():
-#     # Configuration setup
-#     config = SpeechModelConfig(
-#         model_name="wav2vec2-base", num_classes=4, hidden_dim=256, dropout=0.1
-#     )
+                    if phase == "train":
+                        loss.backward()
+                        optimizer.step()
 
-#     # Initialize model
-#     model = Wav2VecModel(config).to(device)
+                running_loss += loss.item() * audio.size(0)
 
-#     # Create dataset and dataloaders
-#     # train_dataset = CustomSpeechDataset(
-#     #     audio_files=train_audio_files, labels=train_labels
-#     # )
-#     # eval_dataset = CustomSpeechDataset(
-#     #     audio_files=eval_audio_files, labels=eval_labels
-#     # )
+            epoch_loss = running_loss / len(dataloaders[phase].dataset)
+            print(f"{phase} Loss: {epoch_loss:.4f}")
 
-#     train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-#     eval_loader = DataLoader(eval_dataset, batch_size=32)
+            if phase == "val":
+                scheduler.step(epoch_loss)
 
-#     # Optimizer and Loss function
-#     optimizer = optim.Adam(model.parameters(), lr=1e-4)
-#     criterion = torch.nn.CrossEntropyLoss()
-
-#     # Learning Rate Scheduler: Reduce LR when validation loss plateaus
-#     scheduler = ReduceLROnPlateau(
-#         optimizer, "min", patience=3, factor=0.5, verbose=True
-#     )
-
-#     # Early stopping setup
-#     patience = 5
-#     best_loss = float("inf")
-#     epochs_without_improvement = 0
-#     checkpoint_path = "best_model.pth"
-
-#     # Training loop
-#     num_epochs = 50
-#     for epoch in range(num_epochs):
-#         print(f"Epoch {epoch + 1}/{num_epochs}")
-
-#         # Training phase
-#         train_loss, train_accuracy = train(
-#             model, train_loader, optimizer, criterion, scheduler, device
-#         )
-#         print(
-#             f"Training Loss: {train_loss:.4f}, Training Accuracy: {train_accuracy:.4f}"
-#         )
-
-#         # Evaluation phase
-#         eval_loss, eval_accuracy = evaluate(
-#             model, eval_loader, criterion, device
-#         )
-#         print(
-#             f"Evaluation Loss: {eval_loss:.4f}, Evaluation Accuracy: {eval_accuracy:.4f}"
-#         )
-
-#         if eval_loss < best_loss:
-#             print(
-#                 f"Validation loss improved ({best_loss:.4f} --> {eval_loss:.4f}). Saving model."
-#             )
-#             save_checkpoint(
-#                 model, optimizer, epoch, eval_loss, checkpoint_path
-#             )
-#             best_loss = eval_loss
-#             epochs_without_improvement = 0
-#         else:
-#             epochs_without_improvement += 1
-#             print(
-#                 f"No improvement in validation loss for {epochs_without_improvement} epochs."
-#             )
-
-#             if epochs_without_improvement >= patience:
-#                 print("Early stopping triggered. Training will stop.")
-#                 break
+                if epoch_loss < best_loss:
+                    best_loss = epoch_loss
+                    patience_counter = 0
+                    print("Saving best model...")
+                    torch.save(model.state_dict(), CHECKPOINT_PATH)
+                else:
+                    patience_counter += 1
+                    if patience_counter >= EARLY_STOPPING_PATIENCE:
+                        print("Early stopping triggered!")
+                        return
 
 
-# if __name__ == "__main__":
-#     # Set device to GPU if available, otherwise use CPU
-#     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+if __name__ == "__main__":
+    device = (
+        "cpu"  # torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    )
 
-#     # Set your train and evaluation audio files and labels here
-#     train_audio_files = []  # List of training audio files
-#     train_labels = []  # Corresponding labels for training
-#     eval_audio_files = []  # List of evaluation audio files
-#     eval_labels = []  # Corresponding labels for evaluation
+    dataset = SpeechEmotionDataset(
+        dataset_name=DATASET.EMOTA.value.name,
+        dataset_path="meta_csvs/"
+        + DATASET.EMOTA.value.language
+        + "_"
+        + DATASET.EMOTA.value.name
+        + ".csv",
+        language=DATASET.EMOTA.value.language,
+    )
 
-#     main()
+    # for audio in dataset.audios:
+    #     print(len(audio))
+
+    dataloaders = get_dataloader(
+        dataset, BATCH_SIZE, shuffle=True, val_split=True
+    )
+
+    feature_extractor = Wav2Vec2FeatureExtractor(device=device)
+    model = SERBenchmarkModel(
+        feature_extractor=feature_extractor, num_classes=5
+    ).to(device)
+    model = model.to(device)
+    criterion = nn.CrossEntropyLoss()
+    optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
+    scheduler = ReduceLROnPlateau(
+        optimizer, mode="min", factor=0.5, patience=2
+    )
+
+    train(
+        model,
+        dataloaders,
+        criterion,
+        optimizer,
+        scheduler,
+        device,
+        EARLY_STOPPING_PATIENCE,
+        EPOCHS,
+        CHECKPOINT_PATH,
+    )

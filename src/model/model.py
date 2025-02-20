@@ -26,7 +26,7 @@ class SERBenchmarkModel(nn.Module):
             ),
             nn.ReLU(),
             nn.Dropout(self.dropout),
-            nn.Linear(self.hidden_dim, num_classes),
+            nn.Linear(self.hidden_dim, 32),
         )
 
     def forward(self, audio: np.ndarray, sr: int = 16000) -> torch.Tensor:
@@ -45,6 +45,7 @@ if __name__ == "__main__":
     audio, sr = librosa.load(audio_path, sr=16000)
 
     output = model(audio)
+    # Audio shape: torch.Size([32, 50000]) => Audio shape: (51542,)
 
     print(output)
     assert output is not None
