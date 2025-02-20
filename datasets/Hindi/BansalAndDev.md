@@ -48,5 +48,5 @@ TBD
 
 ---
 
-🔍 **Back to [All [Language] Datasets](Readme.md)**  
+🔍 **Back to [All Hindi Datasets](Readme.md)**  
 📩 **Found an issue? [Submit an update](../../CONTRIBUTING.md)!**

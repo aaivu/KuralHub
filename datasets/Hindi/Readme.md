@@ -35,4 +35,4 @@ If you know of **missing datasets** for Hindi, feel free to submit an update!
 
 ---
 
-🚀 **Back to [All Languages](../README.md)**  
+🚀 **Back to [All Languages](../../README.md)**  

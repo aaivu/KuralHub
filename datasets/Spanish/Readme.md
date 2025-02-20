@@ -33,4 +33,4 @@ If you know of **missing datasets** for Spanish, feel free to submit an update!
 
 ---
 
-🚀 **Back to [All Languages](../README.md)**
+🚀 **Back to [All Languages](../../README.md)**
