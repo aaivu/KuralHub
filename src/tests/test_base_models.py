@@ -1,10 +1,5 @@
 import pytest
 
-
-def test():
-    print("Hello!")
-
-
 @pytest.mark.local_only
 def test_Wav2Vec2FeatureExtractor():
     pass
