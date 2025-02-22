@@ -59,83 +59,83 @@ class DATASET(Enum):
         name="ASED",
         language=LANGUAGE.AMHARIC.value,
         url="thanikansivatheepan/amharic-speech-emotional-dataset-ased",
-        path="datasets/ASED",
+        path="ser_datasets/ASED",
     )
     BANSPEMO = Dataset(
         name="BANSpEmo",
         language=LANGUAGE.BENGALI.value,
         url="thanikansivatheepan/bangla-lang-ser-dataset",
-        path="datasets/BANSpEmo/BANSpEmo Dataset",
+        path="ser_datasets/BANSpEmo/BANSpEmo Dataset",
     )
     CAFE = Dataset(
         name="CaFE",
         language=LANGUAGE.FRENCH.value,
         url="jubeerathan/cafe-dataset",
-        path="datasets/CaFE",
+        path="ser_datasets/CaFE",
     )
     EMODB = Dataset(
         name="EmoDB",
         language=LANGUAGE.GERMAN.value,
         url="piyushagni5/berlin-database-of-emotional-speech-emodb",
-        path="datasets/EmoDB/wav",
+        path="ser_datasets/EmoDB/wav",
     )
     EMOTA = Dataset(
         name="EmoTa",
         language=LANGUAGE.TAMIL.value,
         url="luxluxshan/tamserdb",
-        path="datasets/EmoTa",
+        path="ser_datasets/EmoTa",
     )
     EMOVO = Dataset(
         name="EMOVO",
         language=LANGUAGE.ITALIAN.value,
         url="sourabhy/emovo-italian-ser-dataset",
-        path="datasets/EMOVO/EMOVO",
+        path="ser_datasets/EMOVO/EMOVO",
     )
     ESD_CHINESE = Dataset(
         name="ESD",
         language=LANGUAGE.CHINESE.value,
         url="thanikansivatheepan/esd-dataset-fyp",
-        path="datasets/ESD/Emotion Speech Dataset",
+        path="ser_datasets/ESD/Emotion Speech Dataset",
     )
     HINDI_DATASET = Dataset(
         name="Hindi-Dataset",
         language=LANGUAGE.HINDI.value,
         url="vishlb/speech-emotion-recognition-hindi",
-        path="datasets/Hindi-Dataset/my Dataset",
+        path="ser_datasets/Hindi-Dataset/my Dataset",
     )
     KANNADA_DATASET = Dataset(
         name="Kannada-Dataset",
         language=LANGUAGE.KANNADA.value,
         url="thanikansivatheepan/kannada-emo-speech-dataset",
-        path="datasets/Kannada-Dataset",
+        path="ser_datasets/Kannada-Dataset",
     )
     MESD = Dataset(
         name="MESD",
         language=LANGUAGE.SPANISH.value,
         url="ashfaqsyed/mexican-emotional-speech-databasemesd",
-        path="datasets/MESD/cy34mh68j9-5/Mexican Emotional Speech Database (MESD)",
+        path="ser_datasets/MESD/cy34mh68j9-5/Mexican Emotional Speech Database (MESD)",
     )
     RAVDESS = Dataset(
         name="RAVDESS",
         language=LANGUAGE.ENGLISH.value,
         url="uwrfkaggler/ravdess-emotional-speech-audio",
-        path="datasets/RAVDESS",
+        path="ser_datasets/RAVDESS",
     )
     SUBESCO = Dataset(
         name="SUBESCO",
         language=LANGUAGE.BENGALI.value,
         url="sushmit0109/subescobangla-speech-emotion-dataset",
-        path="datasets/SUBESCO/SUBESCO",
+        path="ser_datasets/SUBESCO/SUBESCO",
     )
     TELUGU_DATASET = Dataset(
         name="Telugu-Dataset",
         language=LANGUAGE.TELUGU.value,
         url="jettysowmith/telugu-emotion-speech",
-        path="datasets/Telugu-Dataset/telugu",
+        path="ser_datasets/Telugu-Dataset/telugu",
     )
     URDU_DATASET = Dataset(
         name="Urdu-Dataset",
         language=LANGUAGE.URDU.value,
         url="kingabzpro/urdu-emotion-dataset",
-        path="datasets/Urdu-Dataset",
+        path="ser_datasets/Urdu-Dataset",
     )

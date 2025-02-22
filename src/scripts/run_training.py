@@ -17,6 +17,8 @@ EPOCHS = int(os.getenv("EPOCHS", 50))
 EARLY_STOPPING_PATIENCE = int(os.getenv("EARLY_STOPPING_PATIENCE", 5))
 CHECKPOINT_PATH = os.getenv("CHECKPOINT_PATH", "./checkpoints/model.pth")
 
+checkpoint_dir = './checkpoints'
+os.makedirs(checkpoint_dir, exist_ok=True) 
 
 def train(
     model,
@@ -45,17 +47,15 @@ def train(
             for batch in dataloaders[phase]:
                 labels, audio = batch["audio"], batch["labels"]
                 audio, labels = audio.to(device), labels.to(device)
-                print("Audio shape:", audio.shape)
+               
+                
                 optimizer.zero_grad()
 
                 with torch.set_grad_enabled(phase == "train"):
-                    outputs = model(audio[0])
-                    outputs = torch.softmax(outputs, dim=1)
+                    outputs = model(audio)
                     labels = labels.long()
-                    print("Outputs shape:", outputs.shape)
-                    print("Labels shape:", labels.shape)
 
-                    loss = criterion(outputs[0].long(), labels)
+                    loss = criterion(outputs.float(), labels)
 
                     if phase == "train":
                         loss.backward()
@@ -83,7 +83,7 @@ def train(
 
 if __name__ == "__main__":
     device = (
-        "cpu"  # torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        torch.device("cuda" if torch.cuda.is_available() else "cpu")
     )
 
     dataset = SpeechEmotionDataset(
@@ -96,16 +96,14 @@ if __name__ == "__main__":
         language=DATASET.EMOTA.value.language,
     )
 
-    # for audio in dataset.audios:
-    #     print(len(audio))
-
     dataloaders = get_dataloader(
         dataset, BATCH_SIZE, shuffle=True, val_split=True
     )
 
     feature_extractor = Wav2Vec2FeatureExtractor(device=device)
+
     model = SERBenchmarkModel(
-        feature_extractor=feature_extractor, num_classes=5
+        feature_extractor=feature_extractor, num_classes=5, device=device
     ).to(device)
     model = model.to(device)
     criterion = nn.CrossEntropyLoss()
@@ -115,13 +113,13 @@ if __name__ == "__main__":
     )
 
     train(
-        model,
-        dataloaders,
-        criterion,
-        optimizer,
-        scheduler,
-        device,
-        EARLY_STOPPING_PATIENCE,
-        EPOCHS,
-        CHECKPOINT_PATH,
+        model=model,
+        dataloaders=dataloaders,
+        criterion=criterion,
+        optimizer=optimizer,
+        scheduler=scheduler,
+        device=device,
+        EARLY_STOPPING_PATIENCE=EARLY_STOPPING_PATIENCE,
+        EPOCHS=EPOCHS,
+        CHECKPOINT_PATH=CHECKPOINT_PATH,
     )
