@@ -7,7 +7,7 @@ import seaborn as sns
 import numpy as np
 import pandas as pd
 from torch.optim.lr_scheduler import ReduceLROnPlateau
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix, classification_report
 
 from src.model.base_models import Wav2Vec2FeatureExtractor
 from src.model.model import SERBenchmarkModel
@@ -18,7 +18,7 @@ from src.utils.dataset import SpeechEmotionDataset
 # Hyperparameters
 BATCH_SIZE = int(os.getenv("BATCH_SIZE", 32))
 LEARNING_RATE = float(os.getenv("LEARNING_RATE", 0.001))
-EPOCHS = int(os.getenv("EPOCHS", 50))
+EPOCHS = int(os.getenv("EPOCHS", 5))
 EARLY_STOPPING_PATIENCE = int(os.getenv("EARLY_STOPPING_PATIENCE", 5))
 CHECKPOINT_PATH = os.getenv("CHECKPOINT_PATH", "./checkpoints/model.pth")
 
@@ -37,26 +37,32 @@ def plot_loss(train_losses, val_losses):
     plt.savefig("./logs/loss_curve.png")
     plt.close()
 
-def plot_confusion_matrix(y_true, y_pred, classes):
+def plot_confusion_matrix(y_true, y_pred, classes, phase):
     cm = confusion_matrix(y_true, y_pred)
     plt.figure(figsize=(8, 6))
     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=classes, yticklabels=classes)
     plt.xlabel("Predicted Label")
     plt.ylabel("True Label")
-    plt.title("Confusion Matrix")
-    plt.savefig("./logs/confusion_matrix.png")
+    plt.title(f"{phase} Confusion Matrix")
+    plt.savefig(f"./logs/{phase}_confusion_matrix.png")
     plt.close()
+
+def print_classification_report(y_true, y_pred, phase):
+    report = classification_report(y_true, y_pred, target_names=[str(i) for i in range(5)])
+    with open(f"./logs/{phase}_classification_report.txt", "w") as f:
+        f.write(report)
 
 def train(model, dataloaders, criterion, optimizer, scheduler, device):
     best_loss = float("inf")
     patience_counter = 0
     train_losses, val_losses = [], []
-    y_true, y_pred = [], []
+    y_true_val, y_pred_val = [], []
+    y_true_test, y_pred_test = [], []
 
     for epoch in range(EPOCHS):
         print(f"\nEpoch {epoch+1}/{EPOCHS}")
         
-        for phase in ["train", "val"]:
+        for phase in ["train", "val", "test"]:
             if phase not in dataloaders:
                 continue
             
@@ -77,9 +83,13 @@ def train(model, dataloaders, criterion, optimizer, scheduler, device):
                         loss.backward()
                         optimizer.step()
                     
-                    if phase == "val":
-                        y_true.extend(labels.cpu().numpy())
-                        y_pred.extend(torch.argmax(outputs, dim=1).cpu().numpy())
+                    if phase in ["val", "test"]:
+                        if phase == "val":
+                            y_true_val.extend(labels.cpu().numpy())
+                            y_pred_val.extend(torch.argmax(outputs, dim=1).cpu().numpy())
+                        else:
+                            y_true_test.extend(labels.cpu().numpy())
+                            y_pred_test.extend(torch.argmax(outputs, dim=1).cpu().numpy())
                 
                 running_loss += loss.item() * audio.size(0)
             
@@ -89,24 +99,31 @@ def train(model, dataloaders, criterion, optimizer, scheduler, device):
             if phase == "train":
                 train_losses.append(epoch_loss)
             else:
-                val_losses.append(epoch_loss)
-                scheduler.step(epoch_loss)
-                
-                if epoch_loss < best_loss:
-                    best_loss = epoch_loss
-                    patience_counter = 0
-                    print("Saving best model...")
-                    torch.save(model.state_dict(), CHECKPOINT_PATH)
-                else:
-                    patience_counter += 1
-                    if patience_counter >= EARLY_STOPPING_PATIENCE:
-                        print("Early stopping triggered!")
-                        plot_loss(train_losses, val_losses)
-                        plot_confusion_matrix(y_true, y_pred, classes=[0, 1, 2, 3, 4])
-                        return
-    
+                if phase == "val":
+                    val_losses.append(epoch_loss)
+                    scheduler.step(epoch_loss)
+                    
+                    if epoch_loss < best_loss:
+                        best_loss = epoch_loss
+                        patience_counter = 0
+                        print("Saving best model...")
+                        torch.save(model.state_dict(), CHECKPOINT_PATH)
+                    else:
+                        patience_counter += 1
+                        if patience_counter >= EARLY_STOPPING_PATIENCE:
+                            print("Early stopping triggered!")
+                            plot_loss(train_losses, val_losses)
+                            plot_confusion_matrix(y_true_val, y_pred_val, classes=[0, 1, 2, 3, 4], phase="val")
+                            print_classification_report(y_true_val, y_pred_val, phase="val")
+                            plot_confusion_matrix(y_true_test, y_pred_test, classes=[0, 1, 2, 3, 4], phase="test")
+                            print_classification_report(y_true_test, y_pred_test, phase="test")
+                            return
+
     plot_loss(train_losses, val_losses)
-    plot_confusion_matrix(y_true, y_pred, classes=[0, 1, 2, 3, 4])
+    plot_confusion_matrix(y_true_val, y_pred_val, classes=[0, 1, 2, 3, 4], phase="val")
+    print_classification_report(y_true_val, y_pred_val, phase="val")
+    plot_confusion_matrix(y_true_test, y_pred_test, classes=[0, 1, 2, 3, 4], phase="test")
+    print_classification_report(y_true_test, y_pred_test, phase="test")
 
 if __name__ == "__main__":
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -117,7 +134,6 @@ if __name__ == "__main__":
     )
     
     dataloaders = get_dataloader(dataset, BATCH_SIZE, shuffle=True, val_split=True)
-
     feature_extractor = Wav2Vec2FeatureExtractor(device=device)
     
     model = SERBenchmarkModel(feature_extractor=feature_extractor, num_classes=5, device=device).to(device)
