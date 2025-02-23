@@ -4,10 +4,10 @@ from src.utils.constant import EMOTION
 def emotion_converter(value, mode="encode"):
     EMOTION_MAPPING = {
         EMOTION.ANGER.value: 0,
-        EMOTION.FEAR.value: 1,
-        EMOTION.HAPPINESS.value: 2,
-        EMOTION.SADNESS.value: 3,
-        EMOTION.NEUTRAL.value: 4,
+        EMOTION.HAPPINESS.value: 1,
+        EMOTION.SADNESS.value: 2,
+        EMOTION.NEUTRAL.value: 3,
+        EMOTION.FEAR.value: 4,
         EMOTION.DISGUST.value: 5,
         EMOTION.SURPRISE.value: 6,
         EMOTION.CALM.value: 7,
