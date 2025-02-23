@@ -201,7 +201,7 @@ def train(
 
 
 if __name__ == "__main__":
-    CUR_DATASET = DATASET.EMOTA
+    CUR_DATASET = DATASET.ASED
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     dataset = SpeechEmotionDataset(
