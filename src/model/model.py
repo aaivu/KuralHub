@@ -10,7 +10,7 @@ class SERBenchmarkModel(nn.Module):
     def __init__(
         self,
         feature_extractor: nn.Module,
-        device:str,
+        device: str,
         hidden_dim: int = 256,
         num_classes: int = 6,
         dropout: float = 0.3,
@@ -31,9 +31,11 @@ class SERBenchmarkModel(nn.Module):
             nn.Linear(self.hidden_dim, num_classes),
         )
 
-    def forward(self, audios: list[np.ndarray], sr: int = 16000) -> torch.Tensor:
+    def forward(
+        self, audios: list[np.ndarray], sr: int = 16000
+    ) -> torch.Tensor:
         all_outputs = []
-        
+
         for audio in audios:
             features = self.feature_extractor.extract_features(audio, sr)
             features = torch.tensor(features).unsqueeze(0)
