@@ -139,3 +139,17 @@ class DATASET(Enum):
         url="kingabzpro/urdu-emotion-dataset",
         path="ser_datasets/Urdu-Dataset",
     )
+
+
+class BASE_MODEL(Enum):
+    WAV2VEC2_BASE = "facebook/wav2vec2-base"
+    WAV2VEC2_LARGE_960H = "facebook/wav2vec2-large-960h"
+    WAV2VEC2_LARGE_LV60 = "facebook/wav2vec2-large-lv60"
+    HUBERT_LARGE_LS960 = "facebook/hubert-large-ls960"
+    HUBERT_BASE = "facebook/hubert-base"
+    WAVLM_BASE_PLUS = "microsoft/wavlm-base-plus"
+    WAVLM_LARGE = "microsoft/wavlm-large"
+    XLS_R_300M = "facebook/wav2vec2-xls-r-300m"
+    XLS_R_1B = "facebook/wav2vec2-xls-r-1b"
+    OPENAI_WHISPER_SMALL = "openai/whisper-small"
+    OPENAI_WHISPER_LARGE = "openai/whisper-large"
