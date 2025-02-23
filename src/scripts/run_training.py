@@ -210,7 +210,7 @@ def train(
 
 
 if __name__ == "__main__":
-    CUR_DATASET = DATASET.TELUGU_DATASET
+    CUR_DATASET = DATASET.EMOVO
     CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_BASE.value
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
