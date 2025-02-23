@@ -11,7 +11,7 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 
 from src.model.base_models import Wav2Vec2FeatureExtractor
 from src.model.model import SERBenchmarkModel
-from src.utils.constant import DATASET, BASE_MODEL
+from src.utils.constant import BASE_MODEL, DATASET
 from src.utils.data_loader import get_dataloader
 from src.utils.dataset import SpeechEmotionDataset
 from src.utils.encoder import emotion_converter
@@ -33,16 +33,18 @@ def plot_loss(train_losses, val_losses, path: str):
     plt.xlabel("Epoch")
     plt.ylabel("Loss")
     plt.legend()
-    parts = path.split("_",3)
+    parts = path.split("_", 3)
     if len(parts) >= 3:
-        plt.title(f"Training and Validation Loss of {parts[0]} - {parts[1]} ({parts[2]})")
+        plt.title(
+            f"Training and Validation Loss of {parts[0]} - {parts[1]} ({parts[2]})"
+        )
     else:
         plt.title("Training and Validation Loss")
     plt.savefig(f"./logs/{path}_loss_curve.png")
     plt.close()
 
 
-def plot_confusion_matrix(y_true, y_pred, classes, phase, path):
+def plot_confusion_matrix(y_true, y_pred, phase, path, classes):
 
     y_true = [emotion_converter(y, mode="decode") for y in y_true]
     y_pred = [emotion_converter(y, mode="decode") for y in y_pred]
@@ -59,9 +61,11 @@ def plot_confusion_matrix(y_true, y_pred, classes, phase, path):
     )
     plt.xlabel("Predicted Label")
     plt.ylabel("True Label")
-    parts = path.split("_",3)
+    parts = path.split("_", 3)
     if len(parts) >= 3:
-        plt.title(f"{phase} Confusion Matrix of {parts[0]} - {parts[1]} ({parts[2]})")
+        plt.title(
+            f"{phase} Confusion Matrix of {parts[0]} - {parts[1]} ({parts[2]})"
+        )
     else:
         plt.title(f"{phase} Confusion Matrix")
     plt.savefig(f"./logs/{path}_{phase}_confusion_matrix.png")
@@ -72,15 +76,20 @@ def print_classification_report(y_true, y_pred, phase, path):
     y_true = [emotion_converter(y, mode="decode") for y in y_true]
     y_pred = [emotion_converter(y, mode="decode") for y in y_pred]
 
-    report = classification_report(
-        y_true, y_pred, target_names=[str(i) for i in range(5)]
-    )
+    report = classification_report(y_true, y_pred)
     with open(f"./logs/{path}_{phase}_classification_report.txt", "w") as f:
         f.write(report)
 
 
 def train(
-    model, dataloaders, criterion, optimizer, scheduler, device, base_path
+    model,
+    dataloaders,
+    criterion,
+    optimizer,
+    scheduler,
+    device,
+    base_path,
+    ac_labels,
 ):
 
     model_path = os.path.join("./checkpoints", f"{base_path}.pth")
@@ -152,9 +161,9 @@ def train(
                             plot_confusion_matrix(
                                 y_true_val,
                                 y_pred_val,
-                                classes=[0, 1, 2, 3, 4],
                                 phase="val",
                                 path=base_path,
+                                classes=ac_labels,
                             )
                             print_classification_report(
                                 y_true_val,
@@ -165,9 +174,9 @@ def train(
                             plot_confusion_matrix(
                                 y_true_test,
                                 y_pred_test,
-                                classes=[0, 1, 2, 3, 4],
                                 phase="test",
                                 path=base_path,
+                                classes=ac_labels,
                             )
                             print_classification_report(
                                 y_true_test,
@@ -181,9 +190,9 @@ def train(
     plot_confusion_matrix(
         y_true_val,
         y_pred_val,
-        classes=[0, 1, 2, 3, 4],
         phase="val",
         path=base_path,
+        classes=ac_labels,
     )
     print_classification_report(
         y_true_val, y_pred_val, phase="val", path=base_path
@@ -191,9 +200,9 @@ def train(
     plot_confusion_matrix(
         y_true_test,
         y_pred_test,
-        classes=[0, 1, 2, 3, 4],
         phase="test",
         path=base_path,
+        classes=ac_labels,
     )
     print_classification_report(
         y_true_test, y_pred_test, phase="test", path=base_path
@@ -201,8 +210,8 @@ def train(
 
 
 if __name__ == "__main__":
-    CUR_DATASET = DATASET.ASED
-    CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_LARGE_LV60.value
+    CUR_DATASET = DATASET.TELUGU_DATASET
+    CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_BASE.value
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     dataset = SpeechEmotionDataset(
@@ -221,9 +230,14 @@ if __name__ == "__main__":
         label_counts.update(labels.tolist())
 
     num_of_classes = len(list(label_counts.keys()))
-    en_labels = list(label_counts.keys()).sort()
+    en_labels = list(label_counts.keys())
+    en_labels.sort()
+    ac_labels = [emotion_converter(y, mode="decode") for y in en_labels]
+    print(ac_labels)
 
-    feature_extractor = Wav2Vec2FeatureExtractor(model_name=CUR_BASE_MODEL,device=device)
+    feature_extractor = Wav2Vec2FeatureExtractor(
+        model_name=CUR_BASE_MODEL, device=device
+    )
     base_model_name = feature_extractor.model_name.split("/")[1]
 
     model = SERBenchmarkModel(
@@ -245,4 +259,5 @@ if __name__ == "__main__":
         scheduler=scheduler,
         device=device,
         base_path=f"{CUR_DATASET.value.language}_{CUR_DATASET.value.name}_{base_model_name}",
+        ac_labels=ac_labels,
     )
