@@ -35,7 +35,7 @@ def plot_loss(train_losses, val_losses, path: str):
     plt.legend()
     parts = path.split("_",3)
     if len(parts) >= 3:
-        plt.title(f"Training and Validation Loss of {parts[0]} - {parts[1]} ({parts[3]})")
+        plt.title(f"Training and Validation Loss of {parts[0]} - {parts[1]} ({parts[2]})")
     else:
         plt.title("Training and Validation Loss")
     plt.savefig(f"./logs/{path}_loss_curve.png")
@@ -61,7 +61,7 @@ def plot_confusion_matrix(y_true, y_pred, classes, phase, path):
     plt.ylabel("True Label")
     parts = path.split("_",3)
     if len(parts) >= 3:
-        plt.title(f"{phase} Confusion Matrix of {parts[0]} - {parts[1]} ({parts[3]})")
+        plt.title(f"{phase} Confusion Matrix of {parts[0]} - {parts[1]} ({parts[2]})")
     else:
         plt.title(f"{phase} Confusion Matrix")
     plt.savefig(f"./logs/{path}_{phase}_confusion_matrix.png")
@@ -201,7 +201,7 @@ def train(
 
 
 if __name__ == "__main__":
-    CUR_DATASET = DATASET.ASED
+    CUR_DATASET = DATASET.EMOTA
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     dataset = SpeechEmotionDataset(
@@ -223,7 +223,7 @@ if __name__ == "__main__":
     en_labels = list(label_counts.keys()).sort()
 
     feature_extractor = Wav2Vec2FeatureExtractor(device=device)
-    base_model_name = feature_extractor.model_name.replace("/","_")
+    base_model_name = feature_extractor.model_name.split("/")[1]
 
     model = SERBenchmarkModel(
         feature_extractor=feature_extractor,
