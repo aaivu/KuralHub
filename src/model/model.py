@@ -11,8 +11,8 @@ class SERBenchmarkModel(nn.Module):
         self,
         feature_extractor: nn.Module,
         device: str,
+        num_classes: int,
         hidden_dim: int = 256,
-        num_classes: int = 6,
         dropout: float = 0.3,
     ):
         super(SERBenchmarkModel, self).__init__()

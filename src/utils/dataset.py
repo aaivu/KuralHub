@@ -6,7 +6,7 @@ import pandas as pd
 import torch
 from torch.utils.data import Dataset
 
-from src.utils.encoder import emotion_encoder
+from src.utils.encoder import emotion_converter
 
 
 def pad_or_truncate(audio, desired_length=30000):
@@ -64,7 +64,7 @@ class SpeechEmotionDataset(Dataset):
 
         # Extract features and emotion labels
         self.emotions = torch.tensor(
-            self.dataset["emotion"].apply(emotion_encoder).values,
+            self.dataset["emotion"].apply(emotion_converter).values,
             dtype=torch.long,
         )
         paths = self.dataset["audio_path"].astype(str).tolist()

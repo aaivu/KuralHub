@@ -1,4 +1,5 @@
 import os
+from collections import Counter
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -13,6 +14,7 @@ from src.model.model import SERBenchmarkModel
 from src.utils.constant import DATASET
 from src.utils.data_loader import get_dataloader
 from src.utils.dataset import SpeechEmotionDataset
+from src.utils.encoder import emotion_converter
 
 # Hyperparameters
 BATCH_SIZE = int(os.getenv("BATCH_SIZE", 32))
@@ -20,24 +22,31 @@ LEARNING_RATE = float(os.getenv("LEARNING_RATE", 0.001))
 EPOCHS = int(os.getenv("EPOCHS", 5))
 EARLY_STOPPING_PATIENCE = int(os.getenv("EARLY_STOPPING_PATIENCE", 5))
 
-# Create necessary directories
 os.makedirs("./checkpoints", exist_ok=True)
 os.makedirs("./logs", exist_ok=True)
 
 
-def plot_loss(train_losses, val_losses, path):
+def plot_loss(train_losses, val_losses, path: str):
     plt.figure(figsize=(10, 5))
     plt.plot(train_losses, label="Train Loss")
     plt.plot(val_losses, label="Validation Loss")
     plt.xlabel("Epoch")
     plt.ylabel("Loss")
     plt.legend()
-    plt.title("Training and Validation Loss")
+    parts = path.split("_")
+    if len(parts) >= 2:
+        plt.title(f"Training and Validation Loss of {parts[0]} - {parts[1]}")
+    else:
+        plt.title("Training and Validation Loss")
     plt.savefig(f"./logs/{path}_loss_curve.png")
     plt.close()
 
 
 def plot_confusion_matrix(y_true, y_pred, classes, phase, path):
+
+    y_true = [emotion_converter(y, mode="decode") for y in y_true]
+    y_pred = [emotion_converter(y, mode="decode") for y in y_pred]
+
     cm = confusion_matrix(y_true, y_pred)
     plt.figure(figsize=(8, 6))
     sns.heatmap(
@@ -50,12 +59,19 @@ def plot_confusion_matrix(y_true, y_pred, classes, phase, path):
     )
     plt.xlabel("Predicted Label")
     plt.ylabel("True Label")
-    plt.title(f"{phase} Confusion Matrix")
+    parts = path.split("_")
+    if len(parts) >= 2:
+        plt.title(f"{phase} Confusion Matrix of {parts[0]} - {parts[1]}")
+    else:
+        plt.title(f"{phase} Confusion Matrix")
     plt.savefig(f"./logs/{path}_{phase}_confusion_matrix.png")
     plt.close()
 
 
 def print_classification_report(y_true, y_pred, phase, path):
+    y_true = [emotion_converter(y, mode="decode") for y in y_true]
+    y_pred = [emotion_converter(y, mode="decode") for y in y_pred]
+
     report = classification_report(
         y_true, y_pred, target_names=[str(i) for i in range(5)]
     )
@@ -185,20 +201,33 @@ def train(
 
 
 if __name__ == "__main__":
+    CUR_DATASET = DATASET.EMOTA
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     dataset = SpeechEmotionDataset(
-        dataset_name=DATASET.EMOTA.value.name,
-        dataset_path=f"meta_csvs/{DATASET.EMOTA.value.language}_{DATASET.EMOTA.value.name}.csv",
-        language=DATASET.EMOTA.value.language,
+        dataset_name=CUR_DATASET.value.name,
+        dataset_path=f"meta_csvs/{CUR_DATASET.value.language}_{CUR_DATASET.value.name}.csv",
+        language=CUR_DATASET.value.language,
     )
 
     dataloaders = get_dataloader(
         dataset, BATCH_SIZE, shuffle=True, val_split=True
     )
+
+    label_counts = Counter()
+    for batch in dataloaders["train"]:
+        labels, audio = batch["audio"], batch["labels"]
+        label_counts.update(labels.tolist())
+
+    num_of_classes = len(list(label_counts.keys()))
+    en_labels = list(label_counts.keys()).sort()
+
     feature_extractor = Wav2Vec2FeatureExtractor(device=device)
 
     model = SERBenchmarkModel(
-        feature_extractor=feature_extractor, num_classes=5, device=device
+        feature_extractor=feature_extractor,
+        num_classes=num_of_classes,
+        device=device,
     ).to(device)
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
@@ -213,5 +242,5 @@ if __name__ == "__main__":
         optimizer=optimizer,
         scheduler=scheduler,
         device=device,
-        base_path=f"{DATASET.EMOTA.value.language}_{DATASET.EMOTA.value.name}",
+        base_path=f"{CUR_DATASET.value.language}_{CUR_DATASET.value.name}",
     )
