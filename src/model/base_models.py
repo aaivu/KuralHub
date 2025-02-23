@@ -17,6 +17,7 @@ class BaseFeatureExtractor(nn.Module):
         self.processor = processor.from_pretrained(model_name)
         self.model = model.from_pretrained(model_name).to(self.device)
         self.model.eval()
+        self.model_name = model_name
 
     def extract_features(
         self, audio: np.ndarray, sr: int = 16000

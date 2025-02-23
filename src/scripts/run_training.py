@@ -33,9 +33,9 @@ def plot_loss(train_losses, val_losses, path: str):
     plt.xlabel("Epoch")
     plt.ylabel("Loss")
     plt.legend()
-    parts = path.split("_")
-    if len(parts) >= 2:
-        plt.title(f"Training and Validation Loss of {parts[0]} - {parts[1]}")
+    parts = path.split("_",3)
+    if len(parts) >= 3:
+        plt.title(f"Training and Validation Loss of {parts[0]} - {parts[1]} ({parts[3]})")
     else:
         plt.title("Training and Validation Loss")
     plt.savefig(f"./logs/{path}_loss_curve.png")
@@ -59,9 +59,9 @@ def plot_confusion_matrix(y_true, y_pred, classes, phase, path):
     )
     plt.xlabel("Predicted Label")
     plt.ylabel("True Label")
-    parts = path.split("_")
-    if len(parts) >= 2:
-        plt.title(f"{phase} Confusion Matrix of {parts[0]} - {parts[1]}")
+    parts = path.split("_",3)
+    if len(parts) >= 3:
+        plt.title(f"{phase} Confusion Matrix of {parts[0]} - {parts[1]} ({parts[3]})")
     else:
         plt.title(f"{phase} Confusion Matrix")
     plt.savefig(f"./logs/{path}_{phase}_confusion_matrix.png")
@@ -223,6 +223,7 @@ if __name__ == "__main__":
     en_labels = list(label_counts.keys()).sort()
 
     feature_extractor = Wav2Vec2FeatureExtractor(device=device)
+    base_model_name = feature_extractor.model_name.replace("/","_")
 
     model = SERBenchmarkModel(
         feature_extractor=feature_extractor,
@@ -242,5 +243,5 @@ if __name__ == "__main__":
         optimizer=optimizer,
         scheduler=scheduler,
         device=device,
-        base_path=f"{CUR_DATASET.value.language}_{CUR_DATASET.value.name}",
+        base_path=f"{CUR_DATASET.value.language}_{CUR_DATASET.value.name}_{base_model_name}",
     )
