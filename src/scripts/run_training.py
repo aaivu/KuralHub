@@ -19,7 +19,7 @@ from src.utils.encoder import emotion_converter
 # Hyperparameters
 BATCH_SIZE = int(os.getenv("BATCH_SIZE", 32))
 LEARNING_RATE = float(os.getenv("LEARNING_RATE", 0.001))
-EPOCHS = int(os.getenv("EPOCHS", 10))
+EPOCHS = int(os.getenv("EPOCHS", 30))
 EARLY_STOPPING_PATIENCE = int(os.getenv("EARLY_STOPPING_PATIENCE", 5))
 
 os.makedirs("./checkpoints", exist_ok=True)
@@ -210,7 +210,7 @@ def train(
 
 
 if __name__ == "__main__":
-    CUR_DATASET = DATASET.ESD_CHINESE
+    CUR_DATASET = DATASET.URDU_DATASET
     CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_BASE.value
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
