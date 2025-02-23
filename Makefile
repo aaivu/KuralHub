@@ -47,6 +47,9 @@ download_dataset:
 meta_extract:
 	. .venv/bin/activate && python3 -m src.scripts.meta_extractor
 
+train_model:
+	. .venv/bin/activate && python3 -m src.scripts.run_training
+
 clear:
 	@echo "Cleaning up..."
 	rm -rf __pycache__ .pytest_cache dist build *.egg-info
