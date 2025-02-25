@@ -3,7 +3,7 @@
 
 🔹 **Dataset Name:** Tank et al. (2020)  <br/> 
 🔹 **Language:** Gujarati  <br/> 
-🔹 **Dataset Type:** 🎙️ Audio <br/>  
+🔹 **Dataset Type:** 🎙️ Audio <br/>
 🔹 **Emotion Categories:** Sadness,  Surprise,  Anger,  Disgust,  Fear,  Happiness  <br/> 
 🔹 **Size:** samples: 1296, speakers: 9  <br/> 
 🔹 **Recording Environment:** 🎭 Acted <br/> 
