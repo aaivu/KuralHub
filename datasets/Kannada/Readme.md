@@ -17,8 +17,8 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 
 | Dataset Name             | Type          | # Speakers | # Samples | License    | Access     | Research Paper             | Dataset Access            |
 | ------------------------ | ------------- | ---------- | --------- | ---------- | ---------- | -------------------------- | ------------------------- |
-| [](dataset1.md) | 🎙️ Audio      | X          | Y         | MIT/CC-BY  | 🔗 Open    | [Link to Paper](paper1.md) | [Access Link](access1.md) |
-| [Dataset 2](dataset2.md) | 🎭 Multimodal | A          | B         | Restricted | 🔒 Request | [Link to Paper](paper2.md) | [Access Link](access2.md) |
+| [Agrawal et al. (2022)](Agrawal_et_al_2022.md) | 🎙️ Audio      | 13          | 468         | CC-BY 4.0  | 🔗 Open    | [Link to Paper](https://zenodo.org/records/6345107) | [Access Link](https://zenodo.org/records/6345107) |
+| [KES](KES.md) | 🎙️ Audio | -          | -         | Restricted | 🔒 Request | [Link to Paper](https://link.springer.com/chapter/10.1007/978-981-10-5146-3_14) | - |
 
 ---
 
