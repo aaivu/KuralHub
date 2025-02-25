@@ -2,7 +2,7 @@
 
 🔹 **Dataset Name:** Sharif Emotional Speech Database  <br/> 
 🔹 **Language:** Persian  <br/> 
-🔹 **Dataset Type:** 🎙️ Audio <br/>  
+🔹 **Dataset Type:** 🎙️ Audio <br/>
 🔹 **Emotion Categories:** Anger, Fear, Happiness, Sadness, Surprise, Neutral  <br/> 
 🔹 **Size:** samples: 3000, speakers: 87, duration: 3 h and 25 min   <br/> 
 🔹 **Recording Environment:** 🎭 Acted  <br/> 
