@@ -21,7 +21,7 @@ The Javanese Emotional Speech Database is the first publicly available dataset f
 📄 **Paper:** [Paper Link](https://www.researchgate.net/publication/364399980_Development_of_Javanese_Speech_Emotion_Database_Java-SED) <br/> 
 🗂️ **Download Link:** [Download](https://beais-uny.id/dataset/) <br/> 
 💾 **File Format:** `.wav` <br/> 
-📧 Contact: [mail](mailto:rg.beais.uny@gmail.com?subject=Dataset%20Access%20Request) [mail](mailto:fatchul@uny.ac.id?subject=Dataset%20Access%20Request)  </br>
+📧 Contact: [rg.beais.uny@gmail.com](mailto:rg.beais.uny@gmail.com?subject=Dataset%20Access%20Request) [fatchul@uny.ac.id](mailto:fatchul@uny.ac.id?subject=Dataset%20Access%20Request)  </br>
 > ⚠️ **Note:** Fill the request process if the dataset is restricted.
 
 ---
