@@ -20,7 +20,7 @@ TBD
 📄 **Paper:** - <br/> 
 🗂️ **Download Link:** Not Specified <br/> 
 💾 **File Format:** `.wav`  <br/> 
-📧 Contact: [mail](mailto:<mail>?subject=Dataset%20Access%20Request) </br>
+📧 Contact: [Gregory Mikuro](https://www.linkedin.com/in/gregorymikuro?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_sent_invitations%3BxXp39ZKQTDaFz3fh3vvuoA%3D%3D) </br>
 > ⚠️ **Note:** Fill the request process if the dataset is restricted.
 
 ---
