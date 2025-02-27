@@ -1,7 +1,7 @@
-# 🎙️ ESMBS - Burmese
+# 🎙️ ESMBS - Burmese, Mandarin
 
 🔹 **Dataset Name:** Emotional Speech of Mandarin and Burmese Speakers (ESMBS) <br/>
-🔹 **Language:** Burmese <br/>
+🔹 **Language:** Burmese, Mandarin <br/>
 🔹 **Dataset Type:** 🎙️ Audio <br/>
 🔹 **Emotion Categories:** Anger, happiness, sadness, disgust, fear, surprise <br/>
 🔹 **Size:** Not Specified <br/>
