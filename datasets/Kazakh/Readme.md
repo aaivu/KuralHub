@@ -15,8 +15,8 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 
 | Dataset Name | Type       | # Speakers | # Samples | License    | Access  | Research Paper         | Dataset Access |
 |--------------|------------|------------|-----------|------------|---------|------------------------|---------------------|
-| [KazEmoTTS](dataset1.md) | 🎙️ Audio + 📜 Text  | 3 | 54,760         | CC BY 4.0  | 🔒 Request | [Link to Paper](https://arxiv.org/pdf/2404.01033) | [Access Link](https://docs.google.com/forms/d/e/1FAIpQLSeTg88cvRbZkR5Go1p0IkQxFnOJv2KL6j2WVcsa6ut4XzQp5g/viewform) |
-| [Kazakh-Russian Emotion Corpus](dataset2.md) | 🎙️ Audio | 101          | 16160         | 🔒 Restricted | [Link to Paper](https://digitalcommons.aaru.edu.jo/cgi/viewcontent.cgi?article=2829&context=amis) | [Access Link](https://digitalcommons.aaru.edu.jo/amis/vol14/iss1/8/) |
+| [KazEmoTTS](KazEmoTTS.md) | 🎙️ Audio + 📜 Text  | 3 | 54,760         | CC BY 4.0  | 🔒 Request | [Link to Paper](https://arxiv.org/pdf/2404.01033) | [Access Link](https://docs.google.com/forms/d/e/1FAIpQLSeTg88cvRbZkR5Go1p0IkQxFnOJv2KL6j2WVcsa6ut4XzQp5g/viewform) |
+| [Kazakh-Russian Emotion Corpus](Kazakh-Russian-Emotion-Corpus.md) | 🎙️ Audio | 101          | 16160     |  Not Specified  | 🔒 Restricted | [Link to Paper](https://digitalcommons.aaru.edu.jo/cgi/viewcontent.cgi?article=2829&context=amis) | [Access Link](https://digitalcommons.aaru.edu.jo/amis/vol14/iss1/8/) |
 
 ---
 

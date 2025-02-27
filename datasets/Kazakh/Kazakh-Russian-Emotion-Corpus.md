@@ -2,7 +2,7 @@
 
 🔹 **Dataset Name:** Kazakh-Russian Emotion Corpus  <br/> 
 🔹 **Language:** Kazakh + Russian  <br/> 
-🔹 **Dataset Type:** 🎙️ Audio <br/>  
+🔹 **Dataset Type:** 🎙️ Audio <br/>
 🔹 **Emotion Categories:** Happiness, Sadness, Anger, Neutral, Boredom, Disgust, Fear<br/> 
 🔹 **Size:** Number of samples:  16160, speakers: 101, duration: 14+ hours  <br/> 
 🔹 **Recording Environment:** 🎭 Acted  <br/> 
@@ -12,7 +12,7 @@
 ---
 
 ## 📜 **Dataset Overview**
-The Kazakh-Russian Emotion Corpus is a multilingual dataset designed for speech emotion recognition (SER) in both Kazakh and Russian languages. It contains over 16,000 audio recordings labeled with 8 emotion categories, collected from 101 participants to ensure diversity in vocal expressions. The dataset is divided into training (80%), validation (10%), and testing (10%) sets, facilitating robust model evaluation and development for SER tasks.
+The Kazakh-Russian Emotion Corpus is a multilingual dataset designed fmor speech emotion recognition (SER) in both Kazakh and Russian languages. It contains over 16,000 audio recordings labeled with 8 emotion categories, collected from 101 participants to ensure diversity in vocal expressions. The dataset is divided into training (80%), validation (10%), and testing (10%) sets, facilitating robust model evaluation and development for SER tasks.
 
 ---
 
@@ -21,7 +21,7 @@ The Kazakh-Russian Emotion Corpus is a multilingual dataset designed for speech 
 📄 **Paper:** [Paper Link](https://digitalcommons.aaru.edu.jo/cgi/viewcontent.cgi?article=2829&context=amis) <br/> 
 🗂️ **Download Link:**   Not Specified <br/> 
 💾 **File Format:** `.wav`<br/> 
-📧 Contact: Not Specified </br>
+📧 Contact: [Kanat Kozhakhmet](https://kz.linkedin.com/in/kanat-kozhakhmet-b7235733) </br>
 > ⚠️ **Note:** Fill the request process if the dataset is restricted.
 
 ---
@@ -40,11 +40,7 @@ If you're using this dataset, please cite both the original authors and our surv
 }
 ```
 
-```
-TBD
-```
-
 ---
 
-🔍 **Back to [All [Language] Datasets](Readme.md)**  <br/> 
+🔍 **Back to [All Kazakh Datasets](Readme.md)**  <br/> 
 📩 **Found an issue? [Submit an update](../../CONTRIBUTING.md)!**

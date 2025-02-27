@@ -38,11 +38,7 @@ If you're using this dataset, please cite both the original authors and our surv
 }
 ```
 
-```
-TBD
-```
-
 ---
 
-🔍 **Back to [All [Language] Datasets](Readme.md)**  <br/> 
+🔍 **Back to [All Kazakh Datasets](Readme.md)**  <br/> 
 📩 **Found an issue? [Submit an update](../../CONTRIBUTING.md)!**
