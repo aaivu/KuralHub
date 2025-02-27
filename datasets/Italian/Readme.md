@@ -18,7 +18,7 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 | ------------------------ | ------------- | ---------- | --------- | ---------- | ---------- | -------------------------- | ------------------------- |
 | [Emozionalmente](Emozionalmente.md) | 🎙️ Audio      | 431          | 6902         | CC-BY 4.0  | 🔗 Open    | [Link to Paper](https://ieeexplore.ieee.org/document/10879457) | [Access Link](https://zenodo.org/records/6569824) |
 | [EMOVO](EMOVO.md) | 🎙️ Audio | 6          | 564         | - | 🔗 Open | [Link to Paper](https://aclanthology.org/L14-1478/) | [Access Link](https://dagshub.com/kingabzpro/EMOVO) |
-| [DEMoS](DEMoS.md) | 🎙️ Audio | 68          | 6697        | - | 🔗 Open | [Link to Paper](https://link.springer.com/article/10.1007/s10579-019-09450-y) | [Access Link](https://zenodo.org/records/2544829) |
+| [DEMoS](DEMoS.md) | 🎙️ Audio | 68          | 6697        | - | 🔒 Request | [Link to Paper](https://link.springer.com/article/10.1007/s10579-019-09450-y) | [Access Link](https://zenodo.org/records/2544829) |
 
 ---
 
