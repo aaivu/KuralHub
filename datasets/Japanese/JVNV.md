@@ -6,7 +6,7 @@
 🔹 **Emotion Categories:** Anger, Disgust, Fear, Happiness, Sadness, and Surprise  <br/> 
 🔹 **Size:** samples - 1615, speakers - 4, duration - 3.94h  <br/> 
 🔹 **Recording Environment:** 🎭 Acted  <br/> 
-🔹 **License:** Not Specified  <br/> 
+🔹 **License:** CC-BY-SA 4.0  <br/> 
 🔹 **Access:** 🔗 Open <br/> 
 
 ---
