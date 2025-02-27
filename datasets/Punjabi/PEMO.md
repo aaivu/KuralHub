@@ -20,7 +20,8 @@ The Punjabi Emotional Speech Database (PEMO) is a curated dataset designed for e
 🔗 **Official Website:** Not Specified  <br/> 
 📄 **Paper:** [Paper Link](https://www.researchgate.net/publication/366257963_PEMO_A_New_Validated_Dataset_for_Punjabi_Speech_Emotion_Detection) <br/> 
 🗂️ **Download Link:** Not Specified <br/> 
-💾 **File Format:** `.wav`  <br/> 
+💾 **File Format:** `.wav`  <br/>
+📧 Contact: [chaitanya.singla246@gmail.com](mailto:chaitanya.singla246@gmail.com?subject=Dataset%20Access%20Request) [tomrdev@gmail.com](mailto:tomrdev@gmail.com?subject=Dataset%20Access%20Request) </br>
 > ⚠️ **Note:** Fill the request process if the dataset is restricted.
 
 ---
