@@ -1,7 +1,7 @@
 # 🎙️ [Dataset Name] - [Language]
 
 🔹 **Dataset Name:** [Full dataset name]  <br/> 
-🔹 **Language:** [Language Name]  <br/> 
+🔹 **Language:** [Language]  <br/> 
 🔹 **Dataset Type:** 🎙️ Audio / 📄 Text / 🎭 Multimodal <br/>
 🔹 **Emotion Categories:** [e.g., Happy, Sad, Angry, Neutral]  <br/> 
 🔹 **Size:** [Number of samples, speakers, duration]  <br/> 
