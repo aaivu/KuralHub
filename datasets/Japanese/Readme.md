@@ -17,7 +17,7 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 | Dataset Name             | Type          | # Speakers | # Samples | License    | Access     | Research Paper             | Dataset Access            |
 | ------------------------ | ------------- | ---------- | --------- | ---------- | ---------- | -------------------------- | ------------------------- |
 | [JVNV](JVNV.md) | 🎙️ Audio      | 4          | 1615         | CC-BY-SA 4.0  | 🔗 Open    | [Link to Paper](https://arxiv.org/pdf/2310.06072) | [Access Link](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvnv_corpus) |
-| [Keio-ESD](Keio-ESD.md) | 🎙️ Audio | A          | B         | - | 🔗 Open | - | [Access Link](https://research.nii.ac.jp/src/en/Keio-ESD.html) |
+| [Keio-ESD](Keio-ESD.md) | 🎙️ Audio | -         | -         | - | 🔗 Open | - | [Access Link](https://research.nii.ac.jp/src/en/Keio-ESD.html) |
 
 ---
 
