@@ -20,7 +20,7 @@ M3ED is a comprehensive multimodal emotional dialogue dataset created by Renmin 
 ## 📥 **Access & Download**
 
 🔗 **Official Website:** [GitHub Repository](https://github.com/AIM3-RUC/RUCM3ED) <br/>
-📄 **Paper:** Not Specified <br/>
+📄 **Paper:** [M3ED: Multi-modal Multi-scene Multi-label Emotional Dialogue Database](https://arxiv.org/abs/2205.10237) <br/>
 🗂️ **Download Links:**
 
 - Features: [Baidu Pan](https://pan.baidu.com/s/1xip42FAEBeBteSMUNYtHtQ) (code: y95k) <br/>
