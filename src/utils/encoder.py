@@ -1,21 +1,37 @@
 from src.utils.constant import EMOTION
 
 
-def emotion_encoder(emotion: str):
+def emotion_converter(value, mode="encode"):
     EMOTION_MAPPING = {
         EMOTION.ANGER.value: 0,
-        EMOTION.FEAR.value: 1,
-        EMOTION.HAPPINESS.value: 2,
-        EMOTION.SADNESS.value: 3,
-        EMOTION.NEUTRAL.value: 4,
+        EMOTION.SADNESS.value: 1,
+        EMOTION.NEUTRAL.value: 2,
+        EMOTION.HAPPINESS.value: 3,
+        EMOTION.FEAR.value: 4,
+        EMOTION.DISGUST.value: 5,
+        EMOTION.SURPRISE.value: 6,
+        EMOTION.CALM.value: 7,
+        EMOTION.BOREDOM.value: 8,
+        EMOTION.SARCASTIC.value: 9,
+        EMOTION.JOY.value: 10,
     }
 
-    if emotion not in EMOTION_MAPPING:
-        raise ValueError(
-            f"Invalid emotion: {emotion}. Allowed values are {list(EMOTION_MAPPING.keys())}"
-        )
+    if mode == "encode":
+        if value not in EMOTION_MAPPING:
+            raise ValueError(
+                f"Invalid emotion: {value}. Allowed values are {list(EMOTION_MAPPING.keys())}"
+            )
+        return EMOTION_MAPPING[value]
 
-    return EMOTION_MAPPING[emotion]
+    elif mode == "decode":
+        if value not in EMOTION_MAPPING.values():
+            raise ValueError(
+                f"Invalid encoded value: {value}. Allowed values are {list(EMOTION_MAPPING.values())}"
+            )
+        return [k for k, v in EMOTION_MAPPING.items() if v == value][0]
+
+    else:
+        raise ValueError("Mode should be either 'encode' or 'decode'")
 
 
 def gender_encoder(gender: str):

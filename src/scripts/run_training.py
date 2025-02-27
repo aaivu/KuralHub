@@ -1,148 +1,263 @@
+import os
+from collections import Counter
+
+import matplotlib.pyplot as plt
+import seaborn as sns
 import torch
+import torch.nn as nn
 import torch.optim as optim
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import classification_report, confusion_matrix
 from torch.optim.lr_scheduler import ReduceLROnPlateau
-from torch.utils.data import DataLoader
 
-from src.model.model import SpeechModelConfig, Wav2VecModel
+from src.model.base_models import Wav2Vec2FeatureExtractor
+from src.model.model import SERBenchmarkModel
+from src.utils.constant import BASE_MODEL, DATASET
+from src.utils.data_loader import get_dataloader
+from src.utils.dataset import SpeechEmotionDataset
+from src.utils.encoder import emotion_converter
 
+# Hyperparameters
+BATCH_SIZE = int(os.getenv("BATCH_SIZE", 32))
+LEARNING_RATE = float(os.getenv("LEARNING_RATE", 0.001))
+EPOCHS = int(os.getenv("EPOCHS", 30))
+EARLY_STOPPING_PATIENCE = int(os.getenv("EARLY_STOPPING_PATIENCE", 5))
 
-def train(model, train_loader, optimizer, criterion, scheduler, device):
-    model.train()
-    running_loss = 0
-    all_preds = []
-    all_labels = []
-
-    for batch_idx, (audio, labels) in enumerate(train_loader):
-        audio, labels = audio.to(device), labels.to(device)
-
-        optimizer.zero_grad()
-        outputs = model(audio)
-
-        loss = criterion(outputs, labels)
-        loss.backward()
-        optimizer.step()
-
-        running_loss += loss.item()
-        _, preds = torch.max(outputs, 1)
-        all_preds.extend(preds.cpu().numpy())
-        all_labels.extend(labels.cpu().numpy())
-
-    accuracy = accuracy_score(all_labels, all_preds)
-    avg_loss = running_loss / len(train_loader)
-
-    scheduler.step(avg_loss)  # Update the learning rate scheduler
-    return avg_loss, accuracy
+os.makedirs("./checkpoints", exist_ok=True)
+os.makedirs("./logs", exist_ok=True)
 
 
-def evaluate(model, eval_loader, criterion, device):
-    model.eval()
-    running_loss = 0
-    all_preds = []
-    all_labels = []
-
-    with torch.no_grad():
-        for batch_idx, (audio, labels) in enumerate(eval_loader):
-            audio, labels = audio.to(device), labels.to(device)
-
-            outputs = model(audio)
-            loss = criterion(outputs, labels)
-
-            running_loss += loss.item()
-            _, preds = torch.max(outputs, 1)
-            all_preds.extend(preds.cpu().numpy())
-            all_labels.extend(labels.cpu().numpy())
-
-    accuracy = accuracy_score(all_labels, all_preds)
-    avg_loss = running_loss / len(eval_loader)
-
-    return avg_loss, accuracy
+def plot_loss(train_losses, val_losses, path: str):
+    plt.figure(figsize=(10, 5))
+    plt.plot(train_losses, label="Train Loss")
+    plt.plot(val_losses, label="Validation Loss")
+    plt.xlabel("Epoch")
+    plt.ylabel("Loss")
+    plt.legend()
+    parts = path.split("_", 3)
+    if len(parts) >= 3:
+        plt.title(
+            f"Training and Validation Loss of {parts[0]} - {parts[1]} ({parts[2]})"
+        )
+    else:
+        plt.title("Training and Validation Loss")
+    plt.savefig(f"./logs/{path}_loss_curve.png")
+    plt.close()
 
 
-def main():
-    # Configuration setup
-    config = SpeechModelConfig(
-        model_name="wav2vec2-base", num_classes=4, hidden_dim=256, dropout=0.1
+def plot_confusion_matrix(y_true, y_pred, phase, path, classes):
+
+    y_true = [emotion_converter(y, mode="decode") for y in y_true]
+    y_pred = [emotion_converter(y, mode="decode") for y in y_pred]
+
+    cm = confusion_matrix(y_true, y_pred)
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(
+        cm,
+        annot=True,
+        fmt="d",
+        cmap="Blues",
+        xticklabels=classes,
+        yticklabels=classes,
     )
+    plt.xlabel("Predicted Label")
+    plt.ylabel("True Label")
+    parts = path.split("_", 3)
+    if len(parts) >= 3:
+        plt.title(
+            f"{phase} Confusion Matrix of {parts[0]} - {parts[1]} ({parts[2]})"
+        )
+    else:
+        plt.title(f"{phase} Confusion Matrix")
+    plt.savefig(f"./logs/{path}_{phase}_confusion_matrix.png")
+    plt.close()
 
-    # Initialize model
-    model = Wav2VecModel(config).to(device)
 
-    # Create dataset and dataloaders
-    train_dataset = CustomSpeechDataset(
-        audio_files=train_audio_files, labels=train_labels
-    )
-    eval_dataset = CustomSpeechDataset(
-        audio_files=eval_audio_files, labels=eval_labels
-    )
+def print_classification_report(y_true, y_pred, phase, path):
+    y_true = [emotion_converter(y, mode="decode") for y in y_true]
+    y_pred = [emotion_converter(y, mode="decode") for y in y_pred]
 
-    train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-    eval_loader = DataLoader(eval_dataset, batch_size=32)
+    report = classification_report(y_true, y_pred)
+    with open(f"./logs/{path}_{phase}_classification_report.txt", "w") as f:
+        f.write(report)
 
-    # Optimizer and Loss function
-    optimizer = optim.Adam(model.parameters(), lr=1e-4)
-    criterion = torch.nn.CrossEntropyLoss()
 
-    # Learning Rate Scheduler: Reduce LR when validation loss plateaus
-    scheduler = ReduceLROnPlateau(
-        optimizer, "min", patience=3, factor=0.5, verbose=True
-    )
+def train(
+    model,
+    dataloaders,
+    criterion,
+    optimizer,
+    scheduler,
+    device,
+    base_path,
+    ac_labels,
+):
 
-    # Early stopping setup
-    patience = 5
+    model_path = os.path.join("./checkpoints", f"{base_path}.pth")
+
     best_loss = float("inf")
-    epochs_without_improvement = 0
-    checkpoint_path = "best_model.pth"
+    patience_counter = 0
+    train_losses, val_losses = [], []
+    y_true_val, y_pred_val = [], []
+    y_true_test, y_pred_test = [], []
 
-    # Training loop
-    num_epochs = 50
-    for epoch in range(num_epochs):
-        print(f"Epoch {epoch + 1}/{num_epochs}")
+    for epoch in range(EPOCHS):
+        print(f"\nEpoch {epoch+1}/{EPOCHS}")
 
-        # Training phase
-        train_loss, train_accuracy = train(
-            model, train_loader, optimizer, criterion, scheduler, device
-        )
-        print(
-            f"Training Loss: {train_loss:.4f}, Training Accuracy: {train_accuracy:.4f}"
-        )
+        for phase in ["train", "val", "test"]:
+            if phase not in dataloaders:
+                continue
 
-        # Evaluation phase
-        eval_loss, eval_accuracy = evaluate(
-            model, eval_loader, criterion, device
-        )
-        print(
-            f"Evaluation Loss: {eval_loss:.4f}, Evaluation Accuracy: {eval_accuracy:.4f}"
-        )
+            model.train() if phase == "train" else model.eval()
+            running_loss = 0.0
 
-        if eval_loss < best_loss:
-            print(
-                f"Validation loss improved ({best_loss:.4f} --> {eval_loss:.4f}). Saving model."
-            )
-            save_checkpoint(
-                model, optimizer, epoch, eval_loss, checkpoint_path
-            )
-            best_loss = eval_loss
-            epochs_without_improvement = 0
-        else:
-            epochs_without_improvement += 1
-            print(
-                f"No improvement in validation loss for {epochs_without_improvement} epochs."
-            )
+            for batch in dataloaders[phase]:
+                labels, audio = batch["audio"], batch["labels"]
+                audio, labels = audio.to(device), labels.to(device)
+                optimizer.zero_grad()
 
-            if epochs_without_improvement >= patience:
-                print("Early stopping triggered. Training will stop.")
-                break
+                with torch.set_grad_enabled(phase == "train"):
+                    outputs = model(audio)
+                    labels = labels.long()
+                    loss = criterion(outputs.float(), labels)
+
+                    if phase == "train":
+                        loss.backward()
+                        optimizer.step()
+
+                    if phase in ["val", "test"]:
+                        if phase == "val":
+                            y_true_val.extend(labels.cpu().numpy())
+                            y_pred_val.extend(
+                                torch.argmax(outputs, dim=1).cpu().numpy()
+                            )
+                        else:
+                            y_true_test.extend(labels.cpu().numpy())
+                            y_pred_test.extend(
+                                torch.argmax(outputs, dim=1).cpu().numpy()
+                            )
+
+                running_loss += loss.item() * audio.size(0)
+
+            epoch_loss = running_loss / len(dataloaders[phase].dataset)
+            print(f"{phase} Loss: {epoch_loss:.4f}")
+
+            if phase == "train":
+                train_losses.append(epoch_loss)
+            else:
+                if phase == "val":
+                    val_losses.append(epoch_loss)
+                    scheduler.step(epoch_loss)
+
+                    if epoch_loss < best_loss:
+                        best_loss = epoch_loss
+                        patience_counter = 0
+                        print("Saving best model...")
+                        torch.save(model.state_dict(), model_path)
+                    else:
+                        patience_counter += 1
+                        if patience_counter >= EARLY_STOPPING_PATIENCE:
+                            print("Early stopping triggered!")
+                            plot_loss(train_losses, val_losses, base_path)
+                            plot_confusion_matrix(
+                                y_true_val,
+                                y_pred_val,
+                                phase="val",
+                                path=base_path,
+                                classes=ac_labels,
+                            )
+                            print_classification_report(
+                                y_true_val,
+                                y_pred_val,
+                                phase="val",
+                                path=base_path,
+                            )
+                            plot_confusion_matrix(
+                                y_true_test,
+                                y_pred_test,
+                                phase="test",
+                                path=base_path,
+                                classes=ac_labels,
+                            )
+                            print_classification_report(
+                                y_true_test,
+                                y_pred_test,
+                                phase="test",
+                                path=base_path,
+                            )
+                            return
+
+    plot_loss(train_losses, val_losses, path=base_path)
+    plot_confusion_matrix(
+        y_true_val,
+        y_pred_val,
+        phase="val",
+        path=base_path,
+        classes=ac_labels,
+    )
+    print_classification_report(
+        y_true_val, y_pred_val, phase="val", path=base_path
+    )
+    plot_confusion_matrix(
+        y_true_test,
+        y_pred_test,
+        phase="test",
+        path=base_path,
+        classes=ac_labels,
+    )
+    print_classification_report(
+        y_true_test, y_pred_test, phase="test", path=base_path
+    )
 
 
 if __name__ == "__main__":
-    # Set device to GPU if available, otherwise use CPU
+    CUR_DATASET = DATASET.URDU_DATASET
+    CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_BASE.value
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    dataset = SpeechEmotionDataset(
+        dataset_name=CUR_DATASET.value.name,
+        dataset_path=f"meta_csvs/{CUR_DATASET.value.language}_{CUR_DATASET.value.name}.csv",
+        language=CUR_DATASET.value.language,
+    )
 
-    # Set your train and evaluation audio files and labels here
-    train_audio_files = []  # List of training audio files
-    train_labels = []  # Corresponding labels for training
-    eval_audio_files = []  # List of evaluation audio files
-    eval_labels = []  # Corresponding labels for evaluation
+    dataloaders = get_dataloader(
+        dataset, BATCH_SIZE, shuffle=True, val_split=True
+    )
 
-    main()
+    label_counts = Counter()
+    for batch in dataloaders["train"]:
+        labels, audio = batch["audio"], batch["labels"]
+        label_counts.update(labels.tolist())
+
+    num_of_classes = len(list(label_counts.keys()))
+    en_labels = list(label_counts.keys())
+    en_labels.sort()
+    ac_labels = [emotion_converter(y, mode="decode") for y in en_labels]
+    print(ac_labels)
+
+    feature_extractor = Wav2Vec2FeatureExtractor(
+        model_name=CUR_BASE_MODEL, device=device
+    )
+    base_model_name = feature_extractor.model_name.split("/")[1]
+
+    model = SERBenchmarkModel(
+        feature_extractor=feature_extractor,
+        num_classes=num_of_classes,
+        device=device,
+    ).to(device)
+    criterion = nn.CrossEntropyLoss()
+    optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
+    scheduler = ReduceLROnPlateau(
+        optimizer, mode="min", factor=0.5, patience=2
+    )
+
+    train(
+        model=model,
+        dataloaders=dataloaders,
+        criterion=criterion,
+        optimizer=optimizer,
+        scheduler=scheduler,
+        device=device,
+        base_path=f"{CUR_DATASET.value.language}_{CUR_DATASET.value.name}_{base_model_name}",
+        ac_labels=ac_labels,
+    )

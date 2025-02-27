@@ -163,4 +163,6 @@ cython_debug/
 
 
 # datasets and project related folders
+ser_datasets
 meta_csvs
+checkpoints

@@ -32,4 +32,4 @@ If you know of **missing datasets** for Vietnamese, feel free to submit an updat
 
 ---
 
-🚀 **Back to [All Languages](../README.md)**  
+🚀 **Back to [All Languages](../../README.md)**  

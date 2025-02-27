@@ -2,7 +2,7 @@
 
 🔹 **Dataset Name:** [Full dataset name]  <br/> 
 🔹 **Language:** [Language Name]  <br/> 
-🔹 **Dataset Type:** 🎙️ Audio / 📄 Text / 🎭 Multimodal <br/>  
+🔹 **Dataset Type:** 🎙️ Audio / 📄 Text / 🎭 Multimodal <br/>
 🔹 **Emotion Categories:** [e.g., Happy, Sad, Angry, Neutral]  <br/> 
 🔹 **Size:** [Number of samples, speakers, duration]  <br/> 
 🔹 **Recording Environment:** 🎤 Studio / 🎭 Acted / 🎙️ Spontaneous  <br/> 

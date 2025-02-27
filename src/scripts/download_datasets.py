@@ -18,13 +18,15 @@ def download_and_extract(name: str, dataset: str):
     """Downloads and extracts a single dataset."""
     logger.info(f"Downloading {name} dataset...")
 
-    kaggle.api.dataset_download_files(dataset, path="datasets", unzip=False)
+    kaggle.api.dataset_download_files(
+        dataset, path="ser_datasets", unzip=False
+    )
 
     dataset_name = dataset.split("/")[-1]
-    dataset_zip = f"datasets/{dataset_name}.zip"
+    dataset_zip = f"ser_datasets/{dataset_name}.zip"
 
     with zipfile.ZipFile(dataset_zip, "r") as zip_ref:
-        zip_ref.extractall(f"datasets/{name}")
+        zip_ref.extractall(f"ser_datasets/{name}")
     os.remove(dataset_zip)
 
     logger.info(f"Finished downloading {name}")
