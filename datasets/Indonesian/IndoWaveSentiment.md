@@ -3,7 +3,7 @@
 🔹 **Dataset Name:** IndoWaveSentiment  <br/> 
 🔹 **Language:** Indonesian  <br/> 
 🔹 **Dataset Type:** 🎙️ Audio <br/>
-🔹 **Emotion Categories:** Happy, Sad, Angry, Neutral  <br/> 
+🔹 **Emotion Categories:** Neutral, Happy, Surprised, Disgusted, and Disappointed  <br/> 
 🔹 **Size:** samples - 300, speakers - 10  <br/> 
 🔹 **Recording Environment:** 🎭 Acted  <br/> 
 🔹 **License:** CC-BY 4.0 <br/> 
