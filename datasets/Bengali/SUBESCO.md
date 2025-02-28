@@ -12,7 +12,7 @@
 ---
 
 ## 📜 **Dataset Overview**
-[Short description of the dataset, its purpose, and how it was collected.]
+SUBESCO is a Bangla emotional speech corpus containing 7,000 sentence-level utterances recorded by 20 professional actors (10 male, 10 female) across seven emotions: Anger, Disgust, Fear, Happiness, Neutral, Sadness, and Surprise. The dataset spans 7 hours and 40 minutes, totaling 2.03 GB. Evaluated by 50 raters, it achieved a human perception accuracy of 71%. Details on its creation and analysis are available in its PLOS ONE journal publication.
 
 ---
 
