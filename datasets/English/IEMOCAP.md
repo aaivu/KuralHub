@@ -4,7 +4,7 @@
 🔹 **Language:** English  <br/> 
 🔹 **Dataset Type:** 🎙️ Audio <br/>
 🔹 **Emotion Categories:** Happy, Anger, Sadness, Frustration, and Neutral  <br/> 
-🔹 **Size:** samples - ?, speakers - ?, duration - 12h  <br/> 
+🔹 **Size:** samples - 12000+, speakers - 10, duration - 12h  <br/> 
 🔹 **Recording Environment:** 🎭 Acted  <br/> 
 🔹 **License:** Dataset-Specific  <br/> 
 🔹 **Access:** 🔒 Request <br/> 
