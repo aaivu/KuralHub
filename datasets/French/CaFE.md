@@ -1,4 +1,4 @@
-# 🎙️ CaFE - French
+# 🎙️ CaFE - French (Canadian)
 
 🔹 **Dataset Name:** A Canadian French Emotional Speech Dataset  <br/> 
 🔹 **Language:** French  <br/> 
