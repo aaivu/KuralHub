@@ -1,4 +1,4 @@
-# 🎙️ [Dataset Name] - English (Indian)
+# 🎙️ IESC - English (Indian)
 
 🔹 **Dataset Name:** Indian Emotional Speech Corpora  <br/> 
 🔹 **Language:** English  <br/> 
