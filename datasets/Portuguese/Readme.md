@@ -7,7 +7,7 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 - **🗣 Language Name:** Portuguese <br/>
 - **🌐 Language Family:** Romance <br/>
 - **🔤 ISO Code:** pt <br/>
-- **📍 Major Spoken Countries:** Brazil <br/>
+- **📍 Major Spoken Countries:** Brazil, Angola, Mozambique, and Portugal <br/>
 
 ---
 
