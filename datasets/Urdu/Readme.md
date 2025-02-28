@@ -1,4 +1,4 @@
-    # 🗂️ Speech Emotion Recognition (SER) Datasets for Urdu
+# 🗂️ Speech Emotion Recognition (SER) Datasets for Urdu
 
 Welcome to the **Urdu** section of KuralHub! <br/>
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Urdu**, along with metadata and access information.
