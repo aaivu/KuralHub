@@ -5,14 +5,14 @@
 🔹 **Dataset Type:** 🎙️ Audio <br/>
 🔹 **Emotion Categories:** Anticipation, Joy, Trust, Fear, Surprise, Sadness, Disgust and Anger <br/> 
 🔹 **Size:** Number of samples: 800  <br/> 
-🔹 **Recording Environment:** Local Youtube Channel <br/> 
+🔹 **Recording Environment:** 🎤 Studio (Local Youtube Channel) <br/> 
 🔹 **License:** Creative Commons Attribution license  <br/> 
 🔹 **Access:** 🔒 Request <br/> 
 
 ---
 
 ## 📜 **Dataset Overview**
-[Short description of the dataset, its purpose, and how it was collected.]
+This dataset was created to support research in automatic speech emotion recognition (SER) for the Afrikaans language. It comprises high-quality audio recordings captured in a controlled studio environment. The recordings include both acted and spontaneous speech, covering eight emotional categories: Anticipation, Joy, Trust, Fear, Surprise, Sadness, Disgust, and Anger. The corpus is designed to facilitate the development and evaluation of SER systems tailored to Afrikaans, providing researchers with a valuable resource that reflects natural as well as expressive emotional speech patterns.
 
 ---
 
