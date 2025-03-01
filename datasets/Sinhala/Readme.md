@@ -5,7 +5,7 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 
 ## 🌍 **Language Information**  
 - **🗣 Language Name:** Sinhala  <br/>
-- **🌐 Language Family:** Indo-Aryan  <br/>
+- **🌐 Language Family:** Indo-European  <br/>
 - **🔤 ISO Code:** si  <br/>
 - **📍 Major Spoken Countries:** Sri Lanka <br/>
 
