@@ -1,14 +1,14 @@
-# 🗂️ Speech Emotion Recognition (SER) Datasets for [Language]
+# 🗂️ Speech Emotion Recognition (SER) Datasets for Afrikaans
 
-Welcome to the **[Language]** section of KuralHub! <br/>
-This directory contains **Speech Emotion Recognition (SER) datasets** available for **[Language]**, along with metadata and access information.
+Welcome to the **Afrikaans** section of KuralHub! <br/>
+This directory contains **Speech Emotion Recognition (SER) datasets** available for **Afrikaans**, along with metadata and access information.
 
 ## 🌍 **Language Information**
 
-- **🗣 Language Name:** [Language] <br/>
-- **🌐 Language Family:** [Language Family] <br/>
-- **🔤 ISO Code:** [ISO Code] <br/>
-- **📍 Major Spoken Countries:** [Country 1, Country 2, Country 3...] <br/>
+- **🗣 Language Name:** Afrikaans <br/>
+- **🌐 Language Family:** Indo-European <br/>
+- **🔤 ISO Code:** af <br/>
+- **📍 Major Spoken Countries:** South Africa, Namibia <br/>
 
 ---
 
@@ -16,8 +16,7 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 
 | Dataset Name             | Type          | # Speakers | # Samples | License    | Access     | Research Paper             | Dataset Access            |
 | ------------------------ | ------------- | ---------- | --------- | ---------- | ---------- | -------------------------- | ------------------------- |
-| [Dataset 1](dataset1.md) | 🎙️ Audio      | X          | Y         | MIT/CC-BY  | 🔗 Open    | [Link to Paper](paper1.md) | [Access Link](access1.md) |
-| [Dataset 2](dataset2.md) | 🎭 Multimodal | A          | B         | Restricted | 🔒 Request | [Link to Paper](paper2.md) | [Access Link](access2.md) |
+| [AfrikaansSE](AfrikaansSE.md) | 🎙️ Audio      |     Not Specified      | 800        | Creative Commons Attribution license  | 🔒 Request    | [Link to Paper](https://drive.google.com/file/d/178ObKjeWx1m7Faek45IsJ53B2fZiViPS/view) | Not Specified |
 
 ---
 
@@ -31,7 +30,7 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 
 ## 📌 **Contribute**
 
-If you know of **missing datasets** for [Language], feel free to submit an update! <br/>
+If you know of **missing datasets** for Afrikaans, feel free to submit an update! <br/>
 📩 **[Contribution Guidelines](../../CONTRIBUTING.md)**
 
 ---
