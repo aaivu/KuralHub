@@ -39,7 +39,7 @@ class LANGUAGE(Enum):
     HINDI = "hi"
     FRENCH = "fr"
     AMHARIC = "am"
-    PERSIAN= "fa" # Farsi 
+    PERSIAN = "fa"  # Farsi
 
 
 class Dataset:

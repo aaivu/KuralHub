@@ -21,7 +21,10 @@ def process_ased_files(dataset_path, emotion_map, selected_emotions):
         wav_files = get_wav_files(dataset_path)
 
         for file in wav_files:
-            data.append([EMOTION_MAP[file.split("/")[-2]], file])
+            emo = EMOTION_MAP[file.split("/")[-2]]
+            if emo not in selected_emotions:
+                continue
+            data.append([emo, file])
 
     except Exception as e:
         logging.error(f"Error processing ASED files: {str(e)}")

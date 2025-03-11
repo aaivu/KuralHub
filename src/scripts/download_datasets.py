@@ -11,8 +11,8 @@ from src.utils.utils import get_logger
 
 logger = get_logger(name=__name__)
 
-# datasets = {dataset.value.name: dataset.value.url for dataset in DATASET}
-datasets = {DATASET.SHEMO.value.name:DATASET.SHEMO.value.url}
+datasets = {dataset.value.name: dataset.value.url for dataset in DATASET}
+
 
 def download_and_extract(name: str, dataset: str):
     """Downloads and extracts a single dataset."""

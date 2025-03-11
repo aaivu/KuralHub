@@ -3,6 +3,7 @@ import os
 
 from src.scripts.meta_extractors.dataset_processor import process_dataset
 from src.utils.constant import DATASET, EMOTION, SELECTED_EMOTIONS
+from src.utils.utils import get_wav_files
 
 SHEMO = DATASET.SHEMO.value
 EMOTION_MAP = {
@@ -18,22 +19,12 @@ EMOTION_MAP = {
 def process_ased_files(dataset_path, emotion_map, selected_emotions):
     data = []
     try:
-        dir_list = os.listdir(dataset_path)
-        dir_list.remove(".gitattributes")
-        dir_list.remove("README.md")
-
-        for directory in dir_list:
-            dir_path = os.path.join(dataset_path, directory)
-            sub_dir = os.listdir(dir_path)
-            emotion = directory[2:]  # Remove 'E_' prefix
-            emotion = emotion_map.get(emotion)
-
-            if emotion not in selected_emotions:
+        wav_files = get_wav_files(dataset_path)
+        for file in wav_files:
+            emo = emotion_map[file.split("/")[-1][3]]
+            if emo not in selected_emotions:
                 continue
-
-            for file_name in sub_dir:
-                file_path = os.path.join(dir_path, file_name)
-                data.append([emotion, file_path])
+            data.append([emo, file])
 
     except Exception as e:
         logging.error(f"Error processing ASED files: {str(e)}")
