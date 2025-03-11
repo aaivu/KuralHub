@@ -81,3 +81,12 @@ def model_namer(name, version):
         return cls
 
     return decorator
+
+
+def get_wav_files(root_dir, extention=".wav"):
+    wav_files = []
+    for dirpath, _, filenames in os.walk(root_dir):
+        for file in filenames:
+            if file.endswith(extention):
+                wav_files.append(os.path.join(dirpath, file))
+    return wav_files
