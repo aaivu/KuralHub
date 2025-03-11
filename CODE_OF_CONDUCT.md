@@ -1,8 +1,8 @@
-# 🧑‍🤝‍🧑 Code of Conduct for KuralHub by AAAIVU
+# 🧑‍🤝‍🧑 Code of Conduct for KuralHub by AAIVU
 
 ## Our Pledge
 
-We, the members of the **AAAIVU Organization** and the **KuralHub** community, pledge to make participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+We, the members of the **AAIVU Organization** and the **KuralHub** community, pledge to make participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
 We are committed to providing a welcoming and inclusive environment for all.
 
@@ -32,7 +32,7 @@ Project maintainers have the right and responsibility to remove, edit, or reject
 
 ## Scope
 
-This Code of Conduct applies to all spaces managed by **AAAIVU** and **KuralHub**, including but not limited to:
+This Code of Conduct applies to all spaces managed by **AAIVU** and **KuralHub**, including but not limited to:
 
 - The repository itself
 - Issues and pull requests
@@ -41,7 +41,7 @@ This Code of Conduct applies to all spaces managed by **AAAIVU** and **KuralHub*
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at **contact@aaaivu.org**. All complaints will be reviewed and investigated, and will result in a response that is deemed necessary and appropriate to the circumstances.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at **contact@aaivu.org**. All complaints will be reviewed and investigated, and will result in a response that is deemed necessary and appropriate to the circumstances.
 
 Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.
 
