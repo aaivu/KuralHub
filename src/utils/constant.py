@@ -39,6 +39,7 @@ class LANGUAGE(Enum):
     HINDI = "hi"
     FRENCH = "fr"
     AMHARIC = "am"
+    PERSIAN = "fa"  # Farsi
 
 
 class Dataset:
@@ -138,6 +139,12 @@ class DATASET(Enum):
         language=LANGUAGE.URDU.value,
         url="kingabzpro/urdu-emotion-dataset",
         path="ser_datasets/Urdu-Dataset",
+    )
+    SHEMO = Dataset(
+        name="SHEMO",
+        language=LANGUAGE.PERSIAN.value,
+        url="mansourehk/shemo-persian-speech-emotion-detection-database",
+        path="ser_datasets/SHEMO",
     )
     IESC = Dataset(
         name="IESC",  # Indian English
