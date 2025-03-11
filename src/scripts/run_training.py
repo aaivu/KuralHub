@@ -9,7 +9,10 @@ import torch.optim as optim
 from sklearn.metrics import classification_report, confusion_matrix
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 
-from src.model.base_models import Wav2Vec2FeatureExtractor
+from src.model.base_models import (HuBERTFeatureExtractor,
+                                   Wav2Vec2FeatureExtractor,
+                                   WavLMFeatureExtractor,
+                                   WhisperFeatureExtractor)
 from src.model.model import SERBenchmarkModel
 from src.utils.constant import BASE_MODEL, DATASET
 from src.utils.data_loader import get_dataloader
@@ -151,8 +154,8 @@ def train(
                     if epoch_loss < best_loss:
                         best_loss = epoch_loss
                         patience_counter = 0
-                        print("Saving best model...")
-                        torch.save(model.state_dict(), model_path)
+                        # print("Saving best model...")
+                        # torch.save(model.state_dict(), model_path)
                     else:
                         patience_counter += 1
                         if patience_counter >= EARLY_STOPPING_PATIENCE:
@@ -211,7 +214,7 @@ def train(
 
 if __name__ == "__main__":
     CUR_DATASET = DATASET.URDU_DATASET
-    CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_BASE.value
+    CUR_BASE_MODEL = BASE_MODEL.OPENAI_WHISPER_SMALL.value
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     dataset = SpeechEmotionDataset(
@@ -235,7 +238,7 @@ if __name__ == "__main__":
     ac_labels = [emotion_converter(y, mode="decode") for y in en_labels]
     print(ac_labels)
 
-    feature_extractor = Wav2Vec2FeatureExtractor(
+    feature_extractor = WhisperFeatureExtractor(
         model_name=CUR_BASE_MODEL, device=device
     )
     base_model_name = feature_extractor.model_name.split("/")[1]

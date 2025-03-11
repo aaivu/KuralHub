@@ -1,7 +1,8 @@
 import numpy as np
 import torch
 import torch.nn as nn
-from transformers import (AutoFeatureExtractor, HubertModel, Wav2Vec2Model,
+from transformers import (AutoFeatureExtractor, AutoProcessor, HubertModel,
+                          Wav2Vec2FeatureExtractor, Wav2Vec2Model,
                           Wav2Vec2Processor, WavLMModel, WhisperModel,
                           WhisperProcessor)
 
@@ -25,11 +26,24 @@ class BaseFeatureExtractor(nn.Module):
         """
         Extract features from the model.
         """
-        input_values = self.processor(
-            audio, sampling_rate=sr, return_tensors="pt"
-        ).input_values.to(self.device)
+        if isinstance(audio, torch.Tensor):
+            audio = audio.detach().cpu().numpy()
+        if isinstance(self.model, WhisperModel):
+            input_values = self.processor(
+                audio, sampling_rate=sr, return_tensors="pt"
+            ).input_features.to(self.device)
+        else:
+            input_values = self.processor(
+                audio, sampling_rate=sr, return_tensors="pt"
+            ).input_values.to(self.device)
+
         with torch.no_grad():
-            outputs = self.model(input_values, output_hidden_states=True)
+            if isinstance(self.model, WhisperModel):
+                outputs = self.model.encoder(
+                    input_values, output_hidden_states=True
+                )
+            else:
+                outputs = self.model(input_values, output_hidden_states=True)
         last_hidden_states = outputs.last_hidden_state
 
         # Apply Mean Pooling
@@ -69,6 +83,6 @@ class HuBERTFeatureExtractor(BaseFeatureExtractor):
         model_name: str = "facebook/hubert-base-ls960",
         device: str = None,
     ):
-        processor = Wav2Vec2Processor
+        processor = AutoProcessor
         model = HubertModel
         super().__init__(model_name, processor, model, device)
