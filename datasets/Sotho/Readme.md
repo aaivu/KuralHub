@@ -1,6 +1,6 @@
 # 🗂️ Speech Emotion Recognition (SER) Datasets for Sotho
 
-Welcome to the **Sotho** section of KuralNet!  <br/>
+Welcome to the **Sotho** section of KuralHub!  <br/>
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Sotho**, along with metadata and access information.
 
 ## 🌍 **Language Information**  

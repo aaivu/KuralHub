@@ -1,6 +1,6 @@
 # 🗂️ Speech Emotion Recognition (SER) Datasets for Cebuano
 
-Welcome to the **Cebuano** section of KuralNet!  <br/>
+Welcome to the **Cebuano** section of KuralHub!  <br/>
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Cebuano**, along with metadata and access information.
 
 ## 🌍 **Language Information**  

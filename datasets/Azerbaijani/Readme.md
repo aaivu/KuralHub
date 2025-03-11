@@ -1,6 +1,6 @@
 # 🗂️ Speech Emotion Recognition (SER) Datasets for Azerbaijani
 
-Welcome to the **Azerbaijani** section of KuralNet!  <br/>
+Welcome to the **Azerbaijani** section of KuralHub!  <br/>
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Azerbaijani**, along with metadata and access information.
 
 ## 🌍 **Language Information**  

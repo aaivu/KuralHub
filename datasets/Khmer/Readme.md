@@ -1,6 +1,6 @@
 # 🗂️ Speech Emotion Recognition (SER) Datasets for Khmer
 
-Welcome to the **Khmer** section of KuralNet!  <br/>
+Welcome to the **Khmer** section of KuralHub!  <br/>
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Khmer**, along with metadata and access information.
 
 ## 🌍 **Language Information**  

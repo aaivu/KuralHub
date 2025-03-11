@@ -1,6 +1,6 @@
 # 🗂️ Speech Emotion Recognition (SER) Datasets for Sinhala
 
-Welcome to the **Sinhala** section of KuralNet!  <br/>
+Welcome to the **Sinhala** section of KuralHub!  <br/>
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Sinhala**, along with metadata and access information.
 
 ## 🌍 **Language Information**  

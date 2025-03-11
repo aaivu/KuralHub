@@ -1,6 +1,6 @@
 # 🗂️ Speech Emotion Recognition (SER) Datasets for Fulflude
 
-Welcome to the **Fulflude** section of KuralNet!  <br/>
+Welcome to the **Fulflude** section of KuralHub!  <br/>
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Fulflude**, along with metadata and access information.
 
 ## 🌍 **Language Information**  

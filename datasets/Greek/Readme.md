@@ -1,6 +1,6 @@
 # 🗂️ Speech Emotion Recognition (SER) Datasets for Greek
 
-Welcome to the **Greek** section of KuralNet!  
+Welcome to the **Greek** section of KuralHub!  
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Greek**, along with metadata and access information.
 
 ## 🌍 **Language Information**  

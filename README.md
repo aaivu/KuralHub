@@ -2,7 +2,7 @@
 
 # 🎙️ KuralHub: A Comprehensive Review of Speech Emotion Recognition (SER) Datasets  
 
-[![Latest Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/aaivu/KuralNet)  [![ACL Paper](https://img.shields.io/badge/ACL-Paper-orange)](https://arxiv.org/abs/xxxx.xxxxx)  [![License](https://img.shields.io/github/license/aaivu/KuralNet)](LICENSE)  [![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen)](CONTRIBUTING.md)  
+[![Latest Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/aaivu/KuralHub)  [![ACL Paper](https://img.shields.io/badge/ACL-Paper-orange)](https://arxiv.org/abs/xxxx.xxxxx)  [![License](https://img.shields.io/github/license/aaivu/KuralHub)](LICENSE)  [![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen)](CONTRIBUTING.md)  
 
 </div>
 
@@ -19,7 +19,7 @@ It provides **detailed metadata, access links, and benchmarks** using **fine-tun
 
 ## 🗂 **Repository Structure**
 ```
-KuralNet/
+KuralHub/
 │── datasets/             # Language-specific datasets
 │   ├── english/
 │   │   ├── README.md     # Overview of English SER datasets
@@ -68,16 +68,16 @@ We fine-tune **pre-trained SER models** on monolingual datasets and report their
 
 ---
 
-## 🎯 **Contribute to KuralNet**
-💡 **Know of a missing dataset?** Help us expand KuralNet!  
+## 🎯 **Contribute to KuralHub**
+💡 **Know of a missing dataset?** Help us expand KuralHub!  
 📩 **Submit a pull request** or open an issue with new datasets.  
 
 📖 **[Contribution Guidelines](CONTRIBUTING.md)**  
 
 ---
 
-## 📜 **Citing KuralNet**
-If you use KuralNet, **cite our work**:
+## 📜 **Citing KuralHub**
+If you use KuralHub, **cite our work**:
 
 ```
 TBD
@@ -86,5 +86,5 @@ TBD
 ---
 
 ## 📜 **License**
-📝 KuralNet is released under the **MIT License**.  
+📝 KuralHub is released under the **MIT License**.  
 📄 See **[LICENSE](LICENSE)** for details.

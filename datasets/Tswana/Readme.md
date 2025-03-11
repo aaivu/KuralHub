@@ -1,6 +1,6 @@
 # 🗂️ Speech Emotion Recognition (SER) Datasets for Tswana
 
-Welcome to the **Tswana** section of KuralNet!  <br/>
+Welcome to the **Tswana** section of KuralHub!  <br/>
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Tswana**, along with metadata and access information.
 
 ## 🌍 **Language Information**  

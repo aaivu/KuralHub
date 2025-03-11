@@ -1,7 +1,7 @@
 
 # 🗂️ Speech Emotion Recognition (SER) Datasets for Hindi
 
-Welcome to the **Hindi** section of KuralNet!  
+Welcome to the **Hindi** section of KuralHub!  
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Hindi**, along with metadata and access information.
 
 ## 🌍 **Language Information**  

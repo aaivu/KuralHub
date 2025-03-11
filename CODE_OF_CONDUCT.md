@@ -1,8 +1,8 @@
-# 🧑‍🤝‍🧑 Code of Conduct for KuralNet by AAAIVU
+# 🧑‍🤝‍🧑 Code of Conduct for KuralHub by AAAIVU
 
 ## Our Pledge
 
-We, the members of the **AAAIVU Organization** and the **KuralNet** community, pledge to make participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+We, the members of the **AAAIVU Organization** and the **KuralHub** community, pledge to make participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
 We are committed to providing a welcoming and inclusive environment for all.
 
@@ -32,7 +32,7 @@ Project maintainers have the right and responsibility to remove, edit, or reject
 
 ## Scope
 
-This Code of Conduct applies to all spaces managed by **AAAIVU** and **KuralNet**, including but not limited to:
+This Code of Conduct applies to all spaces managed by **AAAIVU** and **KuralHub**, including but not limited to:
 
 - The repository itself
 - Issues and pull requests

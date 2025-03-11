@@ -1,6 +1,6 @@
 # 🗂️ Speech Emotion Recognition (SER) Datasets for Somali
 
-Welcome to the **Somali** section of KuralNet!  <br/>
+Welcome to the **Somali** section of KuralHub!  <br/>
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Somali**, along with metadata and access information.
 
 ## 🌍 **Language Information**  
