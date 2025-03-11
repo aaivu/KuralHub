@@ -99,7 +99,7 @@ class DATASET(Enum):
         path="ser_datasets/ESD/Emotion Speech Dataset",
     )
     HINDI_DATASET = Dataset(
-        name="Hindi-Dataset",
+        name="Hindi-Dataset",  # Vishal B. (2021). Speech Emotion Recognition (Hindi) Dataset. Kaggle.
         language=LANGUAGE.HINDI.value,
         url="vishlb/speech-emotion-recognition-hindi",
         path="ser_datasets/Hindi-Dataset/my Dataset",
@@ -145,6 +145,12 @@ class DATASET(Enum):
         language=LANGUAGE.PERSIAN.value,
         url="mansourehk/shemo-persian-speech-emotion-detection-database",
         path="ser_datasets/SHEMO",
+    )
+    IESC = Dataset(
+        name="IESC",  # Indian English
+        language=LANGUAGE.ENGLISH.value,
+        url="ybsingh/indian-emotional-speech-corpora-iesc",
+        path="ser_datasets/IESC",
     )
 
 
