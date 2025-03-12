@@ -18,7 +18,6 @@ venv:
 setup: venv
 	. .venv/bin/activate && pip install --upgrade pip
 	. .venv/bin/activate && pip install -r requirements.txt
-	. .venv/bin/activate && pip install -r dev-requirements.txt
 	@echo "Dependencies installed."
 
 sync:
