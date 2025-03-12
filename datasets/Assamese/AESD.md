@@ -4,7 +4,7 @@
 🔹 **Language:** Assamese  <br/>
 🔹 **Dataset Type:** 🎙️ Audio <br/>
 🔹 **Emotion Categories:** Calm, Neutral, Anger, Sad, Happy, Surprise, Disgust  <br/>
-🔹 **Size:** Not specified; includes recordings from native Assamese speakers  <br/>
+🔹 **Size:** samples: 1750, speakers: 25  <br/>
 🔹 **Recording Environment:** 🎭 Acted (controlled settings)  <br/>
 🔹 **License:** Not Specified  <br/>
 🔹 **Access:** 🔒 Request <br/>
