@@ -1,5 +1,5 @@
 ## Tamil
-### Dataset: EmoTa
+### Dataset: EmoTa 
 
 | Model             | Variant                           | Parameters           | Owned by              | Select |
 |-------------------|-----------------------------------|----------------------|-----------------------|--------|
