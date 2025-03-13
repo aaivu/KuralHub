@@ -66,7 +66,7 @@ def plot_loss(train_losses, val_losses, path: str):
         )
     else:
         plt.title("Training and Validation Loss")
-    plt.savefig(f"./train_val_test_logs/{path}_loss_curve.png")
+    plt.savefig(f"./train_val_test_logs/{path}/{path}_loss_curve.png")
     plt.close()
 
 
@@ -102,7 +102,9 @@ def plot_confusion_matrix(
         )
     else:
         plt.title(f"{phase} Confusion Matrix")
-    plt.savefig(f"./train_val_test_logs/{path}_{phase}_confusion_matrix.png")
+    plt.savefig(
+        f"./train_val_test_logs/{path}/{path}_{phase}_confusion_matrix.png"
+    )
     plt.close()
 
 
@@ -118,7 +120,8 @@ def print_classification_report(y_true, y_pred, phase, path, EMOTION_MAPPING):
 
     report = classification_report(y_true, y_pred)
     with open(
-        f"./train_val_test_logs/{path}_{phase}_classification_report.txt", "w"
+        f"./train_val_test_logs/{path}/{path}_{phase}_classification_report.txt",
+        "w",
     ) as f:
         f.write(report)
 
@@ -137,6 +140,8 @@ def train(
     logger.info("Finetuning Started...")
 
     os.makedirs(f"./finetuned_models/{base_path}", exist_ok=True)
+    os.makedirs(f"./train_val_test_logs/{base_path}", exist_ok=True)
+
     model_path = os.path.join(
         "./finetuned_models", base_path, f"{base_path}.pth"
     )
