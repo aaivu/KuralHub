@@ -14,7 +14,7 @@ import torch.optim as optim
 from sklearn.metrics import classification_report, confusion_matrix
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 
-from src.model.base_models import Wav2Vec2FeatureExtractor
+from src.model.base_models import Wav2Vec2XLRFeatureExtractor
 from src.model.model import SERBenchmarkModel
 from src.utils.constant import BASE_MODEL, DATASET
 from src.utils.data_loader import get_dataloader
@@ -289,13 +289,13 @@ if __name__ == "__main__":
 
     # ----------Modify-------------#
     CUR_DATASET = DATASET.EMOTA
-    CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_LARGE_LV60.value
+    CUR_BASE_MODEL = BASE_MODEL.XLS_R_1B.value
 
     logger.info(
         f"Start finetuning {CUR_BASE_MODEL} with {CUR_DATASET.value.name}"
     )
 
-    feature_extractor = Wav2Vec2FeatureExtractor(
+    feature_extractor = Wav2Vec2XLRFeatureExtractor(
         model_name=CUR_BASE_MODEL, device=device
     )
 
