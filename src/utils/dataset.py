@@ -63,10 +63,22 @@ class SpeechEmotionDataset(Dataset):
             raise ValueError("Metadata file must contain an 'emotion' column.")
 
         # Extract features and emotion labels
+        self.available_emotions = sorted(self.dataset["emotion"].unique())
+        self.EMOTION_MAPPING = {
+            emotion: idx for idx, emotion in enumerate(self.available_emotions)
+        }
+
         self.emotions = torch.tensor(
-            self.dataset["emotion"].apply(emotion_converter).values,
+            self.dataset["emotion"]
+            .apply(
+                lambda x: emotion_converter(
+                    x, mode="encode", EMOTION_MAPPING=self.EMOTION_MAPPING
+                )[0]
+            )
+            .values,
             dtype=torch.long,
         )
+
         paths = self.dataset["audio_path"].astype(str).tolist()
         self.audios = []
         for path in paths:
