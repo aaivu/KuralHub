@@ -289,7 +289,7 @@ if __name__ == "__main__":
 
     # ----------Modify-------------#
     CUR_DATASET = DATASET.EMOTA
-    CUR_BASE_MODEL = BASE_MODEL.WAVLM_BASE_PLUS.value
+    CUR_BASE_MODEL = BASE_MODEL.WAVLM_LARGE.value
 
     logger.info(
         f"Start finetuning {CUR_BASE_MODEL} with {CUR_DATASET.value.name}"
