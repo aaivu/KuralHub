@@ -11,6 +11,7 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 
 from src.model.base_models import (HuBERTFeatureExtractor,
                                    Wav2Vec2FeatureExtractor,
+                                   Wav2Vec2XLRFeatureExtractor,
                                    WavLMFeatureExtractor,
                                    WhisperFeatureExtractor)
 from src.model.model import SERBenchmarkModel
@@ -22,7 +23,7 @@ from src.utils.encoder import emotion_converter
 # Hyperparameters
 BATCH_SIZE = int(os.getenv("BATCH_SIZE", 32))
 LEARNING_RATE = float(os.getenv("LEARNING_RATE", 0.001))
-EPOCHS = int(os.getenv("EPOCHS", 5))
+EPOCHS = int(os.getenv("EPOCHS", 2))
 EARLY_STOPPING_PATIENCE = int(os.getenv("EARLY_STOPPING_PATIENCE", 5))
 
 os.makedirs("./checkpoints", exist_ok=True)
@@ -213,10 +214,15 @@ def train(
 
 
 if __name__ == "__main__":
-    CUR_DATASET = DATASET.URDU_DATASET
-    CUR_BASE_MODEL = BASE_MODEL.OPENAI_WHISPER_SMALL.value
-
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    # Update
+    CUR_DATASET = DATASET.EMOTA
+    CUR_BASE_MODEL = BASE_MODEL.XLS_R_300M.value
+
+    feature_extractor = Wav2Vec2XLRFeatureExtractor(
+        model_name=CUR_BASE_MODEL, device=device
+    )
     dataset = SpeechEmotionDataset(
         dataset_name=CUR_DATASET.value.name,
         dataset_path=f"meta_csvs/{CUR_DATASET.value.language}_{CUR_DATASET.value.name}.csv",
@@ -238,9 +244,6 @@ if __name__ == "__main__":
     ac_labels = [emotion_converter(y, mode="decode") for y in en_labels]
     print(ac_labels)
 
-    feature_extractor = WhisperFeatureExtractor(
-        model_name=CUR_BASE_MODEL, device=device
-    )
     base_model_name = feature_extractor.model_name.split("/")[1]
 
     model = SERBenchmarkModel(

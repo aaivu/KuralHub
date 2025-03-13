@@ -1,8 +1,8 @@
 import numpy as np
 import torch
 import torch.nn as nn
-from transformers import (AutoFeatureExtractor, AutoProcessor, HubertModel,
-                          Wav2Vec2FeatureExtractor, Wav2Vec2Model,
+from transformers import (AutoFeatureExtractor, AutoModel, AutoProcessor,
+                          HubertModel, Wav2Vec2FeatureExtractor, Wav2Vec2Model,
                           Wav2Vec2Processor, WavLMModel, WhisperModel,
                           WhisperProcessor)
 
@@ -83,6 +83,17 @@ class HuBERTFeatureExtractor(BaseFeatureExtractor):
         model_name: str = "facebook/hubert-base-ls960",
         device: str = None,
     ):
-        processor = AutoProcessor
+        processor = AutoFeatureExtractor
         model = HubertModel
+        super().__init__(model_name, processor, model, device)
+
+
+class Wav2Vec2XLRFeatureExtractor(BaseFeatureExtractor):
+    def __init__(
+        self,
+        model_name: str = "facebook/wav2vec2-xls-r-300m",
+        device: str = None,
+    ):
+        processor = AutoFeatureExtractor
+        model = AutoModel
         super().__init__(model_name, processor, model, device)
