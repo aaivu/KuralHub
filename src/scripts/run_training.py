@@ -14,7 +14,7 @@ import torch.optim as optim
 from sklearn.metrics import classification_report, confusion_matrix
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 
-from src.model.base_models import Wav2Vec2XLRFeatureExtractor
+from src.model.base_models import Wav2Vec2FeatureExtractor
 from src.model.model import SERBenchmarkModel
 from src.utils.constant import BASE_MODEL, DATASET
 from src.utils.data_loader import get_dataloader
@@ -32,7 +32,6 @@ SEED = 42
 random.seed(SEED)
 np.random.seed(SEED)
 pd.options.mode.chained_assignment = None
-pd.np.random.seed(SEED)
 torch.manual_seed(SEED)
 torch.cuda.manual_seed(SEED)
 torch.cuda.manual_seed_all(SEED)
@@ -45,7 +44,7 @@ os.environ["PYTHONHASHSEED"] = str(SEED)
 # Hyperparameters
 BATCH_SIZE = int(os.getenv("BATCH_SIZE", 32))
 LEARNING_RATE = float(os.getenv("LEARNING_RATE", 0.001))
-EPOCHS = int(os.getenv("EPOCHS", 2))
+EPOCHS = int(os.getenv("EPOCHS", 30))
 EARLY_STOPPING_PATIENCE = int(os.getenv("EARLY_STOPPING_PATIENCE", 5))
 
 os.makedirs("./finetuned_models", exist_ok=True)
@@ -290,13 +289,13 @@ if __name__ == "__main__":
 
     # ----------Modify-------------#
     CUR_DATASET = DATASET.EMOTA
-    CUR_BASE_MODEL = BASE_MODEL.XLS_R_300M.value
+    CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_BASE.value
 
     logger.info(
         f"Start finetuning {CUR_BASE_MODEL} with {CUR_DATASET.value.name}"
     )
 
-    feature_extractor = Wav2Vec2XLRFeatureExtractor(
+    feature_extractor = Wav2Vec2FeatureExtractor(
         model_name=CUR_BASE_MODEL, device=device
     )
 
