@@ -1,10 +1,9 @@
 import numpy as np
 import torch
 import torch.nn as nn
-from transformers import (AutoFeatureExtractor, AutoModel, AutoProcessor,
-                          HubertModel, Wav2Vec2FeatureExtractor, Wav2Vec2Model,
-                          Wav2Vec2Processor, WavLMModel, WhisperModel,
-                          WhisperProcessor)
+from transformers import (AutoFeatureExtractor, AutoModel, HubertModel,
+                          Wav2Vec2Model, Wav2Vec2Processor, WavLMModel,
+                          WhisperModel, WhisperProcessor)
 
 
 class BaseFeatureExtractor(nn.Module):

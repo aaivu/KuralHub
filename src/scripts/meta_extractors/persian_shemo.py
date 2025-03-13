@@ -1,5 +1,4 @@
 import logging
-import os
 
 from src.scripts.meta_extractors.dataset_processor import process_dataset
 from src.utils.constant import DATASET, EMOTION, SELECTED_EMOTIONS
