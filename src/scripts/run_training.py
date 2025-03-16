@@ -289,7 +289,7 @@ if __name__ == "__main__":
 
     # ----------Modify-------------#
     CUR_DATASET = DATASET.EMOTA
-    CUR_BASE_MODEL = BASE_MODEL.HUBERT_BASE.value
+    CUR_BASE_MODEL = BASE_MODEL.HUBERT_LARGE_LS960.value
 
     logger.info(
         f"Start finetuning {CUR_BASE_MODEL} with {CUR_DATASET.value.name}"
