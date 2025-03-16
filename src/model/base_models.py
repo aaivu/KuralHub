@@ -5,6 +5,8 @@ from transformers import (AutoFeatureExtractor, AutoModel, HubertModel,
                           Wav2Vec2Model, Wav2Vec2Processor, WavLMModel,
                           WhisperModel, WhisperProcessor)
 
+from src.utils.constant import BASE_MODEL
+
 
 class BaseFeatureExtractor(nn.Module):
     def __init__(self, model_name: str, processor, model, device: str = None):
@@ -96,3 +98,33 @@ class Wav2Vec2XLRFeatureExtractor(BaseFeatureExtractor):
         processor = AutoFeatureExtractor
         model = AutoModel
         super().__init__(model_name, processor, model, device)
+
+
+class FeatureExtractorFactory:
+    extractors = {
+        # Wav2Vec2.0
+        BASE_MODEL.WAV2VEC2_BASE.value: Wav2Vec2FeatureExtractor,
+        BASE_MODEL.WAV2VEC2_LARGE_LV60.value: Wav2Vec2FeatureExtractor,
+        BASE_MODEL.WAV2VEC2_LARGE_960H.value: Wav2Vec2FeatureExtractor,
+        # Wav2vec XLS
+        BASE_MODEL.XLS_R_300M.value: Wav2Vec2XLRFeatureExtractor,
+        BASE_MODEL.XLS_R_1B.value: Wav2Vec2XLRFeatureExtractor,
+        # Hubert
+        BASE_MODEL.HUBERT_BASE.value: HuBERTFeatureExtractor,
+        BASE_MODEL.HUBERT_LARGE_LS960.value: HuBERTFeatureExtractor,
+        # WavLM
+        BASE_MODEL.WAVLM_BASE_PLUS.value: WavLMFeatureExtractor,
+        BASE_MODEL.WAVLM_LARGE.value: WavLMFeatureExtractor,
+        # Whisper
+        BASE_MODEL.OPENAI_WHISPER_SMALL.value: WhisperFeatureExtractor,
+        BASE_MODEL.OPENAI_WHISPER_LARGE.value: WhisperFeatureExtractor,
+    }
+
+    @staticmethod
+    def get_extractor(model_name: str, device: str = None):
+        if model_name in FeatureExtractorFactory.extractors:
+            return FeatureExtractorFactory.extractors[model_name](
+                model_name, device
+            )
+        else:
+            raise ValueError(f"Unsupported model: {model_name}")

@@ -14,7 +14,7 @@ import torch.optim as optim
 from sklearn.metrics import classification_report, confusion_matrix
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 
-from src.model.base_models import HuBERTFeatureExtractor
+from src.model.base_models import FeatureExtractorFactory
 from src.model.model import SERBenchmarkModel
 from src.utils.constant import BASE_MODEL, DATASET
 from src.utils.data_loader import get_dataloader
@@ -288,18 +288,16 @@ if __name__ == "__main__":
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # ----------Modify-------------#
-    CUR_DATASET = DATASET.EMOTA
-    CUR_BASE_MODEL = BASE_MODEL.HUBERT_LARGE_LS960.value
+    CUR_DATASET = DATASET.TELUGU_DATASET
+    CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_LARGE_LV60.value
+    # ----------End-------------#
 
     logger.info(
         f"Start finetuning {CUR_BASE_MODEL} with {CUR_DATASET.value.name}"
     )
-
-    feature_extractor = HuBERTFeatureExtractor(
+    feature_extractor = FeatureExtractorFactory.get_extractor(
         model_name=CUR_BASE_MODEL, device=device
     )
-
-    # ----------End-------------#
 
     dataset = SpeechEmotionDataset(
         dataset_name=CUR_DATASET.value.name,
