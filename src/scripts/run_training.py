@@ -289,7 +289,7 @@ if __name__ == "__main__":
 
     # ----------Modify-------------#
     CUR_DATASET = DATASET.TELUGU_DATASET
-    CUR_BASE_MODEL = BASE_MODEL.XLS_R_1B.value
+    CUR_BASE_MODEL = BASE_MODEL.OPENAI_WHISPER_LARGE.value
     # ----------End-------------#
 
     logger.info(
