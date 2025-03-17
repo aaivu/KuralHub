@@ -49,6 +49,9 @@ meta_extract:
 train_model:
 	. .venv/bin/activate && python3 -m src.scripts.run_training
 
+generate_benchmark:
+	. .venv/bin/activate && python3 generate_benchmark.py
+
 clear:
 	@echo "Cleaning up..."
 	rm -rf __pycache__ .pytest_cache dist build *.egg-info
