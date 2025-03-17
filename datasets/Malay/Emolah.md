@@ -21,7 +21,7 @@
 📄 **Paper:** [Paper Link](https://izzadramli.uitm-apps.com/wp-content/uploads/2021/03/Emolah_A_Malay_Language_Spontaneous_Speech_Emotion.pdf)
 🗂️ **Download Link:** Request
 💾 **File Format:** Not Specified  
-📧 Contact: [dlizajamil@computer.org](mailto:lizajamil@computer.org) </br>
+📧 Contact: [lizajamil@computer.org](mailto:lizajamil@computer.org) </br>
 > ⚠️ **Note:** Fill the request process if the dataset is restricted.
 
 ---
