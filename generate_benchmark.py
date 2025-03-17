@@ -1,5 +1,14 @@
 import os
 import re
+from collections import defaultdict
+from enum import Enum
+from src.utils.constant import LANGUAGE
+
+def get_language_name(code):
+    for lang in LANGUAGE:
+        if lang.value == code:
+            return f"{lang.name.capitalize()} ({code})"
+    return code
 
 def extract_accuracy(file_path):
     try:
@@ -12,7 +21,7 @@ def extract_accuracy(file_path):
         return None
 
 def generate_markdown(directory, output_file):
-    entries = []
+    data = defaultdict(lambda: defaultdict(list))
     
     for folder in sorted(os.listdir(directory)):
         folder_path = os.path.join(directory, folder)
@@ -30,17 +39,27 @@ def generate_markdown(directory, output_file):
                 val_acc = extract_accuracy(val_file) if os.path.exists(val_file) else None
                 
                 completed = "✅" if test_acc is not None and val_acc is not None else "❌"
-                entries.append((language_code, dataset_name, model_name, val_acc, test_acc, completed))
+                data[language_code][dataset_name].append((model_name, val_acc, test_acc, completed))
     
     with open(output_file, "w") as md_file:
         md_file.write("# Model Benchmarks\n\n")
-        md_file.write("| Language Code | Dataset Name | Model Name | Val Accuracy | Test Accuracy | Completed |\n")
-        md_file.write("|--------------|-------------|------------|--------------|--------------|-----------|\n")
+        md_file.write("## Models Evaluated\n")
+        md_file.write(", ".join(sorted(set(m for d in data.values() for models in d.values() for m, _, _, _ in models))) + "\n\n")
         
-        for lang, dataset, model, val_acc, test_acc, completed in entries:
-            val_acc_str = f"{val_acc:.2f}" if val_acc is not None else "N/A"
-            test_acc_str = f"{test_acc:.2f}" if test_acc is not None else "N/A"
-            md_file.write(f"| {lang} | {dataset} | {model} | {val_acc_str} | {test_acc_str} | {completed} |\n")
+        for language_code, datasets in sorted(data.items()):
+            language_name = get_language_name(language_code)
+            md_file.write(f"## {language_name}\n\n")
+            for dataset, models in sorted(datasets.items()):
+                md_file.write(f"### {dataset}\n\n")
+                md_file.write("| Model Name | Val Accuracy | Test Accuracy | Completed |\n")
+                md_file.write("|------------|--------------|--------------|-----------|\n")
+                
+                for model, val_acc, test_acc, completed in sorted(models):
+                    val_acc_str = f"{val_acc:.2f}" if val_acc is not None else "N/A"
+                    test_acc_str = f"{test_acc:.2f}" if test_acc is not None else "N/A"
+                    md_file.write(f"| {model} | {val_acc_str} | {test_acc_str} | {completed} |\n")
+                
+                md_file.write("\n")
     
     print(f"Markdown file '{output_file}' generated successfully!")
 
