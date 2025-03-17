@@ -32,7 +32,7 @@ def generate_markdown(directory, output_file):
                 entries.append((language_code, dataset_name, model_name, val_acc, test_acc))
     
     with open(output_file, "w") as md_file:
-        md_file.write("# Model Training Progress\n\n")
+        md_file.write("# Model Benchmarks\n\n")
         md_file.write("| Language Code | Dataset Name | Model Name | Val Accuracy | Test Accuracy | Completed |\n")
         md_file.write("|--------------|-------------|------------|--------------|--------------|-----------|\n")
         

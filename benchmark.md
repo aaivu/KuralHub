@@ -1,4 +1,4 @@
-# Model Training Progress
+# Model Benchmarks
 
 | Language Code | Dataset Name | Model Name | Val Accuracy | Test Accuracy | Completed |
 |--------------|-------------|------------|--------------|--------------|-----------|
