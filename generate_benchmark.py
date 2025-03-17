@@ -29,17 +29,18 @@ def generate_markdown(directory, output_file):
                 test_acc = extract_accuracy(test_file) if os.path.exists(test_file) else None
                 val_acc = extract_accuracy(val_file) if os.path.exists(val_file) else None
                 
-                entries.append((language_code, dataset_name, model_name, val_acc, test_acc))
+                completed = "✅" if test_acc is not None and val_acc is not None else "❌"
+                entries.append((language_code, dataset_name, model_name, val_acc, test_acc, completed))
     
     with open(output_file, "w") as md_file:
         md_file.write("# Model Benchmarks\n\n")
         md_file.write("| Language Code | Dataset Name | Model Name | Val Accuracy | Test Accuracy | Completed |\n")
         md_file.write("|--------------|-------------|------------|--------------|--------------|-----------|\n")
         
-        for lang, dataset, model, val_acc, test_acc in entries:
+        for lang, dataset, model, val_acc, test_acc, completed in entries:
             val_acc_str = f"{val_acc:.2f}" if val_acc is not None else "N/A"
             test_acc_str = f"{test_acc:.2f}" if test_acc is not None else "N/A"
-            md_file.write(f"| {lang} | {dataset} | {model} | {val_acc_str} | {test_acc_str} | ✅ |\n")
+            md_file.write(f"| {lang} | {dataset} | {model} | {val_acc_str} | {test_acc_str} | {completed} |\n")
     
     print(f"Markdown file '{output_file}' generated successfully!")
 

@@ -7,12 +7,12 @@
 | hi | Hindi-Dataset | wav2vec2-base | 0.62 | 0.61 | ✅ |
 | hi | Hindi-Dataset | wav2vec2-large-960h | 0.22 | 0.23 | ✅ |
 | hi | Hindi-Dataset | wav2vec2-large-lv60 | 0.20 | 0.20 | ✅ |
-| hi | Hindi-Dataset | wav2vec2-xls-r-1b | N/A | N/A | ✅ |
+| hi | Hindi-Dataset | wav2vec2-xls-r-1b | N/A | N/A | ❌ |
 | hi | Hindi-Dataset | wav2vec2-xls-r-300m | 0.22 | 0.22 | ✅ |
 | hi | Hindi-Dataset | wavlm-base-plus | 0.70 | 0.65 | ✅ |
 | hi | Hindi-Dataset | wavlm-large | 0.69 | 0.70 | ✅ |
-| hi | Hindi-Dataset | whisper-large | N/A | N/A | ✅ |
-| hi | Hindi-Dataset | whisper-small | N/A | N/A | ✅ |
+| hi | Hindi-Dataset | whisper-large | N/A | N/A | ❌ |
+| hi | Hindi-Dataset | whisper-small | N/A | N/A | ❌ |
 | kn | Kannada-Dataset | hubert-base-ls960 | 0.21 | 0.29 | ✅ |
 | kn | Kannada-Dataset | hubert-large-ls960-ft | 0.19 | 0.19 | ✅ |
 | kn | Kannada-Dataset | wav2vec2-base | 0.18 | 0.22 | ✅ |
