@@ -14,12 +14,12 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | wav2vec2-base | 0.62 | 0.61 | ✅ |
 | wav2vec2-large-960h | 0.22 | 0.23 | ✅ |
 | wav2vec2-large-lv60 | 0.20 | 0.20 | ✅ |
-| wav2vec2-xls-r-1b | N/A | N/A | ❌ |
+| wav2vec2-xls-r-1b | 0.35 | 0.35 | ✅ |
 | wav2vec2-xls-r-300m | 0.22 | 0.22 | ✅ |
 | wavlm-base-plus | 0.70 | 0.65 | ✅ |
 | wavlm-large | 0.69 | 0.70 | ✅ |
-| whisper-large | N/A | N/A | ❌ |
-| whisper-small | N/A | N/A | ❌ |
+| whisper-large | 0.67 | 0.69 | ✅ |
+| whisper-small | 0.68 | 0.71 | ✅ |
 
 ## Kannada (kn)
 
