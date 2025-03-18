@@ -3,6 +3,21 @@
 ## Models Evaluated
 hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wav2vec2-large-lv60, wav2vec2-xls-r-1b, wav2vec2-xls-r-300m, wavlm-base-plus, wavlm-large, whisper-large, whisper-small
 
+## Amharic (am)
+
+### ASED
+
+| Model Name | Val Accuracy | Test Accuracy | Completed |
+|------------|--------------|--------------|-----------|
+| hubert-base-ls960 | N/A | N/A | ❌ |
+| hubert-large-ls960-ft | N/A | N/A | ❌ |
+| wav2vec2-base | N/A | N/A | ❌ |
+| wav2vec2-large-960h | N/A | N/A | ❌ |
+| wav2vec2-large-lv60 | 0.23 | 0.27 | ✅ |
+| wavlm-base-plus | N/A | N/A | ❌ |
+| wavlm-large | N/A | N/A | ❌ |
+| whisper-small | N/A | N/A | ❌ |
+
 ## English (en)
 
 ### IESC
@@ -14,6 +29,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | wav2vec2-base | 0.70 | 0.66 | ✅ |
 | wav2vec2-large-960h | 0.28 | 0.31 | ✅ |
 | wav2vec2-large-lv60 | 0.21 | 0.25 | ✅ |
+| wav2vec2-xls-r-1b | N/A | N/A | ❌ |
 | wav2vec2-xls-r-300m | 0.26 | 0.25 | ✅ |
 | wavlm-base-plus | 0.70 | 0.78 | ✅ |
 | wavlm-large | 0.76 | 0.81 | ✅ |
@@ -25,14 +41,14 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | Model Name | Val Accuracy | Test Accuracy | Completed |
 |------------|--------------|--------------|-----------|
 | hubert-base-ls960 | 0.65 | 0.65 | ✅ |
-| hubert-large-ls960-ft | N/A | N/A | ❌ |
+| hubert-large-ls960-ft | 0.34 | 0.35 | ✅ |
 | wav2vec2-base | 0.51 | 0.59 | ✅ |
 | wav2vec2-large-960h | 0.13 | 0.15 | ✅ |
 | wav2vec2-large-lv60 | 0.23 | 0.27 | ✅ |
 | wav2vec2-xls-r-1b | 0.22 | 0.23 | ✅ |
-| wav2vec2-xls-r-300m | N/A | N/A | ❌ |
+| wav2vec2-xls-r-300m | 0.31 | 0.34 | ✅ |
 | wavlm-base-plus | 0.68 | 0.69 | ✅ |
-| wavlm-large | N/A | N/A | ❌ |
+| wavlm-large | 0.66 | 0.55 | ✅ |
 | whisper-large | N/A | N/A | ❌ |
 | whisper-small | N/A | N/A | ❌ |
 
