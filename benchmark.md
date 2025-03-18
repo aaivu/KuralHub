@@ -20,6 +20,22 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | whisper-large | 0.79 | 0.74 | ✅ |
 | whisper-small | 0.78 | 0.71 | ✅ |
 
+### RAVDESS
+
+| Model Name | Val Accuracy | Test Accuracy | Completed |
+|------------|--------------|--------------|-----------|
+| hubert-base-ls960 | 0.65 | 0.65 | ✅ |
+| hubert-large-ls960-ft | N/A | N/A | ❌ |
+| wav2vec2-base | 0.51 | 0.59 | ✅ |
+| wav2vec2-large-960h | 0.13 | 0.15 | ✅ |
+| wav2vec2-large-lv60 | N/A | N/A | ❌ |
+| wav2vec2-xls-r-1b | 0.22 | 0.23 | ✅ |
+| wav2vec2-xls-r-300m | N/A | N/A | ❌ |
+| wavlm-base-plus | N/A | N/A | ❌ |
+| wavlm-large | N/A | N/A | ❌ |
+| whisper-large | N/A | N/A | ❌ |
+| whisper-small | N/A | N/A | ❌ |
+
 ## Hindi (hi)
 
 ### Hindi-Dataset
