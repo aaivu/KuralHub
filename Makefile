@@ -52,6 +52,9 @@ train_model:
 generate_benchmark:
 	. .venv/bin/activate && python3 generate_benchmark.py
 
+run_ui:
+	cd ui && npm run dev
+
 clear:
 	@echo "Cleaning up..."
 	rm -rf __pycache__ .pytest_cache dist build *.egg-info
