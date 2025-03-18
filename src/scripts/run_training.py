@@ -209,8 +209,8 @@ def train(
                     if epoch_loss < best_loss:
                         best_loss = epoch_loss
                         patience_counter = 0
-                        logger.info("Saving best model...")
-                        torch.save(model.state_dict(), model_path)
+                        # logger.info("Saving best model...")
+                        # torch.save(model.state_dict(), model_path)
                     else:
                         patience_counter += 1
                         if patience_counter >= EARLY_STOPPING_PATIENCE:
@@ -299,7 +299,7 @@ if __name__ == "__main__":
 
     # ----------Modify-------------#
     CUR_DATASET = DATASET.IESC
-    CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_BASE.value
+    CUR_BASE_MODEL = BASE_MODEL.OPENAI_WHISPER_SMALL.value
     # ----------End-------------#
 
     logger.info(
