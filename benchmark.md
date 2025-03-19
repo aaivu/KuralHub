@@ -91,6 +91,24 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 10 | whisper-large | 0.75 | 0.68 | ✅ |
 | 11 | whisper-small | 0.70 | 0.61 | ✅ |
 
+## French (fr)
+
+### CaFE
+
+| No | Model Name | Val Accuracy | Test Accuracy | Completed |
+|----|------------|--------------|--------------|-----------|
+| 1 | hubert-base-ls960 | 0.64 | 0.60 | ✅ |
+| 2 | hubert-large-ls960-ft | 0.33 | 0.33 | ✅ |
+| 3 | wav2vec2-base | 0.46 | 0.38 | ✅ |
+| 4 | wav2vec2-large-960h | 0.26 | 0.24 | ✅ |
+| 5 | wav2vec2-large-lv60 | 0.20 | 0.21 | ✅ |
+| 6 | wav2vec2-xls-r-1b | 0.26 | 0.25 | ✅ |
+| 7 | wav2vec2-xls-r-300m | 0.29 | 0.25 | ✅ |
+| 8 | wavlm-base-plus | 0.53 | 0.53 | ✅ |
+| 9 | wavlm-large | N/A | N/A | ❌ |
+| 10 | whisper-large | N/A | N/A | ❌ |
+| 11 | whisper-small | N/A | N/A | ❌ |
+
 ## Hindi (hi)
 
 ### Hindi-Dataset
@@ -120,7 +138,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 3 | wav2vec2-base | 0.47 | 0.56 | ✅ |
 | 4 | wav2vec2-large-960h | 0.26 | 0.28 | ✅ |
 | 5 | wav2vec2-large-lv60 | 0.21 | 0.26 | ✅ |
-| 6 | wav2vec2-xls-r-1b | N/A | N/A | ❌ |
+| 6 | wav2vec2-xls-r-1b | 0.31 | 0.24 | ✅ |
 | 7 | wav2vec2-xls-r-300m | 0.25 | 0.25 | ✅ |
 | 8 | wavlm-base-plus | 0.69 | 0.58 | ✅ |
 | 9 | wavlm-large | 0.64 | 0.55 | ✅ |
