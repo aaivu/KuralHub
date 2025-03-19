@@ -91,6 +91,14 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 10 | whisper-large | 0.75 | 0.68 | ✅ |
 | 11 | whisper-small | 0.70 | 0.61 | ✅ |
 
+## Spanish (es)
+
+### MESD
+
+| No | Model Name | Val Accuracy | Test Accuracy | Completed |
+|----|------------|--------------|--------------|-----------|
+| 1 | wav2vec2-base | 0.38 | 0.27 | ✅ |
+
 ## French (fr)
 
 ### CaFE
@@ -210,9 +218,10 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 3 | wav2vec2-base | N/A | N/A | ❌ |
 | 4 | wav2vec2-large-960h | N/A | N/A | ❌ |
 | 5 | wav2vec2-large-lv60 | N/A | N/A | ❌ |
-| 6 | wav2vec2-xls-r-300m | N/A | N/A | ❌ |
-| 7 | wavlm-base-plus | N/A | N/A | ❌ |
-| 8 | wavlm-large | N/A | N/A | ❌ |
-| 9 | whisper-large | N/A | N/A | ❌ |
-| 10 | whisper-small | N/A | N/A | ❌ |
+| 6 | wav2vec2-xls-r-1b | N/A | N/A | ❌ |
+| 7 | wav2vec2-xls-r-300m | N/A | N/A | ❌ |
+| 8 | wavlm-base-plus | N/A | N/A | ❌ |
+| 9 | wavlm-large | N/A | N/A | ❌ |
+| 10 | whisper-large | N/A | N/A | ❌ |
+| 11 | whisper-small | N/A | N/A | ❌ |
 
