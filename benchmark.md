@@ -15,10 +15,10 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 4 | wav2vec2-large-960h | 0.30 | 0.32 | ✅ |
 | 5 | wav2vec2-large-lv60 | 0.23 | 0.27 | ✅ |
 | 6 | wav2vec2-xls-r-1b | N/A | N/A | ❌ |
-| 7 | wav2vec2-xls-r-300m | N/A | N/A | ❌ |
+| 7 | wav2vec2-xls-r-300m | 0.31 | 0.32 | ✅ |
 | 8 | wavlm-base-plus | 0.87 | 0.84 | ✅ |
 | 9 | wavlm-large | 0.80 | 0.82 | ✅ |
-| 10 | whisper-large | N/A | N/A | ❌ |
+| 10 | whisper-large | 0.88 | 0.86 | ✅ |
 | 11 | whisper-small | 0.91 | 0.90 | ✅ |
 
 ## Bengali (bn)
@@ -36,8 +36,19 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 7 | wav2vec2-xls-r-300m | 0.25 | 0.23 | ✅ |
 | 8 | wavlm-base-plus | 0.49 | 0.35 | ✅ |
 | 9 | wavlm-large | 0.41 | 0.40 | ✅ |
-| 10 | whisper-large | N/A | N/A | ❌ |
-| 11 | whisper-small | N/A | N/A | ❌ |
+| 10 | whisper-large | 0.35 | 0.40 | ✅ |
+| 11 | whisper-small | 0.30 | 0.38 | ✅ |
+
+## German (de)
+
+### EmoDB
+
+| No | Model Name | Val Accuracy | Test Accuracy | Completed |
+|----|------------|--------------|--------------|-----------|
+| 1 | wav2vec2-base | 0.68 | 0.70 | ✅ |
+| 2 | wav2vec2-large-960h | 0.31 | 0.34 | ✅ |
+| 3 | wav2vec2-large-lv60 | 0.30 | 0.26 | ✅ |
+| 4 | wavlm-base-plus | 0.71 | 0.70 | ✅ |
 
 ## English (en)
 
