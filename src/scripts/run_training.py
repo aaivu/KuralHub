@@ -299,7 +299,7 @@ if __name__ == "__main__":
 
     # ----------Modify-------------#
     CUR_DATASET = DATASET.BANSPEMO
-    CUR_BASE_MODEL = BASE_MODEL.HUBERT_LARGE_LS960.value
+    CUR_BASE_MODEL = BASE_MODEL.OPENAI_WHISPER_LARGE.value
     # ----------End-------------#
 
     logger.info(
