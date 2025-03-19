@@ -298,8 +298,8 @@ if __name__ == "__main__":
     )
 
     # ----------Modify-------------#
-    CUR_DATASET = DATASET.BANSPEMO
-    CUR_BASE_MODEL = BASE_MODEL.OPENAI_WHISPER_LARGE.value
+    CUR_DATASET = DATASET.EMODB
+    CUR_BASE_MODEL = BASE_MODEL.WAVLM_BASE_PLUS.value
     # ----------End-------------#
 
     logger.info(
