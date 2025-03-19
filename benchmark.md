@@ -105,7 +105,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 6 | wav2vec2-xls-r-1b | 0.26 | 0.25 | ✅ |
 | 7 | wav2vec2-xls-r-300m | 0.29 | 0.25 | ✅ |
 | 8 | wavlm-base-plus | 0.53 | 0.53 | ✅ |
-| 9 | wavlm-large | N/A | N/A | ❌ |
+| 9 | wavlm-large | 0.72 | 0.70 | ✅ |
 | 10 | whisper-large | N/A | N/A | ❌ |
 | 11 | whisper-small | N/A | N/A | ❌ |
 
@@ -198,4 +198,21 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 9 | wavlm-large | 0.46 | 0.43 | ✅ |
 | 10 | whisper-large | 0.46 | 0.45 | ✅ |
 | 11 | whisper-small | 0.50 | 0.52 | ✅ |
+
+## Chinese (zh)
+
+### ESD
+
+| No | Model Name | Val Accuracy | Test Accuracy | Completed |
+|----|------------|--------------|--------------|-----------|
+| 1 | hubert-base-ls960 | N/A | N/A | ❌ |
+| 2 | hubert-large-ls960-ft | N/A | N/A | ❌ |
+| 3 | wav2vec2-base | N/A | N/A | ❌ |
+| 4 | wav2vec2-large-960h | N/A | N/A | ❌ |
+| 5 | wav2vec2-large-lv60 | N/A | N/A | ❌ |
+| 6 | wav2vec2-xls-r-300m | N/A | N/A | ❌ |
+| 7 | wavlm-base-plus | N/A | N/A | ❌ |
+| 8 | wavlm-large | N/A | N/A | ❌ |
+| 9 | whisper-large | N/A | N/A | ❌ |
+| 10 | whisper-small | N/A | N/A | ❌ |
 
