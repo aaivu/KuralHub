@@ -51,13 +51,14 @@ def generate_markdown(directory, output_file):
             md_file.write(f"## {language_name}\n\n")
             for dataset, models in sorted(datasets.items()):
                 md_file.write(f"### {dataset}\n\n")
-                md_file.write("| Model Name | Val Accuracy | Test Accuracy | Completed |\n")
-                md_file.write("|------------|--------------|--------------|-----------|\n")
-                
+                md_file.write("| No | Model Name | Val Accuracy | Test Accuracy | Completed |\n")
+                md_file.write("|----|------------|--------------|--------------|-----------|\n")
+                no = 1
                 for model, val_acc, test_acc, completed in sorted(models):
                     val_acc_str = f"{val_acc:.2f}" if val_acc is not None else "N/A"
                     test_acc_str = f"{test_acc:.2f}" if test_acc is not None else "N/A"
-                    md_file.write(f"| {model} | {val_acc_str} | {test_acc_str} | {completed} |\n")
+                    md_file.write(f"| {no} | {model} | {val_acc_str} | {test_acc_str} | {completed} |\n")
+                    no+=1
                 
                 md_file.write("\n")
     
