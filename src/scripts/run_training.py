@@ -298,8 +298,8 @@ if __name__ == "__main__":
     )
 
     # ----------Modify-------------#
-    CUR_DATASET = DATASET.EMODB
-    CUR_BASE_MODEL = BASE_MODEL.WAVLM_BASE_PLUS.value
+    CUR_DATASET = DATASET.EMOVO
+    CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_LARGE_LV60.value
     # ----------End-------------#
 
     logger.info(
