@@ -41,6 +41,7 @@ class LANGUAGE(Enum):
     AMHARIC = "am"
     PERSIAN = "fa"  # Farsi
     SWAHILI = "sw"
+    KOREAN = "ko"
 
 
 class Dataset:
@@ -158,7 +159,13 @@ class DATASET(Enum):
         language=LANGUAGE.URDU.value,
         url="kingabzpro/urdu-emotion-dataset",
         path="ser_datasets/Urdu-Dataset",
-    )  
+    )
+    KESDy18 = Dataset(
+        name="KESDy18",
+        language=LANGUAGE.KOREAN.value,
+        url="luxluxshan/korean-emotional-speech-dataset-kesdy18",
+        path="ser_datasets/KESDy18",
+    )
 
 
 class BASE_MODEL(Enum):
