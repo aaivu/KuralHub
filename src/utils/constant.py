@@ -130,6 +130,12 @@ class DATASET(Enum):
         url="uwrfkaggler/ravdess-emotional-speech-audio",
         path="ser_datasets/RAVDESS",
     )
+    TELUGU_DATASET = Dataset(
+        name="Telugu-Dataset",
+        language=LANGUAGE.TELUGU.value,
+        url="jettysowmith/telugu-emotion-speech",
+        path="ser_datasets/Telugu-Dataset/telugu",
+    )
     SHEMO = Dataset(
         name="SHEMO",
         language=LANGUAGE.PERSIAN.value,
@@ -147,12 +153,6 @@ class DATASET(Enum):
         language=LANGUAGE.SWAHILI.value,
         url="luxluxshan/kenyan-swahili-ser",
         path="ser_datasets/Swahili-Dataset",
-    )
-    TELUGU_DATASET = Dataset(
-        name="Telugu-Dataset",
-        language=LANGUAGE.TELUGU.value,
-        url="jettysowmith/telugu-emotion-speech",
-        path="ser_datasets/Telugu-Dataset/telugu",
     )
     URDU_DATASET = Dataset(
         name="Urdu-Dataset",
