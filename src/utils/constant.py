@@ -42,6 +42,7 @@ class LANGUAGE(Enum):
     PERSIAN = "fa"  # Farsi
     SWAHILI = "sw"
     KOREAN = "ko"
+    POLISH = "pl"
 
 
 class Dataset:
@@ -165,6 +166,12 @@ class DATASET(Enum):
         language=LANGUAGE.KOREAN.value,
         url="luxluxshan/korean-emotional-speech-dataset-kesdy18",
         path="ser_datasets/KESDy18",
+    )
+    nEMO = Dataset(
+        name="nEMO",
+        language=LANGUAGE.POLISH.value,
+        url="jubeerathan/polish-nemo",
+        path="ser_datasets/nEMO",
     )
 
 
