@@ -43,6 +43,9 @@ format:
 download_dataset:
 	. .venv/bin/activate && python3 -m src.scripts.download_datasets
 
+upload_dataset:
+	. .venv/bin/activate && python3 -m src.scripts.bulk_kaggle_dataset_uploader
+
 meta_extract:
 	. .venv/bin/activate && python3 -m src.scripts.meta_extractor
 
