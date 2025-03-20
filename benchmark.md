@@ -106,7 +106,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 7 | wav2vec2-xls-r-300m | 0.29 | 0.24 | ✅ |
 | 8 | wavlm-base-plus | 0.40 | 0.28 | ✅ |
 | 9 | wavlm-large | 0.51 | 0.41 | ✅ |
-| 10 | whisper-large | N/A | N/A | ❌ |
+| 10 | whisper-large | 0.69 | 0.67 | ✅ |
 | 11 | whisper-small | 0.67 | 0.68 | ✅ |
 
 ## French (fr)
