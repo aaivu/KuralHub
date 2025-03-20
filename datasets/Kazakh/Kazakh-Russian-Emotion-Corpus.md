@@ -21,7 +21,7 @@ The Kazakh-Russian Emotion Corpus is a multilingual dataset designed fmor speech
 📄 **Paper:** [Paper Link](https://digitalcommons.aaru.edu.jo/cgi/viewcontent.cgi?article=2829&context=amis) <br/> 
 🗂️ **Download Link:**   Not Specified <br/> 
 💾 **File Format:** `.wav`<br/> 
-📧 Contact: [Kanat Kozhakhmet](https://kz.linkedin.com/in/kanat-kozhakhmet-b7235733) </br>
+📧 Contact: [nazerke.sultanova@sdu.edu.kz](mailto:nazerke.sultanova@sdu.edu.kz) </br>
 > ⚠️ **Note:** Fill the request process if the dataset is restricted.
 
 ---
