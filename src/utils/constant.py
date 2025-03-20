@@ -40,6 +40,7 @@ class LANGUAGE(Enum):
     FRENCH = "fr"
     AMHARIC = "am"
     PERSIAN = "fa"  # Farsi
+    SWAHILI = "sw"
 
 
 class Dataset:
@@ -151,6 +152,13 @@ class DATASET(Enum):
         language=LANGUAGE.ENGLISH.value,
         url="ybsingh/indian-emotional-speech-corpora-iesc",
         path="ser_datasets/IESC",
+    )
+
+    SWAHILI_DATASET = Dataset(
+        name="Swahili-Dataset",
+        language=LANGUAGE.SWAHILI.value,
+        url="luxluxshan/kenyan-swahili-ser",
+        path="ser_datasets/Swahili-Dataset",
     )
 
 
