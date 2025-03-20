@@ -105,6 +105,12 @@ class DATASET(Enum):
         url="vishlb/speech-emotion-recognition-hindi",
         path="ser_datasets/Hindi-Dataset/my Dataset",
     )
+    IESC = Dataset(
+        name="IESC",  # Indian English
+        language=LANGUAGE.ENGLISH.value,
+        url="ybsingh/indian-emotional-speech-corpora-iesc",
+        path="ser_datasets/IESC",
+    )
     KANNADA_DATASET = Dataset(
         name="Kannada-Dataset",
         language=LANGUAGE.KANNADA.value,
@@ -123,11 +129,23 @@ class DATASET(Enum):
         url="uwrfkaggler/ravdess-emotional-speech-audio",
         path="ser_datasets/RAVDESS",
     )
+    SHEMO = Dataset(
+        name="SHEMO",
+        language=LANGUAGE.PERSIAN.value,
+        url="mansourehk/shemo-persian-speech-emotion-detection-database",
+        path="ser_datasets/SHEMO",
+    )
     SUBESCO = Dataset(
         name="SUBESCO",
         language=LANGUAGE.BENGALI.value,
         url="sushmit0109/subescobangla-speech-emotion-dataset",
         path="ser_datasets/SUBESCO/SUBESCO",
+    )
+    SWAHILI_DATASET = Dataset(
+        name="Swahili-Dataset",
+        language=LANGUAGE.SWAHILI.value,
+        url="luxluxshan/kenyan-swahili-ser",
+        path="ser_datasets/Swahili-Dataset",
     )
     TELUGU_DATASET = Dataset(
         name="Telugu-Dataset",
@@ -140,26 +158,7 @@ class DATASET(Enum):
         language=LANGUAGE.URDU.value,
         url="kingabzpro/urdu-emotion-dataset",
         path="ser_datasets/Urdu-Dataset",
-    )
-    SHEMO = Dataset(
-        name="SHEMO",
-        language=LANGUAGE.PERSIAN.value,
-        url="mansourehk/shemo-persian-speech-emotion-detection-database",
-        path="ser_datasets/SHEMO",
-    )
-    IESC = Dataset(
-        name="IESC",  # Indian English
-        language=LANGUAGE.ENGLISH.value,
-        url="ybsingh/indian-emotional-speech-corpora-iesc",
-        path="ser_datasets/IESC",
-    )
-
-    SWAHILI_DATASET = Dataset(
-        name="Swahili-Dataset",
-        language=LANGUAGE.SWAHILI.value,
-        url="luxluxshan/kenyan-swahili-ser",
-        path="ser_datasets/Swahili-Dataset",
-    )
+    )  
 
 
 class BASE_MODEL(Enum):
