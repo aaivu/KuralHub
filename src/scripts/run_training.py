@@ -299,7 +299,6 @@ if __name__ == "__main__":
 
     # ----------Modify-------------#
     CUR_DATASET = DATASET.SUBESCO
-    # Train it failed.
     CUR_BASE_MODEL = BASE_MODEL.OPENAI_WHISPER_LARGE.value 
     # ----------End-------------#
 
