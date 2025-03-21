@@ -49,7 +49,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 4 | wav2vec2-large-960h | 0.24 | 0.24 | ✅ |
 | 5 | wav2vec2-large-lv60 | 0.28 | 0.27 | ✅ |
 | 6 | wav2vec2-xls-r-1b | 0.36 | 0.38 | ✅ |
-| 7 | wav2vec2-xls-r-300m | N/A | N/A | ❌ |
+| 7 | wav2vec2-xls-r-300m | 0.51 | 0.48 | ✅ |
 | 8 | wavlm-base-plus | 0.76 | 0.78 | ✅ |
 | 9 | wavlm-large | 0.76 | 0.74 | ✅ |
 | 10 | whisper-large | N/A | N/A | ❌ |
@@ -214,6 +214,18 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 9 | wavlm-large | 0.36 | 0.48 | ✅ |
 | 10 | whisper-large | 0.37 | 0.36 | ✅ |
 | 11 | whisper-small | 0.41 | 0.30 | ✅ |
+
+## Swahili (sw)
+
+### Swahili-Dataset
+
+| No | Model Name | Val Accuracy | Test Accuracy | Completed |
+|----|------------|--------------|--------------|-----------|
+| 1 | hubert-base-ls960 | 0.75 | 0.81 | ✅ |
+| 2 | wav2vec2-base | 0.65 | 0.72 | ✅ |
+| 3 | wav2vec2-xls-r-300m | 0.35 | 0.33 | ✅ |
+| 4 | wavlm-base-plus | 0.80 | 0.83 | ✅ |
+| 5 | whisper-small | N/A | N/A | ❌ |
 
 ## Tamil (ta)
 
