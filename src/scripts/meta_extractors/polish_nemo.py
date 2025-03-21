@@ -4,7 +4,7 @@ import os
 from src.scripts.meta_extractors.dataset_processor import process_dataset
 from src.utils.constant import DATASET, EMOTION, SELECTED_EMOTIONS
 
-nEMO = DATASET.nEMO.value
+nEMO = DATASET.NEMO.value
 EMOTION_MAP = {
     "fear": EMOTION.FEAR.value,
     "sadness": EMOTION.SADNESS.value,
@@ -13,6 +13,7 @@ EMOTION_MAP = {
     "neutral": EMOTION.NEUTRAL.value,
     "surprise": EMOTION.SURPRISE.value,
 }
+
 
 def process_nemo_files(dataset_path, emotion_map, selected_emotions):
 
@@ -26,7 +27,9 @@ def process_nemo_files(dataset_path, emotion_map, selected_emotions):
 
             parts = file_name.split("_")
             if len(parts) < 2:
-                logging.warning(f"Skipping file with unexpected format: {file_name}")
+                logging.warning(
+                    f"Skipping file with unexpected format: {file_name}"
+                )
                 continue
 
             emotion_key = parts[1]
@@ -44,7 +47,7 @@ def process_nemo_files(dataset_path, emotion_map, selected_emotions):
     return data
 
 
-if __name__ == "__main__":  
+if __name__ == "__main__":
     process_dataset(
         dataset_path=nEMO.path,
         language_code=nEMO.language,
