@@ -167,7 +167,7 @@ class DATASET(Enum):
         url="luxluxshan/korean-emotional-speech-dataset-kesdy18",
         path="ser_datasets/KESDy18",
     )
-    nEMO = Dataset(
+    NEMO = Dataset(
         name="nEMO",
         language=LANGUAGE.POLISH.value,
         url="jubeerathan/polish-nemo",
