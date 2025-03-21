@@ -21,7 +21,7 @@ SITB-OSED is the first open-source large Odia speech emotion database developed 
 
 🔗 **Official Website:** [SPEAL Website](http://www.speal.org/download-sitb-osed-dataset/) <br/>
 📄 **Paper:** [IEEE Xplore](https://doi.org/10.1109/CSDE56538.2022.10089254) <br/>
-🗂️ **Download Link:** [Download](http://www.speal.org/download-sitb-osed-dataset/) <br/>
+🗂️ **Download Link:** [Download](https://zenodo.org/records/14953940) <br/>
 💾 **File Format:** `.wav` (16-bit, 22.05 kHz, stereo) <br/>
 📧 **Contact:** [mail](mailto:bubaimaji51@gmail.com?subject=Dataset%20Access%20Request) </br>
 
