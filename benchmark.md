@@ -133,7 +133,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 8 | wavlm-base-plus | 0.77 | 0.79 | ✅ |
 | 9 | wavlm-large | 0.72 | 0.80 | ✅ |
 | 10 | whisper-large | N/A | N/A | ❌ |
-| 11 | whisper-small | N/A | N/A | ❌ |
+| 11 | whisper-small | 0.79 | 0.83 | ✅ |
 
 ## French (fr)
 
@@ -259,5 +259,5 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 8 | wavlm-base-plus | 0.91 | 0.90 | ✅ |
 | 9 | wavlm-large | 0.90 | 0.91 | ✅ |
 | 10 | whisper-large | N/A | N/A | ❌ |
-| 11 | whisper-small | N/A | N/A | ❌ |
+| 11 | whisper-small | 0.97 | 0.97 | ✅ |
 
