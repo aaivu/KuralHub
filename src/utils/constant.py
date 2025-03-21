@@ -43,6 +43,7 @@ class LANGUAGE(Enum):
     SWAHILI = "sw"
     KOREAN = "ko"
     POLISH = "pl"
+    ODIA = "or"
 
 
 class Dataset:
@@ -172,6 +173,12 @@ class DATASET(Enum):
         language=LANGUAGE.POLISH.value,
         url="jubeerathan/polish-nemo",
         path="ser_datasets/nEMO",
+    )
+    SITBOSED = Dataset(
+        name="SITB-OSED",
+        language=LANGUAGE.ODIA.value,
+        url="jubeerathan/odia-sitb-osed",
+        path="ser_datasets/SITB-OSED",
     )
 
 
