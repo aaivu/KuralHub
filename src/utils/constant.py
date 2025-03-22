@@ -209,6 +209,12 @@ class DATASET(Enum):
         url="luxluxshan/ser-indowavesentiment",
         path="ser_datasets/IndoWaveSentiment",
     )
+    EMOZIONALMENTE = Dataset(
+        name="Emozionalmente",
+        language=LANGUAGE.ITALIAN.value,
+        url="luxluxshan/ser-emozionalmente",
+        path="ser_datasets/Emozionalmente",
+    )
 
 
 class BASE_MODEL(Enum):
