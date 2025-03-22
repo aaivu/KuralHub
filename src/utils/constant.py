@@ -46,6 +46,7 @@ class LANGUAGE(Enum):
     ODIA = "or"
     TURKISH = "tr"
     PORTUGUESE = "pt"
+    JAPANESE = "ja"
 
 
 class Dataset:
@@ -193,6 +194,12 @@ class DATASET(Enum):
         language=LANGUAGE.PORTUGUESE.value,
         url="luxluxshan/ser-emouerj",
         path="ser_datasets/emoUERJ",
+    )
+    JVNV = Dataset(
+        name="JVNV",
+        language=LANGUAGE.JAPANESE.value,
+        url="luxluxshan/ser-jvnv",
+        path="ser_datasets/JVNV",
     )
 
 
