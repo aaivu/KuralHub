@@ -45,6 +45,7 @@ class LANGUAGE(Enum):
     POLISH = "pl"
     ODIA = "or"
     TURKISH = "tr"
+    PORTUGUESE = "pt"
 
 
 class Dataset:
@@ -186,6 +187,12 @@ class DATASET(Enum):
         language=LANGUAGE.TURKISH.value,
         url="luxluxshan/ser-turev-db",
         path="ser_datasets/TurEV-DB",
+    )
+    EMOUERJ = Dataset(
+        name="emoUERJ",
+        language=LANGUAGE.PORTUGUESE.value,
+        url="luxluxshan/ser-emouerj",
+        path="ser_datasets/emoUERJ",
     )
 
 
