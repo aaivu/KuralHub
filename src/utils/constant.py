@@ -44,6 +44,7 @@ class LANGUAGE(Enum):
     KOREAN = "ko"
     POLISH = "pl"
     ODIA = "or"
+    TURKISH = "tr"
 
 
 class Dataset:
@@ -179,6 +180,12 @@ class DATASET(Enum):
         language=LANGUAGE.ODIA.value,
         url="jubeerathan/odia-sitb-osed",
         path="ser_datasets/SITB-OSED",
+    )
+    TUREVDB = Dataset(
+        name="TurEV-DB",
+        language=LANGUAGE.TURKISH.value,
+        url="luxluxshan/ser-turev-db",
+        path="ser_datasets/TurEV-DB",
     )
 
 
