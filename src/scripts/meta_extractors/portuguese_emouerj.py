@@ -24,7 +24,7 @@ def process_EMOUERJ_files(dataset_path, emotion_map, selected_emotions):
             data.append([emo, file])
 
     except Exception as e:
-        logging.error(f"Error processing SWAHILI_DATASET files: {str(e)}")
+        logging.error(f"Error processing EMOUERJ files: {str(e)}")
 
     return data
 
