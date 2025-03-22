@@ -44,7 +44,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | No | Model Name | Val Accuracy | Test Accuracy | Completed |
 |----|------------|--------------|--------------|-----------|
 | 1 | hubert-base-ls960 | 0.77 | 0.78 | ✅ |
-| 2 | hubert-large-ls960-ft | N/A | N/A | ❌ |
+| 2 | hubert-large-ls960-ft | 0.56 | 0.54 | ✅ |
 | 3 | wav2vec2-base | 0.69 | 0.68 | ✅ |
 | 4 | wav2vec2-large-960h | 0.24 | 0.24 | ✅ |
 | 5 | wav2vec2-large-lv60 | 0.28 | 0.27 | ✅ |
@@ -53,7 +53,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 8 | wavlm-base-plus | 0.76 | 0.78 | ✅ |
 | 9 | wavlm-large | 0.76 | 0.74 | ✅ |
 | 10 | whisper-large | N/A | N/A | ❌ |
-| 11 | whisper-small | N/A | N/A | ❌ |
+| 11 | whisper-small | 0.88 | 0.89 | ✅ |
 
 ## German (de)
 
@@ -140,7 +140,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 7 | wav2vec2-xls-r-300m | 0.44 | 0.46 | ✅ |
 | 8 | wavlm-base-plus | 0.77 | 0.79 | ✅ |
 | 9 | wavlm-large | 0.72 | 0.80 | ✅ |
-| 10 | whisper-large | N/A | N/A | ❌ |
+| 10 | whisper-large | 0.80 | 0.82 | ✅ |
 | 11 | whisper-small | 0.79 | 0.83 | ✅ |
 
 ## French (fr)
