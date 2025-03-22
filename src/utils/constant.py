@@ -215,6 +215,12 @@ class DATASET(Enum):
         url="luxluxshan/ser-emozionalmente",
         path="ser_datasets/Emozionalmente",
     )
+    URDUSER = Dataset(
+        name="UrduSER",
+        language=LANGUAGE.URDU.value,
+        url="luxluxshan/ser-urduser",
+        path="ser_datasets/UrduSER",
+    )
 
 
 class BASE_MODEL(Enum):
