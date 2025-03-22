@@ -299,7 +299,7 @@ if __name__ == "__main__":
 
     # ----------Modify-------------#
     CUR_DATASET = DATASET.URDU_DATASET
-    CUR_BASE_MODEL = BASE_MODEL.HUBERT_BASE.value 
+    CUR_BASE_MODEL = BASE_MODEL.HUBERT_BASE.value
     # ----------End-------------#
 
     logger.info(

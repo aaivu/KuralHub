@@ -22,26 +22,28 @@ def process_sitb_osed_files(dataset_path, emotion_map, selected_emotions):
         dir_list = os.listdir(dataset_path)
         for directory in dir_list:
             dir_path = os.path.join(dataset_path, directory)
-            
+
             if not os.path.isdir(dir_path):
-                continue 
-                
+                continue
+
             files = os.listdir(dir_path)
             for file in files:
-                if not file.endswith('.wav'):
-                    continue 
-                    
+                if not file.endswith(".wav"):
+                    continue
+
                 parts = file.split(".")[0].split("-")
                 if len(parts) != 4:
-                    print(f"Skipping file with unexpected format: {os.path.join(dir_path, file)}")
+                    print(
+                        f"Skipping file with unexpected format: {os.path.join(dir_path, file)}"
+                    )
                     continue
-                    
+
                 emotion_code = parts[1]
                 emotion = emotion_map.get(emotion_code)
 
                 if emotion not in selected_emotions:
                     continue
-                
+
                 file_path = os.path.join(dir_path, file)
                 data.append([emotion, file_path])
 
