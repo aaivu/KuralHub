@@ -13,6 +13,7 @@ class EMOTION(Enum):
     BOREDOM = "BOREDOM"
     SARCASTIC = "SARCASTIC"
     JOY = "JOY"
+    DISAPPOINTMENT = "DISAPPOINTMENT"
 
 
 SELECTED_EMOTIONS = [
@@ -47,6 +48,7 @@ class LANGUAGE(Enum):
     TURKISH = "tr"
     PORTUGUESE = "pt"
     JAPANESE = "ja"
+    INDONESIAN = "id"
 
 
 class Dataset:
@@ -200,6 +202,12 @@ class DATASET(Enum):
         language=LANGUAGE.JAPANESE.value,
         url="luxluxshan/ser-jvnv",
         path="ser_datasets/JVNV",
+    )
+    INDOWAVESENTIMENT = Dataset(
+        name="IndoWaveSentiment",
+        language=LANGUAGE.INDONESIAN.value,
+        url="luxluxshan/ser-indowavesentiment",
+        path="ser_datasets/IndoWaveSentiment",
     )
 
 
