@@ -14,6 +14,7 @@ class EMOTION(Enum):
     SARCASTIC = "SARCASTIC"
     JOY = "JOY"
     DISAPPOINTMENT = "DISAPPOINTMENT"
+    ENTHUSIASM = "ENTHUSIASM"
 
 
 SELECTED_EMOTIONS = [
@@ -49,6 +50,7 @@ class LANGUAGE(Enum):
     PORTUGUESE = "pt"
     JAPANESE = "ja"
     INDONESIAN = "id"
+    RUSSIAN = "ru"
 
 
 class Dataset:
@@ -220,6 +222,12 @@ class DATASET(Enum):
         language=LANGUAGE.URDU.value,
         url="luxluxshan/ser-urduser",
         path="ser_datasets/UrduSER",
+    )
+    RESD = Dataset(
+        name="RESD",
+        language=LANGUAGE.RUSSIAN.value,
+        url="luxluxshan/ser-resd-russian",
+        path="ser_datasets/RESD",
     )
 
 
