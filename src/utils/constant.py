@@ -16,6 +16,8 @@ class EMOTION(Enum):
     DISAPPOINTMENT = "DISAPPOINTMENT"
     ENTHUSIASM = "ENTHUSIASM"
     EXCITEMENT = "EXCITEMENT"
+    ANTICIPATION = "ANTICIPATION"
+    TRUST = "TRUST"
 
 
 SELECTED_EMOTIONS = [
@@ -56,6 +58,7 @@ class LANGUAGE(Enum):
     GREEK = "el"
     KAZAKH = "kk"
     QUECHUA = "qu"
+    AFRIKAANS = "af"
 
 
 class Dataset:
@@ -257,6 +260,12 @@ class DATASET(Enum):
         language=LANGUAGE.QUECHUA.value,
         url="thanikansivatheepan/quechua-collao-corpus",
         path="ser_datasets/Quechua-Collao-Corpus",
+    )
+    AfrikaansEmotionalSpeechCorpus = Dataset(
+        name="AfrikaansEmotionalSpeechCorpus",
+        language=LANGUAGE.AFRIKAANS.value,
+        url="thanikansivatheepan/afrikaansemotionalspeechcorpus",
+        path="ser_datasets/AfrikaansEmotionalSpeechCorpus",
     )
 
 
