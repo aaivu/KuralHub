@@ -249,7 +249,7 @@ class DATASET(Enum):
         name="KazakhEmotionalTTS",
         language=LANGUAGE.KAZAKH.value,
         url="thanikansivatheepan/kazakh-emotional-tts",
-        path="ser_datasets/KazakhEmotionalTTS",
+        path="ser_datasets/KazakhEmotionalTTS/EmoKaz",
     )
     QUECHUA_COLLAO = Dataset(
         name="Quechua-Collao-Corpus",
