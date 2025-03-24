@@ -298,8 +298,8 @@ if __name__ == "__main__":
     )
 
     # ----------Modify-------------#
-    CUR_DATASET = DATASET.URDU_DATASET
-    CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_LARGE_LV60.value
+    CUR_DATASET = DATASET.KESDy18
+    CUR_BASE_MODEL = BASE_MODEL.XLS_R_300M.value
     # ----------End-------------#
 
     logger.info(
