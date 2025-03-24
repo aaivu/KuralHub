@@ -51,6 +51,10 @@ class LANGUAGE(Enum):
     JAPANESE = "ja"
     INDONESIAN = "id"
     RUSSIAN = "ru"
+    ARABIC = "ar"
+    GREEK = "el"
+    KAZAKH = "kk"
+    QUECHUA = "qu"
 
 
 class Dataset:
@@ -228,6 +232,30 @@ class DATASET(Enum):
         language=LANGUAGE.RUSSIAN.value,
         url="luxluxshan/ser-resd-russian",
         path="ser_datasets/RESD",
+    )
+    ANAD = Dataset(
+        name="ANAD",
+        language=LANGUAGE.ARABIC.value,
+        url="suso172/arabic-natural-audio-dataset",
+        path="ser_datasets/ANAD",
+    )
+    AESDD = Dataset(
+        name="AESDD",
+        language=LANGUAGE.GREEK.value,
+        url="thanikansivatheepan/aesdd-greek",
+        path="ser_datasets/AESDD",
+    )
+    KazakhEmotionalTTS = Dataset(
+        name="KazakhEmotionalTTS",
+        language=LANGUAGE.KAZAKH.value,
+        url="thanikansivatheepan/kazakh-emotional-tts",
+        path="ser_datasets/KazakhEmotionalTTS",
+    )
+    QUECHUA_COLLAO = Dataset(
+        name="Quechua-Collao-Corpus",
+        language=LANGUAGE.QUECHUA.value,
+        url="thanikansivatheepan/quechua-collao-corpus",
+        path="ser_datasets/Quechua-Collao",
     )
 
 
