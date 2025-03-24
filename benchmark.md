@@ -52,7 +52,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 7 | wav2vec2-xls-r-300m | 0.51 | 0.48 | ✅ |
 | 8 | wavlm-base-plus | 0.76 | 0.78 | ✅ |
 | 9 | wavlm-large | 0.76 | 0.74 | ✅ |
-| 10 | whisper-large | N/A | N/A | ❌ |
+| 10 | whisper-large | 0.88 | 0.89 | ✅ |
 | 11 | whisper-small | 0.88 | 0.89 | ✅ |
 
 ## German (de)
@@ -215,6 +215,18 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 10 | whisper-large | 0.37 | 0.36 | ✅ |
 | 11 | whisper-small | 0.41 | 0.30 | ✅ |
 
+## Korean (ko)
+
+### KESDy18
+
+| No | Model Name | Val Accuracy | Test Accuracy | Completed |
+|----|------------|--------------|--------------|-----------|
+| 1 | hubert-base-ls960 | 0.76 | 0.80 | ✅ |
+| 2 | wav2vec2-base | N/A | N/A | ❌ |
+| 3 | wav2vec2-xls-r-300m | 0.40 | 0.39 | ✅ |
+| 4 | wavlm-base-plus | 0.70 | 0.74 | ✅ |
+| 5 | whisper-small | 0.81 | 0.81 | ✅ |
+
 ## Swahili (sw)
 
 ### Swahili-Dataset
@@ -230,7 +242,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 7 | wav2vec2-xls-r-300m | 0.35 | 0.33 | ✅ |
 | 8 | wavlm-base-plus | 0.80 | 0.83 | ✅ |
 | 9 | wavlm-large | 0.78 | 0.74 | ✅ |
-| 10 | whisper-large | N/A | N/A | ❌ |
+| 10 | whisper-large | 0.78 | 0.80 | ✅ |
 | 11 | whisper-small | 0.71 | 0.69 | ✅ |
 
 ## Tamil (ta)
