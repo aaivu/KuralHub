@@ -243,7 +243,7 @@ class DATASET(Enum):
         name="AESDD",
         language=LANGUAGE.GREEK.value,
         url="thanikansivatheepan/aesdd-greek",
-        path="ser_datasets/AESDD",
+        path="ser_datasets/AESDD/Acted Emotional Speech Dynamic Database",
     )
     KazakhEmotionalTTS = Dataset(
         name="KazakhEmotionalTTS",
@@ -255,7 +255,7 @@ class DATASET(Enum):
         name="Quechua-Collao-Corpus",
         language=LANGUAGE.QUECHUA.value,
         url="thanikansivatheepan/quechua-collao-corpus",
-        path="ser_datasets/Quechua-Collao",
+        path="ser_datasets/Quechua-Collao-Corpus",
     )
 
 
