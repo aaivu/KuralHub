@@ -230,7 +230,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 7 | wav2vec2-xls-r-300m | 0.40 | 0.39 | ✅ |
 | 8 | wavlm-base-plus | 0.70 | 0.74 | ✅ |
 | 9 | wavlm-large | 0.77 | 0.76 | ✅ |
-| 10 | whisper-large | N/A | N/A | ❌ |
+| 10 | whisper-large | 0.78 | 0.79 | ✅ |
 | 11 | whisper-small | 0.81 | 0.81 | ✅ |
 
 ## Odia (or)
@@ -239,7 +239,11 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 
 | No | Model Name | Val Accuracy | Test Accuracy | Completed |
 |----|------------|--------------|--------------|-----------|
-| 1 | wav2vec2-base | 0.65 | 0.64 | ✅ |
+| 1 | hubert-base-ls960 | N/A | N/A | ❌ |
+| 2 | wav2vec2-base | 0.65 | 0.64 | ✅ |
+| 3 | wav2vec2-xls-r-300m | N/A | N/A | ❌ |
+| 4 | wavlm-base-plus | N/A | N/A | ❌ |
+| 5 | whisper-small | N/A | N/A | ❌ |
 
 ## Polish (pl)
 
@@ -249,8 +253,9 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 |----|------------|--------------|--------------|-----------|
 | 1 | hubert-base-ls960 | 0.77 | 0.79 | ✅ |
 | 2 | wav2vec2-base | N/A | N/A | ❌ |
-| 3 | wavlm-base-plus | 0.73 | 0.74 | ✅ |
-| 4 | whisper-small | N/A | N/A | ❌ |
+| 3 | wav2vec2-xls-r-300m | N/A | N/A | ❌ |
+| 4 | wavlm-base-plus | 0.73 | 0.74 | ✅ |
+| 5 | whisper-small | 0.85 | 0.85 | ✅ |
 
 ## Swahili (sw)
 
@@ -337,6 +342,6 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 7 | wav2vec2-xls-r-300m | 0.62 | 0.59 | ✅ |
 | 8 | wavlm-base-plus | 0.91 | 0.90 | ✅ |
 | 9 | wavlm-large | 0.90 | 0.91 | ✅ |
-| 10 | whisper-large | N/A | N/A | ❌ |
+| 10 | whisper-large | 0.98 | 0.98 | ✅ |
 | 11 | whisper-small | 0.97 | 0.97 | ✅ |
 
