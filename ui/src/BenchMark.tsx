@@ -472,7 +472,7 @@ const BenchmarkComponent = ({
                       <li>
                         <button
                           className="flex items-center space-x-2 w-full p-2 rounded hover:bg-gray-200 text-left"
-                          onClick={() => setSelectedLogFile('loss_curve.png')}
+                          onClick={() => setSelectedLogFile(`loss_curve.png`)}
                         >
                           <Image size={16} />
                           <span>Loss Curve</span>
@@ -481,9 +481,8 @@ const BenchmarkComponent = ({
                       <li>
                         <button
                           className="flex items-center space-x-2 w-full p-2 rounded hover:bg-gray-200 text-left"
-                          onClick={() =>
-                            setSelectedLogFile('test_classification.txt')
-                          }
+                          onClick={() => setSelectedLogFile(`test_classification_report.txt`)}
+
                         >
                           <FileText size={16} />
                           <span>Test Classification Report</span>
@@ -492,9 +491,8 @@ const BenchmarkComponent = ({
                       <li>
                         <button
                           className="flex items-center space-x-2 w-full p-2 rounded hover:bg-gray-200 text-left"
-                          onClick={() =>
-                            setSelectedLogFile('test_confusion_matrix.png')
-                          }
+                          onClick={() => setSelectedLogFile(`test_confusion_matrix.png`)}
+
                         >
                           <Image size={16} />
                           <span>Test Confusion Matrix</span>
@@ -503,9 +501,8 @@ const BenchmarkComponent = ({
                       <li>
                         <button
                           className="flex items-center space-x-2 w-full p-2 rounded hover:bg-gray-200 text-left"
-                          onClick={() =>
-                            setSelectedLogFile('val_classification.txt')
-                          }
+                          onClick={() => setSelectedLogFile(`val_classification_report.txt`)}
+
                         >
                           <FileText size={16} />
                           <span>Validation Classification Report</span>
@@ -514,9 +511,8 @@ const BenchmarkComponent = ({
                       <li>
                         <button
                           className="flex items-center space-x-2 w-full p-2 rounded hover:bg-gray-200 text-left"
-                          onClick={() =>
-                            setSelectedLogFile('val_confusion_matrix.png')
-                          }
+                          onClick={() => setSelectedLogFile('val_confusion_matrix.png')}
+
                         >
                           <Image size={16} />
                           <span>Validation Confusion Matrix</span>
@@ -539,7 +535,8 @@ const BenchmarkComponent = ({
                         ) : (
                           <div className="flex justify-center">
                             <img
-                              src={`${baseLogsPath}/${selectedModel.model.logs_path}/${selectedLogFile}`}
+                            // src='/train_val_test_logs/am_ASED_hubert-base-ls960/am_ASED_hubert-base-ls960_loss_curve.png'
+                              src={`/${baseLogsPath}/${selectedModel.model.logs_path}/${selectedModel.model.logs_path}_${selectedLogFile}`}
                               alt={selectedLogFile}
                               className="max-w-full max-h-96 object-contain"
                             />
