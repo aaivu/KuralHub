@@ -299,7 +299,7 @@ if __name__ == "__main__":
 
     # ----------Modify-------------#MSER20
     CUR_DATASET = DATASET.JVNV
-    CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_BASE.value
+    CUR_BASE_MODEL = BASE_MODEL.WAVLM_BASE_PLUS.value
     # ----------End-------------#
 
     logger.info(
