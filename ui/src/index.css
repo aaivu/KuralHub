@@ -33,7 +33,7 @@ html {
 }
 
 ::selection {
-  background: var(--secondary-500);
+  background: lightblue;
 }
 
 /* For Firefox */
