@@ -1,34 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect, useLayoutEffect } from 'react'
+import TopNav from './components/TopNav'
+import { Theme } from './utils/type'
+import Home from './Home'
+import { useKeycloak } from '@react-keycloak/web'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [theme, setTheme] = useState<Theme>('light')
+  const { initialized } = useKeycloak()
 
+  useLayoutEffect(() => {
+    const theme = localStorage.getItem('theme')
+    if (theme === 'light' || theme === 'dark') {
+      setTheme(theme as Theme)
+    }
+  }, [])
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+  }, [theme])
+
+  const toggleTheme = () => {
+    setTheme((prv) => {
+      const theme = prv === 'dark' ? 'light' : 'dark'
+      localStorage.setItem('theme', theme)
+      return theme
+    })
+  }
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="bg-secondary-50 h-screen w-screen flex flex-col text-primary-950">
+      {initialized ? (
+        <>
+          <header className="w-full h-fit">
+            <TopNav theme={theme} toggleTheme={toggleTheme} />
+          </header>
+          <main className="flex flex-grow w-screen overflow-hidden text-sm">
+            <div className="w-full  h-full">
+              <Home />
+            </div>
+          </main>
+        </>
+      ) : (
+        <div className="flex w-full h-full justify-center items-center ">
+          <span
+            style={{ height: '40px', width: '40px' }}
+            className="border-primary-500 dbreeze-loader"
+          ></span>
+        </div>
+      )}
+    </div>
   )
 }
 
