@@ -1,7 +1,7 @@
 import os
 import re
+import json
 from collections import defaultdict
-from enum import Enum
 from src.utils.constant import LANGUAGE
 
 def get_language_name(code):
@@ -20,8 +20,9 @@ def extract_accuracy(file_path):
         print(f"Error reading {file_path}: {e}")
         return None
 
-def generate_markdown(directory, output_file):
+def generate_benchmark(directory, output_md, output_json):
     data = defaultdict(lambda: defaultdict(list))
+    json_data = {}
     
     for folder in sorted(os.listdir(directory)):
         folder_path = os.path.join(directory, folder)
@@ -40,8 +41,20 @@ def generate_markdown(directory, output_file):
                 
                 completed = "✅" if test_acc is not None and val_acc is not None else "❌"
                 data[language_code][dataset_name].append((model_name, val_acc, test_acc, completed))
+                
+                if get_language_name(language_code) not in json_data:
+                    json_data[get_language_name(language_code)] = {}
+                if dataset_name not in json_data[get_language_name(language_code)]:
+                    json_data[get_language_name(language_code)][dataset_name] = []
+                json_data[get_language_name(language_code)][dataset_name].append({
+                    "model": model_name,
+                    "val_accuracy": val_acc,
+                    "test_accuracy": test_acc,
+                    "completed": completed,
+                    "logs_path": f"{language_code}_{dataset_name}_{model_name}",
+                })
     
-    with open(output_file, "w") as md_file:
+    with open(output_md, "w") as md_file:
         md_file.write("# Model Benchmarks\n\n")
         md_file.write("## Models Evaluated\n")
         md_file.write(", ".join(sorted(set(m for d in data.values() for models in d.values() for m, _, _, _ in models))) + "\n\n")
@@ -58,12 +71,15 @@ def generate_markdown(directory, output_file):
                     val_acc_str = f"{val_acc:.2f}" if val_acc is not None else "N/A"
                     test_acc_str = f"{test_acc:.2f}" if test_acc is not None else "N/A"
                     md_file.write(f"| {no} | {model} | {val_acc_str} | {test_acc_str} | {completed} |\n")
-                    no+=1
-                
+                    no += 1
                 md_file.write("\n")
     
-    print(f"Markdown file '{output_file}' generated successfully!")
+    with open(output_json, "w") as json_file:
+        json.dump(json_data, json_file, indent=4)
+    
+    print(f"Markdown file '{output_md}' and JSON file '{output_json}' generated successfully!")
 
 directory = "./train_val_test_logs"
-output_file = "benchmark.md"
-generate_markdown(directory, output_file)
+output_md = "benchmark.md"
+output_json = "benchmark.json"
+generate_benchmark(directory, output_md, output_json)
