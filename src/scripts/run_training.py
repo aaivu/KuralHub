@@ -298,8 +298,8 @@ if __name__ == "__main__":
     )
 
     # ----------Modify-------------#MSER20
-    CUR_DATASET = DATASET.EMOUERJ
-    CUR_BASE_MODEL = BASE_MODEL.HUBERT_BASE.value
+    CUR_DATASET = DATASET.JVNV
+    CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_BASE.value
     # ----------End-------------#
 
     logger.info(
