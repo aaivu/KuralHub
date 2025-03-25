@@ -1,10 +1,9 @@
 import HomePage from './Home'
 
 const App = () => {
-  
   return (
     <>
-    <HomePage />
+      <HomePage />
     </>
   )
 }
