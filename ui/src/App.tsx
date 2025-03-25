@@ -11,7 +11,7 @@ const App = () => {
         <HomePage goToBenchmark={() => setCurrentPage('benchmark')} />
       ) : (
         <BenchmarkComponent
-          goToHome={() => setCurrentPage('benchmark')}
+          goToHome={() => setCurrentPage('home')}
           data={benchmarkData as BenchmarkData}
           baseLogsPath="train_val_test_logs"
         />

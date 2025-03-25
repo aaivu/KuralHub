@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   Grid,
   List,
@@ -49,7 +49,20 @@ const BenchmarkComponent = ({
   const [activeTab, setActiveTab] = useState<
     'info' | 'logs' | 'visualizations'
   >('info')
-  const [selectedLogFile, setSelectedLogFile] = useState<string | null>(null)
+  const [selectedLogFile, setSelectedLogFile] =
+    useState<string>('loss_curve.png')
+  const [logContent, setLogContent] = useState('Loading...')
+
+  useEffect(() => {
+    if (selectedLogFile?.endsWith('.txt')) {
+      const logFilePath = `/${baseLogsPath}/${selectedModel?.model.logs_path}/${selectedModel?.model.logs_path}_${selectedLogFile}`
+
+      fetch(logFilePath)
+        .then((response) => response.text())
+        .then(setLogContent)
+        .catch(() => setLogContent('Error loading file'))
+    }
+  }, [baseLogsPath, selectedModel, selectedLogFile])
 
   // Toggle dataset expansion in card view
   const toggleDataset = (language: string, dataset: string) => {
@@ -73,7 +86,7 @@ const BenchmarkComponent = ({
   // Close the detail view
   const handleCloseDetail = () => {
     setSelectedModel(null)
-    setSelectedLogFile(null)
+    setSelectedLogFile('loss_curve.png')
   }
 
   // Helper function to get color based on accuracy
@@ -314,7 +327,7 @@ const BenchmarkComponent = ({
       {/* Detail Modal */}
       {selectedModel && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col">
+          <div className="bg-white rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] h-[38rem] flex flex-col">
             {/* Header */}
             <div className="flex justify-between items-center p-4 border-b">
               <h2 className="text-xl font-semibold text-gray-800">
@@ -481,8 +494,9 @@ const BenchmarkComponent = ({
                       <li>
                         <button
                           className="flex items-center space-x-2 w-full p-2 rounded hover:bg-gray-200 text-left"
-                          onClick={() => setSelectedLogFile(`test_classification_report.txt`)}
-
+                          onClick={() =>
+                            setSelectedLogFile(`test_classification_report.txt`)
+                          }
                         >
                           <FileText size={16} />
                           <span>Test Classification Report</span>
@@ -491,8 +505,9 @@ const BenchmarkComponent = ({
                       <li>
                         <button
                           className="flex items-center space-x-2 w-full p-2 rounded hover:bg-gray-200 text-left"
-                          onClick={() => setSelectedLogFile(`test_confusion_matrix.png`)}
-
+                          onClick={() =>
+                            setSelectedLogFile(`test_confusion_matrix.png`)
+                          }
                         >
                           <Image size={16} />
                           <span>Test Confusion Matrix</span>
@@ -501,8 +516,9 @@ const BenchmarkComponent = ({
                       <li>
                         <button
                           className="flex items-center space-x-2 w-full p-2 rounded hover:bg-gray-200 text-left"
-                          onClick={() => setSelectedLogFile(`val_classification_report.txt`)}
-
+                          onClick={() =>
+                            setSelectedLogFile(`val_classification_report.txt`)
+                          }
                         >
                           <FileText size={16} />
                           <span>Validation Classification Report</span>
@@ -511,8 +527,9 @@ const BenchmarkComponent = ({
                       <li>
                         <button
                           className="flex items-center space-x-2 w-full p-2 rounded hover:bg-gray-200 text-left"
-                          onClick={() => setSelectedLogFile('val_confusion_matrix.png')}
-
+                          onClick={() =>
+                            setSelectedLogFile('val_confusion_matrix.png')
+                          }
                         >
                           <Image size={16} />
                           <span>Validation Confusion Matrix</span>
@@ -529,13 +546,11 @@ const BenchmarkComponent = ({
                         </h3>
                         {selectedLogFile.endsWith('.txt') ? (
                           <pre className="bg-gray-50 p-4 rounded-lg overflow-auto max-h-96 text-sm">
-                            {/* In a real app, you would fetch and display the actual content */}
-                            {`Sample content for ${selectedLogFile}\n\nClassification Report\n-------------------\n              precision    recall  f1-score   support\n\n       class1       0.92      0.90      0.91       100\n       class2       0.88      0.85      0.86        80\n       class3       0.95      0.93      0.94       120\n\n    accuracy                           0.91       300\n   macro avg       0.92      0.89      0.90       300\nweighted avg       0.92      0.91      0.91       300`}
+                            {logContent}
                           </pre>
                         ) : (
                           <div className="flex justify-center">
                             <img
-                            // src='/train_val_test_logs/am_ASED_hubert-base-ls960/am_ASED_hubert-base-ls960_loss_curve.png'
                               src={`/${baseLogsPath}/${selectedModel.model.logs_path}/${selectedModel.model.logs_path}_${selectedLogFile}`}
                               alt={selectedLogFile}
                               className="max-w-full max-h-96 object-contain"
