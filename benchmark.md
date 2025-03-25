@@ -257,6 +257,14 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 4 | wavlm-base-plus | 0.73 | 0.74 | ✅ |
 | 5 | whisper-small | 0.85 | 0.85 | ✅ |
 
+## Portuguese (pt)
+
+### emoUERJ
+
+| No | Model Name | Val Accuracy | Test Accuracy | Completed |
+|----|------------|--------------|--------------|-----------|
+| 1 | wav2vec2-base | N/A | N/A | ❌ |
+
 ## Swahili (sw)
 
 ### Swahili-Dataset
@@ -310,6 +318,17 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 9 | wavlm-large | 0.46 | 0.43 | ✅ |
 | 10 | whisper-large | 0.46 | 0.45 | ✅ |
 | 11 | whisper-small | 0.50 | 0.52 | ✅ |
+
+## Turkish (tr)
+
+### TurEV-DB
+
+| No | Model Name | Val Accuracy | Test Accuracy | Completed |
+|----|------------|--------------|--------------|-----------|
+| 1 | hubert-base-ls960 | N/A | N/A | ❌ |
+| 2 | wav2vec2-base | N/A | N/A | ❌ |
+| 3 | wavlm-base-plus | N/A | N/A | ❌ |
+| 4 | whisper-small | N/A | N/A | ❌ |
 
 ## Urdu (ur)
 
