@@ -79,7 +79,7 @@ def generate_benchmark(directory, output_md, output_json):
     
     print(f"Markdown file '{output_md}' and JSON file '{output_json}' generated successfully!")
 
-directory = "./train_val_test_logs"
+directory = "./ui/public/train_val_test_logs"
 output_md = "benchmark.md"
-output_json = "benchmark.json"
+output_json = "./ui/src/benchmark.json"
 generate_benchmark(directory, output_md, output_json)
