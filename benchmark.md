@@ -204,10 +204,16 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | No | Model Name | Val Accuracy | Test Accuracy | Completed |
 |----|------------|--------------|--------------|-----------|
 | 1 | hubert-base-ls960 | 0.77 | 0.86 | ✅ |
-| 2 | wav2vec2-base | 0.61 | 0.67 | ✅ |
-| 3 | wav2vec2-xls-r-300m | 0.42 | 0.43 | ✅ |
-| 4 | wavlm-base-plus | 0.75 | 0.84 | ✅ |
-| 5 | whisper-small | 0.80 | 0.81 | ✅ |
+| 2 | hubert-large-ls960-ft | 0.46 | 0.49 | ✅ |
+| 3 | wav2vec2-base | 0.61 | 0.67 | ✅ |
+| 4 | wav2vec2-large-960h | 0.33 | 0.39 | ✅ |
+| 5 | wav2vec2-large-lv60 | 0.31 | 0.26 | ✅ |
+| 6 | wav2vec2-xls-r-1b | 0.40 | 0.34 | ✅ |
+| 7 | wav2vec2-xls-r-300m | 0.42 | 0.43 | ✅ |
+| 8 | wavlm-base-plus | 0.75 | 0.84 | ✅ |
+| 9 | wavlm-large | 0.87 | 0.85 | ✅ |
+| 10 | whisper-large | N/A | N/A | ❌ |
+| 11 | whisper-small | 0.80 | 0.81 | ✅ |
 
 ## Kannada (kn)
 
