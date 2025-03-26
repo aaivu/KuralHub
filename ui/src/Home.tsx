@@ -9,7 +9,11 @@ import {
   FileBarChart2,
 } from 'lucide-react'
 
-const HomePage = () => {
+interface HomePageProps {
+  goToBenchmark: () => void
+}
+
+const HomePage = ({ goToBenchmark }: HomePageProps) => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Header */}
@@ -27,7 +31,7 @@ const HomePage = () => {
                 Home
               </a>
               <a
-                href="#benchmarks"
+                onClick={goToBenchmark}
                 className="text-gray-500 hover:text-gray-900 font-medium"
               >
                 Benchmarks
@@ -65,6 +69,7 @@ const HomePage = () => {
             </p>
             <div className="mt-10">
               <a
+                onClick={goToBenchmark}
                 href="#benchmarks"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
               >
@@ -377,6 +382,7 @@ const HomePage = () => {
                 </li>
                 <li>
                   <a
+                    onClick={goToBenchmark}
                     href="#benchmarks"
                     className="text-gray-400 hover:text-white flex items-center transition-colors duration-300"
                   >

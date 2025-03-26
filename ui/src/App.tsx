@@ -1,9 +1,21 @@
+import { useState } from 'react'
+import BenchmarkComponent, { BenchmarkData } from './BenchMark'
 import HomePage from './Home'
+import benchmarkData from './benchmark.json'
 
 const App = () => {
+  const [currentPage, setCurrentPage] = useState<'home' | 'benchmark'>('home')
   return (
     <>
-      <HomePage />
+      {currentPage == 'home' ? (
+        <HomePage goToBenchmark={() => setCurrentPage('benchmark')} />
+      ) : (
+        <BenchmarkComponent
+          goToHome={() => setCurrentPage('home')}
+          data={benchmarkData as BenchmarkData}
+          baseLogsPath="train_val_test_logs"
+        />
+      )}
     </>
   )
 }
