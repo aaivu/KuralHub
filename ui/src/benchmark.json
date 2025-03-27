@@ -953,9 +953,9 @@
             },
             {
                 "model": "whisper-large",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.83,
+                "test_accuracy": 0.87,
+                "completed": "\u2705",
                 "logs_path": "ja_JVNV_whisper-large"
             },
             {
