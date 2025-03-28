@@ -837,9 +837,9 @@
             },
             {
                 "model": "whisper-small",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.96,
+                "test_accuracy": 0.97,
+                "completed": "\u2705",
                 "logs_path": "id_IndoWaveSentiment_whisper-small"
             }
         ]
@@ -1288,9 +1288,9 @@
             },
             {
                 "model": "wav2vec2-xls-r-1b",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.43,
+                "test_accuracy": 0.41,
+                "completed": "\u2705",
                 "logs_path": "pl_nEMO_wav2vec2-xls-r-1b"
             },
             {
@@ -1341,9 +1341,9 @@
             },
             {
                 "model": "hubert-large-ls960-ft",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.59,
+                "test_accuracy": 0.51,
+                "completed": "\u2705",
                 "logs_path": "pt_emoUERJ_hubert-large-ls960-ft"
             },
             {
@@ -1383,9 +1383,9 @@
             },
             {
                 "model": "wavlm-large",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.88,
+                "test_accuracy": 0.76,
+                "completed": "\u2705",
                 "logs_path": "pt_emoUERJ_wavlm-large"
             },
             {
