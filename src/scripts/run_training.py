@@ -292,13 +292,13 @@ if __name__ == "__main__":
     else:
         print("CUDA is not available.")
 
-    device_id = 0
+    device_id = 1
     device = torch.device(
         f"cuda:{device_id}" if torch.cuda.is_available() else "cpu"
     )
 
     # ----------Modify-------------#MSER20
-    CUR_DATASET = DATASET.TUREVDB
+    CUR_DATASET = DATASET.INDOWAVESENTIMENT
     CUR_BASE_MODEL = BASE_MODEL.XLS_R_300M.value
     # ----------End-------------#
 

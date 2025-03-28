@@ -179,6 +179,18 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 10 | whisper-large | 0.67 | 0.69 | ✅ |
 | 11 | whisper-small | 0.68 | 0.71 | ✅ |
 
+## Indonesian (id)
+
+### IndoWaveSentiment
+
+| No | Model Name | Val Accuracy | Test Accuracy | Completed |
+|----|------------|--------------|--------------|-----------|
+| 1 | hubert-base-ls960 | 0.97 | 0.99 | ✅ |
+| 2 | wav2vec2-base | 0.78 | 0.77 | ✅ |
+| 3 | wav2vec2-xls-r-300m | 0.58 | 0.46 | ✅ |
+| 4 | wavlm-base-plus | 0.94 | 0.94 | ✅ |
+| 5 | whisper-small | N/A | N/A | ❌ |
+
 ## Italian (it)
 
 ### EMOVO
@@ -280,10 +292,12 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 3 | wav2vec2-base | 0.67 | 0.69 | ✅ |
 | 4 | wav2vec2-large-960h | 0.24 | 0.24 | ✅ |
 | 5 | wav2vec2-large-lv60 | 0.23 | 0.22 | ✅ |
-| 6 | wav2vec2-xls-r-300m | 0.36 | 0.37 | ✅ |
-| 7 | wavlm-base-plus | 0.73 | 0.74 | ✅ |
-| 8 | wavlm-large | 0.66 | 0.66 | ✅ |
-| 9 | whisper-small | 0.85 | 0.85 | ✅ |
+| 6 | wav2vec2-xls-r-1b | N/A | N/A | ❌ |
+| 7 | wav2vec2-xls-r-300m | 0.36 | 0.37 | ✅ |
+| 8 | wavlm-base-plus | 0.73 | 0.74 | ✅ |
+| 9 | wavlm-large | 0.66 | 0.66 | ✅ |
+| 10 | whisper-large | N/A | N/A | ❌ |
+| 11 | whisper-small | 0.85 | 0.85 | ✅ |
 
 ## Portuguese (pt)
 
@@ -292,10 +306,14 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | No | Model Name | Val Accuracy | Test Accuracy | Completed |
 |----|------------|--------------|--------------|-----------|
 | 1 | hubert-base-ls960 | 0.91 | 0.74 | ✅ |
-| 2 | wav2vec2-base | 0.70 | 0.63 | ✅ |
-| 3 | wav2vec2-xls-r-300m | 0.42 | 0.47 | ✅ |
-| 4 | wavlm-base-plus | 0.88 | 0.74 | ✅ |
-| 5 | whisper-small | 0.74 | 0.91 | ✅ |
+| 2 | hubert-large-ls960-ft | N/A | N/A | ❌ |
+| 3 | wav2vec2-base | 0.70 | 0.63 | ✅ |
+| 4 | wav2vec2-large-960h | 0.41 | 0.23 | ✅ |
+| 5 | wav2vec2-large-lv60 | 0.20 | 0.29 | ✅ |
+| 6 | wav2vec2-xls-r-300m | 0.42 | 0.47 | ✅ |
+| 7 | wavlm-base-plus | 0.88 | 0.74 | ✅ |
+| 8 | wavlm-large | N/A | N/A | ❌ |
+| 9 | whisper-small | 0.74 | 0.91 | ✅ |
 
 ## Swahili (sw)
 

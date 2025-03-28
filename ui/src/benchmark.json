@@ -805,6 +805,45 @@
             }
         ]
     },
+    "Indonesian (id)": {
+        "IndoWaveSentiment": [
+            {
+                "model": "hubert-base-ls960",
+                "val_accuracy": 0.97,
+                "test_accuracy": 0.99,
+                "completed": "\u2705",
+                "logs_path": "id_IndoWaveSentiment_hubert-base-ls960"
+            },
+            {
+                "model": "wav2vec2-base",
+                "val_accuracy": 0.78,
+                "test_accuracy": 0.77,
+                "completed": "\u2705",
+                "logs_path": "id_IndoWaveSentiment_wav2vec2-base"
+            },
+            {
+                "model": "wav2vec2-xls-r-300m",
+                "val_accuracy": 0.58,
+                "test_accuracy": 0.46,
+                "completed": "\u2705",
+                "logs_path": "id_IndoWaveSentiment_wav2vec2-xls-r-300m"
+            },
+            {
+                "model": "wavlm-base-plus",
+                "val_accuracy": 0.94,
+                "test_accuracy": 0.94,
+                "completed": "\u2705",
+                "logs_path": "id_IndoWaveSentiment_wavlm-base-plus"
+            },
+            {
+                "model": "whisper-small",
+                "val_accuracy": null,
+                "test_accuracy": null,
+                "completed": "\u274c",
+                "logs_path": "id_IndoWaveSentiment_whisper-small"
+            }
+        ]
+    },
     "Italian (it)": {
         "EMOVO": [
             {
@@ -1248,6 +1287,13 @@
                 "logs_path": "pl_nEMO_wav2vec2-large-lv60"
             },
             {
+                "model": "wav2vec2-xls-r-1b",
+                "val_accuracy": null,
+                "test_accuracy": null,
+                "completed": "\u274c",
+                "logs_path": "pl_nEMO_wav2vec2-xls-r-1b"
+            },
+            {
                 "model": "wav2vec2-xls-r-300m",
                 "val_accuracy": 0.36,
                 "test_accuracy": 0.37,
@@ -1269,6 +1315,13 @@
                 "logs_path": "pl_nEMO_wavlm-large"
             },
             {
+                "model": "whisper-large",
+                "val_accuracy": null,
+                "test_accuracy": null,
+                "completed": "\u274c",
+                "logs_path": "pl_nEMO_whisper-large"
+            },
+            {
                 "model": "whisper-small",
                 "val_accuracy": 0.85,
                 "test_accuracy": 0.85,
@@ -1287,11 +1340,32 @@
                 "logs_path": "pt_emoUERJ_hubert-base-ls960"
             },
             {
+                "model": "hubert-large-ls960-ft",
+                "val_accuracy": null,
+                "test_accuracy": null,
+                "completed": "\u274c",
+                "logs_path": "pt_emoUERJ_hubert-large-ls960-ft"
+            },
+            {
                 "model": "wav2vec2-base",
                 "val_accuracy": 0.7,
                 "test_accuracy": 0.63,
                 "completed": "\u2705",
                 "logs_path": "pt_emoUERJ_wav2vec2-base"
+            },
+            {
+                "model": "wav2vec2-large-960h",
+                "val_accuracy": 0.41,
+                "test_accuracy": 0.23,
+                "completed": "\u2705",
+                "logs_path": "pt_emoUERJ_wav2vec2-large-960h"
+            },
+            {
+                "model": "wav2vec2-large-lv60",
+                "val_accuracy": 0.2,
+                "test_accuracy": 0.29,
+                "completed": "\u2705",
+                "logs_path": "pt_emoUERJ_wav2vec2-large-lv60"
             },
             {
                 "model": "wav2vec2-xls-r-300m",
@@ -1306,6 +1380,13 @@
                 "test_accuracy": 0.74,
                 "completed": "\u2705",
                 "logs_path": "pt_emoUERJ_wavlm-base-plus"
+            },
+            {
+                "model": "wavlm-large",
+                "val_accuracy": null,
+                "test_accuracy": null,
+                "completed": "\u274c",
+                "logs_path": "pt_emoUERJ_wavlm-large"
             },
             {
                 "model": "whisper-small",
