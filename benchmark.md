@@ -258,10 +258,16 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | No | Model Name | Val Accuracy | Test Accuracy | Completed |
 |----|------------|--------------|--------------|-----------|
 | 1 | hubert-base-ls960 | 0.76 | 0.75 | ✅ |
-| 2 | wav2vec2-base | 0.65 | 0.64 | ✅ |
-| 3 | wav2vec2-xls-r-300m | 0.50 | 0.51 | ✅ |
-| 4 | wavlm-base-plus | 0.79 | 0.78 | ✅ |
-| 5 | whisper-small | 0.83 | 0.83 | ✅ |
+| 2 | hubert-large-ls960-ft | 0.61 | 0.62 | ✅ |
+| 3 | wav2vec2-base | 0.65 | 0.64 | ✅ |
+| 4 | wav2vec2-large-960h | 0.44 | 0.43 | ✅ |
+| 5 | wav2vec2-large-lv60 | 0.29 | 0.28 | ✅ |
+| 6 | wav2vec2-xls-r-1b | 0.54 | 0.58 | ✅ |
+| 7 | wav2vec2-xls-r-300m | 0.50 | 0.51 | ✅ |
+| 8 | wavlm-base-plus | 0.79 | 0.78 | ✅ |
+| 9 | wavlm-large | 0.82 | 0.83 | ✅ |
+| 10 | whisper-large | N/A | N/A | ❌ |
+| 11 | whisper-small | 0.83 | 0.83 | ✅ |
 
 ## Polish (pl)
 
@@ -270,10 +276,14 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | No | Model Name | Val Accuracy | Test Accuracy | Completed |
 |----|------------|--------------|--------------|-----------|
 | 1 | hubert-base-ls960 | 0.77 | 0.79 | ✅ |
-| 2 | wav2vec2-base | 0.67 | 0.69 | ✅ |
-| 3 | wav2vec2-xls-r-300m | 0.36 | 0.37 | ✅ |
-| 4 | wavlm-base-plus | 0.73 | 0.74 | ✅ |
-| 5 | whisper-small | 0.85 | 0.85 | ✅ |
+| 2 | hubert-large-ls960-ft | 0.40 | 0.39 | ✅ |
+| 3 | wav2vec2-base | 0.67 | 0.69 | ✅ |
+| 4 | wav2vec2-large-960h | 0.24 | 0.24 | ✅ |
+| 5 | wav2vec2-large-lv60 | 0.23 | 0.22 | ✅ |
+| 6 | wav2vec2-xls-r-300m | 0.36 | 0.37 | ✅ |
+| 7 | wavlm-base-plus | 0.73 | 0.74 | ✅ |
+| 8 | wavlm-large | 0.66 | 0.66 | ✅ |
+| 9 | whisper-small | 0.85 | 0.85 | ✅ |
 
 ## Portuguese (pt)
 
@@ -283,8 +293,9 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 |----|------------|--------------|--------------|-----------|
 | 1 | hubert-base-ls960 | 0.91 | 0.74 | ✅ |
 | 2 | wav2vec2-base | 0.70 | 0.63 | ✅ |
-| 3 | wavlm-base-plus | 0.88 | 0.74 | ✅ |
-| 4 | whisper-small | 0.74 | 0.91 | ✅ |
+| 3 | wav2vec2-xls-r-300m | 0.42 | 0.47 | ✅ |
+| 4 | wavlm-base-plus | 0.88 | 0.74 | ✅ |
+| 5 | whisper-small | 0.74 | 0.91 | ✅ |
 
 ## Swahili (sw)
 
@@ -348,8 +359,9 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 |----|------------|--------------|--------------|-----------|
 | 1 | hubert-base-ls960 | 0.66 | 0.68 | ✅ |
 | 2 | wav2vec2-base | 0.43 | 0.48 | ✅ |
-| 3 | wavlm-base-plus | 0.58 | 0.52 | ✅ |
-| 4 | whisper-small | 0.88 | 0.84 | ✅ |
+| 3 | wav2vec2-xls-r-300m | 0.39 | 0.34 | ✅ |
+| 4 | wavlm-base-plus | 0.58 | 0.52 | ✅ |
+| 5 | whisper-small | 0.88 | 0.84 | ✅ |
 
 ## Urdu (ur)
 

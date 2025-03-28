@@ -1139,11 +1139,39 @@
                 "logs_path": "or_SITB-OSED_hubert-base-ls960"
             },
             {
+                "model": "hubert-large-ls960-ft",
+                "val_accuracy": 0.61,
+                "test_accuracy": 0.62,
+                "completed": "\u2705",
+                "logs_path": "or_SITB-OSED_hubert-large-ls960-ft"
+            },
+            {
                 "model": "wav2vec2-base",
                 "val_accuracy": 0.65,
                 "test_accuracy": 0.64,
                 "completed": "\u2705",
                 "logs_path": "or_SITB-OSED_wav2vec2-base"
+            },
+            {
+                "model": "wav2vec2-large-960h",
+                "val_accuracy": 0.44,
+                "test_accuracy": 0.43,
+                "completed": "\u2705",
+                "logs_path": "or_SITB-OSED_wav2vec2-large-960h"
+            },
+            {
+                "model": "wav2vec2-large-lv60",
+                "val_accuracy": 0.29,
+                "test_accuracy": 0.28,
+                "completed": "\u2705",
+                "logs_path": "or_SITB-OSED_wav2vec2-large-lv60"
+            },
+            {
+                "model": "wav2vec2-xls-r-1b",
+                "val_accuracy": 0.54,
+                "test_accuracy": 0.58,
+                "completed": "\u2705",
+                "logs_path": "or_SITB-OSED_wav2vec2-xls-r-1b"
             },
             {
                 "model": "wav2vec2-xls-r-300m",
@@ -1158,6 +1186,20 @@
                 "test_accuracy": 0.78,
                 "completed": "\u2705",
                 "logs_path": "or_SITB-OSED_wavlm-base-plus"
+            },
+            {
+                "model": "wavlm-large",
+                "val_accuracy": 0.82,
+                "test_accuracy": 0.83,
+                "completed": "\u2705",
+                "logs_path": "or_SITB-OSED_wavlm-large"
+            },
+            {
+                "model": "whisper-large",
+                "val_accuracy": null,
+                "test_accuracy": null,
+                "completed": "\u274c",
+                "logs_path": "or_SITB-OSED_whisper-large"
             },
             {
                 "model": "whisper-small",
@@ -1178,11 +1220,32 @@
                 "logs_path": "pl_nEMO_hubert-base-ls960"
             },
             {
+                "model": "hubert-large-ls960-ft",
+                "val_accuracy": 0.4,
+                "test_accuracy": 0.39,
+                "completed": "\u2705",
+                "logs_path": "pl_nEMO_hubert-large-ls960-ft"
+            },
+            {
                 "model": "wav2vec2-base",
                 "val_accuracy": 0.67,
                 "test_accuracy": 0.69,
                 "completed": "\u2705",
                 "logs_path": "pl_nEMO_wav2vec2-base"
+            },
+            {
+                "model": "wav2vec2-large-960h",
+                "val_accuracy": 0.24,
+                "test_accuracy": 0.24,
+                "completed": "\u2705",
+                "logs_path": "pl_nEMO_wav2vec2-large-960h"
+            },
+            {
+                "model": "wav2vec2-large-lv60",
+                "val_accuracy": 0.23,
+                "test_accuracy": 0.22,
+                "completed": "\u2705",
+                "logs_path": "pl_nEMO_wav2vec2-large-lv60"
             },
             {
                 "model": "wav2vec2-xls-r-300m",
@@ -1197,6 +1260,13 @@
                 "test_accuracy": 0.74,
                 "completed": "\u2705",
                 "logs_path": "pl_nEMO_wavlm-base-plus"
+            },
+            {
+                "model": "wavlm-large",
+                "val_accuracy": 0.66,
+                "test_accuracy": 0.66,
+                "completed": "\u2705",
+                "logs_path": "pl_nEMO_wavlm-large"
             },
             {
                 "model": "whisper-small",
@@ -1222,6 +1292,13 @@
                 "test_accuracy": 0.63,
                 "completed": "\u2705",
                 "logs_path": "pt_emoUERJ_wav2vec2-base"
+            },
+            {
+                "model": "wav2vec2-xls-r-300m",
+                "val_accuracy": 0.42,
+                "test_accuracy": 0.47,
+                "completed": "\u2705",
+                "logs_path": "pt_emoUERJ_wav2vec2-xls-r-300m"
             },
             {
                 "model": "wavlm-base-plus",
@@ -1497,6 +1574,13 @@
                 "test_accuracy": 0.48,
                 "completed": "\u2705",
                 "logs_path": "tr_TurEV-DB_wav2vec2-base"
+            },
+            {
+                "model": "wav2vec2-xls-r-300m",
+                "val_accuracy": 0.39,
+                "test_accuracy": 0.34,
+                "completed": "\u2705",
+                "logs_path": "tr_TurEV-DB_wav2vec2-xls-r-300m"
             },
             {
                 "model": "wavlm-base-plus",
