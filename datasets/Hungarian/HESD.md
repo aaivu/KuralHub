@@ -3,9 +3,9 @@
 🔹 **Dataset Name:** Hungarian Emotional Speech Database  <br/> 
 🔹 **Language:** Hungarian  <br/> 
 🔹 **Dataset Type:** 🎙️ Audio  <br/>
-🔹 **Emotion Categories:** Happy, Sad, Angry, Surprised, Disgusted/Scorn, Afraid, Nervous/Excited, Neutrality  <br/> 
-🔹 **Size:** Number of samples: 888 , speakers: 37  <br/> 
-🔹 **Recording Environment:** 🎭 Acted  <br/> 
+🔹 **Emotion Categories:** Fear, Sadness, Anger, Surprise, Disgust, Joy, Excitement, Neutral  <br/> 
+🔹 **Size:** Number of samples: 760 , speakers: 38  <br/> 
+🔹 **Recording Environment:** 🎭 Acted(Non Professional Speakers - Quiet Office Room)  <br/> 
 🔹 **License:** Not Specified  <br/> 
 🔹 **Access:** 🔒 Request <br/> 
 
@@ -23,7 +23,7 @@ To achieve this, the dataset was utilized in perception tests comparing human re
 🔗 **Official Website:** Not Specified  <br/> 
 📄 **Paper:** [Speech Emotion Perception by Human and Machine](https://www.researchgate.net/profile/Klara-Vicsi/publication/225204892_Speech_Emotion_Perception_by_Human_and_Machine/links/09e4150b71db991837000000/Speech-Emotion-Perception-by-Human-and-Machine.pdf) <br/> 
 🗂️ **Download Link:** Not Specified <br/> 
-💾 **File Format:**  Not Specified <br/> 
+💾 **File Format:**  `.wav`  <br/> 
 📧 Contact: [toth.sz@tmit.bme.hu](mailto:toth.sz@tmit.bme.hu?subject=Dataset%20Access%20Request), [vicsi@tmit.bme.hu](mailto:vicsi@tmit.bme.hu?subject=Dataset%20Access%20Request), [sztaho.david@tmit.bme.hu](mailto:sztaho.david@tmit.bme.hu?subject=Dataset%20Access%20Request) </br>
 > ⚠️ **Note:** Fill the request process if the dataset is restricted.
 
