@@ -59,6 +59,7 @@ class LANGUAGE(Enum):
     KAZAKH = "kk"
     QUECHUA = "qu"
     AFRIKAANS = "af"
+    HUNGARIAN = "hu"
 
 
 class Dataset:
@@ -266,6 +267,12 @@ class DATASET(Enum):
         language=LANGUAGE.AFRIKAANS.value,
         url="thanikansivatheepan/afrikaansemotionalspeechcorpus",
         path="ser_datasets/AfrikaansEmotionalSpeechCorpus",
+    )
+    HungarianEmotionalSpeechCorpus = Dataset(
+        name="HungarianEmotionalSpeechCorpus",
+        language=LANGUAGE.HUNGARIAN.value,
+        url="thanikansivatheepan/hesd-hungarian",
+        path="ser_datasets/HungarianEmotionalSpeechCorpus",
     )
 
 
