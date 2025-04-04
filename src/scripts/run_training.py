@@ -292,14 +292,14 @@ if __name__ == "__main__":
     else:
         print("CUDA is not available.")
 
-    device_id = 1
+    device_id = 0
     device = torch.device(
         f"cuda:{device_id}" if torch.cuda.is_available() else "cpu"
     )
 
     # ----------Modify-------------#MSER20
-    CUR_DATASET = DATASET.RESD
-    CUR_BASE_MODEL = BASE_MODEL.XLS_R_300M.value
+    CUR_DATASET = DATASET.EMOZIONALMENTE
+    CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_BASE.value
     # ----------End-------------#
 
     logger.info(
@@ -313,6 +313,7 @@ if __name__ == "__main__":
         dataset_name=CUR_DATASET.value.name,
         dataset_path=f"meta_csvs/{CUR_DATASET.value.language}_{CUR_DATASET.value.name}.csv",
         language=CUR_DATASET.value.language,
+        take=0.5
     )
 
     logger.info(f"Emotion Map is Ready: {dataset.EMOTION_MAPPING}")
