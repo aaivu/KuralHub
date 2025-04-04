@@ -965,6 +965,15 @@
                 "completed": "\u2705",
                 "logs_path": "it_EMOVO_whisper-small"
             }
+        ],
+        "Emozionalmente": [
+            {
+                "model": "wav2vec2-base",
+                "val_accuracy": null,
+                "test_accuracy": null,
+                "completed": "\u274c",
+                "logs_path": "it_Emozionalmente_wav2vec2-base"
+            }
         ]
     },
     "Japanese (ja)": {
@@ -1463,11 +1472,39 @@
                 "logs_path": "ru_RESD_hubert-base-ls960"
             },
             {
+                "model": "hubert-large-ls960-ft",
+                "val_accuracy": 0.26,
+                "test_accuracy": 0.22,
+                "completed": "\u2705",
+                "logs_path": "ru_RESD_hubert-large-ls960-ft"
+            },
+            {
                 "model": "wav2vec2-base",
                 "val_accuracy": 0.4,
                 "test_accuracy": 0.41,
                 "completed": "\u2705",
                 "logs_path": "ru_RESD_wav2vec2-base"
+            },
+            {
+                "model": "wav2vec2-large-960h",
+                "val_accuracy": 0.23,
+                "test_accuracy": 0.24,
+                "completed": "\u2705",
+                "logs_path": "ru_RESD_wav2vec2-large-960h"
+            },
+            {
+                "model": "wav2vec2-large-lv60",
+                "val_accuracy": 0.2,
+                "test_accuracy": 0.2,
+                "completed": "\u2705",
+                "logs_path": "ru_RESD_wav2vec2-large-lv60"
+            },
+            {
+                "model": "wav2vec2-xls-r-1b",
+                "val_accuracy": 0.29,
+                "test_accuracy": 0.26,
+                "completed": "\u2705",
+                "logs_path": "ru_RESD_wav2vec2-xls-r-1b"
             },
             {
                 "model": "wav2vec2-xls-r-300m",
@@ -1482,6 +1519,20 @@
                 "test_accuracy": 0.43,
                 "completed": "\u2705",
                 "logs_path": "ru_RESD_wavlm-base-plus"
+            },
+            {
+                "model": "wavlm-large",
+                "val_accuracy": 0.43,
+                "test_accuracy": 0.4,
+                "completed": "\u2705",
+                "logs_path": "ru_RESD_wavlm-large"
+            },
+            {
+                "model": "whisper-large",
+                "val_accuracy": null,
+                "test_accuracy": null,
+                "completed": "\u274c",
+                "logs_path": "ru_RESD_whisper-large"
             },
             {
                 "model": "whisper-small",
@@ -1773,6 +1824,13 @@
                 "logs_path": "tr_TurEV-DB_wav2vec2-large-lv60"
             },
             {
+                "model": "wav2vec2-xls-r-1b",
+                "val_accuracy": 0.47,
+                "test_accuracy": 0.48,
+                "completed": "\u2705",
+                "logs_path": "tr_TurEV-DB_wav2vec2-xls-r-1b"
+            },
+            {
                 "model": "wav2vec2-xls-r-300m",
                 "val_accuracy": 0.39,
                 "test_accuracy": 0.34,
@@ -1792,6 +1850,13 @@
                 "test_accuracy": 0.63,
                 "completed": "\u2705",
                 "logs_path": "tr_TurEV-DB_wavlm-large"
+            },
+            {
+                "model": "whisper-large",
+                "val_accuracy": null,
+                "test_accuracy": null,
+                "completed": "\u274c",
+                "logs_path": "tr_TurEV-DB_whisper-large"
             },
             {
                 "model": "whisper-small",
