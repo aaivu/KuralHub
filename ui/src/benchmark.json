@@ -1529,9 +1529,9 @@
             },
             {
                 "model": "whisper-large",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.48,
+                "test_accuracy": 0.46,
+                "completed": "\u2705",
                 "logs_path": "ru_RESD_whisper-large"
             },
             {
@@ -1984,6 +1984,13 @@
                 "test_accuracy": 0.28,
                 "completed": "\u2705",
                 "logs_path": "zh_ESD_wav2vec2-large-lv60"
+            },
+            {
+                "model": "wav2vec2-xls-r-1b",
+                "val_accuracy": 0.7,
+                "test_accuracy": 0.68,
+                "completed": "\u2705",
+                "logs_path": "zh_ESD_wav2vec2-xls-r-1b"
             },
             {
                 "model": "wav2vec2-xls-r-300m",

@@ -344,7 +344,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 7 | wav2vec2-xls-r-300m | 0.22 | 0.21 | ✅ |
 | 8 | wavlm-base-plus | 0.46 | 0.43 | ✅ |
 | 9 | wavlm-large | 0.43 | 0.40 | ✅ |
-| 10 | whisper-large | N/A | N/A | ❌ |
+| 10 | whisper-large | 0.48 | 0.46 | ✅ |
 | 11 | whisper-small | 0.49 | 0.45 | ✅ |
 
 ## Swahili (sw)
@@ -448,9 +448,10 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 3 | wav2vec2-base | 0.91 | 0.90 | ✅ |
 | 4 | wav2vec2-large-960h | 0.45 | 0.45 | ✅ |
 | 5 | wav2vec2-large-lv60 | 0.28 | 0.28 | ✅ |
-| 6 | wav2vec2-xls-r-300m | 0.62 | 0.59 | ✅ |
-| 7 | wavlm-base-plus | 0.91 | 0.90 | ✅ |
-| 8 | wavlm-large | 0.90 | 0.91 | ✅ |
-| 9 | whisper-large | 0.98 | 0.98 | ✅ |
-| 10 | whisper-small | 0.97 | 0.97 | ✅ |
+| 6 | wav2vec2-xls-r-1b | 0.70 | 0.68 | ✅ |
+| 7 | wav2vec2-xls-r-300m | 0.62 | 0.59 | ✅ |
+| 8 | wavlm-base-plus | 0.91 | 0.90 | ✅ |
+| 9 | wavlm-large | 0.90 | 0.91 | ✅ |
+| 10 | whisper-large | 0.98 | 0.98 | ✅ |
+| 11 | whisper-small | 0.97 | 0.97 | ✅ |
 
