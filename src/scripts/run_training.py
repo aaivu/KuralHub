@@ -298,8 +298,8 @@ if __name__ == "__main__":
     )
 
     # ----------Modify-------------#MSER20
-    CUR_DATASET = DATASET.EMOZIONALMENTE
-    CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_BASE.value
+    CUR_DATASET = DATASET.ESD_CHINESE
+    CUR_BASE_MODEL = BASE_MODEL.XLS_R_1B.value
     # ----------End-------------#
 
     logger.info(
@@ -313,7 +313,6 @@ if __name__ == "__main__":
         dataset_name=CUR_DATASET.value.name,
         dataset_path=f"meta_csvs/{CUR_DATASET.value.language}_{CUR_DATASET.value.name}.csv",
         language=CUR_DATASET.value.language,
-        take=0.5
     )
 
     logger.info(f"Emotion Map is Ready: {dataset.EMOTION_MAPPING}")
