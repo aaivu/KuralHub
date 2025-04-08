@@ -298,8 +298,8 @@ if __name__ == "__main__":
     )
 
     # ----------Modify-------------#MSER20
-    CUR_DATASET = DATASET.ESD_CHINESE
-    CUR_BASE_MODEL = BASE_MODEL.XLS_R_1B.value
+    CUR_DATASET = DATASET.URDUSER
+    CUR_BASE_MODEL = BASE_MODEL.XLS_R_300M.value
     # ----------End-------------#
 
     logger.info(
