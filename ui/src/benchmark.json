@@ -968,11 +968,81 @@
         ],
         "Emozionalmente": [
             {
-                "model": "wav2vec2-base",
+                "model": "hubert-base-ls960",
+                "val_accuracy": 0.72,
+                "test_accuracy": 0.71,
+                "completed": "\u2705",
+                "logs_path": "it_Emozionalmente_hubert-base-ls960"
+            },
+            {
+                "model": "hubert-large-ls960-ft",
                 "val_accuracy": null,
                 "test_accuracy": null,
                 "completed": "\u274c",
+                "logs_path": "it_Emozionalmente_hubert-large-ls960-ft"
+            },
+            {
+                "model": "wav2vec2-base",
+                "val_accuracy": 0.62,
+                "test_accuracy": 0.61,
+                "completed": "\u2705",
                 "logs_path": "it_Emozionalmente_wav2vec2-base"
+            },
+            {
+                "model": "wav2vec2-large-960h",
+                "val_accuracy": 0.3,
+                "test_accuracy": 0.32,
+                "completed": "\u2705",
+                "logs_path": "it_Emozionalmente_wav2vec2-large-960h"
+            },
+            {
+                "model": "wav2vec2-large-lv60",
+                "val_accuracy": 0.28,
+                "test_accuracy": 0.3,
+                "completed": "\u2705",
+                "logs_path": "it_Emozionalmente_wav2vec2-large-lv60"
+            },
+            {
+                "model": "wav2vec2-xls-r-1b",
+                "val_accuracy": 0.26,
+                "test_accuracy": 0.28,
+                "completed": "\u2705",
+                "logs_path": "it_Emozionalmente_wav2vec2-xls-r-1b"
+            },
+            {
+                "model": "wav2vec2-xls-r-300m",
+                "val_accuracy": null,
+                "test_accuracy": null,
+                "completed": "\u274c",
+                "logs_path": "it_Emozionalmente_wav2vec2-xls-r-300m"
+            },
+            {
+                "model": "wavlm-base-plus",
+                "val_accuracy": 0.75,
+                "test_accuracy": 0.72,
+                "completed": "\u2705",
+                "logs_path": "it_Emozionalmente_wavlm-base-plus"
+            },
+            {
+                "model": "wavlm-large",
+                "val_accuracy": 0.69,
+                "test_accuracy": 0.73,
+                "completed": "\u2705",
+                "logs_path": "it_Emozionalmente_wavlm-large"
+            },
+            {
+                "model": "whisper-large",
+                "val_accuracy": null,
+                "test_accuracy": null,
+                "completed": "\u274c",
+                "logs_path": "it_Emozionalmente_whisper-large"
+            },
+            {
+                "model": "whisper-small",
+                "val_accuracy": null,
+                "test_accuracy": null,
+                "completed": "\u274c",
+                "logs_path": "it_Emozionalmente_whisper-small"
             }
         ]
     },
@@ -1945,6 +2015,43 @@
                 "test_accuracy": 0.78,
                 "completed": "\u2705",
                 "logs_path": "ur_Urdu-Dataset_whisper-small"
+            }
+        ],
+        "UrduSER": [
+            {
+                "model": "hubert-base-ls960",
+                "val_accuracy": 0.53,
+                "test_accuracy": 0.51,
+                "completed": "\u2705",
+                "logs_path": "ur_UrduSER_hubert-base-ls960"
+            },
+            {
+                "model": "wav2vec2-base",
+                "val_accuracy": 0.44,
+                "test_accuracy": 0.46,
+                "completed": "\u2705",
+                "logs_path": "ur_UrduSER_wav2vec2-base"
+            },
+            {
+                "model": "wav2vec2-xls-r-300m",
+                "val_accuracy": 0.27,
+                "test_accuracy": 0.28,
+                "completed": "\u2705",
+                "logs_path": "ur_UrduSER_wav2vec2-xls-r-300m"
+            },
+            {
+                "model": "wavlm-base-plus",
+                "val_accuracy": 0.52,
+                "test_accuracy": 0.52,
+                "completed": "\u2705",
+                "logs_path": "ur_UrduSER_wavlm-base-plus"
+            },
+            {
+                "model": "whisper-small",
+                "val_accuracy": null,
+                "test_accuracy": null,
+                "completed": "\u274c",
+                "logs_path": "ur_UrduSER_whisper-small"
             }
         ]
     },
