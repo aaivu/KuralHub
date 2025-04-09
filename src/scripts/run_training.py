@@ -299,7 +299,7 @@ if __name__ == "__main__":
 
     # ----------Modify-------------#MSER20
     CUR_DATASET = DATASET.URDUSER
-    CUR_BASE_MODEL = BASE_MODEL.XLS_R_300M.value
+    CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_LARGE_LV60.value
     # ----------End-------------#
 
     logger.info(
