@@ -17,7 +17,7 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 | Dataset Name             | Type          | # Speakers | # Samples | License    | Access     | Research Paper             | Dataset Access            |
 | ------------------------ | ------------- | ---------- | --------- | ---------- | ---------- | -------------------------- | ------------------------- |
 | [EU-Emotion-Voice-Database](EU-Emotion-Voice-Database.md) | 🎙️ Audio      | 54         | 2,159     | Not Specified | 🔒 Request | [Link to Paper](https://link.springer.com/content/pdf/10.3758/s13428-018-1048-1.pdf) | Not Specified |
-| [Swedish Voice Provider Emotional Speech Corpus](SwedishVoiceProviderEmotionSpeechCorpus.md) | 🎙️ Audio | Not Specified | ~10,000 utterances | Not Specified | 🔒 Request | [Link to Paper](https://www.cs.cmu.edu/~kornel/pubs/is061581.pdf) | Not Specified |
+| [Swedish Voice Provider Emotional Speech Corpus](SwedishVoiceProviderEmotionalSpeechCorpus.md) | 🎙️ Audio | Not Specified | ~10,000 utterances | Not Specified | 🔒 Request | [Link to Paper](https://www.cs.cmu.edu/~kornel/pubs/is061581.pdf) | Not Specified |
 
 ---
 
