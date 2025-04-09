@@ -220,16 +220,16 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | No | Model Name | Val Accuracy | Test Accuracy | Completed |
 |----|------------|--------------|--------------|-----------|
 | 1 | hubert-base-ls960 | 0.72 | 0.71 | ✅ |
-| 2 | hubert-large-ls960-ft | N/A | N/A | ❌ |
+| 2 | hubert-large-ls960-ft | 0.46 | 0.49 | ✅ |
 | 3 | wav2vec2-base | 0.62 | 0.61 | ✅ |
 | 4 | wav2vec2-large-960h | 0.30 | 0.32 | ✅ |
 | 5 | wav2vec2-large-lv60 | 0.28 | 0.30 | ✅ |
 | 6 | wav2vec2-xls-r-1b | 0.26 | 0.28 | ✅ |
-| 7 | wav2vec2-xls-r-300m | N/A | N/A | ❌ |
+| 7 | wav2vec2-xls-r-300m | 0.46 | 0.47 | ✅ |
 | 8 | wavlm-base-plus | 0.75 | 0.72 | ✅ |
 | 9 | wavlm-large | 0.69 | 0.73 | ✅ |
 | 10 | whisper-large | N/A | N/A | ❌ |
-| 11 | whisper-small | N/A | N/A | ❌ |
+| 11 | whisper-small | 0.77 | 0.75 | ✅ |
 
 ## Japanese (ja)
 
@@ -426,7 +426,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 7 | wav2vec2-xls-r-300m | 0.39 | 0.34 | ✅ |
 | 8 | wavlm-base-plus | 0.58 | 0.52 | ✅ |
 | 9 | wavlm-large | 0.65 | 0.63 | ✅ |
-| 10 | whisper-large | N/A | N/A | ❌ |
+| 10 | whisper-large | 0.87 | 0.84 | ✅ |
 | 11 | whisper-small | 0.88 | 0.84 | ✅ |
 
 ## Urdu (ur)
@@ -452,10 +452,14 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | No | Model Name | Val Accuracy | Test Accuracy | Completed |
 |----|------------|--------------|--------------|-----------|
 | 1 | hubert-base-ls960 | 0.53 | 0.51 | ✅ |
-| 2 | wav2vec2-base | 0.44 | 0.46 | ✅ |
-| 3 | wav2vec2-xls-r-300m | 0.27 | 0.28 | ✅ |
-| 4 | wavlm-base-plus | 0.52 | 0.52 | ✅ |
-| 5 | whisper-small | N/A | N/A | ❌ |
+| 2 | hubert-large-ls960-ft | 0.31 | 0.32 | ✅ |
+| 3 | wav2vec2-base | 0.44 | 0.46 | ✅ |
+| 4 | wav2vec2-large-960h | 0.23 | 0.24 | ✅ |
+| 5 | wav2vec2-large-lv60 | 0.22 | 0.23 | ✅ |
+| 6 | wav2vec2-xls-r-300m | 0.27 | 0.28 | ✅ |
+| 7 | wavlm-base-plus | 0.52 | 0.52 | ✅ |
+| 8 | wavlm-large | 0.44 | 0.45 | ✅ |
+| 9 | whisper-small | 0.59 | 0.56 | ✅ |
 
 ## Chinese (zh)
 

@@ -976,9 +976,9 @@
             },
             {
                 "model": "hubert-large-ls960-ft",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.46,
+                "test_accuracy": 0.49,
+                "completed": "\u2705",
                 "logs_path": "it_Emozionalmente_hubert-large-ls960-ft"
             },
             {
@@ -1011,9 +1011,9 @@
             },
             {
                 "model": "wav2vec2-xls-r-300m",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.46,
+                "test_accuracy": 0.47,
+                "completed": "\u2705",
                 "logs_path": "it_Emozionalmente_wav2vec2-xls-r-300m"
             },
             {
@@ -1039,9 +1039,9 @@
             },
             {
                 "model": "whisper-small",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.77,
+                "test_accuracy": 0.75,
+                "completed": "\u2705",
                 "logs_path": "it_Emozionalmente_whisper-small"
             }
         ]
@@ -1923,9 +1923,9 @@
             },
             {
                 "model": "whisper-large",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.87,
+                "test_accuracy": 0.84,
+                "completed": "\u2705",
                 "logs_path": "tr_TurEV-DB_whisper-large"
             },
             {
@@ -2026,11 +2026,32 @@
                 "logs_path": "ur_UrduSER_hubert-base-ls960"
             },
             {
+                "model": "hubert-large-ls960-ft",
+                "val_accuracy": 0.31,
+                "test_accuracy": 0.32,
+                "completed": "\u2705",
+                "logs_path": "ur_UrduSER_hubert-large-ls960-ft"
+            },
+            {
                 "model": "wav2vec2-base",
                 "val_accuracy": 0.44,
                 "test_accuracy": 0.46,
                 "completed": "\u2705",
                 "logs_path": "ur_UrduSER_wav2vec2-base"
+            },
+            {
+                "model": "wav2vec2-large-960h",
+                "val_accuracy": 0.23,
+                "test_accuracy": 0.24,
+                "completed": "\u2705",
+                "logs_path": "ur_UrduSER_wav2vec2-large-960h"
+            },
+            {
+                "model": "wav2vec2-large-lv60",
+                "val_accuracy": 0.22,
+                "test_accuracy": 0.23,
+                "completed": "\u2705",
+                "logs_path": "ur_UrduSER_wav2vec2-large-lv60"
             },
             {
                 "model": "wav2vec2-xls-r-300m",
@@ -2047,10 +2068,17 @@
                 "logs_path": "ur_UrduSER_wavlm-base-plus"
             },
             {
+                "model": "wavlm-large",
+                "val_accuracy": 0.44,
+                "test_accuracy": 0.45,
+                "completed": "\u2705",
+                "logs_path": "ur_UrduSER_wavlm-large"
+            },
+            {
                 "model": "whisper-small",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.59,
+                "test_accuracy": 0.56,
+                "completed": "\u2705",
                 "logs_path": "ur_UrduSER_whisper-small"
             }
         ]
