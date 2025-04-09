@@ -21,7 +21,7 @@ The Assamese Emotional Speech Dataset comprises recordings from native Assamese 
 📄 **Paper:** [Emotion Recognition in Standard Spoken Assamese Language Using Support Vector Machine and Ensemble Model](https://www.ijcse.com/docs/INDJCSE21-12-01-187.pdf) <br/>
 🗂️ **Download Link:** Not Specified <br/>
 💾 **File Format:** Not Specified  <br/>
-📧 Contact: [nupur.choudhury@dbuniversity.ac.in](mailto:nupur.choudhury@dbuniversity.ac.in?subject=Dataset%20Access%20Request), [uzzal.sharma@dbuniversity.ac.in](mailto:uzzal.sharma@dbuniversity.ac.in?subject=Dataset%20Access%20Request) </br>
+📧 Contact: [nupur.choudhury@dbuniversity.ac.in](mailto:nupur.choudhury@dbuniversity.ac.in?subject=Dataset%20Access%20Request) </br>
 > ⚠️ **Note:** Access details are not specified in the available sources. Interested researchers may need to contact the authors of the paper for access.
 
 ---

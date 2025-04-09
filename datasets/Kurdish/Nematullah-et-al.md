@@ -27,7 +27,7 @@ By providing this specialized dataset, the study aims to bridge the gap in resou
 📄 **Paper:** [Paper Link](https://www.iraqoaj.net/iasj/download/d7df705d2d594266) <br/> 
 🗂️ **Download Link:** [Not Specified](..) <br/> 
 💾 **File Format:** Not Specified  <br/> 
-📧 Contact: [mail](mailto:Omar.mustafa@epu.edu.iq?subject=Dataset%20Access%20Request) </br>
+📧 Contact: [Omar.mustafa@epu.edu.iq](mailto:Omar.mustafa@epu.edu.iq?subject=Dataset%20Access%20Request) </br>
 > ⚠️ **Note:** Fill the request process if the dataset is restricted.
 
 ---

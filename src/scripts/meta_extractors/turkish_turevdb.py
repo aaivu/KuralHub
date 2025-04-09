@@ -9,7 +9,7 @@ EMOTION_MAP = {
     "Sad": EMOTION.SADNESS.value,
     "Happy": EMOTION.HAPPINESS.value,
     "Angry": EMOTION.ANGER.value,
-    "Calm": EMOTION.CALM.value,
+    "Calm": EMOTION.CALMNESS.value,
 }
 
 
