@@ -65,7 +65,9 @@ def plot_loss(train_losses, val_losses, path: str):
         )
     else:
         plt.title("Training and Validation Loss")
-    plt.savefig(f"./ui/public/train_val_test_logs/{path}/{path}_loss_curve.png")
+    plt.savefig(
+        f"./ui/public/train_val_test_logs/{path}/{path}_loss_curve.png"
+    )
     plt.close()
 
 
@@ -298,8 +300,8 @@ if __name__ == "__main__":
     )
 
     # ----------Modify-------------#MSER20
-    CUR_DATASET = DATASET.URDUSER
-    CUR_BASE_MODEL = BASE_MODEL.XLS_R_1B.value
+    CUR_DATASET = DATASET.AESDD
+    CUR_BASE_MODEL = BASE_MODEL.WAV2VEC2_BASE.value
     # ----------End-------------#
 
     logger.info(
