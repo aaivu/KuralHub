@@ -456,10 +456,12 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 3 | wav2vec2-base | 0.44 | 0.46 | ✅ |
 | 4 | wav2vec2-large-960h | 0.23 | 0.24 | ✅ |
 | 5 | wav2vec2-large-lv60 | 0.22 | 0.23 | ✅ |
-| 6 | wav2vec2-xls-r-300m | 0.27 | 0.28 | ✅ |
-| 7 | wavlm-base-plus | 0.52 | 0.52 | ✅ |
-| 8 | wavlm-large | 0.44 | 0.45 | ✅ |
-| 9 | whisper-small | 0.59 | 0.56 | ✅ |
+| 6 | wav2vec2-xls-r-1b | 0.28 | 0.26 | ✅ |
+| 7 | wav2vec2-xls-r-300m | 0.27 | 0.28 | ✅ |
+| 8 | wavlm-base-plus | 0.52 | 0.52 | ✅ |
+| 9 | wavlm-large | 0.44 | 0.45 | ✅ |
+| 10 | whisper-large | N/A | N/A | ❌ |
+| 11 | whisper-small | 0.59 | 0.56 | ✅ |
 
 ## Chinese (zh)
 
