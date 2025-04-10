@@ -7,6 +7,7 @@ import torch
 from torch.utils.data import Dataset
 
 from src.utils.encoder import emotion_converter
+from src.utils.utils import is_valid_wav
 
 
 def pad_or_truncate(audio, desired_length=30000):
@@ -82,6 +83,11 @@ class SpeechEmotionDataset(Dataset):
         paths = self.dataset["audio_path"].astype(str).tolist()
         self.audios = []
         for path in paths:
+            if is_valid_wav(path):
+                audio, sr = librosa.load(path, sr=sr)
+            else:
+                print(f"Skipping invalid file: {path}")
+                continue
             audio, sr = librosa.load(path, sr=sr)
             audio_fixed = pad_or_truncate(audio, 50000)
             self.audios.append(audio_fixed)
