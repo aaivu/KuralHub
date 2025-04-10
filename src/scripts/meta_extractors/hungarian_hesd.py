@@ -4,7 +4,7 @@ import os
 from src.scripts.meta_extractors.dataset_processor import process_dataset
 from src.utils.constant import DATASET, EMOTION, SELECTED_EMOTIONS
 
-HungarianEmotionalSpeechCorpus = DATASET.HungarianEmotionalSpeechCorpus.value
+HungarianEmotionalSpeechCorpus = DATASET.HUNGARIANEMOTIONALSPEECHCORPUS.value
 EMOTION_MAP = {
     "B": EMOTION.SADNESS.value,
     "D": EMOTION.ANGER.value,
@@ -13,13 +13,11 @@ EMOTION_MAP = {
     "L": EMOTION.DISGUST.value,
     "M": EMOTION.SURPRISE.value,
     "O": EMOTION.JOY.value,
-    "S": EMOTION.NEUTRAL.value,   
+    "S": EMOTION.NEUTRAL.value,
 }
 
 
-def process_hesd_files(
-    dataset_path, emotion_map, selected_emotions
-):
+def process_hesd_files(dataset_path, emotion_map, selected_emotions):
     data = []
     for file in os.listdir(dataset_path):
         if file.endswith(".wav"):

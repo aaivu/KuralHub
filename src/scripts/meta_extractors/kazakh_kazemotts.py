@@ -4,7 +4,7 @@ import os
 from src.scripts.meta_extractors.dataset_processor import process_dataset
 from src.utils.constant import DATASET, EMOTION, SELECTED_EMOTIONS
 
-KazakhEmKazakhEmotionalTTS = DATASET.KazakhEmotionalTTS.value
+KazakhEmKazakhEmotionalTTS = DATASET.KAZAKHEMOTIONALTTS.value
 EMOTION_MAP = {
     "happy": EMOTION.HAPPINESS.value,
     "neutral": EMOTION.NEUTRAL.value,

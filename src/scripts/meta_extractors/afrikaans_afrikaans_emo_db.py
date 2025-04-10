@@ -4,7 +4,7 @@ import os
 from src.scripts.meta_extractors.dataset_processor import process_dataset
 from src.utils.constant import DATASET, EMOTION, SELECTED_EMOTIONS
 
-AfrikaansEmotionalSpeechCorpus = DATASET.AfrikaansEmotionalSpeechCorpus.value
+AfrikaansEmotionalSpeechCorpus = DATASET.AFRIKAANSEMOTIONALSPEECHCORPUS.value
 EMOTION_MAP = {
     "Anger": EMOTION.ANGER.value,
     "Anticipation": EMOTION.ANTICIPATION.value,

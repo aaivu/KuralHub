@@ -250,25 +250,27 @@ class DATASET(Enum):
         url="thanikansivatheepan/aesdd-greek",
         path="ser_datasets/AESDD/Acted Emotional Speech Dynamic Database",
     )
-    KazakhEmotionalTTS = Dataset(
+    # Reduce to 3000
+    KAZAKHEMOTIONALTTS = Dataset(
         name="KazakhEmotionalTTS",
         language=LANGUAGE.KAZAKH.value,
         url="thanikansivatheepan/kazakh-emotional-tts",
         path="ser_datasets/KazakhEmotionalTTS/EmoKaz",
     )
+    # Reduce to 3000
     QUECHUA_COLLAO = Dataset(
         name="Quechua-Collao-Corpus",
         language=LANGUAGE.QUECHUA.value,
         url="thanikansivatheepan/quechua-collao-corpus",
         path="ser_datasets/Quechua-Collao-Corpus",
     )
-    AfrikaansEmotionalSpeechCorpus = Dataset(
+    AFRIKAANSEMOTIONALSPEECHCORPUS = Dataset(
         name="AfrikaansEmotionalSpeechCorpus",
         language=LANGUAGE.AFRIKAANS.value,
         url="thanikansivatheepan/afrikaansemotionalspeechcorpus",
         path="ser_datasets/AfrikaansEmotionalSpeechCorpus",
     )
-    HungarianEmotionalSpeechCorpus = Dataset(
+    HUNGARIANEMOTIONALSPEECHCORPUS = Dataset(
         name="HungarianEmotionalSpeechCorpus",
         language=LANGUAGE.HUNGARIAN.value,
         url="thanikansivatheepan/hesd-hungarian",
