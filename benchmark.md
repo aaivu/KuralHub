@@ -21,6 +21,22 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 10 | whisper-large | 0.88 | 0.86 | ✅ |
 | 11 | whisper-small | 0.91 | 0.90 | ✅ |
 
+## Arabic (ar)
+
+### ANAD
+
+| No | Model Name | Val Accuracy | Test Accuracy | Completed |
+|----|------------|--------------|--------------|-----------|
+| 1 | hubert-base-ls960 | 0.63 | 0.58 | ✅ |
+| 2 | hubert-large-ls960-ft | 0.64 | 0.66 | ✅ |
+| 3 | wav2vec2-base | 0.62 | 0.57 | ✅ |
+| 4 | wav2vec2-large-960h | 0.62 | 0.65 | ✅ |
+| 5 | wav2vec2-large-lv60 | 0.64 | 0.64 | ✅ |
+| 6 | wav2vec2-xls-r-300m | 0.61 | 0.61 | ✅ |
+| 7 | wavlm-base-plus | 0.66 | 0.61 | ✅ |
+| 8 | wavlm-large | 0.66 | 0.71 | ✅ |
+| 9 | whisper-small | 0.72 | 0.79 | ✅ |
+
 ## Bengali (bn)
 
 ### BANSpEmo
@@ -72,6 +88,14 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 9 | wavlm-large | 0.52 | 0.53 | ✅ |
 | 10 | whisper-large | 0.84 | 0.86 | ✅ |
 | 11 | whisper-small | 0.82 | 0.84 | ✅ |
+
+## Greek (el)
+
+### AESDD
+
+| No | Model Name | Val Accuracy | Test Accuracy | Completed |
+|----|------------|--------------|--------------|-----------|
+| 1 | wav2vec2-base | N/A | N/A | ❌ |
 
 ## English (en)
 
@@ -228,7 +252,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 7 | wav2vec2-xls-r-300m | 0.46 | 0.47 | ✅ |
 | 8 | wavlm-base-plus | 0.75 | 0.72 | ✅ |
 | 9 | wavlm-large | 0.69 | 0.73 | ✅ |
-| 10 | whisper-large | N/A | N/A | ❌ |
+| 10 | whisper-large | 0.79 | 0.80 | ✅ |
 | 11 | whisper-small | 0.77 | 0.75 | ✅ |
 
 ## Japanese (ja)
@@ -460,7 +484,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 7 | wav2vec2-xls-r-300m | 0.27 | 0.28 | ✅ |
 | 8 | wavlm-base-plus | 0.52 | 0.52 | ✅ |
 | 9 | wavlm-large | 0.44 | 0.45 | ✅ |
-| 10 | whisper-large | N/A | N/A | ❌ |
+| 10 | whisper-large | 0.60 | 0.60 | ✅ |
 | 11 | whisper-small | 0.59 | 0.56 | ✅ |
 
 ## Chinese (zh)

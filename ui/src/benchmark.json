@@ -80,6 +80,73 @@
             }
         ]
     },
+    "Arabic (ar)": {
+        "ANAD": [
+            {
+                "model": "hubert-base-ls960",
+                "val_accuracy": 0.63,
+                "test_accuracy": 0.58,
+                "completed": "\u2705",
+                "logs_path": "ar_ANAD_hubert-base-ls960"
+            },
+            {
+                "model": "hubert-large-ls960-ft",
+                "val_accuracy": 0.64,
+                "test_accuracy": 0.66,
+                "completed": "\u2705",
+                "logs_path": "ar_ANAD_hubert-large-ls960-ft"
+            },
+            {
+                "model": "wav2vec2-base",
+                "val_accuracy": 0.62,
+                "test_accuracy": 0.57,
+                "completed": "\u2705",
+                "logs_path": "ar_ANAD_wav2vec2-base"
+            },
+            {
+                "model": "wav2vec2-large-960h",
+                "val_accuracy": 0.62,
+                "test_accuracy": 0.65,
+                "completed": "\u2705",
+                "logs_path": "ar_ANAD_wav2vec2-large-960h"
+            },
+            {
+                "model": "wav2vec2-large-lv60",
+                "val_accuracy": 0.64,
+                "test_accuracy": 0.64,
+                "completed": "\u2705",
+                "logs_path": "ar_ANAD_wav2vec2-large-lv60"
+            },
+            {
+                "model": "wav2vec2-xls-r-300m",
+                "val_accuracy": 0.61,
+                "test_accuracy": 0.61,
+                "completed": "\u2705",
+                "logs_path": "ar_ANAD_wav2vec2-xls-r-300m"
+            },
+            {
+                "model": "wavlm-base-plus",
+                "val_accuracy": 0.66,
+                "test_accuracy": 0.61,
+                "completed": "\u2705",
+                "logs_path": "ar_ANAD_wavlm-base-plus"
+            },
+            {
+                "model": "wavlm-large",
+                "val_accuracy": 0.66,
+                "test_accuracy": 0.71,
+                "completed": "\u2705",
+                "logs_path": "ar_ANAD_wavlm-large"
+            },
+            {
+                "model": "whisper-small",
+                "val_accuracy": 0.72,
+                "test_accuracy": 0.79,
+                "completed": "\u2705",
+                "logs_path": "ar_ANAD_whisper-small"
+            }
+        ]
+    },
     "Bengali (bn)": {
         "BANSpEmo": [
             {
@@ -318,6 +385,17 @@
                 "test_accuracy": 0.84,
                 "completed": "\u2705",
                 "logs_path": "de_EmoDB_whisper-small"
+            }
+        ]
+    },
+    "Greek (el)": {
+        "AESDD": [
+            {
+                "model": "wav2vec2-base",
+                "val_accuracy": null,
+                "test_accuracy": null,
+                "completed": "\u274c",
+                "logs_path": "el_AESDD_wav2vec2-base"
             }
         ]
     },
@@ -1032,9 +1110,9 @@
             },
             {
                 "model": "whisper-large",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.79,
+                "test_accuracy": 0.8,
+                "completed": "\u2705",
                 "logs_path": "it_Emozionalmente_whisper-large"
             },
             {
@@ -2083,9 +2161,9 @@
             },
             {
                 "model": "whisper-large",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.6,
+                "test_accuracy": 0.6,
+                "completed": "\u2705",
                 "logs_path": "ur_UrduSER_whisper-large"
             },
             {
