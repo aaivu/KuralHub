@@ -69,28 +69,26 @@ class SpeechEmotionDataset(Dataset):
             emotion: idx for idx, emotion in enumerate(self.available_emotions)
         }
 
-        self.emotions = torch.tensor(
-            self.dataset["emotion"]
-            .apply(
-                lambda x: emotion_converter(
-                    x, mode="encode", EMOTION_MAPPING=self.EMOTION_MAPPING
-                )[0]
-            )
-            .values,
-            dtype=torch.long,
-        )
-
         paths = self.dataset["audio_path"].astype(str).tolist()
+        emotions_raw = self.dataset["emotion"].tolist()
+
         self.audios = []
-        for path in paths:
-            if is_valid_wav(path):
-                audio, sr = librosa.load(path, sr=sr)
-            else:
+        self.emotions = []
+
+        for path, emotion in zip(paths, emotions_raw):
+            if not is_valid_wav(path):
                 print(f"Skipping invalid file: {path}")
                 continue
             audio, sr = librosa.load(path, sr=sr)
             audio_fixed = pad_or_truncate(audio, 50000)
             self.audios.append(audio_fixed)
+
+            emotion_encoded = emotion_converter(
+                emotion, mode="encode", EMOTION_MAPPING=self.EMOTION_MAPPING
+            )[0]
+            self.emotions.append(emotion_encoded)
+
+        self.emotions = torch.tensor(self.emotions, dtype=torch.long)
 
     def __len__(self) -> int:
         """Returns the number of samples in the dataset."""
