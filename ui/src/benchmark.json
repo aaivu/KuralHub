@@ -465,11 +465,81 @@
     "Greek (el)": {
         "AESDD": [
             {
+                "model": "hubert-base-ls960",
+                "val_accuracy": 0.69,
+                "test_accuracy": 0.75,
+                "completed": "\u2705",
+                "logs_path": "el_AESDD_hubert-base-ls960"
+            },
+            {
+                "model": "hubert-large-ls960-ft",
+                "val_accuracy": 0.43,
+                "test_accuracy": 0.32,
+                "completed": "\u2705",
+                "logs_path": "el_AESDD_hubert-large-ls960-ft"
+            },
+            {
                 "model": "wav2vec2-base",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.58,
+                "test_accuracy": 0.54,
+                "completed": "\u2705",
                 "logs_path": "el_AESDD_wav2vec2-base"
+            },
+            {
+                "model": "wav2vec2-large-960h",
+                "val_accuracy": 0.37,
+                "test_accuracy": 0.32,
+                "completed": "\u2705",
+                "logs_path": "el_AESDD_wav2vec2-large-960h"
+            },
+            {
+                "model": "wav2vec2-large-lv60",
+                "val_accuracy": 0.28,
+                "test_accuracy": 0.25,
+                "completed": "\u2705",
+                "logs_path": "el_AESDD_wav2vec2-large-lv60"
+            },
+            {
+                "model": "wav2vec2-xls-r-1b",
+                "val_accuracy": 0.21,
+                "test_accuracy": 0.26,
+                "completed": "\u2705",
+                "logs_path": "el_AESDD_wav2vec2-xls-r-1b"
+            },
+            {
+                "model": "wav2vec2-xls-r-300m",
+                "val_accuracy": 0.38,
+                "test_accuracy": 0.36,
+                "completed": "\u2705",
+                "logs_path": "el_AESDD_wav2vec2-xls-r-300m"
+            },
+            {
+                "model": "wavlm-base-plus",
+                "val_accuracy": 0.62,
+                "test_accuracy": 0.63,
+                "completed": "\u2705",
+                "logs_path": "el_AESDD_wavlm-base-plus"
+            },
+            {
+                "model": "wavlm-large",
+                "val_accuracy": 0.7,
+                "test_accuracy": 0.57,
+                "completed": "\u2705",
+                "logs_path": "el_AESDD_wavlm-large"
+            },
+            {
+                "model": "whisper-large",
+                "val_accuracy": 0.57,
+                "test_accuracy": 0.56,
+                "completed": "\u2705",
+                "logs_path": "el_AESDD_whisper-large"
+            },
+            {
+                "model": "whisper-small",
+                "val_accuracy": 0.6,
+                "test_accuracy": 0.57,
+                "completed": "\u2705",
+                "logs_path": "el_AESDD_whisper-small"
             }
         ]
     },
