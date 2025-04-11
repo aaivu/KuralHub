@@ -220,6 +220,24 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 10 | whisper-large | 0.67 | 0.69 | ✅ |
 | 11 | whisper-small | 0.68 | 0.71 | ✅ |
 
+## Hungarian (hu)
+
+### HungarianEmotionalSpeechCorpus
+
+| No | Model Name | Val Accuracy | Test Accuracy | Completed |
+|----|------------|--------------|--------------|-----------|
+| 1 | hubert-base-ls960 | 0.54 | 0.52 | ✅ |
+| 2 | hubert-large-ls960-ft | 0.29 | 0.21 | ✅ |
+| 3 | wav2vec2-base | 0.42 | 0.43 | ✅ |
+| 4 | wav2vec2-large-960h | 0.28 | 0.24 | ✅ |
+| 5 | wav2vec2-large-lv60 | 0.22 | 0.23 | ✅ |
+| 6 | wav2vec2-xls-r-1b | 0.19 | 0.22 | ✅ |
+| 7 | wav2vec2-xls-r-300m | 0.28 | 0.23 | ✅ |
+| 8 | wavlm-base-plus | 0.52 | 0.51 | ✅ |
+| 9 | wavlm-large | 0.45 | 0.49 | ✅ |
+| 10 | whisper-large | 0.48 | 0.44 | ✅ |
+| 11 | whisper-small | 0.41 | 0.52 | ✅ |
+
 ## Indonesian (id)
 
 ### IndoWaveSentiment
