@@ -3,6 +3,21 @@
 ## Models Evaluated
 hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wav2vec2-large-lv60, wav2vec2-xls-r-1b, wav2vec2-xls-r-300m, wavlm-base-plus, wavlm-large, whisper-large, whisper-small
 
+## Afrikaans (af)
+
+### AfrikaansEmotionalSpeechCorpus
+
+| No | Model Name | Val Accuracy | Test Accuracy | Completed |
+|----|------------|--------------|--------------|-----------|
+| 1 | hubert-base-ls960 | 0.65 | 0.67 | ✅ |
+| 2 | wav2vec2-base | 0.57 | 0.66 | ✅ |
+| 3 | wav2vec2-large-960h | 0.38 | 0.43 | ✅ |
+| 4 | wav2vec2-large-lv60 | 0.36 | 0.40 | ✅ |
+| 5 | wav2vec2-xls-r-300m | 0.38 | 0.37 | ✅ |
+| 6 | wavlm-base-plus | 0.53 | 0.59 | ✅ |
+| 7 | whisper-large | 0.68 | 0.65 | ✅ |
+| 8 | whisper-small | 0.75 | 0.71 | ✅ |
+
 ## Amharic (am)
 
 ### ASED
@@ -32,10 +47,12 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 3 | wav2vec2-base | 0.62 | 0.57 | ✅ |
 | 4 | wav2vec2-large-960h | 0.62 | 0.65 | ✅ |
 | 5 | wav2vec2-large-lv60 | 0.64 | 0.64 | ✅ |
-| 6 | wav2vec2-xls-r-300m | 0.61 | 0.61 | ✅ |
-| 7 | wavlm-base-plus | 0.66 | 0.61 | ✅ |
-| 8 | wavlm-large | 0.66 | 0.71 | ✅ |
-| 9 | whisper-small | 0.72 | 0.79 | ✅ |
+| 6 | wav2vec2-xls-r-1b | 0.61 | 0.63 | ✅ |
+| 7 | wav2vec2-xls-r-300m | 0.61 | 0.61 | ✅ |
+| 8 | wavlm-base-plus | 0.66 | 0.61 | ✅ |
+| 9 | wavlm-large | 0.66 | 0.71 | ✅ |
+| 10 | whisper-large | 0.78 | 0.82 | ✅ |
+| 11 | whisper-small | 0.72 | 0.79 | ✅ |
 
 ## Bengali (bn)
 

@@ -1,4 +1,64 @@
 {
+    "Afrikaans (af)": {
+        "AfrikaansEmotionalSpeechCorpus": [
+            {
+                "model": "hubert-base-ls960",
+                "val_accuracy": 0.65,
+                "test_accuracy": 0.67,
+                "completed": "\u2705",
+                "logs_path": "af_AfrikaansEmotionalSpeechCorpus_hubert-base-ls960"
+            },
+            {
+                "model": "wav2vec2-base",
+                "val_accuracy": 0.57,
+                "test_accuracy": 0.66,
+                "completed": "\u2705",
+                "logs_path": "af_AfrikaansEmotionalSpeechCorpus_wav2vec2-base"
+            },
+            {
+                "model": "wav2vec2-large-960h",
+                "val_accuracy": 0.38,
+                "test_accuracy": 0.43,
+                "completed": "\u2705",
+                "logs_path": "af_AfrikaansEmotionalSpeechCorpus_wav2vec2-large-960h"
+            },
+            {
+                "model": "wav2vec2-large-lv60",
+                "val_accuracy": 0.36,
+                "test_accuracy": 0.4,
+                "completed": "\u2705",
+                "logs_path": "af_AfrikaansEmotionalSpeechCorpus_wav2vec2-large-lv60"
+            },
+            {
+                "model": "wav2vec2-xls-r-300m",
+                "val_accuracy": 0.38,
+                "test_accuracy": 0.37,
+                "completed": "\u2705",
+                "logs_path": "af_AfrikaansEmotionalSpeechCorpus_wav2vec2-xls-r-300m"
+            },
+            {
+                "model": "wavlm-base-plus",
+                "val_accuracy": 0.53,
+                "test_accuracy": 0.59,
+                "completed": "\u2705",
+                "logs_path": "af_AfrikaansEmotionalSpeechCorpus_wavlm-base-plus"
+            },
+            {
+                "model": "whisper-large",
+                "val_accuracy": 0.68,
+                "test_accuracy": 0.65,
+                "completed": "\u2705",
+                "logs_path": "af_AfrikaansEmotionalSpeechCorpus_whisper-large"
+            },
+            {
+                "model": "whisper-small",
+                "val_accuracy": 0.75,
+                "test_accuracy": 0.71,
+                "completed": "\u2705",
+                "logs_path": "af_AfrikaansEmotionalSpeechCorpus_whisper-small"
+            }
+        ]
+    },
     "Amharic (am)": {
         "ASED": [
             {
@@ -118,6 +178,13 @@
                 "logs_path": "ar_ANAD_wav2vec2-large-lv60"
             },
             {
+                "model": "wav2vec2-xls-r-1b",
+                "val_accuracy": 0.61,
+                "test_accuracy": 0.63,
+                "completed": "\u2705",
+                "logs_path": "ar_ANAD_wav2vec2-xls-r-1b"
+            },
+            {
                 "model": "wav2vec2-xls-r-300m",
                 "val_accuracy": 0.61,
                 "test_accuracy": 0.61,
@@ -137,6 +204,13 @@
                 "test_accuracy": 0.71,
                 "completed": "\u2705",
                 "logs_path": "ar_ANAD_wavlm-large"
+            },
+            {
+                "model": "whisper-large",
+                "val_accuracy": 0.78,
+                "test_accuracy": 0.82,
+                "completed": "\u2705",
+                "logs_path": "ar_ANAD_whisper-large"
             },
             {
                 "model": "whisper-small",
