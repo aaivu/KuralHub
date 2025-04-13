@@ -122,8 +122,8 @@
                 try {
                     const langCode = getLanguageCode(language);
                     if (!langCode) throw new Error('Could not extract language code');
-                    
-                    const response = await fetch(`datasets/${langCode}/README.md`);
+                    console.log(language)
+                    const response = await fetch(`../datasets/${language.split(" ")[0]}/Readme.md`);
                     if (!response.ok) throw new Error('Failed to load README.md');
                     
                     const content = await response.text();
@@ -204,6 +204,8 @@ This is a Speech Emotion Recognition dataset for ${language}.
             
             // Add event listener for language selector
             languageSelector.addEventListener('change', async function() {
+
+                
                 const selectedLanguage = this.value;
                 
                 // Clear previous content

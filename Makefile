@@ -56,7 +56,7 @@ generate_benchmark:
 	. .venv/bin/activate && python3 generate_benchmark.py
 
 run_ui:
-	cd ui && npm run dev
+	cd ui && python -m http.server 8000
 
 clear:
 	@echo "Cleaning up..."
