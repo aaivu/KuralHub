@@ -1,0 +1,8 @@
+
+<current_date>
+Sunday, April 13, 2025 - 03:31 AM PDT
+</current_date>
+This is the Project I benchmarked all the available datasets review for world 100+ languages and several lanuges don’t have datasets for SER. And we got finally 30 lanauges datasets one may have more datasets. here in this json file you can see I listed all of them with behcmark. I bechmarked them with all  """hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wav2vec2-large-lv60, wav2vec2-xls-r-1b, wav2vec2-xls-r-300m, wavlm-base-plus, wavlm-large, whisper-large, whisper-small
+""" Model one lanuage at a time NOT Multilingual. This is a research that have big dataset review and avaiablity and access check and then fintune them on these models by adding clafficiation head top of the model while freezeing entire model. Now I need to show all of them in a nice view. Give me all in html like table view nicely more grouped with laniages famility also please consider major primary lanuage family. Give me use tailiwnd css and fontawsome library. load json you cna analysis the format
+
+there should be a home page there provide this baenchmark page link! and Dataset review page link there I have folder structure like datasets/<Language_name>/* under this I have Readme.md having overall view of that Lanuage and SER datasets then <dataset_name>.md that have specifc more detailed details of the dataset let’s load dynamically them and render in website. and for benchmark.json also can we load dynamically this because that will be easy to update whenver needed. please totaly home page then bechamrk html then dataset view html page. Project Name: KuralHub at bottom add team and other infos and starting of the home page ive some descrption
