@@ -1,4 +1,4 @@
-# 🎙️ AESSD - Greek
+# 🎙️ AESDD - Greek
 
 🔹 **Dataset Name:** Acted Emotional Speech Dynamic Database  <br/> 
 🔹 **Language:** Greek  <br/> 
@@ -24,7 +24,7 @@ theatrical teams.
 ---
 
 ## 📥 **Access & Download**
-🔗 **Official Website:** [AESSD](https://m3c.web.auth.gr/research/aesdd-speech-emotion-recognition/) <br/> 
+🔗 **Official Website:** [AESDD](https://m3c.web.auth.gr/research/aesdd-speech-emotion-recognition/) <br/> 
 📄 **Papers:** [Paper Link 1](https://ieeexplore.ieee.org/abstract/document/8501881), [Paper Link 2](https://aes2.org/publications/elibrary-page/?id=19585) <br/> 
 🗂️ **Download Link:** [Download](https://mega.nz/folder/0ShVXY7C#-73kVoK05OjTPEA95UUvMw) <br/> 
 💾 **File Format:** `.wav` <br/> 

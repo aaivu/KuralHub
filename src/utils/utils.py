@@ -3,6 +3,7 @@ import os
 
 import librosa
 import pandas as pd
+import soundfile as sf
 
 
 def get_logger(
@@ -90,3 +91,11 @@ def get_wav_files(root_dir, extention=".wav"):
             if file.endswith(extention):
                 wav_files.append(os.path.join(dirpath, file))
     return wav_files
+
+
+def is_valid_wav(file_path):
+    try:
+        with sf.SoundFile(file_path) as f:
+            return True
+    except RuntimeError:
+        return False

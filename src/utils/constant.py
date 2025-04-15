@@ -9,12 +9,15 @@ class EMOTION(Enum):
     NEUTRAL = "NEUTRAL"
     DISGUST = "DISGUST"
     SURPRISE = "SURPRISE"
-    CALM = "CALM"
+    CALMNESS = "CALMNESS"
     BOREDOM = "BOREDOM"
     SARCASTIC = "SARCASTIC"
     JOY = "JOY"
     DISAPPOINTMENT = "DISAPPOINTMENT"
     ENTHUSIASM = "ENTHUSIASM"
+    EXCITEMENT = "EXCITEMENT"
+    ANTICIPATION = "ANTICIPATION"
+    TRUST = "TRUST"
 
 
 SELECTED_EMOTIONS = [
@@ -51,6 +54,12 @@ class LANGUAGE(Enum):
     JAPANESE = "ja"
     INDONESIAN = "id"
     RUSSIAN = "ru"
+    ARABIC = "ar"
+    GREEK = "el"
+    KAZAKH = "kk"
+    QUECHUA = "qu"
+    AFRIKAANS = "af"
+    HUNGARIAN = "hu"
 
 
 class Dataset:
@@ -228,6 +237,44 @@ class DATASET(Enum):
         language=LANGUAGE.RUSSIAN.value,
         url="luxluxshan/ser-resd-russian",
         path="ser_datasets/RESD",
+    )
+    ANAD = Dataset(
+        name="ANAD",
+        language=LANGUAGE.ARABIC.value,
+        url="suso172/arabic-natural-audio-dataset",
+        path="ser_datasets/ANAD",
+    )
+    AESDD = Dataset(
+        name="AESDD",
+        language=LANGUAGE.GREEK.value,
+        url="thanikansivatheepan/aesdd-greek",
+        path="ser_datasets/AESDD/Acted Emotional Speech Dynamic Database",
+    )
+    # Reduce to 3000
+    KAZAKHEMOTIONALTTS = Dataset(
+        name="KazakhEmotionalTTS",
+        language=LANGUAGE.KAZAKH.value,
+        url="thanikansivatheepan/kazakh-emotional-tts",
+        path="ser_datasets/KazakhEmotionalTTS/EmoKaz",
+    )
+    # Reduce to 3000
+    QUECHUA_COLLAO = Dataset(
+        name="Quechua-Collao-Corpus",
+        language=LANGUAGE.QUECHUA.value,
+        url="thanikansivatheepan/quechua-collao-corpus",
+        path="ser_datasets/Quechua-Collao-Corpus",
+    )
+    AFRIKAANSEMOTIONALSPEECHCORPUS = Dataset(
+        name="AfrikaansEmotionalSpeechCorpus",
+        language=LANGUAGE.AFRIKAANS.value,
+        url="thanikansivatheepan/afrikaansemotionalspeechcorpus",
+        path="ser_datasets/AfrikaansEmotionalSpeechCorpus",
+    )
+    HUNGARIANEMOTIONALSPEECHCORPUS = Dataset(
+        name="HungarianEmotionalSpeechCorpus",
+        language=LANGUAGE.HUNGARIAN.value,
+        url="thanikansivatheepan/hesd-hungarian",
+        path="ser_datasets/HungarianEmotionalSpeechCorpus",
     )
 
 

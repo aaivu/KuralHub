@@ -7,7 +7,7 @@ from src.utils.constant import DATASET, EMOTION, SELECTED_EMOTIONS
 RAVDESS = DATASET.RAVDESS.value
 EMOTION_MAP = {
     "01": EMOTION.NEUTRAL.value,
-    "02": EMOTION.CALM.value,
+    "02": EMOTION.CALMNESS.value,
     "03": EMOTION.HAPPINESS.value,
     "04": EMOTION.SADNESS.value,
     "05": EMOTION.ANGER.value,
