@@ -4,7 +4,8 @@ import os
 import librosa
 import pandas as pd
 import soundfile as sf
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import StratifiedShuffleSplit
+
 
 def get_logger(
     name: str = __name__, level: int = logging.INFO
@@ -104,12 +105,13 @@ def is_valid_wav(file_path):
 def stratified_sampling(data, max_files):
     if len(data) > max_files:
         df = pd.DataFrame(data, columns=["emotion", "path"])
-        _, sampled_df = train_test_split(
-            df,
-            train_size=max_files,
-            stratify=df["emotion"],
-            random_state=42
+        splitter = StratifiedShuffleSplit(
+            n_splits=1, train_size=max_files, random_state=42
         )
+
+        for train_idx, _ in splitter.split(df, df["emotion"]):
+            sampled_df = df.iloc[train_idx]
+
         data = sampled_df.values.tolist()
-        
+
     return data
