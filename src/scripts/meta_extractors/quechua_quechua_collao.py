@@ -44,8 +44,8 @@ def process_quechua_collao_files(dataset_path, emotion_map, selected_emotions):
                 continue
             if emotion in selected_emotions:
                 data.append([emotion, file_path])
-    
-    data = stratified_sampling(data,3000)
+
+    data = stratified_sampling(data, 3000)
     return data
 
 
