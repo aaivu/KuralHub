@@ -1430,6 +1430,87 @@
             }
         ]
     },
+    "Kazakh (kk)": {
+        "KazakhEmotionalTTS": [
+            {
+                "model": "hubert-base-ls960",
+                "val_accuracy": 0.54,
+                "test_accuracy": 0.51,
+                "completed": "\u2705",
+                "logs_path": "kk_KazakhEmotionalTTS_hubert-base-ls960"
+            },
+            {
+                "model": "hubert-large-ls960-ft",
+                "val_accuracy": 0.28,
+                "test_accuracy": 0.29,
+                "completed": "\u2705",
+                "logs_path": "kk_KazakhEmotionalTTS_hubert-large-ls960-ft"
+            },
+            {
+                "model": "wav2vec2-base",
+                "val_accuracy": 0.52,
+                "test_accuracy": 0.53,
+                "completed": "\u2705",
+                "logs_path": "kk_KazakhEmotionalTTS_wav2vec2-base"
+            },
+            {
+                "model": "wav2vec2-large-960h",
+                "val_accuracy": 0.22,
+                "test_accuracy": 0.24,
+                "completed": "\u2705",
+                "logs_path": "kk_KazakhEmotionalTTS_wav2vec2-large-960h"
+            },
+            {
+                "model": "wav2vec2-large-lv60",
+                "val_accuracy": 0.21,
+                "test_accuracy": 0.21,
+                "completed": "\u2705",
+                "logs_path": "kk_KazakhEmotionalTTS_wav2vec2-large-lv60"
+            },
+            {
+                "model": "wav2vec2-xls-r-1b",
+                "val_accuracy": null,
+                "test_accuracy": null,
+                "completed": "\u274c",
+                "logs_path": "kk_KazakhEmotionalTTS_wav2vec2-xls-r-1b"
+            },
+            {
+                "model": "wav2vec2-xls-r-300m",
+                "val_accuracy": 0.37,
+                "test_accuracy": 0.35,
+                "completed": "\u2705",
+                "logs_path": "kk_KazakhEmotionalTTS_wav2vec2-xls-r-300m"
+            },
+            {
+                "model": "wavlm-base-plus",
+                "val_accuracy": 0.52,
+                "test_accuracy": 0.51,
+                "completed": "\u2705",
+                "logs_path": "kk_KazakhEmotionalTTS_wavlm-base-plus"
+            },
+            {
+                "model": "wavlm-large",
+                "val_accuracy": 0.58,
+                "test_accuracy": 0.58,
+                "completed": "\u2705",
+                "logs_path": "kk_KazakhEmotionalTTS_wavlm-large"
+            },
+            {
+                "model": "whisper-large",
+                "val_accuracy": null,
+                "test_accuracy": null,
+                "completed": "\u274c",
+                "logs_path": "kk_KazakhEmotionalTTS_whisper-large"
+            },
+            {
+                "model": "whisper-small",
+                "val_accuracy": null,
+                "test_accuracy": null,
+                "completed": "\u274c",
+                "logs_path": "kk_KazakhEmotionalTTS_whisper-small"
+            }
+        ]
+    },
     "Kannada (kn)": {
         "Kannada-Dataset": [
             {

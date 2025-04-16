@@ -318,6 +318,24 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 10 | whisper-large | 0.83 | 0.87 | ✅ |
 | 11 | whisper-small | 0.80 | 0.81 | ✅ |
 
+## Kazakh (kk)
+
+### KazakhEmotionalTTS
+
+| No | Model Name | Val Accuracy | Test Accuracy | Completed |
+|----|------------|--------------|--------------|-----------|
+| 1 | hubert-base-ls960 | 0.54 | 0.51 | ✅ |
+| 2 | hubert-large-ls960-ft | 0.28 | 0.29 | ✅ |
+| 3 | wav2vec2-base | 0.52 | 0.53 | ✅ |
+| 4 | wav2vec2-large-960h | 0.22 | 0.24 | ✅ |
+| 5 | wav2vec2-large-lv60 | 0.21 | 0.21 | ✅ |
+| 6 | wav2vec2-xls-r-1b | N/A | N/A | ❌ |
+| 7 | wav2vec2-xls-r-300m | 0.37 | 0.35 | ✅ |
+| 8 | wavlm-base-plus | 0.52 | 0.51 | ✅ |
+| 9 | wavlm-large | 0.58 | 0.58 | ✅ |
+| 10 | whisper-large | N/A | N/A | ❌ |
+| 11 | whisper-small | N/A | N/A | ❌ |
+
 ## Kannada (kn)
 
 ### Kannada-Dataset
