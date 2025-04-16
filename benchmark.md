@@ -408,6 +408,24 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 10 | whisper-large | 0.73 | 0.88 | ✅ |
 | 11 | whisper-small | 0.74 | 0.91 | ✅ |
 
+## Quechua (qu)
+
+### Quechua-Collao-Corpus
+
+| No | Model Name | Val Accuracy | Test Accuracy | Completed |
+|----|------------|--------------|--------------|-----------|
+| 1 | hubert-base-ls960 | 0.81 | 0.80 | ✅ |
+| 2 | hubert-large-ls960-ft | 0.50 | 0.50 | ✅ |
+| 3 | wav2vec2-base | 0.78 | 0.76 | ✅ |
+| 4 | wav2vec2-large-960h | 0.39 | 0.36 | ✅ |
+| 5 | wav2vec2-large-lv60 | 0.22 | 0.22 | ✅ |
+| 6 | wav2vec2-xls-r-1b | 0.28 | 0.30 | ✅ |
+| 7 | wav2vec2-xls-r-300m | 0.43 | 0.43 | ✅ |
+| 8 | wavlm-base-plus | 0.75 | 0.71 | ✅ |
+| 9 | wavlm-large | 0.76 | 0.73 | ✅ |
+| 10 | whisper-large | N/A | N/A | ❌ |
+| 11 | whisper-small | 0.82 | 0.82 | ✅ |
+
 ## Russian (ru)
 
 ### RESD
