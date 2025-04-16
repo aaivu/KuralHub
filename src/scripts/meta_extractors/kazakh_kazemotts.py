@@ -3,6 +3,7 @@ import os
 
 from src.scripts.meta_extractors.dataset_processor import process_dataset
 from src.utils.constant import DATASET, EMOTION, SELECTED_EMOTIONS
+from src.utils.utils import stratified_sampling
 
 KazakhEmKazakhEmotionalTTS = DATASET.KAZAKHEMOTIONALTTS.value
 EMOTION_MAP = {
@@ -35,6 +36,8 @@ def process_emo_kaz_files(dataset_path, emotion_map, selected_emotions):
                         continue
                     if emotion in selected_emotions:
                         data.append([emotion, file_path])
+
+    data = stratified_sampling(data, 3000)
     return data
 
 
