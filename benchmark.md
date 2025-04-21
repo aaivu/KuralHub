@@ -333,8 +333,8 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 7 | wav2vec2-xls-r-300m | 0.37 | 0.35 | ✅ |
 | 8 | wavlm-base-plus | 0.52 | 0.51 | ✅ |
 | 9 | wavlm-large | 0.58 | 0.58 | ✅ |
-| 10 | whisper-large | N/A | N/A | ❌ |
-| 11 | whisper-small | N/A | N/A | ❌ |
+| 10 | whisper-large | 0.70 | 0.65 | ✅ |
+| 11 | whisper-small | 0.70 | 0.65 | ✅ |
 
 ## Kannada (kn)
 
@@ -441,7 +441,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 7 | wav2vec2-xls-r-300m | 0.43 | 0.43 | ✅ |
 | 8 | wavlm-base-plus | 0.75 | 0.71 | ✅ |
 | 9 | wavlm-large | 0.76 | 0.73 | ✅ |
-| 10 | whisper-large | N/A | N/A | ❌ |
+| 10 | whisper-large | 0.84 | 0.83 | ✅ |
 | 11 | whisper-small | 0.82 | 0.82 | ✅ |
 
 ## Russian (ru)

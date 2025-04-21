@@ -1497,16 +1497,16 @@
             },
             {
                 "model": "whisper-large",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.7,
+                "test_accuracy": 0.65,
+                "completed": "\u2705",
                 "logs_path": "kk_KazakhEmotionalTTS_whisper-large"
             },
             {
                 "model": "whisper-small",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.7,
+                "test_accuracy": 0.65,
+                "completed": "\u2705",
                 "logs_path": "kk_KazakhEmotionalTTS_whisper-small"
             }
         ]
@@ -1983,9 +1983,9 @@
             },
             {
                 "model": "whisper-large",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.84,
+                "test_accuracy": 0.83,
+                "completed": "\u2705",
                 "logs_path": "qu_Quechua-Collao-Corpus_whisper-large"
             },
             {
