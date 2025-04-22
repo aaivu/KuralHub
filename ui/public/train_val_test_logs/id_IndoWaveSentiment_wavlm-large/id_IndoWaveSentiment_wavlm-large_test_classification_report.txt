@@ -1,8 +1,0 @@
-              precision    recall  f1-score   support
-
-   HAPPINESS       0.99      0.93      0.96       240
-     NEUTRAL       0.87      0.98      0.92       120
-
-    accuracy                           0.94       360
-   macro avg       0.93      0.95      0.94       360
-weighted avg       0.95      0.94      0.95       360
