@@ -10,13 +10,16 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | No | Model Name | Val Accuracy | Test Accuracy | Completed |
 |----|------------|--------------|--------------|-----------|
 | 1 | hubert-base-ls960 | 0.65 | 0.67 | ✅ |
-| 2 | wav2vec2-base | 0.57 | 0.66 | ✅ |
-| 3 | wav2vec2-large-960h | 0.38 | 0.43 | ✅ |
-| 4 | wav2vec2-large-lv60 | 0.36 | 0.40 | ✅ |
-| 5 | wav2vec2-xls-r-300m | 0.38 | 0.37 | ✅ |
-| 6 | wavlm-base-plus | 0.53 | 0.59 | ✅ |
-| 7 | whisper-large | 0.68 | 0.65 | ✅ |
-| 8 | whisper-small | 0.75 | 0.71 | ✅ |
+| 2 | hubert-large-ls960-ft | 0.32 | 0.41 | ✅ |
+| 3 | wav2vec2-base | 0.57 | 0.66 | ✅ |
+| 4 | wav2vec2-large-960h | 0.38 | 0.43 | ✅ |
+| 5 | wav2vec2-large-lv60 | 0.36 | 0.40 | ✅ |
+| 6 | wav2vec2-xls-r-1b | 0.35 | 0.24 | ✅ |
+| 7 | wav2vec2-xls-r-300m | 0.38 | 0.37 | ✅ |
+| 8 | wavlm-base-plus | 0.53 | 0.59 | ✅ |
+| 9 | wavlm-large | 0.29 | 0.63 | ✅ |
+| 10 | whisper-large | 0.68 | 0.65 | ✅ |
+| 11 | whisper-small | 0.75 | 0.71 | ✅ |
 
 ## Amharic (am)
 

@@ -9,6 +9,13 @@
                 "logs_path": "af_AfrikaansEmotionalSpeechCorpus_hubert-base-ls960"
             },
             {
+                "model": "hubert-large-ls960-ft",
+                "val_accuracy": 0.32,
+                "test_accuracy": 0.41,
+                "completed": "\u2705",
+                "logs_path": "af_AfrikaansEmotionalSpeechCorpus_hubert-large-ls960-ft"
+            },
+            {
                 "model": "wav2vec2-base",
                 "val_accuracy": 0.57,
                 "test_accuracy": 0.66,
@@ -30,6 +37,13 @@
                 "logs_path": "af_AfrikaansEmotionalSpeechCorpus_wav2vec2-large-lv60"
             },
             {
+                "model": "wav2vec2-xls-r-1b",
+                "val_accuracy": 0.35,
+                "test_accuracy": 0.24,
+                "completed": "\u2705",
+                "logs_path": "af_AfrikaansEmotionalSpeechCorpus_wav2vec2-xls-r-1b"
+            },
+            {
                 "model": "wav2vec2-xls-r-300m",
                 "val_accuracy": 0.38,
                 "test_accuracy": 0.37,
@@ -42,6 +56,13 @@
                 "test_accuracy": 0.59,
                 "completed": "\u2705",
                 "logs_path": "af_AfrikaansEmotionalSpeechCorpus_wavlm-base-plus"
+            },
+            {
+                "model": "wavlm-large",
+                "val_accuracy": 0.29,
+                "test_accuracy": 0.63,
+                "completed": "\u2705",
+                "logs_path": "af_AfrikaansEmotionalSpeechCorpus_wavlm-large"
             },
             {
                 "model": "whisper-large",
