@@ -3,7 +3,7 @@
 🔹 **Dataset Name:** SUBESCO  <br/> 
 🔹 **Language:** Bengali  <br/> 
 🔹 **Dataset Type:** 🎙️ Audio <br/>
-🔹 **Emotion Categories:** [e.g., Happy, Sad, Angry, Neutral]  <br/> 
+🔹 **Emotion Categories:** Anger, Disgust, Fear, Happiness, Neutral, Sadness, and Surprise  <br/> 
 🔹 **Size:** samples - 7000, speakers - 20, duration - 7h 40min  <br/> 
 🔹 **Recording Environment:** 🎭 Acted  <br/> 
 🔹 **License:** CC-BY 4.0  <br/> 
