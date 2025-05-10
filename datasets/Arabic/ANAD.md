@@ -29,6 +29,16 @@ The Arabic Natural Audio Dataset (ANAD) was created to recognize emotions in spe
 ## 📜 **Citation**
 If you're using this dataset, please cite both the original authors and our survey paper, as it contributed to making the dataset accessible.
 
+```
+@misc{arabic_natural_audio_dataset,
+  title = {Arabic Natural Audio Dataset},
+  author = {Samira Klaylat},
+  year = {2022},
+  publisher = {Kaggle},
+  howpublished = {\url{https://www.kaggle.com/datasets/suso172/arabic-natural-audio-dataset}},
+  note = {Accessed: 2025-05-10}
+}
+```
 
 ```
 TBD-Add kaggle link as reference
