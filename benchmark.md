@@ -332,7 +332,7 @@ hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wa
 | 3 | wav2vec2-base | 0.52 | 0.53 | ✅ |
 | 4 | wav2vec2-large-960h | 0.22 | 0.24 | ✅ |
 | 5 | wav2vec2-large-lv60 | 0.21 | 0.21 | ✅ |
-| 6 | wav2vec2-xls-r-1b | N/A | N/A | ❌ |
+| 6 | wav2vec2-xls-r-1b | 0.30 | 0.32 | ✅ |
 | 7 | wav2vec2-xls-r-300m | 0.37 | 0.35 | ✅ |
 | 8 | wavlm-base-plus | 0.52 | 0.51 | ✅ |
 | 9 | wavlm-large | 0.58 | 0.58 | ✅ |

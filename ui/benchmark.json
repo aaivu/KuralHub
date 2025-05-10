@@ -1490,9 +1490,9 @@
             },
             {
                 "model": "wav2vec2-xls-r-1b",
-                "val_accuracy": null,
-                "test_accuracy": null,
-                "completed": "\u274c",
+                "val_accuracy": 0.3,
+                "test_accuracy": 0.32,
+                "completed": "\u2705",
                 "logs_path": "kk_KazakhEmotionalTTS_wav2vec2-xls-r-1b"
             },
             {
