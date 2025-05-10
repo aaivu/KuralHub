@@ -29,6 +29,18 @@ Basic Arabic Vocal Emotions Dataset (BAVED) is a dataset that contains an arabic
 ## 📜 **Citation**
 If you're using this dataset, please cite both the original authors and our survey paper, as it contributed to making the dataset accessible.
 
+
+```
+@misc{aouf2019baved,
+  title        = {Basic Arabic Vocal Emotions Dataset (BAVED)},
+  author       = {Ali Aouf},
+  year         = {2019},
+  publisher    = {GitHub},
+  howpublished = {\url{https://github.com/40uf411/Basic-Arabic-Vocal-Emotions-Dataset}},
+  note         = {Accessed: 2025-05-10}
+}
+```
+
 ```
 TBD - Need to add github as reference
 ```
