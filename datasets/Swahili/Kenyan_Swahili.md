@@ -29,7 +29,14 @@ TBD
 If you're using this dataset, please cite both the original authors and our survey paper, as it contributed to making the dataset accessible.
 
 ```
-TBD
+@misc{mikuro2023swahiliSER,
+  author       = {Gregory Mikuro},
+  title        = {Swahili Speech Emotion Recognition System},
+  year         = {2023},
+  howpublished = {\url{https://github.com/estherdatascientist/Swahili-Speech-Emotion-Recognition-System}},
+  note         = {GitHub repository},
+  url          = {https://github.com/estherdatascientist/Swahili-Speech-Emotion-Recognition-System}
+}
 ```
 
 ```
