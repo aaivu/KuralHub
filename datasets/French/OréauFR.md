@@ -3,7 +3,7 @@
 🔹 **Dataset Name:** French Emotional Speech Database  <br/> 
 🔹 **Language:** French  <br/> 
 🔹 **Dataset Type:** 🎙️ Audio <br/>
-🔹 **Emotion Categories:** TBD <br/> 
+🔹 **Emotion Categories:** Anger, Disgust, Fear, Happiness, Sadness, Surprise, Neutral <br/> 
 🔹 **Size:** samples - 502  <br/> 
 🔹 **Recording Environment:** 🎭 Acted  <br/> 
 🔹 **License:** CC-BY 4.0  <br/> 
