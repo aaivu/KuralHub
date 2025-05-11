@@ -12,7 +12,7 @@
 ---
 
 ## 📜 **Dataset Overview**
-[Short description of the dataset, its purpose, and how it was collected.]
+The Oréau French emotional speech database was recorded in a quiet environment to support research on emotional speech and speech synthesis. It includes 79 classroom-relevant utterances covering 7 emotions, spoken by 32 non-professional speakers. Two versions exist: the first with 502 utterances, and the second with 434 utterances retained after a perception test confirmed 90% accuracy in emotion recognition and naturalness.
 
 ---
 
