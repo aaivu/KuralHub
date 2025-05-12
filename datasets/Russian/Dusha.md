@@ -3,7 +3,7 @@
 🔹 **Dataset Name:** Dusha (Dusha Crowd, Dusha Podcast)  <br/> 
 🔹 **Language:** Russian  <br/> 
 🔹 **Dataset Type:** 🎙️ Audio <br/>
-🔹 **Emotion Categories:** TBD  <br/> 
+🔹 **Emotion Categories:** Happiness (Positive), Sadness, Anger and Neutral   <br/> 
 🔹 **Size:** samples - 300000, duration - 350h  <br/> 
 🔹 **Recording Environment:** 🎙️ Spontaneous  <br/> 
 🔹 **License:** Not Specified  <br/> 
