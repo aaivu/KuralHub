@@ -70,7 +70,7 @@ We fine-tune **pre-trained SER models** on datasets individually and report thei
 
 ## 📜 Citation
 
-If you are using this model or research findings, please cite the following paper:
+If you are using our research findings, please cite the following paper:
 
 ```bibtex
 @article{placeholder2024,
