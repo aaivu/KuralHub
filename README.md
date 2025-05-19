@@ -41,13 +41,15 @@ If a language has **no available dataset**, it is marked accordingly.
 ---
 
 ## 🚀 **Benchmarks**
-We fine-tune **pre-trained SER models** on monolingual datasets and report their **performance**.
+We fine-tune **pre-trained SER models** on datasets individually and report their **performance**.
 
-| Model  | Language | Accuracy | F1-Score |
-|--------|----------|----------|----------|
-| Wav2Vec 2.0 | English | 85.2% | 0.88 |
-| HuBERT | Spanish | 83.1% | 0.85 |
-| [More...](benchmarks/) | - | - | - |
+### Performance by Datasets
+![Model Dataset Performance](https://github.com/aaivu/KuralHub/blob/main/assets/heatmap_model_dataset_performance.png)
+
+
+### Average Performance by Languages
+
+![Model Language Performance](https://github.com/aaivu/KuralHub/blob/main/assets/radar_chart_language_performance.png)
 
 ---
 
