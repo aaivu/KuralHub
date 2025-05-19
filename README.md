@@ -36,12 +36,7 @@ KuralHub/
 This repository contains details for **58+ languages**, including **open-source and restricted** datasets.  
 If a language has **no available dataset**, it is marked accordingly.
 
-| Language | # Datasets | Open Access | Restricted | Not Available |
-|----------|-----------|-------------|------------|--------------|
-| English  | 10        | ✅ Yes      | 🔒 Yes     | ❌ No        |
-| Spanish  | 5         | ✅ Yes      | 🔒 Yes     | ❌ No        |
-| Tamil    | 2         | ✅ Yes      | ❌ No      | ❌ No        |
-| [More...](datasets/README.md) | - | - | - | - |
+![Language Coverage](https://github.com/aaivu/KuralHub/blob/main/assets/language_selection.png)
 
 ---
 
