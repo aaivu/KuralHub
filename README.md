@@ -33,7 +33,7 @@ KuralHub/
 ---
 
 ## 📊 **SER Datasets Coverage**
-This repository contains details for **58+ languages**, including **open-source and restricted** datasets.  
+This repository contains details for **73 languages**, including **open-source and restricted** datasets.  
 If a language has **no available dataset**, it is marked accordingly.
 
 ![Language Coverage](https://github.com/aaivu/KuralHub/blob/main/assets/language_selection.png)
