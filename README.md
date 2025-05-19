@@ -17,7 +17,7 @@ It provides **detailed metadata, access links, and benchmarks** using **fine-tun
 
 ---
 
-## 🗂 **Repository Structure**
+## 🗂 **Survey Organisation**
 ```
 KuralHub/
 │── datasets/             # Language-specific datasets
@@ -27,12 +27,7 @@ KuralHub/
 │   ├── spanish/
 │   │   ├── README.md
 │   │   ├── dataset1.md
-│── scripts/              # Data loaders
-│── LICENSE               # License information
-│── README.md             # Main repo documentation
-│── CONTRIBUTING.md       # Contribution guidelines
-│── CODE_OF_CONDUCT.md    # Code of conduct
-│── requirements.txt      # Dependencies for processing scripts
+....
 ```
 
 ---
