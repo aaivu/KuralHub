@@ -1,6 +1,6 @@
 # 🗂️ Speech Emotion Recognition (SER) Datasets for Tamil
 
-Welcome to the **Tamil** section of KuralNet!  
+Welcome to the **Tamil** section of KuralHub!  
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Tamil**, along with metadata and access information.
 
 ## 🌍 **Language Information**  

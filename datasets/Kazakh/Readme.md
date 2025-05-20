@@ -1,6 +1,6 @@
 # 🗂️ Speech Emotion Recognition (SER) Datasets for Kazakh
 
-Welcome to the **Kazakh** section of KuralNet!  <br/>
+Welcome to the **Kazakh** section of KuralHub!  <br/>
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Kazakh**, along with metadata and access information.
 
 ## 🌍 **Language Information**  

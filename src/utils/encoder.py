@@ -1,27 +1,11 @@
-from src.utils.constant import EMOTION
-
-
-def emotion_converter(value, mode="encode"):
-    EMOTION_MAPPING = {
-        EMOTION.ANGER.value: 0,
-        EMOTION.SADNESS.value: 1,
-        EMOTION.NEUTRAL.value: 2,
-        EMOTION.HAPPINESS.value: 3,
-        EMOTION.FEAR.value: 4,
-        EMOTION.DISGUST.value: 5,
-        EMOTION.SURPRISE.value: 6,
-        EMOTION.CALM.value: 7,
-        EMOTION.BOREDOM.value: 8,
-        EMOTION.SARCASTIC.value: 9,
-        EMOTION.JOY.value: 10,
-    }
+def emotion_converter(value, EMOTION_MAPPING, mode="encode"):
 
     if mode == "encode":
         if value not in EMOTION_MAPPING:
             raise ValueError(
                 f"Invalid emotion: {value}. Allowed values are {list(EMOTION_MAPPING.keys())}"
             )
-        return EMOTION_MAPPING[value]
+        return EMOTION_MAPPING[value], EMOTION_MAPPING
 
     elif mode == "decode":
         if value not in EMOTION_MAPPING.values():

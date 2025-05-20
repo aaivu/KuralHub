@@ -18,7 +18,6 @@ venv:
 setup: venv
 	. .venv/bin/activate && pip install --upgrade pip
 	. .venv/bin/activate && pip install -r requirements.txt
-	. .venv/bin/activate && pip install -r dev-requirements.txt
 	@echo "Dependencies installed."
 
 sync:
@@ -44,11 +43,20 @@ format:
 download_dataset:
 	. .venv/bin/activate && python3 -m src.scripts.download_datasets
 
+upload_dataset:
+	. .venv/bin/activate && python3 -m src.scripts.bulk_kaggle_dataset_uploader
+
 meta_extract:
 	. .venv/bin/activate && python3 -m src.scripts.meta_extractor
 
 train_model:
 	. .venv/bin/activate && python3 -m src.scripts.run_training
+
+generate_benchmark:
+	. .venv/bin/activate && python3 generate_benchmark.py
+
+run_ui:
+	python -m http.server 8000
 
 clear:
 	@echo "Cleaning up..."

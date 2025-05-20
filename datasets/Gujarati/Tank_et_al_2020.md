@@ -22,7 +22,7 @@ The dataset is a Gujarati emotional speech corpus designed for speech emotion re
 📄 **Paper:** [Paper Link](https://www.researchgate.net/publication/343080634_Creation_of_speech_corpus_for_emotion_analysis_in_Gujarati_language_and_its_evaluation_by_various_speech_parameters) <br/> 
 🗂️ **Download Link:** - <br/> 
 💾 **File Format:** `.wav`  <br/> 
-📧 Contact: [mail](mailto:vishaltank.ec@charusat.ac.in?subject=Dataset%20Access%20Request) </br>
+📧 Contact: [vishaltank.ec@charusat.ac.in](mailto:vishaltank.ec@charusat.ac.in?subject=Dataset%20Access%20Request) </br>
 > ⚠️ **Note:** Fill the request process if the dataset is restricted.
 
 ---

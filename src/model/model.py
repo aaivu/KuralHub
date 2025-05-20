@@ -12,7 +12,7 @@ class SERBenchmarkModel(nn.Module):
         feature_extractor: nn.Module,
         device: str,
         num_classes: int,
-        hidden_dim: int = 256,
+        hidden_dim: int = 512,
         dropout: float = 0.3,
     ):
         super(SERBenchmarkModel, self).__init__()
@@ -26,7 +26,7 @@ class SERBenchmarkModel(nn.Module):
                 self.feature_extractor.model.config.hidden_size,
                 self.hidden_dim,
             ),
-            nn.ReLU(),
+            nn.GELU(),
             nn.Dropout(self.dropout),
             nn.Linear(self.hidden_dim, num_classes),
         )

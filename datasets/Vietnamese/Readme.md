@@ -1,6 +1,6 @@
 # 🗂️ Speech Emotion Recognition (SER) Datasets for Vietnamese 
 
-Welcome to the **Vietnamese** section of KuralNet!  
+Welcome to the **Vietnamese** section of KuralHub!  
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Vietnamese**, along with metadata and access information.
 
 ## 🌍 **Language Information**  

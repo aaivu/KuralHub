@@ -1,6 +1,6 @@
 # 🗂️ Speech Emotion Recognition (SER) Datasets for Bhojpuri
 
-Welcome to the **Bhojpuri** section of KuralNet!  <br/>
+Welcome to the **Bhojpuri** section of KuralHub!  <br/>
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Bhojpuri**, along with metadata and access information.
 
 ## 🌍 **Language Information**  

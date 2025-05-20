@@ -1,6 +1,6 @@
-# 🏗️ Contributing to KuralNet  
+# 🏗️ Contributing to KuralHub  
 
-Thank you for your interest in contributing to **KuralNet**! Your contributions help improve our **Speech Emotion Recognition (SER) dataset repository** and make it more accessible for researchers worldwide.  
+Thank you for your interest in contributing to **KuralHub**! Your contributions help improve our **Speech Emotion Recognition (SER) dataset repository** and make it more accessible for researchers worldwide.  
 
 ---
 
@@ -21,8 +21,8 @@ Click on the **"Fork"** button at the top-right of this repository.
 
 ### 2️⃣ Clone Your Fork  
 ```bash
-git clone https://github.com/aaivu/KuralNet.git
-cd KuralNet
+git clone https://github.com/aaivu/KuralHub.git
+cd KuralHub
 ```
 
 ### 3️⃣ Create a New Branch  
@@ -54,4 +54,4 @@ Please follow our [Code of Conduct](CODE_OF_CONDUCT.md) to maintain a respectful
 ## 🤝 **Join the Discussion**  
 📬 If you have any questions, create an **Issue** or join the discussion in our community.  
 
-🚀 **Thank you for contributing to KuralNet!**
+🚀 **Thank you for contributing to KuralHub!**

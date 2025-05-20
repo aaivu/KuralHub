@@ -1,7 +1,7 @@
 
 # 🗂️ Speech Emotion Recognition (SER) Datasets for Hausa
 
-Welcome to the **Hausa** section of KuralNet!  <br/>
+Welcome to the **Hausa** section of KuralHub!  <br/>
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Hausa**, along with metadata and access information.
 
 ## 🌍 **Language Information**

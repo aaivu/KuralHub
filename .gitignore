@@ -10,13 +10,11 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
 lib/
 lib64/
-parts/
 sdist/
 var/
 wheels/
@@ -165,4 +163,4 @@ cython_debug/
 # datasets and project related folders
 ser_datasets
 meta_csvs
-checkpoints
+finetuned_models

@@ -1,6 +1,6 @@
 # 🗂️ Speech Emotion Recognition (SER) Datasets for Spanish
 
-Welcome to the **Spanish** section of KuralNet!  
+Welcome to the **Spanish** section of KuralHub!  
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Spanish**, along with metadata and access information.
 
 ## 🌍 **Language Information**  

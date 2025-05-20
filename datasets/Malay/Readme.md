@@ -1,6 +1,6 @@
 # 🗂️ Speech Emotion Recognition (SER) Datasets for Malay
 
-Welcome to the **Malay** section of KuralNet!  
+Welcome to the **Malay** section of KuralHub!  
 This directory contains **Speech Emotion Recognition (SER) datasets** available for **Malay**, along with metadata and access information.
 
 ## 🌍 **Language Information**  

@@ -17,9 +17,9 @@ This is a dataset found on Kaggle for Hindi Speech Emotion with 3,200 samples.
 ---
 
 ## 📥 **Access & Download**
-🔗 **Official Website:** [Dataset Homepage](https://github.com/aaivu/KuralNet/blob/add/lux/hindi/datasets/Hindi/VishalB.md)   </br>
+🔗 **Official Website:** [Dataset Homepage](https://github.com/aaivu/KuralHub/blob/add/lux/hindi/datasets/Hindi/VishalB.md)   </br>
 📄 **Paper:** Not Available </br>
-🗂️ **Download Link:** [Download](https://github.com/aaivu/KuralNet/blob/add/lux/hindi/datasets/Hindi/VishalB.md)  </br>
+🗂️ **Download Link:** [Download](https://github.com/aaivu/KuralHub/blob/add/lux/hindi/datasets/Hindi/VishalB.md)  </br>
 💾 **File Format:** `.wav`  </br>
 📧 Contact:Not Found </br>
 
