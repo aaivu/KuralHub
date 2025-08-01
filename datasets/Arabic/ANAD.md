@@ -5,7 +5,7 @@
 🔹 **Dataset Type:** 🎙️ Audio <br/>
 🔹 **Emotion Categories:** Happy, Angry, Surprised  <br/> 
 🔹 **Size:** Number of samples: 1384  <br/> 
-🔹 **Recording Environment:** 🎭 Acted / 🎙️ Spontaneous  <br/> 
+🔹 **Recording Environment:** 🎙️ Spontaneous  <br/> 
 🔹 **License:** [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)  <br/> 
 🔹 **Access:** 🔗 Open <br/> 
 

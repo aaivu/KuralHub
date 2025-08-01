@@ -1,12 +1,12 @@
 # 🎙️ ESCorpus-PE - Spanish
 
-🔹 **Dataset Name:** ESCorpus-PE  
-🔹 **Language:** Spanish 
-🔹 **Dataset Type:** 🎙️ Audio  
-🔹 **Emotion Categories:** three emotional dimensions Valence, Arousal, Dominance
-🔹 **Size:** samples - 3749, speakers - 80, duration - TBD
-🔹 **Recording Environment:** 🎙️ Spontaneous  
-🔹 **License:** CC BY 4.0
+🔹 **Dataset Name:** ESCorpus-PE   </br>
+🔹 **Language:** Spanish  </br>
+🔹 **Dataset Type:** 🎙️ Audio   </br>
+🔹 **Emotion Categories:** three emotional dimensions Valence, Arousal, Dominance </br>
+🔹 **Size:** samples - 3749, speakers - 80 </br>
+🔹 **Recording Environment:** 🎙️ Spontaneous  </br>
+🔹 **License:** CC BY 4.0 </br>
 🔹 **Access:** 🔗 Open
 
 ---

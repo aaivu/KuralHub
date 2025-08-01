@@ -3,6 +3,7 @@
 🔹 **Dataset Name:** PICKA-NH <br/>
 🔹 **Language:** Dutch <br/>
 🔹 **Dataset Type:** 🎙️ Audio <br/>
+🔹 Emotion Categories: Happiness, Anger, Sadness <br/>
 🔹 **Participants:** 58 Dutch & 25 English children (4-12 years), 15 Dutch & 15 English adults (20-30 years) <br/>
 🔹 **Recording Environment:** 🎤 Studio <br/>
 🔹 **License:** MIT, CC-BY <br/>
