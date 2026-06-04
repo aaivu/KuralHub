@@ -1,0 +1,767 @@
+[
+  {
+    "name": "Afrikaans",
+    "folder": "Afrikaans",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "AfrikaansSE.md"
+    ],
+    "family": "Indo-European",
+    "subfamily": "Germanic"
+  },
+  {
+    "name": "Amharic",
+    "folder": "Amharic",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "ASED.md"
+    ],
+    "family": "Afro-Asiatic",
+    "subfamily": "Cushitic"
+  },
+  {
+    "name": "Arabic",
+    "folder": "Arabic",
+    "readme": "Readme.md",
+    "count": 2,
+    "datasets": [
+      "ANAD.md",
+      "BAVED.md"
+    ],
+    "family": "Afro-Asiatic",
+    "subfamily": "Semitic"
+  },
+  {
+    "name": "Assamese",
+    "folder": "Assamese",
+    "readme": "Readme.md",
+    "count": 2,
+    "datasets": [
+      "AESC.md",
+      "AESD.md"
+    ],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Azerbaijani",
+    "folder": "Azerbaijani",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Bambara",
+    "folder": "Bambara",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Bengali",
+    "folder": "Bengali",
+    "readme": "Readme.md",
+    "count": 4,
+    "datasets": [
+      "BANSpEmo.md",
+      "BanglaSER.md",
+      "KBES.md",
+      "SUBESCO.md"
+    ],
+    "family": "Indo-European",
+    "subfamily": "Indo-Iranian"
+  },
+  {
+    "name": "Bhojpuri",
+    "folder": "Bhojpuri",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Burmese",
+    "folder": "Burmese",
+    "readme": "Readme.md",
+    "count": 3,
+    "datasets": [
+      "BMISEC.md",
+      "ESMBS.md",
+      "New_et_al_2001.md"
+    ],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Cebuano",
+    "folder": "Cebuano",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Chinese",
+    "folder": "Chinese",
+    "readme": "Readme.md",
+    "count": 8,
+    "datasets": [
+      "CASIA.md",
+      "CHEAVD.md",
+      "CHEAVD2.md",
+      "EESDB.md",
+      "EMOVIE.md",
+      "ESD.md",
+      "M3ED.md",
+      "SECEPDB.md"
+    ],
+    "family": "Sino-Tibetan",
+    "subfamily": null
+  },
+  {
+    "name": "Czech",
+    "folder": "Czech",
+    "readme": "Readme.md",
+    "count": 2,
+    "datasets": [
+      "CDSE.md",
+      "SCCESC.md"
+    ],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Dutch",
+    "folder": "Dutch",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "PICKA-NH.md"
+    ],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "English",
+    "folder": "English",
+    "readme": "Readme.md",
+    "count": 3,
+    "datasets": [
+      "IEMOCAP.md",
+      "IESC.md",
+      "RAVDESS.md"
+    ],
+    "family": "Indo-European",
+    "subfamily": "Germanic"
+  },
+  {
+    "name": "Filipino",
+    "folder": "Filipino",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "FilMED.md"
+    ],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "French",
+    "folder": "French",
+    "readme": "Readme.md",
+    "count": 2,
+    "datasets": [
+      "CaFE.md",
+      "OréauFR.md"
+    ],
+    "family": "Indo-European",
+    "subfamily": "Romance"
+  },
+  {
+    "name": "Fulflude",
+    "folder": "Fulflude",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "German",
+    "folder": "German",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "EmoDB.md"
+    ],
+    "family": "Indo-European",
+    "subfamily": "Germanic"
+  },
+  {
+    "name": "Greek",
+    "folder": "Greek",
+    "readme": "Readme.md",
+    "count": 3,
+    "datasets": [
+      "AESDD.md",
+      "GreThE.md",
+      "SEWA.md"
+    ],
+    "family": "Indo-European",
+    "subfamily": "Hellenic"
+  },
+  {
+    "name": "Gujarati",
+    "folder": "Gujarati",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "Tank_et_al_2020.md"
+    ],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Hausa",
+    "folder": "Hausa",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Hindi",
+    "folder": "Hindi",
+    "readme": "Readme.md",
+    "count": 3,
+    "datasets": [
+      "BansalAndDev.md",
+      "IITKGP-SEHSC.md",
+      "VishalB.md"
+    ],
+    "family": "Indo-European",
+    "subfamily": "Indo-Iranian"
+  },
+  {
+    "name": "Hungarian",
+    "folder": "Hungarian",
+    "readme": "Readme.md",
+    "count": 2,
+    "datasets": [
+      "HESD.md",
+      "SEWA.md"
+    ],
+    "family": "Uralic",
+    "subfamily": null
+  },
+  {
+    "name": "Igbo",
+    "folder": "Igbo",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Indonesian",
+    "folder": "Indonesian",
+    "readme": "Readme.md",
+    "count": 2,
+    "datasets": [
+      "Fahmi_et_al_2020.md",
+      "IndoWaveSentiment.md"
+    ],
+    "family": "Austronesian",
+    "subfamily": null
+  },
+  {
+    "name": "Italian",
+    "folder": "Italian",
+    "readme": "Readme.md",
+    "count": 3,
+    "datasets": [
+      "DEMoS.md",
+      "EMOVO.md",
+      "Emozionalmente.md"
+    ],
+    "family": "Indo-European",
+    "subfamily": "Romance"
+  },
+  {
+    "name": "Japanese",
+    "folder": "Japanese",
+    "readme": "Readme.md",
+    "count": 2,
+    "datasets": [
+      "JVNV.md",
+      "Keio-ESD.md"
+    ],
+    "family": "Japonic",
+    "subfamily": null
+  },
+  {
+    "name": "Javanese",
+    "folder": "Javanese",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "Java-SED.md"
+    ],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Kannada",
+    "folder": "Kannada",
+    "readme": "Readme.md",
+    "count": 2,
+    "datasets": [
+      "Agrawal_et_al_2022.md",
+      "KES.md"
+    ],
+    "family": "Dravidian",
+    "subfamily": null
+  },
+  {
+    "name": "Kazakh",
+    "folder": "Kazakh",
+    "readme": "Readme.md",
+    "count": 2,
+    "datasets": [
+      "KazEmoTTS.md",
+      "Kazakh-Russian-Emotion-Corpus.md"
+    ],
+    "family": "Turkic",
+    "subfamily": null
+  },
+  {
+    "name": "Khmer",
+    "folder": "Khmer",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Korean",
+    "folder": "Korean",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "KESDy18.md"
+    ],
+    "family": "Koreanic",
+    "subfamily": null
+  },
+  {
+    "name": "Kurdish",
+    "folder": "Kurdish",
+    "readme": "Readme.md",
+    "count": 2,
+    "datasets": [
+      "KurdishEmotionSpeechDatabase.md",
+      "Nematullah-et-al.md"
+    ],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Magahi",
+    "folder": "Magahi",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Maithili",
+    "folder": "Maithili",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Malay",
+    "folder": "Malay",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "Emolah.md"
+    ],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Malayalam",
+    "folder": "Malayalam",
+    "readme": "Readme.md",
+    "count": 4,
+    "datasets": [
+      "IIITSaint-EmoMDB.md",
+      "KMSER.md",
+      "MAVES-DB.md",
+      "MalayalamSpeechEmotionDataset.md"
+    ],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Nepali",
+    "folder": "Nepali",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Nigerian Pidgin",
+    "folder": "Nigerian Pidgin",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Northern Pashto",
+    "folder": "Northern Pashto",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Northern Uzbek",
+    "folder": "Northern Uzbek",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Odia",
+    "folder": "Odia",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "SITB-OSED.md"
+    ],
+    "family": "Other",
+    "subfamily": null
+  },
+  {
+    "name": "Persian",
+    "folder": "Persian",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "ShEMO.md"
+    ],
+    "family": "Indo-European",
+    "subfamily": "Indo-Iranian"
+  },
+  {
+    "name": "Polish",
+    "folder": "Polish",
+    "readme": "Readme.md",
+    "count": 3,
+    "datasets": [
+      "Cichosz_and_Slot_2005.md",
+      "Sapinski_et_al_2019.md",
+      "nEMO.md"
+    ],
+    "family": "Indo-European",
+    "subfamily": "Slavic"
+  },
+  {
+    "name": "Portuguese",
+    "folder": "Portuguese",
+    "readme": "Readme.md",
+    "count": 2,
+    "datasets": [
+      "VERBO.md",
+      "emoUERJ.md"
+    ],
+    "family": "Indo-European",
+    "subfamily": "Romance"
+  },
+  {
+    "name": "Punjabi",
+    "folder": "Punjabi",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "PEMO.md"
+    ],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Quechua",
+    "folder": "Quechua",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "Quechua-Collao.md"
+    ],
+    "family": "Quechuan",
+    "subfamily": null
+  },
+  {
+    "name": "Romanian",
+    "folder": "Romanian",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "SRoL.md"
+    ],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Russian",
+    "folder": "Russian",
+    "readme": "Readme.md",
+    "count": 2,
+    "datasets": [
+      "Dusha.md",
+      "RESD.md"
+    ],
+    "family": "Indo-European",
+    "subfamily": "Slavic"
+  },
+  {
+    "name": "Saraiki",
+    "folder": "Saraiki",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Sindhi",
+    "folder": "Sindhi",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "Syed_et_al_2020.md"
+    ],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Sinhala",
+    "folder": "Sinhala",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Somali",
+    "folder": "Somali",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Sotho",
+    "folder": "Sotho",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Spanish",
+    "folder": "Spanish",
+    "readme": "Readme.md",
+    "count": 3,
+    "datasets": [
+      "EMOVOME.md",
+      "ESCorpus-PE.md",
+      "MESD.md"
+    ],
+    "family": "Indo-European",
+    "subfamily": "Romance"
+  },
+  {
+    "name": "Sunda",
+    "folder": "Sunda",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Swahili",
+    "folder": "Swahili",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "Kenyan_Swahili.md"
+    ],
+    "family": "Niger-Congo",
+    "subfamily": null
+  },
+  {
+    "name": "Swedish",
+    "folder": "Swedish",
+    "readme": "Readme.md",
+    "count": 2,
+    "datasets": [
+      "EU-Emotion-Voice-Database.md",
+      "SwedishVoiceProviderEmotionalSpeechCorpus.md"
+    ],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Tagalog",
+    "folder": "Tagalog",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Tamil",
+    "folder": "Tamil",
+    "readme": "Readme.md",
+    "count": 3,
+    "datasets": [
+      "EmoTa.md",
+      "Ram_C_Sunitha_et_al.md",
+      "TaMaR-EmoDB.md"
+    ],
+    "family": "Dravidian",
+    "subfamily": null
+  },
+  {
+    "name": "Telugu",
+    "folder": "Telugu",
+    "readme": "Readme.md",
+    "count": 2,
+    "datasets": [
+      "IITKGP-SESC.md",
+      "Sowmith_et_al_2024.md"
+    ],
+    "family": "Dravidian",
+    "subfamily": null
+  },
+  {
+    "name": "Thai",
+    "folder": "Thai",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "Thai_Speech_Emotion_Dataset.md"
+    ],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Tswana",
+    "folder": "Tswana",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Turkish",
+    "folder": "Turkish",
+    "readme": "Readme.md",
+    "count": 2,
+    "datasets": [
+      "Oflazoglu_et_al_2011.md",
+      "TurEV-DB.md"
+    ],
+    "family": "Turkic",
+    "subfamily": null
+  },
+  {
+    "name": "Ukrainian",
+    "folder": "Ukrainian",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Urdu",
+    "folder": "Urdu",
+    "readme": "Readme.md",
+    "count": 2,
+    "datasets": [
+      "URDU-Dataset.md",
+      "UrduSER.md"
+    ],
+    "family": "Indo-European",
+    "subfamily": "Indo-Iranian"
+  },
+  {
+    "name": "Vietnamese",
+    "folder": "Vietnamese",
+    "readme": "Readme.md",
+    "count": 1,
+    "datasets": [
+      "VNEMOS.md"
+    ],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Xhosa",
+    "folder": "Xhosa",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Yoruba",
+    "folder": "Yoruba",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  },
+  {
+    "name": "Zulu",
+    "folder": "Zulu",
+    "readme": "Readme.md",
+    "count": 0,
+    "datasets": [],
+    "family": null,
+    "subfamily": null
+  }
+]

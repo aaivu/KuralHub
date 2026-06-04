@@ -1,0 +1,5 @@
+# KuralHub — https://aaivu.github.io/KuralHub/
+User-agent: *
+Allow: /
+
+Sitemap: https://aaivu.github.io/KuralHub/sitemap.xml
