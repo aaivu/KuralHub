@@ -48,7 +48,7 @@ EPOCHS = int(os.getenv("EPOCHS", 30))
 EARLY_STOPPING_PATIENCE = int(os.getenv("EARLY_STOPPING_PATIENCE", 5))
 
 os.makedirs("./finetuned_models", exist_ok=True)
-os.makedirs("./ui/public/train_val_test_logs", exist_ok=True)
+os.makedirs("./results/train_val_test_logs", exist_ok=True)
 
 
 def plot_loss(train_losses, val_losses, path: str):
@@ -66,7 +66,7 @@ def plot_loss(train_losses, val_losses, path: str):
     else:
         plt.title("Training and Validation Loss")
     plt.savefig(
-        f"./ui/public/train_val_test_logs/{path}/{path}_loss_curve.png"
+        f"./results/train_val_test_logs/{path}/{path}_loss_curve.png"
     )
     plt.close()
 
@@ -104,7 +104,7 @@ def plot_confusion_matrix(
     else:
         plt.title(f"{phase} Confusion Matrix")
     plt.savefig(
-        f"./ui/public/train_val_test_logs/{path}/{path}_{phase}_confusion_matrix.png"
+        f"./results/train_val_test_logs/{path}/{path}_{phase}_confusion_matrix.png"
     )
     plt.close()
 
@@ -121,7 +121,7 @@ def print_classification_report(y_true, y_pred, phase, path, EMOTION_MAPPING):
 
     report = classification_report(y_true, y_pred)
     with open(
-        f"./ui/public/train_val_test_logs/{path}/{path}_{phase}_classification_report.txt",
+        f"./results/train_val_test_logs/{path}/{path}_{phase}_classification_report.txt",
         "w",
     ) as f:
         f.write(report)
@@ -141,7 +141,7 @@ def train(
     logger.info("Finetuning Started...")
 
     os.makedirs(f"./finetuned_models/{base_path}", exist_ok=True)
-    os.makedirs(f"./ui/public/train_val_test_logs/{base_path}", exist_ok=True)
+    os.makedirs(f"./results/train_val_test_logs/{base_path}", exist_ok=True)
 
     model_path = os.path.join(
         "./finetuned_models", base_path, f"{base_path}.pth"

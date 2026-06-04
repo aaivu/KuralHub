@@ -2,7 +2,7 @@
 
 # 🎙️ KuralHub: A Comprehensive Review of Speech Emotion Recognition (SER) Datasets  
 
-[![Latest Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/aaivu/KuralHub)  [![ACL Paper](https://img.shields.io/badge/ACL-Paper-orange)](https://arxiv.org/abs/xxxx.xxxxx)  [![License](https://img.shields.io/github/license/aaivu/KuralHub)](LICENSE)  [![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen)](CONTRIBUTING.md)  
+[![Latest Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/aaivu/KuralHub)  [![Interspeech 2026](https://img.shields.io/badge/Interspeech%202026-Accepted-orange)](https://aaivu.github.io/KuralHub/)  [![Website](https://img.shields.io/badge/🌐-Website-blue)](https://aaivu.github.io/KuralHub/)  [![License](https://img.shields.io/github/license/aaivu/KuralHub)](LICENSE)  [![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen)](CONTRIBUTING.md)  
 
 </div>
 
@@ -13,7 +13,8 @@
 **KuralHub** is a **comprehensive repository** that reviews and benchmarks **Speech Emotion Recognition (SER) datasets** across multiple languages.  
 It provides **detailed metadata, access links, and benchmarks** using **fine-tuned monolingual models** for SER.
 
-**📄 Read the paper:** TBD
+**📄 Paper:** Accepted at Interspeech 2026 (to appear)
+**🌐 Website:** https://aaivu.github.io/KuralHub/
 
 ---
 
@@ -33,7 +34,7 @@ KuralHub/
 ---
 
 ## 📊 **SER Datasets Coverage**
-This repository contains details for **73 languages**, including **open-source and restricted** datasets.  
+This survey covers **70+ languages** (with **29 benchmarked**), including **open-source and restricted** datasets.  
 If a language has **no available dataset**, it is marked accordingly.
 
 ![Language Coverage](https://github.com/aaivu/KuralHub/blob/main/assets/language_selection.png)
@@ -72,16 +73,15 @@ We fine-tune **pre-trained SER models** on datasets individually and report thei
 
 If you are using our research findings, please cite the following paper:
 
+*Citation details will be finalized once the paper is published.*
+
 ```bibtex
-@article{placeholder2024,
-  author    = {Author(s)},
-  title     = {Paper Title},
-  journal   = {Conference/Journal},
-  year      = {2024},
-  volume    = {X},
-  number    = {Y},
-  pages     = {ZZ-ZZ},
-  doi       = {10.XXXX/placeholder},
+@inproceedings{kuralhub2026,
+  title     = {KuralHub: A Comprehensive Review of Speech Emotion Recognition Datasets},
+  author    = {Thavarasa, Luxshan and Thevakumar, Jubeerathan and Sivatheepan, Thanikan and Thayasivam, Uthayasanker},
+  booktitle = {Interspeech},
+  year      = {2026},
+  note      = {To appear}
 }
 ```
 
@@ -102,29 +102,31 @@ If you are using our research findings, please cite the following paper:
                 <td style="padding: 10px; border: 1px solid #ddd;"><strong>Luxshan Thavarasa</strong></td>
                 <td style="padding: 10px; border: 1px solid #ddd;"><a href="mailto:luxshan.20@cse.mrt.ac.lk">luxshan.20@cse.mrt.ac.lk</a></td>
                 <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://linkedin.com/in/lux-thavarasa">LinkedIn</a></td>
-                <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://scholar.google.com/citations?user=your-profile-link">Google Scholar</a></td>
+                <td style="padding: 10px; border: 1px solid #ddd;">—</td>
             </tr>
             <tr>
                 <td style="padding: 10px; border: 1px solid #ddd;"><strong>Jubeerathan Thevakumar</strong></td>
                 <td style="padding: 10px; border: 1px solid #ddd;"><a href="mailto:jubeerathan.20@cse.mrt.ac.lk">jubeerathan.20@cse.mrt.ac.lk</a></td>
                 <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://lk.linkedin.com/in/jubeerathan-thevakumar-87b9b8255">LinkedIn</a></td>
-                <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://scholar.google.com/citations?user=your-profile-link">Google Scholar</a></td>
+                <td style="padding: 10px; border: 1px solid #ddd;">—</td>
             </tr>
             <tr>
                 <td style="padding: 10px; border: 1px solid #ddd;"><strong>Thanikan Sivatheepan</strong></td>
                 <td style="padding: 10px; border: 1px solid #ddd;"><a href="mailto:thanikan.20@cse.mrt.ac.lk">thanikan.20@cse.mrt.ac.lk</a></td>
                 <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://lk.linkedin.com/in/sthanikan2000">LinkedIn</a></td>
-                <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://scholar.google.com/citations?user=your-profile-link">Google Scholar</a></td>
+                <td style="padding: 10px; border: 1px solid #ddd;">—</td>
             </tr>
             <tr>
-                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Uthayasanker Thayasivam</strong></td>
+                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Uthayasanker Thayasivam</strong> <em>(supervisor, corresponding author)</em></td>
                 <td style="padding: 10px; border: 1px solid #ddd;"><a href="mailto:rtuthaya@cse.mrt.ac.lk">rtuthaya@cse.mrt.ac.lk</a></td>
                 <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://lk.linkedin.com/in/rtuthaya">LinkedIn</a></td>
-                <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://scholar.google.com/citations?user=your-profile-link">Google Scholar</a></td>
+                <td style="padding: 10px; border: 1px solid #ddd;">—</td>
             </tr>
         </tbody>
     </table>
 </div>
+
+> All authors are with the Department of Computer Science & Engineering, University of Moratuwa, Sri Lanka.
 
 ## 🙏 Acknowledgment
 
