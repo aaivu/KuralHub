@@ -56,6 +56,40 @@ make run_ui          # serves docs/ at http://localhost:8000
 python3 -m http.server 8000 --directory docs
 ```
 
+## SEO & AI / agent discovery (GEO/AEO)
+
+The site is optimized for both classic search engines and AI answer engines:
+
+- **Static, crawlable content** — the 70-language catalog (datasets page) and the
+  "best model per language" table (benchmark page) are pre-rendered into the HTML
+  by `scripts/build_site.py`, so bots that don't run JavaScript (most AI crawlers,
+  and Google's first pass) still see the content. JS only enhances it.
+- **Structured data (JSON-LD)** — `Dataset` (incl. an `ItemList` of all 90+
+  datasets for Google Dataset Search), `ScholarlyArticle`, `FAQPage`, `WebSite`
+  (+ sitelinks SearchAction), `Organization`, `CollectionPage`, `BreadcrumbList`.
+- **`llms.txt` / `llms-full.txt`** — concise, structured summaries for LLMs/agents
+  (per the llmstxt.org convention).
+- **`robots.txt`** — explicitly *welcomes* AI crawlers (GPTBot, ClaudeBot,
+  PerplexityBot, Google-Extended, CCBot, …) plus search bots; links the sitemap.
+- **FAQ** with `FAQPage` schema targeting common queries ("what speech emotion
+  datasets exist", "best model for SER", …) for featured snippets and AI answers.
+- Per-page titles/descriptions/keywords, canonical URLs, Open Graph + Twitter
+  cards, `sitemap.xml`, and `?q=` / `?lang=` deep links on the datasets page.
+
+These regenerate via `./scripts/sync-datasets.sh` (which runs `build_site.py`).
+
+### After the site is live — off-page steps (these drive ranking)
+
+On-page is done; ranking #1 also needs these (do them once the repo is public):
+
+1. **Google Search Console** — verify the site, submit `sitemap.xml`.
+2. **Bing Webmaster Tools** — verify + submit sitemap.
+3. **Google Dataset Search** — it auto-discovers via the `Dataset` JSON-LD once
+   indexed; confirm at datasetsearch.research.google.com.
+4. **Backlinks** — link the site from the paper, the GitHub repo's About/website
+   field, your Google Scholar/lab pages, and list it on Papers with Code and
+   Hugging Face. Backlinks + citations are the biggest ranking factor.
+
 ## To finalize once the paper is public
 
 - Replace the "To appear" BibTeX note and the *Interspeech 2026 / Accepted* badge

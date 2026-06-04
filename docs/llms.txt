@@ -1,0 +1,29 @@
+# KuralHub
+
+> KuralHub is a comprehensive survey and benchmark of Speech Emotion Recognition (SER) datasets across the world's languages. It catalogs 90+ SER datasets spanning 70+ languages and benchmarks 11 pretrained speech models (HuBERT, wav2vec 2.0, WavLM, Whisper) on 29 languages across 363 fine-tuning experiments. Maintained by the aaivu lab, University of Moratuwa, Sri Lanka. To appear at Interspeech 2026.
+
+KuralHub helps researchers and practitioners (1) find speech emotion / emotion-speech datasets for a given language, and (2) see which speech model performs best per language.
+
+## Key facts
+- Languages surveyed: 70+
+- Datasets cataloged: 90+
+- Languages benchmarked: 29
+- Speech models benchmarked: 11 (hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wav2vec2-large-lv60, wav2vec2-xls-r-1b, wav2vec2-xls-r-300m, wavlm-base-plus, wavlm-large, whisper-large, whisper-small)
+- Fine-tuning experiments: 363
+- Protocol: each pretrained speech encoder is fine-tuned per language (monolingual) with a classification head on a frozen backbone; validation and test accuracy reported.
+
+## Pages
+- [Home / overview](https://aaivu.github.io/KuralHub/): project summary, methodology, key findings, team, citation.
+- [Benchmark](https://aaivu.github.io/KuralHub/benchmark.html): validation/test accuracy for every model on every benchmarked dataset; best model per language.
+- [Datasets catalog](https://aaivu.github.io/KuralHub/datasets.html): all 70+ languages with dataset metadata and access links.
+
+## Machine-readable data
+- Benchmark results (JSON): https://aaivu.github.io/KuralHub/data/benchmark.json
+- Language manifest (JSON): https://aaivu.github.io/KuralHub/data/languages.json
+- Language families (JSON): https://aaivu.github.io/KuralHub/data/language_families.json
+
+## Citation
+Thavarasa, L., Thevakumar, J., Sivatheepan, T., Thayasivam, U. "KuralHub: A Comprehensive Review of Speech Emotion Recognition Datasets." To appear, Interspeech 2026.
+
+## Repository
+https://github.com/aaivu/KuralHub

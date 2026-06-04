@@ -10,7 +10,7 @@
   <meta name="keywords" content="Speech Emotion Recognition, SER, multilingual speech, emotion datasets, benchmark, HuBERT, wav2vec2, WavLM, Whisper, low-resource languages, affective computing, KuralHub, Interspeech 2026" />
   <meta name="author" content="Luxshan Thavarasa, Jubeerathan Thevakumar, Thanikan Sivatheepan, Uthayasanker Thayasivam" />
   <link rel="canonical" href="https://aaivu.github.io/KuralHub/" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -29,7 +29,7 @@
   <meta name="twitter:image" content="https://aaivu.github.io/KuralHub/assets/img/og-image.png" />
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <meta name="theme-color" content="#6d5efc" />
+  <meta name="theme-color" content="#ffffff" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -70,6 +70,50 @@
     "publisher": {"@type": "Organization", "name": "Interspeech"},
     "datePublished": "2026",
     "about": "Multilingual Speech Emotion Recognition"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "KuralHub",
+    "alternateName": "KuralHub — Speech Emotion Recognition Datasets & Benchmark",
+    "url": "https://aaivu.github.io/KuralHub/",
+    "description": "Survey and benchmark of multilingual Speech Emotion Recognition datasets.",
+    "publisher": {"@type": "Organization", "name": "aaivu — University of Moratuwa", "url": "https://github.com/aaivu"},
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": { "@type": "EntryPoint", "urlTemplate": "https://aaivu.github.io/KuralHub/datasets.html?q={search_term_string}" },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "aaivu — Artificial Intelligence Research Lab, University of Moratuwa",
+    "url": "https://github.com/aaivu",
+    "parentOrganization": {"@type": "CollegeOrUniversity", "name": "University of Moratuwa", "address": "Sri Lanka"},
+    "member": [
+      {"@type": "Person", "name": "Luxshan Thavarasa"},
+      {"@type": "Person", "name": "Jubeerathan Thevakumar"},
+      {"@type": "Person", "name": "Thanikan Sivatheepan"},
+      {"@type": "Person", "name": "Uthayasanker Thayasivam"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What is KuralHub?", "acceptedAnswer": {"@type": "Answer", "text": "KuralHub is a comprehensive survey and benchmark of Speech Emotion Recognition (SER) datasets across the world's languages. It catalogs 90+ SER datasets spanning 70+ languages and benchmarks 11 pretrained speech models on 29 languages, to help researchers find emotion-speech data and choose the best model for a given language."}},
+      {"@type": "Question", "name": "What speech emotion recognition datasets are available, and for which languages?", "acceptedAnswer": {"@type": "Answer", "text": "KuralHub documents 90+ SER datasets across 70+ languages — including English, Mandarin Chinese, Hindi, Arabic, Spanish, German, French, Japanese, Korean, Tamil, Telugu, Bengali, Persian, Turkish and many low-resource languages. Each dataset entry lists its emotion categories, speaker counts, license and access links."}},
+      {"@type": "Question", "name": "Which model performs best for speech emotion recognition?", "acceptedAnswer": {"@type": "Answer", "text": "There is no single best model — the top encoder is language-dependent. KuralHub fine-tunes 11 pretrained speech models (HuBERT, wav2vec 2.0, WavLM and Whisper variants) per language and reports the winner for each on the benchmark page."}},
+      {"@type": "Question", "name": "Are the datasets free to use?", "acceptedAnswer": {"@type": "Answer", "text": "Many of the cataloged SER datasets are openly available, while others require a request or agreement with the original authors. Each dataset page states its license and access method. Always check the original dataset's license before research or commercial use."}},
+      {"@type": "Question", "name": "What is Speech Emotion Recognition (SER)?", "acceptedAnswer": {"@type": "Answer", "text": "Speech Emotion Recognition (SER) is the task of automatically identifying a speaker's emotional state — such as happy, sad, angry, fearful or neutral — from their voice. It is a core problem in affective computing with applications in human–computer interaction, call-center analytics, healthcare and accessibility."}}
+    ]
   }
   </script>
 </head>
@@ -250,6 +294,42 @@
         <p>Department of Computer Science &amp; Engineering, University of Moratuwa, Sri Lanka — <a href="https://github.com/aaivu" target="_blank" rel="noopener">aaivu</a> research lab.</p>
       </div>
       <div class="people" id="people"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">FAQ</div>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>What is KuralHub?</summary>
+          <p>KuralHub is a comprehensive survey and benchmark of Speech Emotion Recognition (SER) datasets across the world's languages. It catalogs 90+ SER datasets spanning 70+ languages and benchmarks 11 pretrained speech models on 29 languages, to help researchers find emotion-speech data and choose the best model for a given language.</p>
+        </details>
+        <details>
+          <summary>What speech emotion recognition datasets are available, and for which languages?</summary>
+          <p>KuralHub documents 90+ SER datasets across 70+ languages — including English, Mandarin Chinese, Hindi, Arabic, Spanish, German, French, Japanese, Korean, Tamil, Telugu, Bengali, Persian, Turkish and many low-resource languages. Each dataset entry lists its emotion categories, speaker counts, license and access links. Browse the full catalog on the <a href="datasets.html">Datasets</a> page.</p>
+        </details>
+        <details>
+          <summary>Which model performs best for speech emotion recognition?</summary>
+          <p>There is no single best model — the top encoder is language-dependent. KuralHub fine-tunes 11 pretrained speech models (HuBERT, wav2vec 2.0, WavLM and Whisper variants) per language and reports the winner for each. See the best model per language on the <a href="benchmark.html">Benchmark</a> page.</p>
+        </details>
+        <details>
+          <summary>Are the datasets free to use?</summary>
+          <p>Many of the cataloged SER datasets are openly available, while others require a request or agreement with the original authors. Each dataset page states its license and access method. Always check the original dataset's license before research or commercial use.</p>
+        </details>
+        <details>
+          <summary>What is Speech Emotion Recognition (SER)?</summary>
+          <p>Speech Emotion Recognition (SER) is the task of automatically identifying a speaker's emotional state — such as happy, sad, angry, fearful or neutral — from their voice. It is a core problem in affective computing with applications in human–computer interaction, call-center analytics, healthcare and accessibility.</p>
+        </details>
+        <details>
+          <summary>How can I cite KuralHub?</summary>
+          <p>KuralHub will appear at Interspeech 2026. Use the BibTeX entry in the <a href="#cite">citation section</a>; final details will be added once the paper is published.</p>
+        </details>
+      </div>
     </div>
   </section>
 

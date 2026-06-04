@@ -1,0 +1,132 @@
+# KuralHub
+
+> KuralHub is a comprehensive survey and benchmark of Speech Emotion Recognition (SER) datasets across the world's languages. It catalogs 90+ SER datasets spanning 70+ languages and benchmarks 11 pretrained speech models (HuBERT, wav2vec 2.0, WavLM, Whisper) on 29 languages across 363 fine-tuning experiments. Maintained by the aaivu lab, University of Moratuwa, Sri Lanka. To appear at Interspeech 2026.
+
+KuralHub helps researchers and practitioners (1) find speech emotion / emotion-speech datasets for a given language, and (2) see which speech model performs best per language.
+
+## Key facts
+- Languages surveyed: 70+
+- Datasets cataloged: 90+
+- Languages benchmarked: 29
+- Speech models benchmarked: 11 (hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wav2vec2-large-lv60, wav2vec2-xls-r-1b, wav2vec2-xls-r-300m, wavlm-base-plus, wavlm-large, whisper-large, whisper-small)
+- Fine-tuning experiments: 363
+- Protocol: each pretrained speech encoder is fine-tuned per language (monolingual) with a classification head on a frozen backbone; validation and test accuracy reported.
+
+## Pages
+- [Home / overview](https://aaivu.github.io/KuralHub/): project summary, methodology, key findings, team, citation.
+- [Benchmark](https://aaivu.github.io/KuralHub/benchmark.html): validation/test accuracy for every model on every benchmarked dataset; best model per language.
+- [Datasets catalog](https://aaivu.github.io/KuralHub/datasets.html): all 70+ languages with dataset metadata and access links.
+
+## Machine-readable data
+- Benchmark results (JSON): https://aaivu.github.io/KuralHub/data/benchmark.json
+- Language manifest (JSON): https://aaivu.github.io/KuralHub/data/languages.json
+- Language families (JSON): https://aaivu.github.io/KuralHub/data/language_families.json
+
+## Citation
+Thavarasa, L., Thevakumar, J., Sivatheepan, T., Thayasivam, U. "KuralHub: A Comprehensive Review of Speech Emotion Recognition Datasets." To appear, Interspeech 2026.
+
+## Repository
+https://github.com/aaivu/KuralHub
+
+## All languages and dataset counts
+- Afrikaans (Indo-European) — 1 dataset(s)
+- Amharic (Afro-Asiatic) — 1 dataset(s)
+- Arabic (Afro-Asiatic) — 2 dataset(s)
+- Assamese — 2 dataset(s)
+- Azerbaijani — 0 dataset(s)
+- Bambara — 0 dataset(s)
+- Bengali (Indo-European) — 4 dataset(s)
+- Bhojpuri — 0 dataset(s)
+- Burmese — 3 dataset(s)
+- Cebuano — 0 dataset(s)
+- Chinese (Sino-Tibetan) — 8 dataset(s)
+- Czech — 2 dataset(s)
+- Dutch — 1 dataset(s)
+- English (Indo-European) — 3 dataset(s)
+- Filipino — 1 dataset(s)
+- French (Indo-European) — 2 dataset(s)
+- Fulflude — 0 dataset(s)
+- German (Indo-European) — 1 dataset(s)
+- Greek (Indo-European) — 3 dataset(s)
+- Gujarati — 1 dataset(s)
+- Hausa — 0 dataset(s)
+- Hindi (Indo-European) — 3 dataset(s)
+- Hungarian (Uralic) — 2 dataset(s)
+- Igbo — 0 dataset(s)
+- Indonesian (Austronesian) — 2 dataset(s)
+- Italian (Indo-European) — 3 dataset(s)
+- Japanese (Japonic) — 2 dataset(s)
+- Javanese — 1 dataset(s)
+- Kannada (Dravidian) — 2 dataset(s)
+- Kazakh (Turkic) — 2 dataset(s)
+- Khmer — 0 dataset(s)
+- Korean (Koreanic) — 1 dataset(s)
+- Kurdish — 2 dataset(s)
+- Magahi — 0 dataset(s)
+- Maithili — 0 dataset(s)
+- Malay — 1 dataset(s)
+- Malayalam — 4 dataset(s)
+- Nepali — 0 dataset(s)
+- Nigerian Pidgin — 0 dataset(s)
+- Northern Pashto — 0 dataset(s)
+- Northern Uzbek — 0 dataset(s)
+- Odia (Other) — 1 dataset(s)
+- Persian (Indo-European) — 1 dataset(s)
+- Polish (Indo-European) — 3 dataset(s)
+- Portuguese (Indo-European) — 2 dataset(s)
+- Punjabi — 1 dataset(s)
+- Quechua (Quechuan) — 1 dataset(s)
+- Romanian — 1 dataset(s)
+- Russian (Indo-European) — 2 dataset(s)
+- Saraiki — 0 dataset(s)
+- Sindhi — 1 dataset(s)
+- Sinhala — 0 dataset(s)
+- Somali — 0 dataset(s)
+- Sotho — 0 dataset(s)
+- Spanish (Indo-European) — 3 dataset(s)
+- Sunda — 0 dataset(s)
+- Swahili (Niger-Congo) — 1 dataset(s)
+- Swedish — 2 dataset(s)
+- Tagalog — 0 dataset(s)
+- Tamil (Dravidian) — 3 dataset(s)
+- Telugu (Dravidian) — 2 dataset(s)
+- Thai — 1 dataset(s)
+- Tswana — 0 dataset(s)
+- Turkish (Turkic) — 2 dataset(s)
+- Ukrainian — 0 dataset(s)
+- Urdu (Indo-European) — 2 dataset(s)
+- Vietnamese — 1 dataset(s)
+- Xhosa — 0 dataset(s)
+- Yoruba — 0 dataset(s)
+- Zulu — 0 dataset(s)
+
+## Best model per benchmarked language
+- Afrikaans: best model whisper-small on AfrikaansEmotionalSpeechCorpus — 71.0% test accuracy
+- Amharic: best model whisper-small on ASED — 90.0% test accuracy
+- Arabic: best model whisper-large on ANAD — 82.0% test accuracy
+- Bengali: best model whisper-large on SUBESCO — 89.0% test accuracy
+- Chinese: best model whisper-large on ESD — 98.0% test accuracy
+- English: best model hubert-base-ls960 on IESC — 82.0% test accuracy
+- French: best model wavlm-large on CaFE — 70.0% test accuracy
+- German: best model whisper-large on EmoDB — 86.0% test accuracy
+- Greek: best model hubert-base-ls960 on AESDD — 75.0% test accuracy
+- Hindi: best model whisper-small on Hindi-Dataset — 71.0% test accuracy
+- Hungarian: best model hubert-base-ls960 on HungarianEmotionalSpeechCorpus — 52.0% test accuracy
+- Indonesian: best model hubert-base-ls960 on IndoWaveSentiment — 99.0% test accuracy
+- Italian: best model whisper-large on Emozionalmente — 80.0% test accuracy
+- Japanese: best model whisper-large on JVNV — 87.0% test accuracy
+- Kannada: best model wavlm-large on Kannada-Dataset — 48.0% test accuracy
+- Kazakh: best model whisper-large on KazakhEmotionalTTS — 65.0% test accuracy
+- Korean: best model whisper-small on KESDy18 — 81.0% test accuracy
+- Odia: best model wavlm-large on SITB-OSED — 83.0% test accuracy
+- Persian: best model whisper-small on SHEMO — 83.0% test accuracy
+- Polish: best model whisper-large on nEMO — 87.0% test accuracy
+- Portuguese: best model whisper-small on emoUERJ — 91.0% test accuracy
+- Quechua: best model whisper-large on Quechua-Collao-Corpus — 83.0% test accuracy
+- Russian: best model hubert-base-ls960 on RESD — 51.0% test accuracy
+- Spanish: best model whisper-small on MESD — 68.0% test accuracy
+- Swahili: best model wavlm-base-plus on Swahili-Dataset — 83.0% test accuracy
+- Tamil: best model whisper-small on EmoTa — 44.0% test accuracy
+- Telugu: best model hubert-base-ls960 on Telugu-Dataset — 53.0% test accuracy
+- Turkish: best model whisper-large on TurEV-DB — 84.0% test accuracy
+- Urdu: best model wav2vec2-base on Urdu-Dataset — 88.0% test accuracy

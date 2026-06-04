@@ -381,3 +381,18 @@ table.bench td.model { font-family: var(--mono); font-size: .84rem; color: var(-
   font-size: .9rem; color: var(--text); margin-bottom: 16px; display: flex; gap: 9px; align-items: flex-start;
 }
 .note-banner svg { width: 17px; height: 17px; color: var(--muted); flex-shrink: 0; margin-top: 2px; }
+
+/* ---------- FAQ ---------- */
+.faq { max-width: var(--maxw-prose); }
+.faq details { border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 10px; background: var(--bg); }
+.faq summary {
+  cursor: pointer; padding: 16px 18px; font-weight: 600; color: var(--ink); font-size: 1rem;
+  list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+"; font-size: 1.3rem; font-weight: 400; color: var(--muted); line-height: 1; transition: transform .15s ease;
+}
+.faq details[open] summary::after { content: "\2212"; }
+.faq summary:hover { color: var(--accent-700); }
+.faq details p { margin: 0; padding: 0 18px 16px; color: var(--text); font-size: .96rem; }

@@ -20,7 +20,13 @@
     Object.keys(fams).sort().forEach(function (f) {
       famSel.insertAdjacentHTML('beforeend', '<option value="' + esc(f) + '">' + esc(f) + '</option>');
     });
+    // Deep links: ?q=search and ?lang=Folder
+    var params = new URLSearchParams(window.location.search);
+    var q = params.get('q'); var lang = params.get('lang');
+    if (q) searchEl.value = q;
+    if (lang && params.get('fam')) famSel.value = params.get('fam');
     render();
+    if (lang && LANGS.some(function (l) { return l.folder === lang; })) selectLang(lang);
   }).catch(function (err) {
     gridEl.innerHTML = '<div class="note-banner">Could not load the language list. ' + esc(err.message) + '</div>';
   });
