@@ -2,7 +2,7 @@
 
 # 🎙️ KuralHub: A Comprehensive Review of Speech Emotion Recognition (SER) Datasets  
 
-[![Latest Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/aaivu/KuralHub)  [![InterSpeech-2026 Paper](https://img.shields.io/badge/ACL-Paper-orange)](https://arxiv.org/abs/xxxx.xxxxx)  [![License](https://img.shields.io/github/license/aaivu/KuralHub)](LICENSE)  [![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen)](CONTRIBUTING.md)  
+[![Latest Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/aaivu/KuralHub)  [![InterSpeech-2026 Paper]](https://arxiv.org/abs/xxxx.xxxxx)  [![License](https://img.shields.io/github/license/aaivu/KuralHub)](LICENSE)  [![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen)](CONTRIBUTING.md)  
 
 </div>
 
