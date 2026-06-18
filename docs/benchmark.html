@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Benchmark Results — KuralHub Speech Emotion Recognition</title>
+  <meta name="description" content="Interactive benchmark of 11 pretrained speech models (HuBERT, wav2vec 2.0, WavLM, Whisper) fine-tuned for Speech Emotion Recognition across 29 languages and 12+ language families. Filter by model and family." />
+  <link rel="canonical" href="https://aaivu.github.io/KuralHub/benchmark.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta property="og:title" content="KuralHub Benchmark — Speech Emotion Recognition across 29 languages" />
+  <meta property="og:description" content="Validation and test accuracy for 11 speech models fine-tuned per language for SER." />
+  <meta property="og:url" content="https://aaivu.github.io/KuralHub/benchmark.html" />
+  <meta property="og:image" content="https://aaivu.github.io/KuralHub/assets/img/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "KuralHub Speech Emotion Recognition Benchmark",
+    "description": "Benchmark results (validation and test accuracy) for 11 pretrained speech models — HuBERT, wav2vec 2.0, WavLM and Whisper — fine-tuned per language for Speech Emotion Recognition across 29 languages and 33 dataset splits (363 experiments).",
+    "url": "https://aaivu.github.io/KuralHub/benchmark.html",
+    "keywords": ["speech emotion recognition benchmark", "SER benchmark", "multilingual", "HuBERT", "wav2vec2", "WavLM", "Whisper", "emotion classification accuracy"],
+    "creator": { "@type": "Organization", "name": "aaivu — University of Moratuwa", "url": "https://github.com/aaivu" },
+    "isAccessibleForFree": true,
+    "distribution": {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://aaivu.github.io/KuralHub/data/benchmark.json"
+    },
+    "isPartOf": { "@type": "WebSite", "name": "KuralHub", "url": "https://aaivu.github.io/KuralHub/" }
+  }
+  </script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="brand">
+        <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1"/><path d="M12 18v4"/></svg></span>
+        KuralHub
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="benchmark.html" class="active">Benchmark</a>
+        <a href="datasets.html">Datasets</a>
+        <a href="index.html#researchers">Team</a>
+        <a href="index.html#cite">Cite</a>
+        <a href="https://github.com/aaivu/KuralHub" class="nav-cta" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <div class="wrap">
+      <div class="eyebrow">Benchmark</div>
+      <h1>Speech Emotion Recognition results</h1>
+      <p>Validation and test accuracy for 11 pretrained speech models, each fine-tuned per language. Filter by language family or model to compare.</p>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="toolbar">
+      <div class="filters">
+        <div class="field">
+          <label for="familyFilter">Language family</label>
+          <select id="familyFilter"><option value="all">All families</option></select>
+        </div>
+        <div class="field">
+          <label for="modelFilter">Model</label>
+          <select id="modelFilter"><option value="all">All models</option></select>
+        </div>
+        <button class="btn-reset" id="resetFilters">Reset</button>
+      </div>
+      <div class="legend">
+        <span class="dot"><span class="swatch" style="background:var(--good-bg);"></span> ≥ 70%</span>
+        <span class="dot"><span class="swatch" style="background:var(--mid-bg);"></span> 50–70%</span>
+        <span class="dot"><span class="swatch" style="background:var(--low-bg);"></span> &lt; 50%</span>
+      </div>
+    </div>
+  </div>
+
+  <section style="padding-top:34px; padding-bottom:0;">
+    <div class="wrap">
+      <!-- BENCHSUMMARY:START -->
+<h2 style="font-size:1.3rem; margin-bottom:6px;">Best model per language</h2><p style="color:var(--muted); margin-bottom:18px;">Across 29 benchmarked languages, 11 pretrained speech models and 363 fine-tuning runs — the highest test accuracy reached for each language.</p><div class="table-scroll"><table class="bench"><thead><tr><th>Language</th><th>Top model</th><th>Dataset</th><th>Best test accuracy</th></tr></thead><tbody><tr><td>Afrikaans <span style="color:var(--faint)">af</span></td><td class="model">whisper-small</td><td>AfrikaansEmotionalSpeechCorpus</td><td><span class="acc good">71.0%</span></td></tr><tr><td>Amharic <span style="color:var(--faint)">am</span></td><td class="model">whisper-small</td><td>ASED</td><td><span class="acc good">90.0%</span></td></tr><tr><td>Arabic <span style="color:var(--faint)">ar</span></td><td class="model">whisper-large</td><td>ANAD</td><td><span class="acc good">82.0%</span></td></tr><tr><td>Bengali <span style="color:var(--faint)">bn</span></td><td class="model">whisper-large</td><td>SUBESCO</td><td><span class="acc good">89.0%</span></td></tr><tr><td>Chinese <span style="color:var(--faint)">zh</span></td><td class="model">whisper-large</td><td>ESD</td><td><span class="acc good">98.0%</span></td></tr><tr><td>English <span style="color:var(--faint)">en</span></td><td class="model">hubert-base-ls960</td><td>IESC</td><td><span class="acc good">82.0%</span></td></tr><tr><td>French <span style="color:var(--faint)">fr</span></td><td class="model">wavlm-large</td><td>CaFE</td><td><span class="acc good">70.0%</span></td></tr><tr><td>German <span style="color:var(--faint)">de</span></td><td class="model">whisper-large</td><td>EmoDB</td><td><span class="acc good">86.0%</span></td></tr><tr><td>Greek <span style="color:var(--faint)">el</span></td><td class="model">hubert-base-ls960</td><td>AESDD</td><td><span class="acc good">75.0%</span></td></tr><tr><td>Hindi <span style="color:var(--faint)">hi</span></td><td class="model">whisper-small</td><td>Hindi-Dataset</td><td><span class="acc good">71.0%</span></td></tr><tr><td>Hungarian <span style="color:var(--faint)">hu</span></td><td class="model">hubert-base-ls960</td><td>HungarianEmotionalSpeechCorpus</td><td><span class="acc good">52.0%</span></td></tr><tr><td>Indonesian <span style="color:var(--faint)">id</span></td><td class="model">hubert-base-ls960</td><td>IndoWaveSentiment</td><td><span class="acc good">99.0%</span></td></tr><tr><td>Italian <span style="color:var(--faint)">it</span></td><td class="model">whisper-large</td><td>Emozionalmente</td><td><span class="acc good">80.0%</span></td></tr><tr><td>Japanese <span style="color:var(--faint)">ja</span></td><td class="model">whisper-large</td><td>JVNV</td><td><span class="acc good">87.0%</span></td></tr><tr><td>Kannada <span style="color:var(--faint)">kn</span></td><td class="model">wavlm-large</td><td>Kannada-Dataset</td><td><span class="acc good">48.0%</span></td></tr><tr><td>Kazakh <span style="color:var(--faint)">kk</span></td><td class="model">whisper-large</td><td>KazakhEmotionalTTS</td><td><span class="acc good">65.0%</span></td></tr><tr><td>Korean <span style="color:var(--faint)">ko</span></td><td class="model">whisper-small</td><td>KESDy18</td><td><span class="acc good">81.0%</span></td></tr><tr><td>Odia <span style="color:var(--faint)">or</span></td><td class="model">wavlm-large</td><td>SITB-OSED</td><td><span class="acc good">83.0%</span></td></tr><tr><td>Persian <span style="color:var(--faint)">fa</span></td><td class="model">whisper-small</td><td>SHEMO</td><td><span class="acc good">83.0%</span></td></tr><tr><td>Polish <span style="color:var(--faint)">pl</span></td><td class="model">whisper-large</td><td>nEMO</td><td><span class="acc good">87.0%</span></td></tr><tr><td>Portuguese <span style="color:var(--faint)">pt</span></td><td class="model">whisper-small</td><td>emoUERJ</td><td><span class="acc good">91.0%</span></td></tr><tr><td>Quechua <span style="color:var(--faint)">qu</span></td><td class="model">whisper-large</td><td>Quechua-Collao-Corpus</td><td><span class="acc good">83.0%</span></td></tr><tr><td>Russian <span style="color:var(--faint)">ru</span></td><td class="model">hubert-base-ls960</td><td>RESD</td><td><span class="acc good">51.0%</span></td></tr><tr><td>Spanish <span style="color:var(--faint)">es</span></td><td class="model">whisper-small</td><td>MESD</td><td><span class="acc good">68.0%</span></td></tr><tr><td>Swahili <span style="color:var(--faint)">sw</span></td><td class="model">wavlm-base-plus</td><td>Swahili-Dataset</td><td><span class="acc good">83.0%</span></td></tr><tr><td>Tamil <span style="color:var(--faint)">ta</span></td><td class="model">whisper-small</td><td>EmoTa</td><td><span class="acc good">44.0%</span></td></tr><tr><td>Telugu <span style="color:var(--faint)">te</span></td><td class="model">hubert-base-ls960</td><td>Telugu-Dataset</td><td><span class="acc good">53.0%</span></td></tr><tr><td>Turkish <span style="color:var(--faint)">tr</span></td><td class="model">whisper-large</td><td>TurEV-DB</td><td><span class="acc good">84.0%</span></td></tr><tr><td>Urdu <span style="color:var(--faint)">ur</span></td><td class="model">wav2vec2-base</td><td>Urdu-Dataset</td><td><span class="acc good">88.0%</span></td></tr></tbody></table></div>
+<!-- BENCHSUMMARY:END -->
+    </div>
+  </section>
+
+  <section style="padding-top:34px;">
+    <div class="wrap">
+      <h2 style="font-size:1.3rem; margin-bottom:6px;">Full results</h2>
+      <p style="color:var(--muted); margin-bottom:20px;">Every model on every benchmarked dataset. Use the filters above to narrow by language family or model.</p>
+      <div id="results"><div class="spinner"></div></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-bottom" style="border:0; margin:0; padding:0;">
+        <span>© <span data-year>2026</span> KuralHub · aaivu, University of Moratuwa</span>
+        <div class="socials"><a href="https://github.com/aaivu/KuralHub" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/benchmark.js"></script>
+</body>
+</html>

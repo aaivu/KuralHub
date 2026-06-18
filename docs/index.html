@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>KuralHub — Speech Emotion Recognition Datasets &amp; Benchmark Across 70+ Languages</title>
+  <meta name="description" content="KuralHub is a comprehensive survey and benchmark of multilingual Speech Emotion Recognition (SER). We catalog 90+ datasets across 70+ languages and benchmark 11 pretrained speech models (HuBERT, wav2vec 2.0, WavLM, Whisper) on 29 languages. To appear at Interspeech 2026." />
+  <meta name="keywords" content="Speech Emotion Recognition, SER, multilingual speech, emotion datasets, benchmark, HuBERT, wav2vec2, WavLM, Whisper, low-resource languages, affective computing, KuralHub, Interspeech 2026" />
+  <meta name="author" content="Luxshan Thavarasa, Jubeerathan Thevakumar, Thanikan Sivatheepan, Uthayasanker Thayasivam" />
+  <link rel="canonical" href="https://aaivu.github.io/KuralHub/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="KuralHub — Multilingual Speech Emotion Recognition Datasets &amp; Benchmark" />
+  <meta property="og:description" content="A comprehensive survey of SER datasets across 70+ languages, with a benchmark of 11 speech models. To appear at Interspeech 2026." />
+  <meta property="og:url" content="https://aaivu.github.io/KuralHub/" />
+  <meta property="og:site_name" content="KuralHub" />
+  <meta property="og:image" content="https://aaivu.github.io/KuralHub/assets/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="KuralHub — Multilingual Speech Emotion Recognition Benchmark" />
+  <meta name="twitter:description" content="90+ SER datasets across 70+ languages · 11 speech models benchmarked · To appear at Interspeech 2026." />
+  <meta name="twitter:image" content="https://aaivu.github.io/KuralHub/assets/img/og-image.png" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "KuralHub: Multilingual Speech Emotion Recognition Datasets and Benchmark",
+    "description": "A comprehensive survey and benchmark of Speech Emotion Recognition (SER) datasets spanning 70+ languages and 90+ datasets, with 11 pretrained speech models benchmarked on 29 languages.",
+    "url": "https://aaivu.github.io/KuralHub/",
+    "keywords": ["Speech Emotion Recognition", "multilingual", "affective computing", "benchmark", "low-resource languages"],
+    "creator": {
+      "@type": "Organization",
+      "name": "aaivu — University of Moratuwa",
+      "url": "https://github.com/aaivu"
+    },
+    "license": "https://github.com/aaivu/KuralHub/blob/main/LICENSE",
+    "isAccessibleForFree": true,
+    "citation": "Thavarasa, L., Thevakumar, J., Sivatheepan, T., Thayasivam, U. KuralHub: A Comprehensive Review of Speech Emotion Recognition Datasets. To appear at Interspeech 2026."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "KuralHub: A Comprehensive Review of Speech Emotion Recognition Datasets",
+    "author": [
+      {"@type": "Person", "name": "Luxshan Thavarasa"},
+      {"@type": "Person", "name": "Jubeerathan Thevakumar"},
+      {"@type": "Person", "name": "Thanikan Sivatheepan"},
+      {"@type": "Person", "name": "Uthayasanker Thayasivam"}
+    ],
+    "publisher": {"@type": "Organization", "name": "Interspeech"},
+    "datePublished": "2026",
+    "about": "Multilingual Speech Emotion Recognition"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "KuralHub",
+    "alternateName": "KuralHub — Speech Emotion Recognition Datasets & Benchmark",
+    "url": "https://aaivu.github.io/KuralHub/",
+    "description": "Survey and benchmark of multilingual Speech Emotion Recognition datasets.",
+    "publisher": {"@type": "Organization", "name": "aaivu — University of Moratuwa", "url": "https://github.com/aaivu"},
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": { "@type": "EntryPoint", "urlTemplate": "https://aaivu.github.io/KuralHub/datasets.html?q={search_term_string}" },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "aaivu — Artificial Intelligence Research Lab, University of Moratuwa",
+    "url": "https://github.com/aaivu",
+    "parentOrganization": {"@type": "CollegeOrUniversity", "name": "University of Moratuwa", "address": "Sri Lanka"},
+    "member": [
+      {"@type": "Person", "name": "Luxshan Thavarasa"},
+      {"@type": "Person", "name": "Jubeerathan Thevakumar"},
+      {"@type": "Person", "name": "Thanikan Sivatheepan"},
+      {"@type": "Person", "name": "Uthayasanker Thayasivam"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What is KuralHub?", "acceptedAnswer": {"@type": "Answer", "text": "KuralHub is a comprehensive survey and benchmark of Speech Emotion Recognition (SER) datasets across the world's languages. It catalogs 90+ SER datasets spanning 70+ languages and benchmarks 11 pretrained speech models on 29 languages, to help researchers find emotion-speech data and choose the best model for a given language."}},
+      {"@type": "Question", "name": "What speech emotion recognition datasets are available, and for which languages?", "acceptedAnswer": {"@type": "Answer", "text": "KuralHub documents 90+ SER datasets across 70+ languages — including English, Mandarin Chinese, Hindi, Arabic, Spanish, German, French, Japanese, Korean, Tamil, Telugu, Bengali, Persian, Turkish and many low-resource languages. Each dataset entry lists its emotion categories, speaker counts, license and access links."}},
+      {"@type": "Question", "name": "Which model performs best for speech emotion recognition?", "acceptedAnswer": {"@type": "Answer", "text": "There is no single best model — the top encoder is language-dependent. KuralHub fine-tunes 11 pretrained speech models (HuBERT, wav2vec 2.0, WavLM and Whisper variants) per language and reports the winner for each on the benchmark page."}},
+      {"@type": "Question", "name": "Are the datasets free to use?", "acceptedAnswer": {"@type": "Answer", "text": "Many of the cataloged SER datasets are openly available, while others require a request or agreement with the original authors. Each dataset page states its license and access method. Always check the original dataset's license before research or commercial use."}},
+      {"@type": "Question", "name": "What is Speech Emotion Recognition (SER)?", "acceptedAnswer": {"@type": "Answer", "text": "Speech Emotion Recognition (SER) is the task of automatically identifying a speaker's emotional state — such as happy, sad, angry, fearful or neutral — from their voice. It is a core problem in affective computing with applications in human–computer interaction, call-center analytics, healthcare and accessibility."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="brand">
+        <span class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1"/><path d="M12 18v4"/></svg>
+        </span>
+        KuralHub
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="benchmark.html">Benchmark</a>
+        <a href="datasets.html">Datasets</a>
+        <a href="index.html#researchers">Team</a>
+        <a href="index.html#cite">Cite</a>
+        <a href="https://github.com/aaivu/KuralHub" class="nav-cta" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-badges">
+        <span class="chip accent">To appear · Interspeech 2026</span>
+        <span class="chip">70+ languages</span>
+        <span class="chip">90+ datasets</span>
+        <span class="chip">11 speech models</span>
+      </div>
+      <h1>The atlas of multilingual speech emotion recognition</h1>
+      <p class="lead">KuralHub catalogs and benchmarks Speech Emotion Recognition (SER) datasets across the world's languages — from high-resource to long-tail — so researchers can find data and compare models in one place.</p>
+      <p class="byline">By <strong>Luxshan Thavarasa</strong>, <strong>Jubeerathan Thevakumar</strong>, <strong>Thanikan Sivatheepan</strong> &amp; <strong>Uthayasanker Thayasivam</strong> · University of Moratuwa</p>
+      <div class="hero-actions">
+        <a href="benchmark.html" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="7"/><rect x="13" y="6" width="3" height="11"/></svg>
+          Explore the benchmark
+        </a>
+        <a href="datasets.html" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+          Browse datasets
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <div class="wrap stats">
+    <div class="stats-grid reveal">
+      <div class="stat"><div class="num text-grad">70+</div><div class="lbl">Languages surveyed</div></div>
+      <div class="stat"><div class="num text-grad">90+</div><div class="lbl">Datasets cataloged</div></div>
+      <div class="stat"><div class="num text-grad">11</div><div class="lbl">Speech models</div></div>
+      <div class="stat"><div class="num text-grad">363</div><div class="lbl">Fine-tuning runs</div></div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">About the project</div>
+        <h2>One place to find SER data — and see what actually works</h2>
+      </div>
+      <div style="max-width: 70ch;" class="reveal">
+        <p class="prose-lead">Speech Emotion Recognition research is fragmented: datasets are scattered, inconsistently documented, and heavily skewed toward a handful of high-resource languages. KuralHub brings them together.</p>
+        <p>We reviewed Speech Emotion Recognition resources for <strong>70+ languages</strong>, documenting <strong>90+ datasets</strong> with consistent metadata — emotion categories, speaker counts, recording conditions, licensing, and access links. For <strong>29 languages</strong> with usable open data, we ran a controlled benchmark: each of 11 pretrained speech encoders is fine-tuned <em>per language</em> (monolingual, not multilingual) by attaching a lightweight classification head on top of the frozen backbone, then evaluated on held-out test sets.</p>
+        <p>The result is a living atlas that helps researchers and practitioners locate datasets quickly and choose the right model for a given language.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="bg-tint">
+    <div class="wrap">
+      <div class="cards">
+        <div class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></div>
+          <h3>Curated dataset catalog</h3>
+          <p>Consistent, structured metadata for 90+ SER datasets — emotions, speakers, license, and access links — organized by language and family.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="7"/><rect x="13" y="6" width="3" height="11"/></svg></div>
+          <h3>Reproducible benchmark</h3>
+          <p>11 state-of-the-art speech models fine-tuned per language under one protocol, with validation and test accuracy reported transparently.</p>
+        </div>
+        <div class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg></div>
+          <h3>Global language coverage</h3>
+          <p>From English and Mandarin to long-tail languages across 12+ language families — surfacing where emotion data exists and where gaps remain.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section id="method">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Methodology</div>
+        <h2>How the benchmark is built</h2>
+        <p>A single, controlled fine-tuning protocol applied consistently across every language and model.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div class="n">1</div><h3>Collect &amp; standardize</h3><p>Gather open SER datasets per language and normalize their emotion labels, splits, and metadata into a common format.</p></div>
+        <div class="step reveal"><div class="n">2</div><h3>Fine-tune per language</h3><p>Freeze each pretrained speech encoder and train a classification head on top — one monolingual model per dataset, never mixed multilingual.</p></div>
+        <div class="step reveal"><div class="n">3</div><h3>Evaluate &amp; report</h3><p>Score validation and test accuracy on held-out splits and aggregate results by model, language, and language family.</p></div>
+      </div>
+
+      <div style="margin-top: 40px;" class="reveal">
+        <h3 style="font-size:1.1rem; margin-bottom:14px;">Models evaluated</h3>
+        <div class="pill-grid">
+          <span class="pill">hubert-base-ls960</span>
+          <span class="pill">hubert-large-ls960-ft</span>
+          <span class="pill">wav2vec2-base</span>
+          <span class="pill">wav2vec2-large-960h</span>
+          <span class="pill">wav2vec2-large-lv60</span>
+          <span class="pill">wav2vec2-xls-r-300m</span>
+          <span class="pill">wav2vec2-xls-r-1b</span>
+          <span class="pill">wavlm-base-plus</span>
+          <span class="pill">wavlm-large</span>
+          <span class="pill">whisper-small</span>
+          <span class="pill">whisper-large</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY FINDINGS -->
+  <section class="bg-tint" id="findings">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Key findings</div>
+        <h2>What the data tells us</h2>
+        <p>A glimpse of the analysis. Click any figure to enlarge, or dive into the full interactive benchmark.</p>
+      </div>
+      <div class="figures">
+        <figure class="figure reveal" data-zoom>
+          <img src="assets/img/radar_chart_language_performance.png" alt="Radar chart of average SER model performance across languages" loading="lazy" />
+          <figcaption><b>Average performance by language</b>Model accuracy varies widely across languages and families.</figcaption>
+        </figure>
+        <figure class="figure reveal" data-zoom>
+          <img src="assets/img/model_language_heatmap.png" alt="Heatmap of model performance per language" loading="lazy" />
+          <figcaption><b>Model × language heatmap</b>No single model wins everywhere — the best encoder is language-dependent.</figcaption>
+        </figure>
+        <figure class="figure reveal" data-zoom>
+          <img src="assets/img/model_avg_performance.png" alt="Average accuracy per speech model across all languages" loading="lazy" />
+          <figcaption><b>Average accuracy by model</b>Larger self-supervised encoders tend to lead on aggregate.</figcaption>
+        </figure>
+        <figure class="figure reveal" data-zoom>
+          <img src="assets/img/language_dendrogram.png" alt="Dendrogram clustering languages by SER model behavior" loading="lazy" />
+          <figcaption><b>Language clustering</b>Languages group by how models behave on them, hinting at transfer opportunities.</figcaption>
+        </figure>
+      </div>
+      <div style="text-align:center; margin-top:36px;" class="reveal">
+        <a href="benchmark.html" class="btn btn-dark">See the full benchmark
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCHERS -->
+  <section id="researchers">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <div class="eyebrow">The team</div>
+        <h2>Researchers</h2>
+        <p>Department of Computer Science &amp; Engineering, University of Moratuwa, Sri Lanka — <a href="https://github.com/aaivu" target="_blank" rel="noopener">aaivu</a> research lab.</p>
+      </div>
+      <div class="people" id="people"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">FAQ</div>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>What is KuralHub?</summary>
+          <p>KuralHub is a comprehensive survey and benchmark of Speech Emotion Recognition (SER) datasets across the world's languages. It catalogs 90+ SER datasets spanning 70+ languages and benchmarks 11 pretrained speech models on 29 languages, to help researchers find emotion-speech data and choose the best model for a given language.</p>
+        </details>
+        <details>
+          <summary>What speech emotion recognition datasets are available, and for which languages?</summary>
+          <p>KuralHub documents 90+ SER datasets across 70+ languages — including English, Mandarin Chinese, Hindi, Arabic, Spanish, German, French, Japanese, Korean, Tamil, Telugu, Bengali, Persian, Turkish and many low-resource languages. Each dataset entry lists its emotion categories, speaker counts, license and access links. Browse the full catalog on the <a href="datasets.html">Datasets</a> page.</p>
+        </details>
+        <details>
+          <summary>Which model performs best for speech emotion recognition?</summary>
+          <p>There is no single best model — the top encoder is language-dependent. KuralHub fine-tunes 11 pretrained speech models (HuBERT, wav2vec 2.0, WavLM and Whisper variants) per language and reports the winner for each. See the best model per language on the <a href="benchmark.html">Benchmark</a> page.</p>
+        </details>
+        <details>
+          <summary>Are the datasets free to use?</summary>
+          <p>Many of the cataloged SER datasets are openly available, while others require a request or agreement with the original authors. Each dataset page states its license and access method. Always check the original dataset's license before research or commercial use.</p>
+        </details>
+        <details>
+          <summary>What is Speech Emotion Recognition (SER)?</summary>
+          <p>Speech Emotion Recognition (SER) is the task of automatically identifying a speaker's emotional state — such as happy, sad, angry, fearful or neutral — from their voice. It is a core problem in affective computing with applications in human–computer interaction, call-center analytics, healthcare and accessibility.</p>
+        </details>
+        <details>
+          <summary>How can I cite KuralHub?</summary>
+          <p>KuralHub will appear at Interspeech 2026. Use the BibTeX entry in the <a href="#cite">citation section</a>; final details will be added once the paper is published.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITATION -->
+  <section class="bg-tint" id="cite">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <div class="eyebrow">Citation</div>
+        <h2>Cite KuralHub</h2>
+      </div>
+      <div class="cite-wrap reveal">
+        <div class="cite-box">
+          <div class="cite-head">
+            <span>BibTeX</span>
+            <button class="cite-copy" data-copy="#bibtex">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy
+            </button>
+          </div>
+          <pre id="bibtex">@inproceedings{kuralhub2026,
+  title     = {KuralHub: A Comprehensive Review of Speech Emotion Recognition Datasets},
+  author    = {Thavarasa, Luxshan and Thevakumar, Jubeerathan and
+               Sivatheepan, Thanikan and Thayasivam, Uthayasanker},
+  booktitle = {Interspeech},
+  year      = {2026},
+  note      = {To appear}
+}</pre>
+        </div>
+        <p class="cite-note">Accepted at Interspeech 2026 — full citation details will be finalized once the paper is published.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand" style="margin-bottom:12px;">
+            <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1"/><path d="M12 18v4"/></svg></span>
+            KuralHub
+          </a>
+          <p>A comprehensive survey and benchmark of multilingual Speech Emotion Recognition datasets.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <a href="index.html">Home</a>
+            <a href="benchmark.html">Benchmark</a>
+            <a href="datasets.html">Datasets</a>
+            <a href="index.html#researchers">Team</a>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="https://github.com/aaivu/KuralHub" target="_blank" rel="noopener">GitHub repository</a>
+            <a href="https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contribute a dataset</a>
+            <a href="https://github.com/aaivu/KuralHub/blob/main/LICENSE" target="_blank" rel="noopener">License</a>
+            <a href="index.html#cite">Cite</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> KuralHub · aaivu, University of Moratuwa</span>
+        <div class="socials">
+          <a href="https://github.com/aaivu/KuralHub" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox"><img src="" alt="" /></div>
+
+  <!-- Researcher data rendered to avoid duplication -->
+  <script>
+    var TEAM = [
+      { name: 'Luxshan Thavarasa', role: 'Author', slug: 'luxshan-thavarasa',
+        email: 'luxshan.20@cse.mrt.ac.lk', linkedin: 'https://linkedin.com/in/lux-thavarasa',
+        scholar: 'https://scholar.google.com/scholar?q=Luxshan+Thavarasa' },
+      { name: 'Jubeerathan Thevakumar', role: 'Author', slug: 'jubeerathan-thevakumar',
+        email: 'jubeerathan.20@cse.mrt.ac.lk', linkedin: 'https://lk.linkedin.com/in/jubeerathan-thevakumar-87b9b8255',
+        scholar: 'https://scholar.google.com/scholar?q=Jubeerathan+Thevakumar' },
+      { name: 'Thanikan Sivatheepan', role: 'Author', slug: 'thanikan-sivatheepan',
+        email: 'thanikan.20@cse.mrt.ac.lk', linkedin: 'https://lk.linkedin.com/in/sthanikan2000',
+        scholar: 'https://scholar.google.com/scholar?q=Thanikan+Sivatheepan' },
+      { name: 'Uthayasanker Thayasivam', role: 'Supervisor · Corresponding author', slug: 'uthayasanker-thayasivam',
+        email: 'rtuthaya@cse.mrt.ac.lk', linkedin: 'https://lk.linkedin.com/in/rtuthaya',
+        scholar: 'https://scholar.google.com/scholar?q=Uthayasanker+Thayasivam' }
+    ];
+    function initials(name){ return name.split(' ').map(function(w){return w[0];}).slice(0,2).join('').toUpperCase(); }
+    var ICN = {
+      mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>',
+      linkedin: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14C2.2 0 0 2.2 0 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM8 19H5V8h3v11zM6.5 6.7a1.8 1.8 0 1 1 0-3.5 1.8 1.8 0 0 1 0 3.5zM20 19h-3v-5.6c0-1.3 0-3-1.9-3S13 11.8 13 13.3V19h-3V8h2.9v1.5h.04C13.3 8.6 14.6 8 16 8c3 0 3.9 2 3.9 4.6V19z"/></svg>',
+      scholar: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.84 3.77A8 8 0 0 1 12 9a8 8 0 0 1 7.16 4.27L24 9.5z"/></svg>'
+    };
+    document.getElementById('people').innerHTML = TEAM.map(function(p){
+      return '<div class="person reveal">' +
+        '<div class="avatar">' +
+          '<img class="avatar" style="margin:0;border:0;box-shadow:none;" src="assets/profiles/'+p.slug+'.jpg" alt="'+p.name+'" loading="lazy" ' +
+          'onerror="this.replaceWith(document.createTextNode(\''+initials(p.name)+'\'))">' +
+        '</div>' +
+        '<h3>'+p.name+'</h3>' +
+        '<div class="role">'+p.role+'</div>' +
+        '<div class="aff">University of Moratuwa</div>' +
+        '<div class="socials">' +
+          '<a href="mailto:'+p.email+'" aria-label="Email '+p.name+'" title="Email">'+ICN.mail+'</a>' +
+          '<a href="'+p.linkedin+'" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">'+ICN.linkedin+'</a>' +
+          '<a href="'+p.scholar+'" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">'+ICN.scholar+'</a>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
