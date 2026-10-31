@@ -215,7 +215,7 @@ Thavarasa, L., Thevakumar, J., Sivatheepan, T., Thayasivam, U. (2026) KuralHub: 
 
 ## Authors
 
-- Luxshan Thavarasa\* (luxshan.20@cse.mrt.ac.lk, https://luxshan2000.github.io/)
+- Luxshan Thavarasa\*, project lead (luxshan.20@cse.mrt.ac.lk, https://luxshan2000.github.io/)
 - Jubeerathan Thevakumar\* (jubeerathan.25@cse.mrt.ac.lk)
 - Thanikan Sivatheepan (thanikan.20@cse.mrt.ac.lk)
 - Uthayasanker Thayasivam, supervisor (rtuthaya@cse.mrt.ac.lk)

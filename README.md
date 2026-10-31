@@ -78,7 +78,7 @@ If you use one of the catalogued datasets, please cite its authors too. Each dat
 
 ## Contact
 
-- [Luxshan Thavarasa](https://luxshan2000.github.io/): luxshan.20@cse.mrt.ac.lk
+- [Luxshan Thavarasa](https://luxshan2000.github.io/) (project lead): luxshan.20@cse.mrt.ac.lk
 - Jubeerathan Thevakumar: jubeerathan.25@cse.mrt.ac.lk
 - Thanikan Sivatheepan: thanikan.20@cse.mrt.ac.lk
 - Uthayasanker Thayasivam: rtuthaya@cse.mrt.ac.lk
