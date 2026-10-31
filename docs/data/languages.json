@@ -2,766 +2,1046 @@
   {
     "name": "Afrikaans",
     "folder": "Afrikaans",
-    "readme": "Readme.md",
-    "count": 1,
-    "datasets": [
-      "AfrikaansSE.md"
-    ],
+    "slug": "afrikaans",
     "family": "Indo-European",
-    "subfamily": "Germanic"
+    "branch": "Germanic",
+    "iso": "af",
+    "countries": "South Africa, Namibia",
+    "dataset_count": 1,
+    "datasets": [
+      "AfrikaansSE"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/afrikaans.html"
   },
   {
     "name": "Amharic",
     "folder": "Amharic",
-    "readme": "Readme.md",
-    "count": 1,
-    "datasets": [
-      "ASED.md"
-    ],
+    "slug": "amharic",
     "family": "Afro-Asiatic",
-    "subfamily": "Cushitic"
+    "branch": "Semitic",
+    "iso": "am",
+    "countries": "Ethiopia",
+    "dataset_count": 1,
+    "datasets": [
+      "Amharic Speech Emotion Dataset (ASED)"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/amharic.html"
   },
   {
     "name": "Arabic",
     "folder": "Arabic",
-    "readme": "Readme.md",
-    "count": 2,
-    "datasets": [
-      "ANAD.md",
-      "BAVED.md"
-    ],
+    "slug": "arabic",
     "family": "Afro-Asiatic",
-    "subfamily": "Semitic"
+    "branch": "Semitic",
+    "iso": "ar",
+    "countries": "Arab World, Middle East and North Africa",
+    "dataset_count": 2,
+    "datasets": [
+      "ANAD",
+      "BAVED"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/arabic.html"
   },
   {
     "name": "Assamese",
     "folder": "Assamese",
-    "readme": "Readme.md",
-    "count": 2,
+    "slug": "assamese",
+    "family": "Indo-European",
+    "branch": "Indo-Aryan",
+    "iso": "as",
+    "countries": "India (Northeast India: Assam, Arunachal Pradesh, Meghalaya, Nagaland)",
+    "dataset_count": 2,
     "datasets": [
-      "AESC.md",
-      "AESD.md"
+      "Assamese Emotional Speech Corpus",
+      "Assamese Emotional Speech Dataset"
     ],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/assamese.html"
   },
   {
     "name": "Azerbaijani",
     "folder": "Azerbaijani",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "azerbaijani",
+    "family": "Turkic",
+    "branch": "Oghuz",
+    "iso": "az",
+    "countries": "Azerbaijan",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/azerbaijani.html"
   },
   {
     "name": "Bambara",
     "folder": "Bambara",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "bambara",
+    "family": "Niger-Congo",
+    "branch": "Mande",
+    "iso": "bm",
+    "countries": "Mali",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/bambara.html"
   },
   {
     "name": "Bengali",
     "folder": "Bengali",
-    "readme": "Readme.md",
-    "count": 4,
-    "datasets": [
-      "BANSpEmo.md",
-      "BanglaSER.md",
-      "KBES.md",
-      "SUBESCO.md"
-    ],
+    "slug": "bengali",
     "family": "Indo-European",
-    "subfamily": "Indo-Iranian"
+    "branch": "Indo-Aryan",
+    "iso": "bn",
+    "countries": "Bangladesh, and India",
+    "dataset_count": 4,
+    "datasets": [
+      "BANSpEmo",
+      "BanglaSER",
+      "KBES",
+      "SUBESCO"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/bengali.html"
   },
   {
     "name": "Bhojpuri",
     "folder": "Bhojpuri",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "bhojpuri",
+    "family": "Indo-European",
+    "branch": "Indo-Aryan",
+    "iso": "bho",
+    "countries": "India and Nepal",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/bhojpuri.html"
   },
   {
     "name": "Burmese",
     "folder": "Burmese",
-    "readme": "Readme.md",
-    "count": 3,
+    "slug": "burmese",
+    "family": "Sino-Tibetan",
+    "branch": "Lolo-Burmese",
+    "iso": "mya",
+    "countries": "Myanmar (Burma)",
+    "dataset_count": 3,
     "datasets": [
-      "BMISEC.md",
-      "ESMBS.md",
-      "New_et_al_2001.md"
+      "BMISEC",
+      "ESMBS",
+      "New et al. (2001)"
     ],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/burmese.html"
   },
   {
     "name": "Cebuano",
     "folder": "Cebuano",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "cebuano",
+    "family": "Austronesian",
+    "branch": "Philippine",
+    "iso": "ceb",
+    "countries": "Philippines",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/cebuano.html"
   },
   {
     "name": "Chinese",
     "folder": "Chinese",
-    "readme": "Readme.md",
-    "count": 8,
-    "datasets": [
-      "CASIA.md",
-      "CHEAVD.md",
-      "CHEAVD2.md",
-      "EESDB.md",
-      "EMOVIE.md",
-      "ESD.md",
-      "M3ED.md",
-      "SECEPDB.md"
-    ],
+    "slug": "chinese",
     "family": "Sino-Tibetan",
-    "subfamily": null
+    "branch": "Sinitic",
+    "iso": "zh (ISO 639-1), zho (ISO 639-2)",
+    "countries": "China, Taiwan, Singapore, Malaysia",
+    "dataset_count": 8,
+    "datasets": [
+      "CASIA",
+      "CHEAVD",
+      "CHEAVD 2.0",
+      "EESDB",
+      "EMOVIE",
+      "ESD",
+      "M3ED",
+      "SECEPDB"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/chinese.html"
   },
   {
     "name": "Czech",
     "folder": "Czech",
-    "readme": "Readme.md",
-    "count": 2,
+    "slug": "czech",
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "iso": "cs",
+    "countries": "Czech Republic, European Union, Austria, Bosnia and Herzegovina, Croatia, Poland, Romania, Slovakia",
+    "dataset_count": 2,
     "datasets": [
-      "CDSE.md",
-      "SCCESC.md"
+      "CDSE",
+      "Slavic Call Center Emotional Speech Corpus"
     ],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/czech.html"
   },
   {
     "name": "Dutch",
     "folder": "Dutch",
-    "readme": "Readme.md",
-    "count": 1,
+    "slug": "dutch",
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "iso": "nl",
+    "countries": "Netherlands, Belgium, Suriname",
+    "dataset_count": 1,
     "datasets": [
-      "PICKA-NH.md"
+      "PICKA-NH"
     ],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/dutch.html"
   },
   {
     "name": "English",
     "folder": "English",
-    "readme": "Readme.md",
-    "count": 3,
-    "datasets": [
-      "IEMOCAP.md",
-      "IESC.md",
-      "RAVDESS.md"
-    ],
+    "slug": "english",
     "family": "Indo-European",
-    "subfamily": "Germanic"
+    "branch": "Germanic",
+    "iso": "en",
+    "countries": "United States, United Kingdom, Canada, Australia, New Zealand",
+    "dataset_count": 3,
+    "datasets": [
+      "IEMOCAP",
+      "IESC",
+      "RAVDESS"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/english.html"
   },
   {
     "name": "Filipino",
     "folder": "Filipino",
-    "readme": "Readme.md",
-    "count": 1,
+    "slug": "filipino",
+    "family": "Austronesian",
+    "branch": "Philippine",
+    "iso": "fil",
+    "countries": "Philippines",
+    "dataset_count": 1,
     "datasets": [
-      "FilMED.md"
+      "Filipino Multimodal Emotion Database (FilMED)"
     ],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/filipino.html"
   },
   {
     "name": "French",
     "folder": "French",
-    "readme": "Readme.md",
-    "count": 2,
-    "datasets": [
-      "CaFE.md",
-      "OréauFR.md"
-    ],
+    "slug": "french",
     "family": "Indo-European",
-    "subfamily": "Romance"
+    "branch": "Romance",
+    "iso": "fr",
+    "countries": "France",
+    "dataset_count": 2,
+    "datasets": [
+      "CaFE",
+      "OréauFR"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/french.html"
   },
   {
-    "name": "Fulflude",
+    "name": "Fulfulde",
     "folder": "Fulflude",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "fulfulde",
+    "family": "Niger-Congo",
+    "branch": "Atlantic",
+    "iso": "ff",
+    "countries": "Burkina Faso Mali, Senegal, guinea Conakry, Niger, Cameroon",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/fulfulde.html"
   },
   {
     "name": "German",
     "folder": "German",
-    "readme": "Readme.md",
-    "count": 1,
-    "datasets": [
-      "EmoDB.md"
-    ],
+    "slug": "german",
     "family": "Indo-European",
-    "subfamily": "Germanic"
+    "branch": "Germanic",
+    "iso": "de",
+    "countries": "Germany",
+    "dataset_count": 1,
+    "datasets": [
+      "EmoDB"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/german.html"
   },
   {
     "name": "Greek",
     "folder": "Greek",
-    "readme": "Readme.md",
-    "count": 3,
-    "datasets": [
-      "AESDD.md",
-      "GreThE.md",
-      "SEWA.md"
-    ],
+    "slug": "greek",
     "family": "Indo-European",
-    "subfamily": "Hellenic"
+    "branch": "Hellenic",
+    "iso": "el",
+    "countries": "Greece, Cyprus",
+    "dataset_count": 3,
+    "datasets": [
+      "AESDD",
+      "GreThE",
+      "SEWA"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/greek.html"
   },
   {
     "name": "Gujarati",
     "folder": "Gujarati",
-    "readme": "Readme.md",
-    "count": 1,
+    "slug": "gujarati",
+    "family": "Indo-European",
+    "branch": "Indo-Aryan",
+    "iso": "gu",
+    "countries": "India",
+    "dataset_count": 1,
     "datasets": [
-      "Tank_et_al_2020.md"
+      "Tank et al. (2020)"
     ],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/gujarati.html"
   },
   {
     "name": "Hausa",
     "folder": "Hausa",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "hausa",
+    "family": "Afro-Asiatic",
+    "branch": "Chadic",
+    "iso": "ha",
+    "countries": "Nigeria, Niger, Ghana, Cameroon, Chad, Sudan, Benin, Burkina Faso, Togo, Central African Republic, and parts of other West and Central African countries.",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/hausa.html"
   },
   {
     "name": "Hindi",
     "folder": "Hindi",
-    "readme": "Readme.md",
-    "count": 3,
-    "datasets": [
-      "BansalAndDev.md",
-      "IITKGP-SEHSC.md",
-      "VishalB.md"
-    ],
+    "slug": "hindi",
     "family": "Indo-European",
-    "subfamily": "Indo-Iranian"
+    "branch": "Indo-Aryan",
+    "iso": "hi",
+    "countries": "India",
+    "dataset_count": 3,
+    "datasets": [
+      "Bansal And Dev et al.",
+      "IITKGP-SEHSC",
+      "VishalB"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/hindi.html"
   },
   {
     "name": "Hungarian",
     "folder": "Hungarian",
-    "readme": "Readme.md",
-    "count": 2,
-    "datasets": [
-      "HESD.md",
-      "SEWA.md"
-    ],
+    "slug": "hungarian",
     "family": "Uralic",
-    "subfamily": null
+    "branch": "Ugric",
+    "iso": "hu",
+    "countries": "Hungary, Serbia (in Vojvodina), Austria (in Burgenland), Slovenia (in Prekmurje), Romania (in Transylvania),",
+    "dataset_count": 2,
+    "datasets": [
+      "HESD",
+      "SEWA"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/hungarian.html"
   },
   {
     "name": "Igbo",
     "folder": "Igbo",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "igbo",
+    "family": "Niger-Congo",
+    "branch": "Volta-Niger",
+    "iso": "ig",
+    "countries": "Nigeria (southeastern regions)",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/igbo.html"
   },
   {
     "name": "Indonesian",
     "folder": "Indonesian",
-    "readme": "Readme.md",
-    "count": 2,
-    "datasets": [
-      "Fahmi_et_al_2020.md",
-      "IndoWaveSentiment.md"
-    ],
+    "slug": "indonesian",
     "family": "Austronesian",
-    "subfamily": null
+    "branch": "Malayic",
+    "iso": "id",
+    "countries": "Indonesia",
+    "dataset_count": 2,
+    "datasets": [
+      "Fahmi et al (2020)",
+      "IndoWaveSentiment"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/indonesian.html"
   },
   {
     "name": "Italian",
     "folder": "Italian",
-    "readme": "Readme.md",
-    "count": 3,
-    "datasets": [
-      "DEMoS.md",
-      "EMOVO.md",
-      "Emozionalmente.md"
-    ],
+    "slug": "italian",
     "family": "Indo-European",
-    "subfamily": "Romance"
+    "branch": "Romance",
+    "iso": "it",
+    "countries": "Italy",
+    "dataset_count": 3,
+    "datasets": [
+      "DEMoS",
+      "EMOVO",
+      "Emozionalmente"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/italian.html"
   },
   {
     "name": "Japanese",
     "folder": "Japanese",
-    "readme": "Readme.md",
-    "count": 2,
-    "datasets": [
-      "JVNV.md",
-      "Keio-ESD.md"
-    ],
+    "slug": "japanese",
     "family": "Japonic",
-    "subfamily": null
+    "branch": null,
+    "iso": "ja",
+    "countries": "Japan",
+    "dataset_count": 2,
+    "datasets": [
+      "JVNV",
+      "Keio-ESD"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/japanese.html"
   },
   {
     "name": "Javanese",
     "folder": "Javanese",
-    "readme": "Readme.md",
-    "count": 1,
+    "slug": "javanese",
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "iso": "jv",
+    "countries": "Indonesia",
+    "dataset_count": 1,
     "datasets": [
-      "Java-SED.md"
+      "Java-SED"
     ],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/javanese.html"
   },
   {
     "name": "Kannada",
     "folder": "Kannada",
-    "readme": "Readme.md",
-    "count": 2,
-    "datasets": [
-      "Agrawal_et_al_2022.md",
-      "KES.md"
-    ],
+    "slug": "kannada",
     "family": "Dravidian",
-    "subfamily": null
+    "branch": "South Dravidian",
+    "iso": "kn",
+    "countries": "India",
+    "dataset_count": 2,
+    "datasets": [
+      "Agrawal et al (2022)",
+      "KES"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/kannada.html"
   },
   {
     "name": "Kazakh",
     "folder": "Kazakh",
-    "readme": "Readme.md",
-    "count": 2,
-    "datasets": [
-      "KazEmoTTS.md",
-      "Kazakh-Russian-Emotion-Corpus.md"
-    ],
+    "slug": "kazakh",
     "family": "Turkic",
-    "subfamily": null
+    "branch": "Kipchak",
+    "iso": "kk",
+    "countries": "Kazakhstan, Russia, China, Uzbekistan",
+    "dataset_count": 2,
+    "datasets": [
+      "KazEmoTTS",
+      "Kazakh-Russian Emotion Corpus"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/kazakh.html"
   },
   {
     "name": "Khmer",
     "folder": "Khmer",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "khmer",
+    "family": "Austroasiatic",
+    "branch": "Khmeric",
+    "iso": "km",
+    "countries": "Cambodia, Thailand, Vietnam",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/khmer.html"
   },
   {
     "name": "Korean",
     "folder": "Korean",
-    "readme": "Readme.md",
-    "count": 1,
-    "datasets": [
-      "KESDy18.md"
-    ],
+    "slug": "korean",
     "family": "Koreanic",
-    "subfamily": null
+    "branch": null,
+    "iso": "ko",
+    "countries": "South Korea",
+    "dataset_count": 1,
+    "datasets": [
+      "KESDy18"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/korean.html"
   },
   {
     "name": "Kurdish",
     "folder": "Kurdish",
-    "readme": "Readme.md",
-    "count": 2,
+    "slug": "kurdish",
+    "family": "Indo-European",
+    "branch": "Iranian",
+    "iso": "ku",
+    "countries": "Iraq, Rojava, Armenia",
+    "dataset_count": 2,
     "datasets": [
-      "KurdishEmotionSpeechDatabase.md",
-      "Nematullah-et-al.md"
+      "Kurdish Emotional Speech Database",
+      "Nematullah et al. (2024)"
     ],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/kurdish.html"
   },
   {
     "name": "Magahi",
     "folder": "Magahi",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "magahi",
+    "family": "Indo-European",
+    "branch": "Indo-Aryan",
+    "iso": "mag (639-3)",
+    "countries": "India (Bihar, Jharkhand, and West Bengal)",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/magahi.html"
   },
   {
     "name": "Maithili",
     "folder": "Maithili",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "maithili",
+    "family": "Indo-European",
+    "branch": "Indo-Aryan",
+    "iso": "mai",
+    "countries": "India, Nepal",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/maithili.html"
   },
   {
     "name": "Malay",
     "folder": "Malay",
-    "readme": "Readme.md",
-    "count": 1,
+    "slug": "malay",
+    "family": "Austronesian",
+    "branch": "Malayic",
+    "iso": "ms",
+    "countries": "Malaysia, Indonesia, Brunei, Singapore, Thailand",
+    "dataset_count": 1,
     "datasets": [
-      "Emolah.md"
+      "Emolah"
     ],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/malay.html"
   },
   {
     "name": "Malayalam",
     "folder": "Malayalam",
-    "readme": "Readme.md",
-    "count": 4,
+    "slug": "malayalam",
+    "family": "Dravidian",
+    "branch": "South Dravidian",
+    "iso": "ml",
+    "countries": "India (Kerala, Lakshadweep, Puducherry)",
+    "dataset_count": 4,
     "datasets": [
-      "IIITSaint-EmoMDB.md",
-      "KMSER.md",
-      "MAVES-DB.md",
-      "MalayalamSpeechEmotionDataset.md"
+      "IIITSaint-EmoMDB",
+      "Kannur Malayalam Speech Emotion Recognition (KMSER) Dataset",
+      "MAVES DB",
+      "Malayalam Speech Emotion Dataset"
     ],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/malayalam.html"
   },
   {
     "name": "Nepali",
     "folder": "Nepali",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "nepali",
+    "family": "Indo-European",
+    "branch": "Indo-Aryan",
+    "iso": "ne (639-1), nep (639-2/3)",
+    "countries": "Nepal (official), India (parts of Sikkim, Darjeeling), Bhutan",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/nepali.html"
   },
   {
     "name": "Nigerian Pidgin",
     "folder": "Nigerian Pidgin",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "nigerian-pidgin",
+    "family": "English-based creole",
+    "branch": null,
+    "iso": "pcm (West African Pidgin Creole)",
+    "countries": "Nigeria",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/nigerian-pidgin.html"
   },
   {
     "name": "Northern Pashto",
     "folder": "Northern Pashto",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "northern-pashto",
+    "family": "Indo-European",
+    "branch": "Iranian",
+    "iso": "ps (639-1), pus (639-2/3)",
+    "countries": "Afghanistan (eastern and southern regions), Pakistan (Khyber Pakhtunkhwa)",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/northern-pashto.html"
   },
   {
     "name": "Northern Uzbek",
     "folder": "Northern Uzbek",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "northern-uzbek",
+    "family": "Turkic",
+    "branch": "Karluk",
+    "iso": "uzn",
+    "countries": "Uzbekistan, Kazakhstan, Kyrgyzstan, Tajikistan",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/northern-uzbek.html"
   },
   {
     "name": "Odia",
     "folder": "Odia",
-    "readme": "Readme.md",
-    "count": 1,
+    "slug": "odia",
+    "family": "Indo-European",
+    "branch": "Indo-Aryan",
+    "iso": "or (ISO 639-1), ori (ISO 639-2)",
+    "countries": "India (primarily in Odisha state)",
+    "dataset_count": 1,
     "datasets": [
-      "SITB-OSED.md"
+      "SITB-OSED"
     ],
-    "family": "Other",
-    "subfamily": null
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/odia.html"
   },
   {
     "name": "Persian",
     "folder": "Persian",
-    "readme": "Readme.md",
-    "count": 1,
-    "datasets": [
-      "ShEMO.md"
-    ],
+    "slug": "persian",
     "family": "Indo-European",
-    "subfamily": "Indo-Iranian"
+    "branch": "Iranian",
+    "iso": "fa",
+    "countries": "Iran, Afghanistan, and Tajikistan",
+    "dataset_count": 1,
+    "datasets": [
+      "ShEMO"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/persian.html"
   },
   {
     "name": "Polish",
     "folder": "Polish",
-    "readme": "Readme.md",
-    "count": 3,
-    "datasets": [
-      "Cichosz_and_Slot_2005.md",
-      "Sapinski_et_al_2019.md",
-      "nEMO.md"
-    ],
+    "slug": "polish",
     "family": "Indo-European",
-    "subfamily": "Slavic"
+    "branch": "Slavic",
+    "iso": "pl",
+    "countries": "Poland",
+    "dataset_count": 3,
+    "datasets": [
+      "Cichosz and Slot (2005)",
+      "Sapinski et al. (2019)",
+      "nEMO"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/polish.html"
   },
   {
     "name": "Portuguese",
     "folder": "Portuguese",
-    "readme": "Readme.md",
-    "count": 2,
-    "datasets": [
-      "VERBO.md",
-      "emoUERJ.md"
-    ],
+    "slug": "portuguese",
     "family": "Indo-European",
-    "subfamily": "Romance"
+    "branch": "Romance",
+    "iso": "pt",
+    "countries": "Brazil, Angola, Mozambique, and Portugal",
+    "dataset_count": 2,
+    "datasets": [
+      "VERBO",
+      "emoUERJ"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/portuguese.html"
   },
   {
     "name": "Punjabi",
     "folder": "Punjabi",
-    "readme": "Readme.md",
-    "count": 1,
+    "slug": "punjabi",
+    "family": "Indo-European",
+    "branch": "Indo-Aryan",
+    "iso": "pa",
+    "countries": "India (Punjab)",
+    "dataset_count": 1,
     "datasets": [
-      "PEMO.md"
+      "PEMO"
     ],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/punjabi.html"
   },
   {
     "name": "Quechua",
     "folder": "Quechua",
-    "readme": "Readme.md",
-    "count": 1,
-    "datasets": [
-      "Quechua-Collao.md"
-    ],
+    "slug": "quechua",
     "family": "Quechuan",
-    "subfamily": null
+    "branch": null,
+    "iso": "qu",
+    "countries": "Throughout the central Andes Mountains including Argentina, Bolivia, Chile, Colombia, Ecuador, and Peru",
+    "dataset_count": 1,
+    "datasets": [
+      "Quechua Collao Corpus"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/quechua.html"
   },
   {
     "name": "Romanian",
     "folder": "Romanian",
-    "readme": "Readme.md",
-    "count": 1,
+    "slug": "romanian",
+    "family": "Indo-European",
+    "branch": "Romance",
+    "iso": "ro (ISO 639-1), ron (ISO 639-2/T and ISO 639-3)",
+    "countries": "Romania, Moldova, Serbia (Vojvodina), Ukraine",
+    "dataset_count": 1,
     "datasets": [
-      "SRoL.md"
+      "SRoL"
     ],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/romanian.html"
   },
   {
     "name": "Russian",
     "folder": "Russian",
-    "readme": "Readme.md",
-    "count": 2,
-    "datasets": [
-      "Dusha.md",
-      "RESD.md"
-    ],
+    "slug": "russian",
     "family": "Indo-European",
-    "subfamily": "Slavic"
+    "branch": "Slavic",
+    "iso": "ru",
+    "countries": "Russia, Belarus, Ukraine, Kazakhstan, and Kyrgyzstan",
+    "dataset_count": 2,
+    "datasets": [
+      "Dusha",
+      "RESD"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/russian.html"
   },
   {
     "name": "Saraiki",
     "folder": "Saraiki",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "saraiki",
+    "family": "Indo-European",
+    "branch": "Indo-Aryan",
+    "iso": "skr",
+    "countries": "Pakistan (Southern Punjab), India",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/saraiki.html"
   },
   {
     "name": "Sindhi",
     "folder": "Sindhi",
-    "readme": "Readme.md",
-    "count": 1,
+    "slug": "sindhi",
+    "family": "Indo-European",
+    "branch": "Indo-Aryan",
+    "iso": "sd (ISO 639-1), snd (ISO 639-2)",
+    "countries": "Pakistan (Sindh Province), India (Gujarat, Rajasthan)",
+    "dataset_count": 1,
     "datasets": [
-      "Syed_et_al_2020.md"
+      "Urdu-Sindhi Speech Emotion Corpus"
     ],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/sindhi.html"
   },
   {
     "name": "Sinhala",
     "folder": "Sinhala",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "sinhala",
+    "family": "Indo-European",
+    "branch": "Indo-Aryan",
+    "iso": "si",
+    "countries": "Sri Lanka",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/sinhala.html"
   },
   {
     "name": "Somali",
     "folder": "Somali",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "somali",
+    "family": "Afro-Asiatic",
+    "branch": "Cushitic",
+    "iso": "so",
+    "countries": "Somalia, Somaliland, Djibouti, Ethiopia, Kenya",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/somali.html"
   },
   {
     "name": "Sotho",
     "folder": "Sotho",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "sotho",
+    "family": "Niger-Congo",
+    "branch": "Bantu",
+    "iso": "st",
+    "countries": "Lesotho, South Africa, Zimbabwe",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/sotho.html"
   },
   {
     "name": "Spanish",
     "folder": "Spanish",
-    "readme": "Readme.md",
-    "count": 3,
-    "datasets": [
-      "EMOVOME.md",
-      "ESCorpus-PE.md",
-      "MESD.md"
-    ],
+    "slug": "spanish",
     "family": "Indo-European",
-    "subfamily": "Romance"
+    "branch": "Romance",
+    "iso": "es",
+    "countries": "Spain, Andorra, Gibraltar",
+    "dataset_count": 3,
+    "datasets": [
+      "EMOVOME",
+      "ESCorpus-PE",
+      "MESD"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/spanish.html"
   },
   {
-    "name": "Sunda",
+    "name": "Sundanese",
     "folder": "Sunda",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "sundanese",
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "iso": "sun",
+    "countries": "Indonesia (West Java)",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/sundanese.html"
   },
   {
     "name": "Swahili",
     "folder": "Swahili",
-    "readme": "Readme.md",
-    "count": 1,
-    "datasets": [
-      "Kenyan_Swahili.md"
-    ],
+    "slug": "swahili",
     "family": "Niger-Congo",
-    "subfamily": null
+    "branch": "Bantu",
+    "iso": "sw",
+    "countries": "Tanzania, Kenya, Uganda, Rwanda, Burundi, the Democratic Republic of Congo, and parts of Mozambique, Malawi, and Somalia",
+    "dataset_count": 1,
+    "datasets": [
+      "Kenyan Swahili SER"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/swahili.html"
   },
   {
     "name": "Swedish",
     "folder": "Swedish",
-    "readme": "Readme.md",
-    "count": 2,
+    "slug": "swedish",
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "iso": "sv",
+    "countries": "Finland, Sweden, Åland, European Union, Nordic Council",
+    "dataset_count": 2,
     "datasets": [
-      "EU-Emotion-Voice-Database.md",
-      "SwedishVoiceProviderEmotionalSpeechCorpus.md"
+      "EU-Emotion Voice Database",
+      "Swedish Voice Provider Emotional Speech Corpus"
     ],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/swedish.html"
   },
   {
     "name": "Tagalog",
     "folder": "Tagalog",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "tagalog",
+    "family": "Austronesian",
+    "branch": "Philippine",
+    "iso": "tl (ISO 639-1), tgl (ISO 639-2)",
+    "countries": "Philippines, United States, Canada, Saudi Arabia, UAE",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/tagalog.html"
   },
   {
     "name": "Tamil",
     "folder": "Tamil",
-    "readme": "Readme.md",
-    "count": 3,
-    "datasets": [
-      "EmoTa.md",
-      "Ram_C_Sunitha_et_al.md",
-      "TaMaR-EmoDB.md"
-    ],
+    "slug": "tamil",
     "family": "Dravidian",
-    "subfamily": null
+    "branch": "South Dravidian",
+    "iso": "ta",
+    "countries": "India, Sri Lanka",
+    "dataset_count": 3,
+    "datasets": [
+      "EmoTa",
+      "Ram, C. Sunitha, et al.",
+      "TaMaR-EmoDB"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/tamil.html"
   },
   {
     "name": "Telugu",
     "folder": "Telugu",
-    "readme": "Readme.md",
-    "count": 2,
-    "datasets": [
-      "IITKGP-SESC.md",
-      "Sowmith_et_al_2024.md"
-    ],
+    "slug": "telugu",
     "family": "Dravidian",
-    "subfamily": null
+    "branch": "South-Central Dravidian",
+    "iso": "te",
+    "countries": "India",
+    "dataset_count": 2,
+    "datasets": [
+      "IITKGP-SESC",
+      "Sowmith et al (2024)"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/telugu.html"
   },
   {
     "name": "Thai",
     "folder": "Thai",
-    "readme": "Readme.md",
-    "count": 1,
+    "slug": "thai",
+    "family": "Kra-Dai",
+    "branch": "Tai",
+    "iso": "th",
+    "countries": "Thailand",
+    "dataset_count": 1,
     "datasets": [
-      "Thai_Speech_Emotion_Dataset.md"
+      "Thai Speech Emotion Dataset"
     ],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/thai.html"
   },
   {
     "name": "Tswana",
     "folder": "Tswana",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "tswana",
+    "family": "Niger-Congo",
+    "branch": "Bantu",
+    "iso": "tn",
+    "countries": "Botswana, South Africa, Zimbabwe, Namibia",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/tswana.html"
   },
   {
     "name": "Turkish",
     "folder": "Turkish",
-    "readme": "Readme.md",
-    "count": 2,
-    "datasets": [
-      "Oflazoglu_et_al_2011.md",
-      "TurEV-DB.md"
-    ],
+    "slug": "turkish",
     "family": "Turkic",
-    "subfamily": null
+    "branch": "Oghuz",
+    "iso": "tr",
+    "countries": "Turkey",
+    "dataset_count": 2,
+    "datasets": [
+      "Oflazoglu et al (2011)",
+      "TurEV-DB"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/turkish.html"
   },
   {
     "name": "Ukrainian",
     "folder": "Ukrainian",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "ukrainian",
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "iso": "uk (ISO 639-1), ukr (ISO 639-2)",
+    "countries": "Ukraine, parts of Russia, Poland, Canada, USA",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/ukrainian.html"
   },
   {
     "name": "Urdu",
     "folder": "Urdu",
-    "readme": "Readme.md",
-    "count": 2,
-    "datasets": [
-      "URDU-Dataset.md",
-      "UrduSER.md"
-    ],
+    "slug": "urdu",
     "family": "Indo-European",
-    "subfamily": "Indo-Iranian"
+    "branch": "Indo-Aryan",
+    "iso": "ur",
+    "countries": "Pakistan, and India (Uttar Pradesh)",
+    "dataset_count": 2,
+    "datasets": [
+      "URDU-Dataset",
+      "UrduSER"
+    ],
+    "benchmarked": true,
+    "url": "https://aaivu.github.io/KuralHub/languages/urdu.html"
   },
   {
     "name": "Vietnamese",
     "folder": "Vietnamese",
-    "readme": "Readme.md",
-    "count": 1,
+    "slug": "vietnamese",
+    "family": "Austroasiatic",
+    "branch": "Vietic",
+    "iso": "vi",
+    "countries": "Vietnam",
+    "dataset_count": 1,
     "datasets": [
-      "VNEMOS.md"
+      "VNEMOS"
     ],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/vietnamese.html"
   },
   {
     "name": "Xhosa",
     "folder": "Xhosa",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "xhosa",
+    "family": "Niger-Congo",
+    "branch": "Bantu",
+    "iso": "xho",
+    "countries": "South Africa, Lesotho, Zimbabwe",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/xhosa.html"
   },
   {
     "name": "Yoruba",
     "folder": "Yoruba",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "yoruba",
+    "family": "Niger-Congo",
+    "branch": "Volta-Niger",
+    "iso": "yo",
+    "countries": "Nigeria, Benin, Togo",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/yoruba.html"
   },
   {
     "name": "Zulu",
     "folder": "Zulu",
-    "readme": "Readme.md",
-    "count": 0,
+    "slug": "zulu",
+    "family": "Niger-Congo",
+    "branch": "Bantu",
+    "iso": "zul",
+    "countries": "South Africa (KwaZulu-Natal), Lesotho, Eswatini, Zimbabwe",
+    "dataset_count": 0,
     "datasets": [],
-    "family": null,
-    "subfamily": null
+    "benchmarked": false,
+    "url": "https://aaivu.github.io/KuralHub/languages/zulu.html"
   }
 ]

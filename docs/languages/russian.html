@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Russian Speech Emotion Recognition Datasets | KuralHub</title>
+<meta name="description" content="2 speech emotion recognition datasets for Russian: Dusha and RESD. Benchmark results for 11 models.">
+<link rel="canonical" href="https://aaivu.github.io/KuralHub/languages/russian.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="KuralHub">
+<meta property="og:title" content="Russian speech emotion recognition datasets">
+<meta property="og:description" content="2 speech emotion recognition datasets for Russian: Dusha and RESD. Benchmark results for 11 models.">
+<meta property="og:url" content="https://aaivu.github.io/KuralHub/languages/russian.html">
+<meta property="og:image" content="https://aaivu.github.io/KuralHub/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="text/markdown" href="../datasets/Russian/Readme.md" title="Source Markdown">
+<link rel="alternate" type="text/plain" href="../llms.txt" title="llms.txt">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "KuralHub", "item": "https://aaivu.github.io/KuralHub/"}, {"@type": "ListItem", "position": 2, "name": "Datasets", "item": "https://aaivu.github.io/KuralHub/datasets.html"}, {"@type": "ListItem", "position": 3, "name": "Russian", "item": "https://aaivu.github.io/KuralHub/languages/russian.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "Dusha (Dusha Crowd, Dusha Podcast)", "alternateName": "Dusha", "description": "Dusha is a Russian speech emotion recognition dataset (Audio). Emotion labels: Happiness (Positive), Sadness, Anger and Neutral. Size: samples - 300000, duration - 350h. Dusha is a bi-modal corpus suitable for speech emotion recognition (SER) tasks. The dataset consists of about 300 000 audio recordings with Russian speech, their transcripts and emotional labels. The corpus contains approximately 350 hours of data. Four basic emotions that usually appear in a dialog with a virtual assistant were selected: Happiness (Positive), Sadness, Anger and Neutral emotion.", "url": "https://aaivu.github.io/KuralHub/languages/russian.html#dusha", "sameAs": "https://huggingface.co/datasets/KELONMYOSA/dusha_emotion_audio/tree/main/data", "inLanguage": "ru", "keywords": ["Russian speech emotion recognition", "speech emotion recognition dataset", "emotional speech corpus"], "isAccessibleForFree": true, "includedInDataCatalog": {"@type": "DataCatalog", "name": "KuralHub", "url": "https://aaivu.github.io/KuralHub/datasets.html"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "Russian Emotional Speech Dialogs with annotated text", "alternateName": "RESD", "description": "RESD is a Russian speech emotion recognition dataset (Audio). Emotion labels: Anger, Disgust, Fear, Enthusiasm, Happiness, Neutral, and Sadness. Size: samples - 1120, duration - 3.5h. The dataset focuses on emotional speech dialogues in Russian, capturing live speech performed by actors who express specific emotions in pre-scripted dialogues. The dataset contains approximately 3.5 hours of speech, with each dialogue lasting around 3 minutes. It includes audio samples recorded at either 16,000 Hz or 44,100 Hz, corresponding to one of seven labeled emotional states: anger, disgust, fear, enthusiasm, happiness, neutral, and sadness. In addition to the emotional labels, each sample also includes speech-to-text transcriptions of the spoken dialogue. The dataset is useful for tasks related to Speech Emotion Recognition (SER), emotion detection in speech, and speech-to-text modeling.", "url": "https://aaivu.github.io/KuralHub/languages/russian.html#resd", "sameAs": "https://huggingface.co/datasets/Aniemore/resd", "inLanguage": "ru", "keywords": ["Russian speech emotion recognition", "speech emotion recognition dataset", "emotional speech corpus"], "isAccessibleForFree": true, "includedInDataCatalog": {"@type": "DataCatalog", "name": "KuralHub", "url": "https://aaivu.github.io/KuralHub/datasets.html"}}</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="../index.html">KuralHub</a><nav aria-label="Site"><a href="../index.html">Paper</a><a href="../benchmark.html">Results</a><a href="../datasets.html" aria-current=page>Datasets</a><a href="../index.html#cite">Cite</a><a href="https://github.com/aaivu/KuralHub">GitHub</a></nav></div></header>
+<div class="layout with-toc">
+<aside class="toc"><nav aria-label="On this page"><ol><li><a href="#top">Overview</a></li><li><a href="#datasets">Datasets at a glance</a></li><li><a href="#benchmark">Benchmark results</a></li><li>Dataset entries<ol><li><a href="#dusha">Dusha</a></li><li><a href="#resd">RESD</a></li></ol></li></ol></nav></aside>
+<main id="content">
+<p class="crumbs" id="top"><a href="../index.html">KuralHub</a><span aria-hidden="true">/</span><a href="../datasets.html">Datasets</a><span aria-hidden="true">/</span>Russian</p>
+<h1>Russian speech emotion recognition datasets</h1>
+<p class="lede">KuralHub lists <b>2</b> speech emotion recognition datasets for Russian, 2 of them openly available. Each entry below gives the emotion labels, size, recording setup, licence, where to get it and how to cite it. Russian is also part of the benchmark. The best of 11 models reached 51.0% test accuracy (<code>hubert-base-ls960</code>).</p>
+<dl class="facts"><dt>Language family</dt><dd>Indo-European (Slavic)</dd><dt>ISO code</dt><dd>ru</dd><dt>Spoken mainly in</dt><dd>Russia, Belarus, Ukraine, Kazakhstan, and Kyrgyzstan</dd><dt>Datasets listed</dt><dd>2</dd><dt>In benchmark</dt><dd>Yes</dd></dl>
+<h2 id="datasets">Datasets at a glance</h2><div class="table-wrap"><table><thead><tr><th data-sort=text>Dataset</th><th data-sort=text>Type</th><th class=num data-sort=num>Samples</th><th class=num data-sort=num>Speakers</th><th data-sort=text>Recording</th><th data-sort=text>Access</th><th data-sort=text>Licence</th></tr></thead><tbody><tr><td><a href="#dusha">Dusha</a></td><td>Audio</td><td class="num" data-v="300000">300000</td><td class="num" data-v=""></td><td>Spontaneous</td><td>Open</td><td></td></tr><tr><td><a href="#resd">RESD</a></td><td>Audio</td><td class="num" data-v="1120">1120</td><td class="num" data-v=""></td><td>Acted</td><td>Open</td><td></td></tr></tbody></table></div>
+<h2 id="benchmark">Benchmark results</h2>
+<p>Russian is one of the 29 languages in the KuralHub benchmark. Each of the 11 frozen speech models was trained with a small classification head on the shared emotions and scored on a held-out test split. Over all 11 runs the mean test accuracy was <b>34.5%</b> (median 40.0%). The best run reached <b>51.0%</b> with <code>hubert-base-ls960</code>. <a href="../benchmark.html">Compare with other languages</a>.</p>
+<div class="table-wrap"><table><caption><b><a href="#resd">RESD</a></b> (run ID <code>RESD</code>). Scores on the test split, best run highlighted.</caption><thead><tr><th data-sort=text>Model</th><th data-sort=text>Family</th><th class=num data-sort=num>Val acc.</th><th class=num data-sort=num>Test acc.</th><th class=num data-sort=num>Macro-F1</th><th class=num data-sort=num>Weighted-F1</th><th>Logs</th></tr></thead><tbody><tr class=hl><td class="mono">hubert-base-ls960<span class="tag best">best</span></td><td>HuBERT</td><td class="num">0.48</td><td class="num">0.51</td><td class="num">0.51</td><td class="num">0.51</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ru_RESD_hubert-base-ls960">logs</a></td></tr><tr><td class="mono">hubert-large-ls960-ft</td><td>HuBERT</td><td class="num">0.26</td><td class="num">0.22</td><td class="num">0.19</td><td class="num">0.19</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ru_RESD_hubert-large-ls960-ft">logs</a></td></tr><tr><td class="mono">wav2vec2-base</td><td>wav2vec 2.0</td><td class="num">0.40</td><td class="num">0.41</td><td class="num">0.40</td><td class="num">0.41</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ru_RESD_wav2vec2-base">logs</a></td></tr><tr><td class="mono">wav2vec2-large-960h</td><td>wav2vec 2.0</td><td class="num">0.23</td><td class="num">0.24</td><td class="num">0.21</td><td class="num">0.22</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ru_RESD_wav2vec2-large-960h">logs</a></td></tr><tr><td class="mono">wav2vec2-large-lv60</td><td>wav2vec 2.0</td><td class="num">0.20</td><td class="num">0.20</td><td class="num">0.17</td><td class="num">0.18</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ru_RESD_wav2vec2-large-lv60">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-300m</td><td>wav2vec 2.0</td><td class="num">0.22</td><td class="num">0.21</td><td class="num">0.18</td><td class="num">0.19</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ru_RESD_wav2vec2-xls-r-300m">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-1b</td><td>wav2vec 2.0</td><td class="num">0.29</td><td class="num">0.26</td><td class="num">0.26</td><td class="num">0.25</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ru_RESD_wav2vec2-xls-r-1b">logs</a></td></tr><tr><td class="mono">wavlm-base-plus</td><td>WavLM</td><td class="num">0.46</td><td class="num">0.43</td><td class="num">0.41</td><td class="num">0.41</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ru_RESD_wavlm-base-plus">logs</a></td></tr><tr><td class="mono">wavlm-large</td><td>WavLM</td><td class="num">0.43</td><td class="num">0.40</td><td class="num">0.38</td><td class="num">0.36</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ru_RESD_wavlm-large">logs</a></td></tr><tr><td class="mono">whisper-small</td><td>Whisper</td><td class="num">0.49</td><td class="num">0.45</td><td class="num">0.45</td><td class="num">0.45</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ru_RESD_whisper-small">logs</a></td></tr><tr><td class="mono">whisper-large</td><td>Whisper</td><td class="num">0.48</td><td class="num">0.46</td><td class="num">0.43</td><td class="num">0.43</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ru_RESD_whisper-large">logs</a></td></tr></tbody></table></div>
+<section class="entry" id="dusha">
+<h2>Dusha</h2>
+<p class="alt-name">Dusha (Dusha Crowd, Dusha Podcast)</p><dl class="facts"><dt>Type</dt><dd>Audio</dd><dt>Emotion labels</dt><dd>Happiness (Positive), Sadness, Anger and Neutral</dd><dt>Size</dt><dd>samples - 300000, duration - 350h</dd><dt>Recording</dt><dd>Spontaneous</dd><dt>Access</dt><dd>Open</dd><dt>Licence</dt><dd>Not stated</dd><dt>File format</dt><dd>.wav</dd><dt>Website</dt><dd><a href="https://huggingface.co/datasets/KELONMYOSA/dusha_emotion_audio/tree/main/data">Dataset Homepage</a></dd><dt>Download</dt><dd><a href="https://huggingface.co/datasets/KELONMYOSA/dusha_emotion_audio/tree/main/data">Download</a></dd></dl>
+<p>Dusha is a bi-modal corpus suitable for speech emotion recognition (SER) tasks. The dataset consists of about 300 000 audio recordings with Russian speech, their transcripts and emotional labels. The corpus contains approximately 350 hours of data. Four basic emotions that usually appear in a dialog with a virtual assistant were selected: Happiness (Positive), Sadness, Anger and Neutral emotion.</p>
+
+
+<h3>Citation</h3>
+<div class="cite-box"><button class="copy-btn" data-copy="#dusha-bib0">Copy</button><pre id="dusha-bib0"><code>@misc{kelonmyosa_dusha_emotion_audio,
+  author = {KELONMYOSA},
+  title = {Dusha Emotion Audio Dataset},
+  year = {2023},
+  url = {https://huggingface.co/datasets/KELONMYOSA/dusha_emotion_audio},
+  note = {Accessed: 2025-02-28}
+}</code></pre></div>
+<p class="small muted">Source: <a href="https://github.com/aaivu/KuralHub/blob/main/datasets/Russian/Dusha.md">datasets/Russian/Dusha.md</a> · <a href="https://github.com/aaivu/KuralHub/edit/main/datasets/Russian/Dusha.md">Suggest an edit</a></p>
+</section><section class="entry" id="resd">
+<h2>RESD</h2>
+<p class="alt-name">Russian Emotional Speech Dialogs with annotated text</p><dl class="facts"><dt>Type</dt><dd>Audio</dd><dt>Emotion labels</dt><dd>Anger, Disgust, Fear, Enthusiasm, Happiness, Neutral, and Sadness</dd><dt>Size</dt><dd>samples - 1120, duration - 3.5h</dd><dt>Recording</dt><dd>Acted</dd><dt>Access</dt><dd>Open</dd><dt>Licence</dt><dd>Not stated</dd><dt>File format</dt><dd>.wav</dd><dt>Website</dt><dd><a href="https://huggingface.co/datasets/Aniemore/resd">Dataset Homepage</a></dd><dt>Download</dt><dd><a href="https://huggingface.co/datasets/Aniemore/resd">Download</a></dd></dl>
+<p>The dataset focuses on emotional speech dialogues in Russian, capturing live speech performed by actors who express specific emotions in pre-scripted dialogues. The dataset contains approximately 3.5 hours of speech, with each dialogue lasting around 3 minutes. It includes audio samples recorded at either 16,000 Hz or 44,100 Hz, corresponding to one of seven labeled emotional states: anger, disgust, fear, enthusiasm, happiness, neutral, and sadness. In addition to the emotional labels, each sample also includes speech-to-text transcriptions of the spoken dialogue. The dataset is useful for tasks related to Speech Emotion Recognition (SER), emotion detection in speech, and speech-to-text modeling.</p>
+
+<p class="callout small">Used in the KuralHub benchmark (run ID <code>RESD</code>). See the results above.</p>
+<h3>Citation</h3>
+<div class="cite-box"><button class="copy-btn" data-copy="#resd-bib0">Copy</button><pre id="resd-bib0"><code>@misc{Aniemore,
+  author = {Артем Аментес, Илья Лубенец, Никита Давидчук},
+  title = {Открытая библиотека искусственного интеллекта для анализа и выявления эмоциональных оттенков речи человека},
+  year = {2022},
+  publisher = {Hugging Face},
+  journal = {Hugging Face Hub},
+  howpublished = {\url{https://huggingface.com/aniemore/Aniemore}},
+  email = {hello@socialcode.ru}
+}</code></pre></div>
+<p class="small muted">Source: <a href="https://github.com/aaivu/KuralHub/blob/main/datasets/Russian/RESD.md">datasets/Russian/RESD.md</a> · <a href="https://github.com/aaivu/KuralHub/edit/main/datasets/Russian/RESD.md">Suggest an edit</a></p>
+</section>
+<hr>
+<p class="small muted">This page is generated from <a href="https://github.com/aaivu/KuralHub/tree/main/datasets/Russian"><code>datasets/Russian/</code></a> in the KuralHub repository.
+If you use a dataset, cite its authors. If KuralHub helped you find it, please also <a href="../index.html#cite">cite the KuralHub paper</a>.</p>
+</main>
+</div>
+<footer class="site"><div class="inner">
+  <span>KuralHub · Interspeech 2026 · <a href="https://doi.org/10.21437/Interspeech.2026-3502">doi:10.21437/Interspeech.2026-3502</a> · MIT License</span>
+  <nav aria-label="Footer">
+    <a href="../index.html">Paper</a>
+    <a href="../benchmark.html">Results</a>
+    <a href="../datasets.html">Datasets</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+    <a href="https://github.com/aaivu/KuralHub">GitHub</a>
+    <a href="https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md">Contribute</a>
+  </nav>
+</div></footer>
+<script src="../js/site.js" defer></script>
+</body>
+</html>

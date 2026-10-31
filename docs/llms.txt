@@ -1,29 +1,94 @@
 # KuralHub
 
-> KuralHub is a comprehensive survey and benchmark of Speech Emotion Recognition (SER) datasets across the world's languages. It catalogs 90+ SER datasets spanning 70+ languages and benchmarks 11 pretrained speech models (HuBERT, wav2vec 2.0, WavLM, Whisper) on 29 languages across 363 fine-tuning experiments. Maintained by the aaivu lab, University of Moratuwa, Sri Lanka. To appear at Interspeech 2026.
+> KuralHub is an open catalog of speech emotion recognition (SER) datasets for the 70 most widely spoken languages, plus a benchmark of 11 self-supervised speech models (HuBERT, wav2vec 2.0, WavLM, Whisper) on 33 datasets in 29 languages (363 runs). It accompanies the Interspeech 2026 paper "KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition" (doi:10.21437/Interspeech.2026-3502) by Luxshan Thavarasa, Jubeerathan Thevakumar, Thanikan Sivatheepan and Uthayasanker Thayasivam, University of Moratuwa, Sri Lanka.
 
-KuralHub helps researchers and practitioners (1) find speech emotion / emotion-speech datasets for a given language, and (2) see which speech model performs best per language.
+Key findings (figures as published in the paper):
 
-## Key facts
-- Languages surveyed: 70+
-- Datasets cataloged: 90+
-- Languages benchmarked: 29
-- Speech models benchmarked: 11 (hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wav2vec2-large-lv60, wav2vec2-xls-r-1b, wav2vec2-xls-r-300m, wavlm-base-plus, wavlm-large, whisper-large, whisper-small)
-- Fine-tuning experiments: 363
-- Protocol: each pretrained speech encoder is fine-tuned per language (monolingual) with a classification head on a frozen backbone; validation and test accuracy reported.
+- No single model is best for every language. Whisper had the highest mean F1 (0.70 for whisper-small and whisper-large), then HuBERT-base (0.68) and WavLM (0.64 large, 0.63 base-plus). wav2vec 2.0 models generalised worst.
+- Dravidian languages are hard for every model. Kannada mean accuracy 0.275, Tamil 0.306 (best 0.44), Telugu best 0.53.
+- More pre-training data does not guarantee better SER. Mandarin (0.755) and Indonesian (0.720) did well, while French (0.421), Spanish (0.365) and Russian (0.344) did not.
+- Larger models are not better. log(parameters) correlates negatively with F1 (r = -0.18, p = 0.0007), and wav2vec2-base (0.58) beat wav2vec2-large-960h (0.30) and wav2vec2-large-lv60 (0.25).
+- Fear is the hardest emotion (F1 0.38). Anger (0.54) and neutral (0.52) are the easiest.
+
+Survey coverage: 70 languages surveyed, 45 with at least one SER dataset, 25 with none, 90 datasets documented.
+
+Cite as:
+
+```
+Thavarasa, L., Thevakumar, J., Sivatheepan, T., Thayasivam, U. (2026) KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition. Proc. Interspeech 2026, 4673-4678, doi: 10.21437/Interspeech.2026-3502
+```
+
+## Paper
+
+- [Web version of the paper](https://aaivu.github.io/KuralHub/): abstract, method, results, figures, tables, FAQ and citation
+- [Paper as Markdown](https://aaivu.github.io/KuralHub/paper.md): the same content in plain Markdown
+- [PDF on the ISCA Archive](https://www.isca-archive.org/interspeech_2026/thavarasa26_interspeech.pdf): Proc. Interspeech 2026, pages 4673-4678
+- [DOI](https://doi.org/10.21437/Interspeech.2026-3502)
+
+## Data
+
+- [Benchmark results, CSV](https://aaivu.github.io/KuralHub/data/runs.csv): one row per run (363 rows) with accuracy, macro and weighted F1, per-emotion F1
+- [Benchmark results, JSON](https://aaivu.github.io/KuralHub/data/runs.json): the same data as JSON
+- [Dataset catalog, JSON](https://aaivu.github.io/KuralHub/data/datasets.json): all 90 datasets with language, emotion labels, size, access, licence and links
+- [Languages, JSON](https://aaivu.github.io/KuralHub/data/languages.json): all 70 languages with family, ISO code and dataset counts
 
 ## Pages
-- [Home / overview](https://aaivu.github.io/KuralHub/): project summary, methodology, key findings, team, citation.
-- [Benchmark](https://aaivu.github.io/KuralHub/benchmark.html): validation/test accuracy for every model on every benchmarked dataset; best model per language.
-- [Datasets catalog](https://aaivu.github.io/KuralHub/datasets.html): all 70+ languages with dataset metadata and access links.
 
-## Machine-readable data
-- Benchmark results (JSON): https://aaivu.github.io/KuralHub/data/benchmark.json
-- Language manifest (JSON): https://aaivu.github.io/KuralHub/data/languages.json
-- Language families (JSON): https://aaivu.github.io/KuralHub/data/language_families.json
+- [Results](https://aaivu.github.io/KuralHub/benchmark.html): best model per language, dataset x model accuracy matrix, all 363 runs
+- [Dataset catalog](https://aaivu.github.io/KuralHub/datasets.html): searchable tables of all languages and datasets
 
-## Citation
-Thavarasa, L., Thevakumar, J., Sivatheepan, T., Thayasivam, U. "KuralHub: A Comprehensive Review of Speech Emotion Recognition Datasets." To appear, Interspeech 2026.
+## Datasets by language
 
-## Repository
-https://github.com/aaivu/KuralHub
+- [Afrikaans](https://aaivu.github.io/KuralHub/languages/afrikaans.html): AfrikaansSE (benchmarked)
+- [Amharic](https://aaivu.github.io/KuralHub/languages/amharic.html): Amharic Speech Emotion Dataset (ASED) (benchmarked)
+- [Arabic](https://aaivu.github.io/KuralHub/languages/arabic.html): ANAD, BAVED (benchmarked)
+- [Assamese](https://aaivu.github.io/KuralHub/languages/assamese.html): Assamese Emotional Speech Corpus, Assamese Emotional Speech Dataset
+- [Bengali](https://aaivu.github.io/KuralHub/languages/bengali.html): BANSpEmo, BanglaSER, KBES, SUBESCO (benchmarked)
+- [Burmese](https://aaivu.github.io/KuralHub/languages/burmese.html): BMISEC, ESMBS, New et al. (2001)
+- [Chinese](https://aaivu.github.io/KuralHub/languages/chinese.html): CASIA, CHEAVD, CHEAVD 2.0, EESDB, EMOVIE, ESD, M3ED, SECEPDB (benchmarked)
+- [Czech](https://aaivu.github.io/KuralHub/languages/czech.html): CDSE, Slavic Call Center Emotional Speech Corpus
+- [Dutch](https://aaivu.github.io/KuralHub/languages/dutch.html): PICKA-NH
+- [English](https://aaivu.github.io/KuralHub/languages/english.html): IEMOCAP, IESC, RAVDESS (benchmarked)
+- [Filipino](https://aaivu.github.io/KuralHub/languages/filipino.html): Filipino Multimodal Emotion Database (FilMED)
+- [French](https://aaivu.github.io/KuralHub/languages/french.html): CaFE, OréauFR (benchmarked)
+- [German](https://aaivu.github.io/KuralHub/languages/german.html): EmoDB (benchmarked)
+- [Greek](https://aaivu.github.io/KuralHub/languages/greek.html): AESDD, GreThE, SEWA (benchmarked)
+- [Gujarati](https://aaivu.github.io/KuralHub/languages/gujarati.html): Tank et al. (2020)
+- [Hindi](https://aaivu.github.io/KuralHub/languages/hindi.html): Bansal And Dev et al., IITKGP-SEHSC, VishalB (benchmarked)
+- [Hungarian](https://aaivu.github.io/KuralHub/languages/hungarian.html): HESD, SEWA (benchmarked)
+- [Indonesian](https://aaivu.github.io/KuralHub/languages/indonesian.html): Fahmi et al (2020), IndoWaveSentiment (benchmarked)
+- [Italian](https://aaivu.github.io/KuralHub/languages/italian.html): DEMoS, EMOVO, Emozionalmente (benchmarked)
+- [Japanese](https://aaivu.github.io/KuralHub/languages/japanese.html): JVNV, Keio-ESD (benchmarked)
+- [Javanese](https://aaivu.github.io/KuralHub/languages/javanese.html): Java-SED
+- [Kannada](https://aaivu.github.io/KuralHub/languages/kannada.html): Agrawal et al (2022), KES (benchmarked)
+- [Kazakh](https://aaivu.github.io/KuralHub/languages/kazakh.html): KazEmoTTS, Kazakh-Russian Emotion Corpus (benchmarked)
+- [Korean](https://aaivu.github.io/KuralHub/languages/korean.html): KESDy18 (benchmarked)
+- [Kurdish](https://aaivu.github.io/KuralHub/languages/kurdish.html): Kurdish Emotional Speech Database, Nematullah et al. (2024)
+- [Malay](https://aaivu.github.io/KuralHub/languages/malay.html): Emolah
+- [Malayalam](https://aaivu.github.io/KuralHub/languages/malayalam.html): IIITSaint-EmoMDB, Kannur Malayalam Speech Emotion Recognition (KMSER) Dataset, MAVES DB, Malayalam Speech Emotion Dataset
+- [Odia](https://aaivu.github.io/KuralHub/languages/odia.html): SITB-OSED (benchmarked)
+- [Persian](https://aaivu.github.io/KuralHub/languages/persian.html): ShEMO (benchmarked)
+- [Polish](https://aaivu.github.io/KuralHub/languages/polish.html): Cichosz and Slot (2005), Sapinski et al. (2019), nEMO (benchmarked)
+- [Portuguese](https://aaivu.github.io/KuralHub/languages/portuguese.html): VERBO, emoUERJ (benchmarked)
+- [Punjabi](https://aaivu.github.io/KuralHub/languages/punjabi.html): PEMO
+- [Quechua](https://aaivu.github.io/KuralHub/languages/quechua.html): Quechua Collao Corpus (benchmarked)
+- [Romanian](https://aaivu.github.io/KuralHub/languages/romanian.html): SRoL
+- [Russian](https://aaivu.github.io/KuralHub/languages/russian.html): Dusha, RESD (benchmarked)
+- [Sindhi](https://aaivu.github.io/KuralHub/languages/sindhi.html): Urdu-Sindhi Speech Emotion Corpus
+- [Spanish](https://aaivu.github.io/KuralHub/languages/spanish.html): EMOVOME, ESCorpus-PE, MESD (benchmarked)
+- [Swahili](https://aaivu.github.io/KuralHub/languages/swahili.html): Kenyan Swahili SER (benchmarked)
+- [Swedish](https://aaivu.github.io/KuralHub/languages/swedish.html): EU-Emotion Voice Database, Swedish Voice Provider Emotional Speech Corpus
+- [Tamil](https://aaivu.github.io/KuralHub/languages/tamil.html): EmoTa, Ram, C. Sunitha, et al., TaMaR-EmoDB (benchmarked)
+- [Telugu](https://aaivu.github.io/KuralHub/languages/telugu.html): IITKGP-SESC, Sowmith et al (2024) (benchmarked)
+- [Thai](https://aaivu.github.io/KuralHub/languages/thai.html): Thai Speech Emotion Dataset
+- [Turkish](https://aaivu.github.io/KuralHub/languages/turkish.html): Oflazoglu et al (2011), TurEV-DB (benchmarked)
+- [Urdu](https://aaivu.github.io/KuralHub/languages/urdu.html): URDU-Dataset, UrduSER (benchmarked)
+- [Vietnamese](https://aaivu.github.io/KuralHub/languages/vietnamese.html): VNEMOS
+
+No dataset found for: Azerbaijani, Bambara, Bhojpuri, Cebuano, Fulfulde, Hausa, Igbo, Khmer, Magahi, Maithili, Nepali, Nigerian Pidgin, Northern Pashto, Northern Uzbek, Saraiki, Sinhala, Somali, Sotho, Sundanese, Tagalog, Tswana, Ukrainian, Xhosa, Yoruba, Zulu.
+
+## Optional
+
+- [llms-full.txt](https://aaivu.github.io/KuralHub/llms-full.txt): the full paper text, every result table and every dataset entry in one file
+- [GitHub repository](https://github.com/aaivu/KuralHub): code, per-run logs and the dataset Markdown sources
+- [Contributing](https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md): how to add a dataset

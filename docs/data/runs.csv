@@ -1,0 +1,364 @@
+run_id,language,iso,family,dataset,catalog_dataset,model,model_family,val_accuracy,test_accuracy,test_macro_precision,test_macro_recall,test_macro_f1,test_weighted_f1,test_f1_anger,test_f1_fear,test_f1_happiness,test_f1_neutral,test_f1_sadness
+af_AfrikaansEmotionalSpeechCorpus_hubert-base-ls960,Afrikaans,af,Indo-European,AfrikaansEmotionalSpeechCorpus,AfrikaansSE,hubert-base-ls960,HuBERT,0.65,0.67,0.62,0.64,0.62,0.66,0.85,0.35,,,0.67
+af_AfrikaansEmotionalSpeechCorpus_hubert-large-ls960-ft,Afrikaans,af,Indo-European,AfrikaansEmotionalSpeechCorpus,AfrikaansSE,hubert-large-ls960-ft,HuBERT,0.32,0.41,0.43,0.42,0.41,0.41,0.39,0.42,,,0.41
+af_AfrikaansEmotionalSpeechCorpus_wav2vec2-base,Afrikaans,af,Indo-European,AfrikaansEmotionalSpeechCorpus,AfrikaansSE,wav2vec2-base,wav2vec 2.0,0.57,0.66,0.71,0.72,0.67,0.67,0.81,0.55,,,0.64
+af_AfrikaansEmotionalSpeechCorpus_wav2vec2-large-960h,Afrikaans,af,Indo-European,AfrikaansEmotionalSpeechCorpus,AfrikaansSE,wav2vec2-large-960h,wav2vec 2.0,0.38,0.43,0.54,0.47,0.41,0.41,0.33,0.49,,,0.43
+af_AfrikaansEmotionalSpeechCorpus_wav2vec2-large-lv60,Afrikaans,af,Indo-European,AfrikaansEmotionalSpeechCorpus,AfrikaansSE,wav2vec2-large-lv60,wav2vec 2.0,0.36,0.4,0.45,0.41,0.4,0.4,0.43,0.36,,,0.41
+af_AfrikaansEmotionalSpeechCorpus_wav2vec2-xls-r-300m,Afrikaans,af,Indo-European,AfrikaansEmotionalSpeechCorpus,AfrikaansSE,wav2vec2-xls-r-300m,wav2vec 2.0,0.38,0.37,0.39,0.38,0.37,0.37,0.34,0.38,,,0.38
+af_AfrikaansEmotionalSpeechCorpus_wav2vec2-xls-r-1b,Afrikaans,af,Indo-European,AfrikaansEmotionalSpeechCorpus,AfrikaansSE,wav2vec2-xls-r-1b,wav2vec 2.0,0.35,0.24,0.19,0.34,0.15,0.11,0.0,0.05,,,0.39
+af_AfrikaansEmotionalSpeechCorpus_wavlm-base-plus,Afrikaans,af,Indo-European,AfrikaansEmotionalSpeechCorpus,AfrikaansSE,wavlm-base-plus,WavLM,0.53,0.59,0.62,0.65,0.6,0.6,0.7,0.53,,,0.56
+af_AfrikaansEmotionalSpeechCorpus_wavlm-large,Afrikaans,af,Indo-European,AfrikaansEmotionalSpeechCorpus,AfrikaansSE,wavlm-large,WavLM,0.29,0.63,0.65,0.58,0.58,0.61,0.83,0.28,,,0.65
+af_AfrikaansEmotionalSpeechCorpus_whisper-small,Afrikaans,af,Indo-European,AfrikaansEmotionalSpeechCorpus,AfrikaansSE,whisper-small,Whisper,0.75,0.71,0.71,0.71,0.7,0.7,0.79,0.57,,,0.74
+af_AfrikaansEmotionalSpeechCorpus_whisper-large,Afrikaans,af,Indo-European,AfrikaansEmotionalSpeechCorpus,AfrikaansSE,whisper-large,Whisper,0.68,0.65,0.64,0.66,0.63,0.63,0.75,0.46,,,0.69
+am_ASED_hubert-base-ls960,Amharic,am,Afro-Asiatic,ASED,Amharic Speech Emotion Dataset (ASED),hubert-base-ls960,HuBERT,0.88,0.89,0.89,0.89,0.89,0.89,0.89,0.88,0.88,0.89,0.9
+am_ASED_hubert-large-ls960-ft,Amharic,am,Afro-Asiatic,ASED,Amharic Speech Emotion Dataset (ASED),hubert-large-ls960-ft,HuBERT,0.64,0.63,0.67,0.64,0.63,0.63,0.58,0.58,0.7,0.64,0.66
+am_ASED_wav2vec2-base,Amharic,am,Afro-Asiatic,ASED,Amharic Speech Emotion Dataset (ASED),wav2vec2-base,wav2vec 2.0,0.75,0.75,0.76,0.74,0.75,0.75,0.69,0.76,0.71,0.76,0.83
+am_ASED_wav2vec2-large-960h,Amharic,am,Afro-Asiatic,ASED,Amharic Speech Emotion Dataset (ASED),wav2vec2-large-960h,wav2vec 2.0,0.3,0.32,0.48,0.34,0.27,0.26,0.33,0.05,0.43,0.4,0.16
+am_ASED_wav2vec2-large-lv60,Amharic,am,Afro-Asiatic,ASED,Amharic Speech Emotion Dataset (ASED),wav2vec2-large-lv60,wav2vec 2.0,0.23,0.27,0.29,0.28,0.25,0.24,0.15,0.11,0.22,0.35,0.42
+am_ASED_wav2vec2-xls-r-300m,Amharic,am,Afro-Asiatic,ASED,Amharic Speech Emotion Dataset (ASED),wav2vec2-xls-r-300m,wav2vec 2.0,0.31,0.32,0.31,0.32,0.29,0.3,0.2,0.34,0.37,0.42,0.14
+am_ASED_wav2vec2-xls-r-1b,Amharic,am,Afro-Asiatic,ASED,Amharic Speech Emotion Dataset (ASED),wav2vec2-xls-r-1b,wav2vec 2.0,0.35,0.4,0.45,0.39,0.32,0.33,0.05,0.19,0.5,0.53,0.35
+am_ASED_wavlm-base-plus,Amharic,am,Afro-Asiatic,ASED,Amharic Speech Emotion Dataset (ASED),wavlm-base-plus,WavLM,0.87,0.84,0.84,0.85,0.84,0.84,0.85,0.84,0.84,0.84,0.85
+am_ASED_wavlm-large,Amharic,am,Afro-Asiatic,ASED,Amharic Speech Emotion Dataset (ASED),wavlm-large,WavLM,0.8,0.82,0.84,0.82,0.82,0.82,0.85,0.82,0.83,0.79,0.81
+am_ASED_whisper-small,Amharic,am,Afro-Asiatic,ASED,Amharic Speech Emotion Dataset (ASED),whisper-small,Whisper,0.91,0.9,0.9,0.9,0.9,0.9,0.91,0.86,0.91,0.91,0.9
+am_ASED_whisper-large,Amharic,am,Afro-Asiatic,ASED,Amharic Speech Emotion Dataset (ASED),whisper-large,Whisper,0.88,0.86,0.87,0.87,0.86,0.86,0.87,0.81,0.87,0.9,0.87
+ar_ANAD_hubert-base-ls960,Arabic,ar,Afro-Asiatic,ANAD,ANAD,hubert-base-ls960,HuBERT,0.63,0.58,0.59,0.59,0.58,0.58,0.57,,0.59,,
+ar_ANAD_hubert-large-ls960-ft,Arabic,ar,Afro-Asiatic,ANAD,ANAD,hubert-large-ls960-ft,HuBERT,0.64,0.66,0.62,0.55,0.51,0.59,0.78,,0.25,,
+ar_ANAD_wav2vec2-base,Arabic,ar,Afro-Asiatic,ANAD,ANAD,wav2vec2-base,wav2vec 2.0,0.62,0.57,0.55,0.52,0.45,0.48,0.71,,0.18,,
+ar_ANAD_wav2vec2-large-960h,Arabic,ar,Afro-Asiatic,ANAD,ANAD,wav2vec2-large-960h,wav2vec 2.0,0.62,0.65,0.6,0.56,0.54,0.61,0.77,,0.31,,
+ar_ANAD_wav2vec2-large-lv60,Arabic,ar,Afro-Asiatic,ANAD,ANAD,wav2vec2-large-lv60,wav2vec 2.0,0.64,0.64,0.32,0.5,0.39,0.51,0.78,,0.0,,
+ar_ANAD_wav2vec2-xls-r-300m,Arabic,ar,Afro-Asiatic,ANAD,ANAD,wav2vec2-xls-r-300m,wav2vec 2.0,0.61,0.61,0.5,0.5,0.46,0.54,0.74,,0.18,,
+ar_ANAD_wav2vec2-xls-r-1b,Arabic,ar,Afro-Asiatic,ANAD,ANAD,wav2vec2-xls-r-1b,wav2vec 2.0,0.61,0.63,0.52,0.51,0.47,0.56,0.76,,0.17,,
+ar_ANAD_wavlm-base-plus,Arabic,ar,Afro-Asiatic,ANAD,ANAD,wavlm-base-plus,WavLM,0.66,0.61,0.62,0.57,0.54,0.57,0.72,,0.36,,
+ar_ANAD_wavlm-large,Arabic,ar,Afro-Asiatic,ANAD,ANAD,wavlm-large,WavLM,0.66,0.71,0.81,0.6,0.57,0.64,0.81,,0.33,,
+ar_ANAD_whisper-small,Arabic,ar,Afro-Asiatic,ANAD,ANAD,whisper-small,Whisper,0.72,0.79,0.78,0.77,0.78,0.79,0.83,,0.73,,
+ar_ANAD_whisper-large,Arabic,ar,Afro-Asiatic,ANAD,ANAD,whisper-large,Whisper,0.78,0.82,0.81,0.8,0.81,0.81,0.85,,0.77,,
+bn_BANSpEmo_hubert-base-ls960,Bengali,bn,Indo-European,BANSpEmo,BANSpEmo,hubert-base-ls960,HuBERT,0.52,0.41,0.41,0.43,0.42,0.41,0.55,0.25,0.51,,0.34
+bn_BANSpEmo_hubert-large-ls960-ft,Bengali,bn,Indo-European,BANSpEmo,BANSpEmo,hubert-large-ls960-ft,HuBERT,0.24,0.23,0.23,0.23,0.22,0.22,0.16,0.19,0.27,,0.27
+bn_BANSpEmo_wav2vec2-base,Bengali,bn,Indo-European,BANSpEmo,BANSpEmo,wav2vec2-base,wav2vec 2.0,0.41,0.32,0.3,0.37,0.31,0.3,0.43,0.36,0.3,,0.16
+bn_BANSpEmo_wav2vec2-large-960h,Bengali,bn,Indo-European,BANSpEmo,BANSpEmo,wav2vec2-large-960h,wav2vec 2.0,0.23,0.23,0.26,0.24,0.23,0.24,0.25,0.2,0.26,,0.23
+bn_BANSpEmo_wav2vec2-large-lv60,Bengali,bn,Indo-European,BANSpEmo,BANSpEmo,wav2vec2-large-lv60,wav2vec 2.0,0.26,0.25,0.26,0.26,0.25,0.26,0.3,0.21,0.26,,0.25
+bn_BANSpEmo_wav2vec2-xls-r-300m,Bengali,bn,Indo-European,BANSpEmo,BANSpEmo,wav2vec2-xls-r-300m,wav2vec 2.0,0.25,0.23,0.24,0.24,0.23,0.23,0.25,0.21,0.27,,0.2
+bn_BANSpEmo_wav2vec2-xls-r-1b,Bengali,bn,Indo-European,BANSpEmo,BANSpEmo,wav2vec2-xls-r-1b,wav2vec 2.0,0.19,0.26,0.27,0.26,0.25,0.25,0.3,0.23,0.17,,0.29
+bn_BANSpEmo_wavlm-base-plus,Bengali,bn,Indo-European,BANSpEmo,BANSpEmo,wavlm-base-plus,WavLM,0.49,0.35,0.35,0.39,0.36,0.35,0.48,0.24,0.42,,0.27
+bn_BANSpEmo_wavlm-large,Bengali,bn,Indo-European,BANSpEmo,BANSpEmo,wavlm-large,WavLM,0.41,0.4,0.41,0.39,0.38,0.39,0.6,0.21,0.32,,0.38
+bn_BANSpEmo_whisper-small,Bengali,bn,Indo-European,BANSpEmo,BANSpEmo,whisper-small,Whisper,0.3,0.38,0.36,0.36,0.34,0.37,0.53,0.3,0.12,,0.4
+bn_BANSpEmo_whisper-large,Bengali,bn,Indo-European,BANSpEmo,BANSpEmo,whisper-large,Whisper,0.35,0.4,0.37,0.37,0.36,0.39,0.56,0.35,0.2,,0.33
+bn_SUBESCO_hubert-base-ls960,Bengali,bn,Indo-European,SUBESCO,SUBESCO,hubert-base-ls960,HuBERT,0.77,0.78,0.8,0.78,0.78,0.78,0.84,0.79,0.77,0.82,0.71
+bn_SUBESCO_hubert-large-ls960-ft,Bengali,bn,Indo-European,SUBESCO,SUBESCO,hubert-large-ls960-ft,HuBERT,0.56,0.54,0.58,0.55,0.53,0.52,0.71,0.54,0.43,0.58,0.39
+bn_SUBESCO_wav2vec2-base,Bengali,bn,Indo-European,SUBESCO,SUBESCO,wav2vec2-base,wav2vec 2.0,0.69,0.68,0.71,0.69,0.68,0.68,0.84,0.73,0.56,0.7,0.58
+bn_SUBESCO_wav2vec2-large-960h,Bengali,bn,Indo-European,SUBESCO,SUBESCO,wav2vec2-large-960h,wav2vec 2.0,0.24,0.24,0.41,0.26,0.18,0.17,0.17,0.14,0.07,0.34,0.17
+bn_SUBESCO_wav2vec2-large-lv60,Bengali,bn,Indo-European,SUBESCO,SUBESCO,wav2vec2-large-lv60,wav2vec 2.0,0.28,0.27,0.28,0.28,0.23,0.22,0.39,0.17,0.1,0.37,0.12
+bn_SUBESCO_wav2vec2-xls-r-300m,Bengali,bn,Indo-European,SUBESCO,SUBESCO,wav2vec2-xls-r-300m,wav2vec 2.0,0.51,0.48,0.53,0.49,0.47,0.47,0.61,0.45,0.48,0.53,0.29
+bn_SUBESCO_wav2vec2-xls-r-1b,Bengali,bn,Indo-European,SUBESCO,SUBESCO,wav2vec2-xls-r-1b,wav2vec 2.0,0.36,0.38,0.57,0.36,0.33,0.34,0.18,0.15,0.41,0.5,0.4
+bn_SUBESCO_wavlm-base-plus,Bengali,bn,Indo-European,SUBESCO,SUBESCO,wavlm-base-plus,WavLM,0.76,0.78,0.78,0.78,0.77,0.77,0.87,0.76,0.73,0.82,0.69
+bn_SUBESCO_wavlm-large,Bengali,bn,Indo-European,SUBESCO,SUBESCO,wavlm-large,WavLM,0.76,0.74,0.78,0.75,0.74,0.74,0.9,0.66,0.78,0.74,0.62
+bn_SUBESCO_whisper-small,Bengali,bn,Indo-European,SUBESCO,SUBESCO,whisper-small,Whisper,0.88,0.89,0.89,0.88,0.88,0.89,0.92,0.85,0.89,0.93,0.83
+bn_SUBESCO_whisper-large,Bengali,bn,Indo-European,SUBESCO,SUBESCO,whisper-large,Whisper,0.88,0.89,0.89,0.89,0.89,0.89,0.95,0.82,0.9,0.94,0.83
+zh_ESD_hubert-base-ls960,Chinese,zh,Sino-Tibetan,ESD,ESD,hubert-base-ls960,HuBERT,0.93,0.92,0.92,0.91,0.91,0.91,0.88,,0.9,0.92,0.95
+zh_ESD_hubert-large-ls960-ft,Chinese,zh,Sino-Tibetan,ESD,ESD,hubert-large-ls960-ft,HuBERT,0.75,0.73,0.76,0.74,0.74,0.73,0.73,,0.62,0.74,0.85
+zh_ESD_wav2vec2-base,Chinese,zh,Sino-Tibetan,ESD,ESD,wav2vec2-base,wav2vec 2.0,0.91,0.9,0.91,0.9,0.9,0.9,0.84,,0.86,0.93,0.95
+zh_ESD_wav2vec2-large-960h,Chinese,zh,Sino-Tibetan,ESD,ESD,wav2vec2-large-960h,wav2vec 2.0,0.45,0.45,0.59,0.45,0.42,0.42,0.53,,0.21,0.51,0.44
+zh_ESD_wav2vec2-large-lv60,Chinese,zh,Sino-Tibetan,ESD,ESD,wav2vec2-large-lv60,wav2vec 2.0,0.28,0.28,0.23,0.28,0.18,0.18,0.07,,0.0,0.43,0.21
+zh_ESD_wav2vec2-xls-r-300m,Chinese,zh,Sino-Tibetan,ESD,ESD,wav2vec2-xls-r-300m,wav2vec 2.0,0.62,0.59,0.72,0.59,0.58,0.58,0.45,,0.57,0.65,0.64
+zh_ESD_wav2vec2-xls-r-1b,Chinese,zh,Sino-Tibetan,ESD,ESD,wav2vec2-xls-r-1b,wav2vec 2.0,0.7,0.68,0.74,0.69,0.68,0.68,0.55,,0.62,0.7,0.84
+zh_ESD_wavlm-base-plus,Chinese,zh,Sino-Tibetan,ESD,ESD,wavlm-base-plus,WavLM,0.91,0.9,0.9,0.9,0.9,0.9,0.88,,0.87,0.91,0.94
+zh_ESD_wavlm-large,Chinese,zh,Sino-Tibetan,ESD,ESD,wavlm-large,WavLM,0.9,0.91,0.91,0.91,0.91,0.91,0.9,,0.87,0.89,0.96
+zh_ESD_whisper-small,Chinese,zh,Sino-Tibetan,ESD,ESD,whisper-small,Whisper,0.97,0.97,0.97,0.97,0.97,0.97,0.96,,0.96,0.98,0.99
+zh_ESD_whisper-large,Chinese,zh,Sino-Tibetan,ESD,ESD,whisper-large,Whisper,0.98,0.98,0.98,0.98,0.98,0.98,0.98,,0.98,0.99,0.99
+en_IESC_hubert-base-ls960,English,en,Indo-European,IESC,IESC,hubert-base-ls960,HuBERT,0.82,0.82,0.82,0.83,0.81,0.82,0.84,0.8,0.78,0.79,0.86
+en_IESC_hubert-large-ls960-ft,English,en,Indo-European,IESC,IESC,hubert-large-ls960-ft,HuBERT,0.45,0.53,0.54,0.51,0.49,0.52,0.64,0.37,0.19,0.63,0.61
+en_IESC_wav2vec2-base,English,en,Indo-European,IESC,IESC,wav2vec2-base,wav2vec 2.0,0.7,0.66,0.67,0.67,0.66,0.66,0.72,0.6,0.6,0.72,0.64
+en_IESC_wav2vec2-large-960h,English,en,Indo-European,IESC,IESC,wav2vec2-large-960h,wav2vec 2.0,0.28,0.31,0.38,0.29,0.27,0.28,0.39,0.15,0.1,0.29,0.41
+en_IESC_wav2vec2-large-lv60,English,en,Indo-European,IESC,IESC,wav2vec2-large-lv60,wav2vec 2.0,0.21,0.25,0.29,0.22,0.2,0.22,0.24,0.13,0.14,0.37,0.14
+en_IESC_wav2vec2-xls-r-300m,English,en,Indo-European,IESC,IESC,wav2vec2-xls-r-300m,wav2vec 2.0,0.26,0.25,0.3,0.26,0.24,0.25,0.31,0.22,0.21,0.27,0.21
+en_IESC_wav2vec2-xls-r-1b,English,en,Indo-European,IESC,IESC,wav2vec2-xls-r-1b,wav2vec 2.0,0.28,0.24,0.34,0.27,0.22,0.22,0.12,0.34,0.22,0.11,0.29
+en_IESC_wavlm-base-plus,English,en,Indo-European,IESC,IESC,wavlm-base-plus,WavLM,0.7,0.78,0.79,0.8,0.78,0.78,0.9,0.75,0.78,0.74,0.73
+en_IESC_wavlm-large,English,en,Indo-European,IESC,IESC,wavlm-large,WavLM,0.76,0.81,0.8,0.79,0.79,0.8,0.9,0.63,0.79,0.88,0.73
+en_IESC_whisper-small,English,en,Indo-European,IESC,IESC,whisper-small,Whisper,0.78,0.71,0.69,0.7,0.69,0.71,0.88,0.6,0.73,0.66,0.56
+en_IESC_whisper-large,English,en,Indo-European,IESC,IESC,whisper-large,Whisper,0.79,0.74,0.74,0.74,0.73,0.74,0.81,0.7,0.77,0.74,0.65
+en_RAVDESS_hubert-base-ls960,English,en,Indo-European,RAVDESS,RAVDESS,hubert-base-ls960,HuBERT,0.65,0.65,0.66,0.68,0.65,0.64,0.86,0.5,0.59,0.71,0.6
+en_RAVDESS_hubert-large-ls960-ft,English,en,Indo-European,RAVDESS,RAVDESS,hubert-large-ls960-ft,HuBERT,0.34,0.35,0.43,0.45,0.34,0.33,0.53,0.58,0.28,0.26,0.06
+en_RAVDESS_wav2vec2-base,English,en,Indo-European,RAVDESS,RAVDESS,wav2vec2-base,wav2vec 2.0,0.51,0.59,0.59,0.57,0.58,0.59,0.88,0.59,0.44,0.51,0.46
+en_RAVDESS_wav2vec2-large-960h,English,en,Indo-European,RAVDESS,RAVDESS,wav2vec2-large-960h,wav2vec 2.0,0.13,0.15,0.12,0.21,0.12,0.12,0.0,0.0,0.25,0.13,0.21
+en_RAVDESS_wav2vec2-large-lv60,English,en,Indo-European,RAVDESS,RAVDESS,wav2vec2-large-lv60,wav2vec 2.0,0.23,0.27,0.2,0.22,0.21,0.25,0.13,0.31,0.27,0.0,0.32
+en_RAVDESS_wav2vec2-xls-r-300m,English,en,Indo-European,RAVDESS,RAVDESS,wav2vec2-xls-r-300m,wav2vec 2.0,0.31,0.34,0.31,0.28,0.27,0.32,0.21,0.38,0.28,0.01,0.45
+en_RAVDESS_wav2vec2-xls-r-1b,English,en,Indo-European,RAVDESS,RAVDESS,wav2vec2-xls-r-1b,wav2vec 2.0,0.22,0.23,0.21,0.21,0.18,0.21,0.15,0.31,0.26,0.0,0.21
+en_RAVDESS_wavlm-base-plus,English,en,Indo-European,RAVDESS,RAVDESS,wavlm-base-plus,WavLM,0.68,0.69,0.68,0.71,0.69,0.69,0.87,0.66,0.56,0.75,0.62
+en_RAVDESS_wavlm-large,English,en,Indo-European,RAVDESS,RAVDESS,wavlm-large,WavLM,0.66,0.55,0.61,0.63,0.54,0.55,0.84,0.54,0.54,0.38,0.39
+en_RAVDESS_whisper-small,English,en,Indo-European,RAVDESS,RAVDESS,whisper-small,Whisper,0.7,0.61,0.57,0.64,0.58,0.62,0.7,0.63,0.61,0.37,0.59
+en_RAVDESS_whisper-large,English,en,Indo-European,RAVDESS,RAVDESS,whisper-large,Whisper,0.75,0.68,0.63,0.69,0.64,0.68,0.77,0.69,0.7,0.4,0.65
+fr_CaFE_hubert-base-ls960,French,fr,Indo-European,CaFE,CaFE,hubert-base-ls960,HuBERT,0.64,0.6,0.63,0.62,0.6,0.6,0.71,0.58,0.47,,0.63
+fr_CaFE_hubert-large-ls960-ft,French,fr,Indo-European,CaFE,CaFE,hubert-large-ls960-ft,HuBERT,0.33,0.33,0.35,0.34,0.32,0.33,0.29,0.32,0.38,,0.31
+fr_CaFE_wav2vec2-base,French,fr,Indo-European,CaFE,CaFE,wav2vec2-base,wav2vec 2.0,0.46,0.38,0.37,0.4,0.36,0.35,0.53,0.25,0.16,,0.48
+fr_CaFE_wav2vec2-large-960h,French,fr,Indo-European,CaFE,CaFE,wav2vec2-large-960h,wav2vec 2.0,0.26,0.24,0.34,0.28,0.22,0.21,0.1,0.31,0.19,,0.28
+fr_CaFE_wav2vec2-large-lv60,French,fr,Indo-European,CaFE,CaFE,wav2vec2-large-lv60,wav2vec 2.0,0.2,0.21,0.25,0.25,0.17,0.15,0.15,0.31,0.06,,0.15
+fr_CaFE_wav2vec2-xls-r-300m,French,fr,Indo-European,CaFE,CaFE,wav2vec2-xls-r-300m,wav2vec 2.0,0.29,0.25,0.2,0.29,0.21,0.19,0.0,0.27,0.18,,0.38
+fr_CaFE_wav2vec2-xls-r-1b,French,fr,Indo-European,CaFE,CaFE,wav2vec2-xls-r-1b,wav2vec 2.0,0.26,0.25,0.27,0.26,0.19,0.18,0.03,0.15,0.22,,0.36
+fr_CaFE_wavlm-base-plus,French,fr,Indo-European,CaFE,CaFE,wavlm-base-plus,WavLM,0.53,0.53,0.53,0.53,0.52,0.53,0.66,0.55,0.27,,0.6
+fr_CaFE_wavlm-large,French,fr,Indo-European,CaFE,CaFE,wavlm-large,WavLM,0.72,0.7,0.69,0.69,0.69,0.7,0.8,0.61,0.67,,0.69
+fr_CaFE_whisper-small,French,fr,Indo-European,CaFE,CaFE,whisper-small,Whisper,0.55,0.61,0.6,0.61,0.6,0.6,0.69,0.42,0.6,,0.68
+fr_CaFE_whisper-large,French,fr,Indo-European,CaFE,CaFE,whisper-large,Whisper,0.49,0.53,0.53,0.53,0.52,0.53,0.62,0.38,0.49,,0.61
+de_EmoDB_hubert-base-ls960,German,de,Indo-European,EmoDB,EmoDB,hubert-base-ls960,HuBERT,0.75,0.78,0.78,0.76,0.76,0.78,0.81,0.64,0.64,0.81,0.92
+de_EmoDB_hubert-large-ls960-ft,German,de,Indo-European,EmoDB,EmoDB,hubert-large-ls960-ft,HuBERT,0.43,0.44,0.48,0.45,0.39,0.38,0.57,0.35,0.04,0.5,0.49
+de_EmoDB_wav2vec2-base,German,de,Indo-European,EmoDB,EmoDB,wav2vec2-base,wav2vec 2.0,0.68,0.7,0.7,0.68,0.68,0.7,0.77,0.59,0.45,0.72,0.85
+de_EmoDB_wav2vec2-large-960h,German,de,Indo-European,EmoDB,EmoDB,wav2vec2-large-960h,wav2vec 2.0,0.31,0.34,0.33,0.37,0.3,0.3,0.45,0.26,0.0,0.37,0.44
+de_EmoDB_wav2vec2-large-lv60,German,de,Indo-European,EmoDB,EmoDB,wav2vec2-large-lv60,wav2vec 2.0,0.3,0.26,0.12,0.2,0.09,0.11,0.42,0.0,0.0,0.03,0.0
+de_EmoDB_wav2vec2-xls-r-300m,German,de,Indo-European,EmoDB,EmoDB,wav2vec2-xls-r-300m,wav2vec 2.0,0.33,0.35,0.24,0.34,0.26,0.27,0.47,0.0,0.0,0.3,0.55
+de_EmoDB_wav2vec2-xls-r-1b,German,de,Indo-European,EmoDB,EmoDB,wav2vec2-xls-r-1b,wav2vec 2.0,0.33,0.3,0.42,0.34,0.28,0.24,0.45,0.05,0.0,0.29,0.63
+de_EmoDB_wavlm-base-plus,German,de,Indo-European,EmoDB,EmoDB,wavlm-base-plus,WavLM,0.71,0.7,0.75,0.64,0.64,0.67,0.69,0.42,0.39,0.81,0.89
+de_EmoDB_wavlm-large,German,de,Indo-European,EmoDB,EmoDB,wavlm-large,WavLM,0.52,0.53,0.65,0.54,0.44,0.44,0.69,0.15,0.03,0.5,0.83
+de_EmoDB_whisper-small,German,de,Indo-European,EmoDB,EmoDB,whisper-small,Whisper,0.82,0.84,0.84,0.83,0.83,0.84,0.86,0.82,0.67,0.89,0.91
+de_EmoDB_whisper-large,German,de,Indo-European,EmoDB,EmoDB,whisper-large,Whisper,0.84,0.86,0.86,0.85,0.85,0.86,0.85,0.89,0.75,0.86,0.9
+el_AESDD_hubert-base-ls960,Greek,el,Indo-European,AESDD,AESDD,hubert-base-ls960,HuBERT,0.69,0.75,0.73,0.75,0.73,0.74,0.82,0.61,0.64,,0.85
+el_AESDD_hubert-large-ls960-ft,Greek,el,Indo-European,AESDD,AESDD,hubert-large-ls960-ft,HuBERT,0.43,0.32,0.29,0.3,0.27,0.28,0.17,0.28,0.11,,0.5
+el_AESDD_wav2vec2-base,Greek,el,Indo-European,AESDD,AESDD,wav2vec2-base,wav2vec 2.0,0.58,0.54,0.57,0.54,0.53,0.55,0.53,0.39,0.55,,0.65
+el_AESDD_wav2vec2-large-960h,Greek,el,Indo-European,AESDD,AESDD,wav2vec2-large-960h,wav2vec 2.0,0.37,0.32,0.28,0.29,0.22,0.24,0.14,0.26,0.02,,0.47
+el_AESDD_wav2vec2-large-lv60,Greek,el,Indo-European,AESDD,AESDD,wav2vec2-large-lv60,wav2vec 2.0,0.28,0.25,0.26,0.26,0.24,0.24,0.21,0.23,0.14,,0.36
+el_AESDD_wav2vec2-xls-r-300m,Greek,el,Indo-European,AESDD,AESDD,wav2vec2-xls-r-300m,wav2vec 2.0,0.38,0.36,0.33,0.32,0.28,0.3,0.19,0.2,0.2,,0.53
+el_AESDD_wav2vec2-xls-r-1b,Greek,el,Indo-European,AESDD,AESDD,wav2vec2-xls-r-1b,wav2vec 2.0,0.21,0.26,0.21,0.26,0.2,0.2,0.22,0.0,0.2,,0.38
+el_AESDD_wavlm-base-plus,Greek,el,Indo-European,AESDD,AESDD,wavlm-base-plus,WavLM,0.62,0.63,0.63,0.64,0.6,0.61,0.67,0.48,0.48,,0.79
+el_AESDD_wavlm-large,Greek,el,Indo-European,AESDD,AESDD,wavlm-large,WavLM,0.7,0.57,0.61,0.6,0.52,0.53,0.52,0.37,0.38,,0.8
+el_AESDD_whisper-small,Greek,el,Indo-European,AESDD,AESDD,whisper-small,Whisper,0.6,0.57,0.56,0.57,0.56,0.58,0.61,0.44,0.45,,0.75
+el_AESDD_whisper-large,Greek,el,Indo-European,AESDD,AESDD,whisper-large,Whisper,0.57,0.56,0.56,0.56,0.56,0.57,0.58,0.42,0.49,,0.72
+hi_Hindi-Dataset_hubert-base-ls960,Hindi,hi,Indo-European,Hindi-Dataset,VishalB,hubert-base-ls960,HuBERT,0.72,0.7,0.71,0.69,0.7,0.71,0.84,0.67,0.74,0.56,0.66
+hi_Hindi-Dataset_hubert-large-ls960-ft,Hindi,hi,Indo-European,Hindi-Dataset,VishalB,hubert-large-ls960-ft,HuBERT,0.33,0.31,0.33,0.32,0.26,0.25,0.45,0.36,0.15,0.17,0.16
+hi_Hindi-Dataset_wav2vec2-base,Hindi,hi,Indo-European,Hindi-Dataset,VishalB,wav2vec2-base,wav2vec 2.0,0.62,0.61,0.6,0.6,0.6,0.61,0.79,0.59,0.55,0.49,0.56
+hi_Hindi-Dataset_wav2vec2-large-960h,Hindi,hi,Indo-European,Hindi-Dataset,VishalB,wav2vec2-large-960h,wav2vec 2.0,0.22,0.23,0.33,0.23,0.13,0.12,0.36,0.21,0.04,0.03,0.03
+hi_Hindi-Dataset_wav2vec2-large-lv60,Hindi,hi,Indo-European,Hindi-Dataset,VishalB,wav2vec2-large-lv60,wav2vec 2.0,0.2,0.2,0.16,0.22,0.12,0.11,0.33,0.22,0.0,0.0,0.03
+hi_Hindi-Dataset_wav2vec2-xls-r-300m,Hindi,hi,Indo-European,Hindi-Dataset,VishalB,wav2vec2-xls-r-300m,wav2vec 2.0,0.22,0.22,0.26,0.23,0.14,0.13,0.35,0.18,0.16,0.0,0.03
+hi_Hindi-Dataset_wav2vec2-xls-r-1b,Hindi,hi,Indo-European,Hindi-Dataset,VishalB,wav2vec2-xls-r-1b,wav2vec 2.0,0.35,0.35,0.35,0.36,0.34,0.34,0.48,0.4,0.25,0.28,0.3
+hi_Hindi-Dataset_wavlm-base-plus,Hindi,hi,Indo-European,Hindi-Dataset,VishalB,wavlm-base-plus,WavLM,0.7,0.65,0.68,0.64,0.64,0.65,0.87,0.68,0.62,0.51,0.51
+hi_Hindi-Dataset_wavlm-large,Hindi,hi,Indo-European,Hindi-Dataset,VishalB,wavlm-large,WavLM,0.69,0.7,0.73,0.7,0.7,0.69,0.83,0.73,0.64,0.63,0.65
+hi_Hindi-Dataset_whisper-small,Hindi,hi,Indo-European,Hindi-Dataset,VishalB,whisper-small,Whisper,0.68,0.71,0.7,0.7,0.7,0.7,0.9,0.67,0.72,0.61,0.58
+hi_Hindi-Dataset_whisper-large,Hindi,hi,Indo-European,Hindi-Dataset,VishalB,whisper-large,Whisper,0.67,0.69,0.68,0.68,0.68,0.69,0.88,0.68,0.72,0.59,0.55
+hu_HungarianEmotionalSpeechCorpus_hubert-base-ls960,Hungarian,hu,Uralic,HungarianEmotionalSpeechCorpus,HESD,hubert-base-ls960,HuBERT,0.54,0.52,0.59,0.55,0.52,0.51,0.49,0.52,,0.47,0.57
+hu_HungarianEmotionalSpeechCorpus_hubert-large-ls960-ft,Hungarian,hu,Uralic,HungarianEmotionalSpeechCorpus,HESD,hubert-large-ls960-ft,HuBERT,0.29,0.21,0.23,0.23,0.19,0.18,0.23,0.02,,0.26,0.25
+hu_HungarianEmotionalSpeechCorpus_wav2vec2-base,Hungarian,hu,Uralic,HungarianEmotionalSpeechCorpus,HESD,wav2vec2-base,wav2vec 2.0,0.42,0.43,0.42,0.43,0.4,0.41,0.39,0.54,,0.19,0.48
+hu_HungarianEmotionalSpeechCorpus_wav2vec2-large-960h,Hungarian,hu,Uralic,HungarianEmotionalSpeechCorpus,HESD,wav2vec2-large-960h,wav2vec 2.0,0.28,0.24,0.35,0.26,0.22,0.21,0.28,0.06,,0.27,0.27
+hu_HungarianEmotionalSpeechCorpus_wav2vec2-large-lv60,Hungarian,hu,Uralic,HungarianEmotionalSpeechCorpus,HESD,wav2vec2-large-lv60,wav2vec 2.0,0.22,0.23,0.26,0.25,0.17,0.16,0.16,0.02,,0.35,0.14
+hu_HungarianEmotionalSpeechCorpus_wav2vec2-xls-r-300m,Hungarian,hu,Uralic,HungarianEmotionalSpeechCorpus,HESD,wav2vec2-xls-r-300m,wav2vec 2.0,0.28,0.23,0.26,0.24,0.22,0.21,0.24,0.17,,0.29,0.17
+hu_HungarianEmotionalSpeechCorpus_wav2vec2-xls-r-1b,Hungarian,hu,Uralic,HungarianEmotionalSpeechCorpus,HESD,wav2vec2-xls-r-1b,wav2vec 2.0,0.19,0.22,0.18,0.26,0.14,0.13,0.17,0.0,,0.07,0.34
+hu_HungarianEmotionalSpeechCorpus_wavlm-base-plus,Hungarian,hu,Uralic,HungarianEmotionalSpeechCorpus,HESD,wavlm-base-plus,WavLM,0.52,0.51,0.57,0.54,0.5,0.49,0.63,0.32,,0.44,0.6
+hu_HungarianEmotionalSpeechCorpus_wavlm-large,Hungarian,hu,Uralic,HungarianEmotionalSpeechCorpus,HESD,wavlm-large,WavLM,0.45,0.49,0.62,0.52,0.48,0.47,0.57,0.31,,0.5,0.54
+hu_HungarianEmotionalSpeechCorpus_whisper-small,Hungarian,hu,Uralic,HungarianEmotionalSpeechCorpus,HESD,whisper-small,Whisper,0.41,0.52,0.51,0.52,0.51,0.51,0.66,0.44,,0.58,0.35
+hu_HungarianEmotionalSpeechCorpus_whisper-large,Hungarian,hu,Uralic,HungarianEmotionalSpeechCorpus,HESD,whisper-large,Whisper,0.48,0.44,0.44,0.44,0.43,0.43,0.55,0.31,,0.42,0.45
+id_IndoWaveSentiment_hubert-base-ls960,Indonesian,id,Austronesian,IndoWaveSentiment,IndoWaveSentiment,hubert-base-ls960,HuBERT,0.97,0.99,0.99,0.99,0.99,0.99,,,0.99,0.99,
+id_IndoWaveSentiment_hubert-large-ls960-ft,Indonesian,id,Austronesian,IndoWaveSentiment,IndoWaveSentiment,hubert-large-ls960-ft,HuBERT,0.63,0.46,0.64,0.58,0.45,0.41,,,0.35,0.54,
+id_IndoWaveSentiment_wav2vec2-base,Indonesian,id,Austronesian,IndoWaveSentiment,IndoWaveSentiment,wav2vec2-base,wav2vec 2.0,0.78,0.77,0.81,0.77,0.76,0.76,,,0.71,0.8,
+id_IndoWaveSentiment_wav2vec2-large-960h,Indonesian,id,Austronesian,IndoWaveSentiment,IndoWaveSentiment,wav2vec2-large-960h,wav2vec 2.0,0.61,0.37,0.58,0.52,0.32,0.26,,,0.14,0.51,
+id_IndoWaveSentiment_wav2vec2-large-lv60,Indonesian,id,Austronesian,IndoWaveSentiment,IndoWaveSentiment,wav2vec2-large-lv60,wav2vec 2.0,0.5,0.57,0.53,0.53,0.53,0.57,,,0.67,0.38,
+id_IndoWaveSentiment_wav2vec2-xls-r-300m,Indonesian,id,Austronesian,IndoWaveSentiment,IndoWaveSentiment,wav2vec2-xls-r-300m,wav2vec 2.0,0.58,0.46,0.51,0.51,0.46,0.45,,,0.45,0.46,
+id_IndoWaveSentiment_wav2vec2-xls-r-1b,Indonesian,id,Austronesian,IndoWaveSentiment,IndoWaveSentiment,wav2vec2-xls-r-1b,wav2vec 2.0,0.63,0.59,0.58,0.58,0.58,0.59,,,0.52,0.64,
+id_IndoWaveSentiment_wavlm-base-plus,Indonesian,id,Austronesian,IndoWaveSentiment,IndoWaveSentiment,wavlm-base-plus,WavLM,0.94,0.94,0.94,0.94,0.94,0.94,,,0.94,0.94,
+id_IndoWaveSentiment_wavlm-large,Indonesian,id,Austronesian,IndoWaveSentiment,IndoWaveSentiment,wavlm-large,WavLM,0.97,0.94,0.93,0.95,0.94,0.95,,,0.96,0.92,
+id_IndoWaveSentiment_whisper-small,Indonesian,id,Austronesian,IndoWaveSentiment,IndoWaveSentiment,whisper-small,Whisper,0.96,0.97,0.97,0.98,0.97,0.98,,,0.98,0.96,
+id_IndoWaveSentiment_whisper-large,Indonesian,id,Austronesian,IndoWaveSentiment,IndoWaveSentiment,whisper-large,Whisper,0.85,0.87,0.85,0.86,0.86,0.87,,,0.9,0.81,
+it_EMOVO_hubert-base-ls960,Italian,it,Indo-European,EMOVO,EMOVO,hubert-base-ls960,HuBERT,0.66,0.57,0.72,0.66,0.6,0.61,0.83,0.61,,0.39,0.56
+it_EMOVO_hubert-large-ls960-ft,Italian,it,Indo-European,EMOVO,EMOVO,hubert-large-ls960-ft,HuBERT,0.26,0.28,0.45,0.29,0.24,0.23,0.12,0.25,,0.41,0.17
+it_EMOVO_wav2vec2-base,Italian,it,Indo-European,EMOVO,EMOVO,wav2vec2-base,wav2vec 2.0,0.47,0.56,0.61,0.5,0.52,0.55,0.73,0.63,,0.29,0.43
+it_EMOVO_wav2vec2-large-960h,Italian,it,Indo-European,EMOVO,EMOVO,wav2vec2-large-960h,wav2vec 2.0,0.26,0.28,0.29,0.29,0.2,0.2,0.08,0.3,,0.42,0.0
+it_EMOVO_wav2vec2-large-lv60,Italian,it,Indo-European,EMOVO,EMOVO,wav2vec2-large-lv60,wav2vec 2.0,0.21,0.26,0.29,0.28,0.18,0.18,0.08,0.28,,0.38,0.0
+it_EMOVO_wav2vec2-xls-r-300m,Italian,it,Indo-European,EMOVO,EMOVO,wav2vec2-xls-r-300m,wav2vec 2.0,0.25,0.25,0.3,0.26,0.22,0.21,0.14,0.18,,0.35,0.21
+it_EMOVO_wav2vec2-xls-r-1b,Italian,it,Indo-European,EMOVO,EMOVO,wav2vec2-xls-r-1b,wav2vec 2.0,0.31,0.24,0.28,0.28,0.23,0.22,0.15,0.26,,0.26,0.26
+it_EMOVO_wavlm-base-plus,Italian,it,Indo-European,EMOVO,EMOVO,wavlm-base-plus,WavLM,0.69,0.58,0.63,0.61,0.57,0.6,0.65,0.64,,0.4,0.6
+it_EMOVO_wavlm-large,Italian,it,Indo-European,EMOVO,EMOVO,wavlm-large,WavLM,0.64,0.55,0.76,0.56,0.55,0.55,0.72,0.31,,0.5,0.65
+it_EMOVO_whisper-small,Italian,it,Indo-European,EMOVO,EMOVO,whisper-small,Whisper,0.78,0.64,0.65,0.66,0.64,0.64,0.72,0.51,,0.72,0.62
+it_EMOVO_whisper-large,Italian,it,Indo-European,EMOVO,EMOVO,whisper-large,Whisper,0.78,0.7,0.7,0.72,0.71,0.7,0.79,0.65,,0.72,0.67
+it_Emozionalmente_hubert-base-ls960,Italian,it,Indo-European,Emozionalmente,Emozionalmente,hubert-base-ls960,HuBERT,0.72,0.71,0.73,0.7,0.71,0.71,0.72,0.68,,0.73,0.7
+it_Emozionalmente_hubert-large-ls960-ft,Italian,it,Indo-European,Emozionalmente,Emozionalmente,hubert-large-ls960-ft,HuBERT,0.46,0.49,0.59,0.48,0.46,0.46,0.48,0.48,,0.55,0.33
+it_Emozionalmente_wav2vec2-base,Italian,it,Indo-European,Emozionalmente,Emozionalmente,wav2vec2-base,wav2vec 2.0,0.62,0.61,0.64,0.6,0.61,0.61,0.72,0.6,,0.51,0.6
+it_Emozionalmente_wav2vec2-large-960h,Italian,it,Indo-European,Emozionalmente,Emozionalmente,wav2vec2-large-960h,wav2vec 2.0,0.3,0.32,0.39,0.31,0.24,0.25,0.16,0.21,,0.45,0.15
+it_Emozionalmente_wav2vec2-large-lv60,Italian,it,Indo-European,Emozionalmente,Emozionalmente,wav2vec2-large-lv60,wav2vec 2.0,0.28,0.3,0.3,0.29,0.25,0.25,0.12,0.23,,0.43,0.21
+it_Emozionalmente_wav2vec2-xls-r-300m,Italian,it,Indo-European,Emozionalmente,Emozionalmente,wav2vec2-xls-r-300m,wav2vec 2.0,0.46,0.47,0.49,0.47,0.47,0.47,0.56,0.39,,0.52,0.41
+it_Emozionalmente_wav2vec2-xls-r-1b,Italian,it,Indo-European,Emozionalmente,Emozionalmente,wav2vec2-xls-r-1b,wav2vec 2.0,0.26,0.28,0.44,0.28,0.19,0.2,0.04,0.21,,0.12,0.41
+it_Emozionalmente_wavlm-base-plus,Italian,it,Indo-European,Emozionalmente,Emozionalmente,wavlm-base-plus,WavLM,0.75,0.72,0.73,0.72,0.72,0.72,0.76,0.68,,0.74,0.7
+it_Emozionalmente_wavlm-large,Italian,it,Indo-European,Emozionalmente,Emozionalmente,wavlm-large,WavLM,0.69,0.73,0.75,0.73,0.73,0.73,0.81,0.7,,0.75,0.64
+it_Emozionalmente_whisper-small,Italian,it,Indo-European,Emozionalmente,Emozionalmente,whisper-small,Whisper,0.77,0.75,0.76,0.75,0.75,0.75,0.81,0.69,,0.83,0.69
+it_Emozionalmente_whisper-large,Italian,it,Indo-European,Emozionalmente,Emozionalmente,whisper-large,Whisper,0.79,0.8,0.8,0.8,0.8,0.8,0.87,0.72,,0.87,0.74
+ja_JVNV_hubert-base-ls960,Japanese,ja,Japonic,JVNV,JVNV,hubert-base-ls960,HuBERT,0.77,0.86,0.86,0.86,0.86,0.86,0.87,0.81,0.83,,0.91
+ja_JVNV_hubert-large-ls960-ft,Japanese,ja,Japonic,JVNV,JVNV,hubert-large-ls960-ft,HuBERT,0.46,0.49,0.57,0.49,0.47,0.46,0.57,0.3,0.49,,0.51
+ja_JVNV_wav2vec2-base,Japanese,ja,Japonic,JVNV,JVNV,wav2vec2-base,wav2vec 2.0,0.61,0.67,0.67,0.66,0.65,0.66,0.75,0.51,0.62,,0.74
+ja_JVNV_wav2vec2-large-960h,Japanese,ja,Japonic,JVNV,JVNV,wav2vec2-large-960h,wav2vec 2.0,0.33,0.39,0.39,0.4,0.3,0.29,0.51,0.0,0.13,,0.55
+ja_JVNV_wav2vec2-large-lv60,Japanese,ja,Japonic,JVNV,JVNV,wav2vec2-large-lv60,wav2vec 2.0,0.31,0.26,0.24,0.25,0.22,0.22,0.39,0.16,0.16,,0.16
+ja_JVNV_wav2vec2-xls-r-300m,Japanese,ja,Japonic,JVNV,JVNV,wav2vec2-xls-r-300m,wav2vec 2.0,0.42,0.43,0.44,0.44,0.4,0.4,0.51,0.19,0.42,,0.5
+ja_JVNV_wav2vec2-xls-r-1b,Japanese,ja,Japonic,JVNV,JVNV,wav2vec2-xls-r-1b,wav2vec 2.0,0.4,0.34,0.41,0.37,0.31,0.29,0.08,0.32,0.38,,0.45
+ja_JVNV_wavlm-base-plus,Japanese,ja,Japonic,JVNV,JVNV,wavlm-base-plus,WavLM,0.75,0.84,0.84,0.84,0.84,0.84,0.85,0.81,0.8,,0.89
+ja_JVNV_wavlm-large,Japanese,ja,Japonic,JVNV,JVNV,wavlm-large,WavLM,0.87,0.85,0.85,0.85,0.85,0.85,0.92,0.79,0.89,,0.81
+ja_JVNV_whisper-small,Japanese,ja,Japonic,JVNV,JVNV,whisper-small,Whisper,0.8,0.81,0.81,0.82,0.81,0.81,0.87,0.77,0.86,,0.75
+ja_JVNV_whisper-large,Japanese,ja,Japonic,JVNV,JVNV,whisper-large,Whisper,0.83,0.87,0.87,0.88,0.87,0.87,0.93,0.83,0.89,,0.84
+kn_Kannada-Dataset_hubert-base-ls960,Kannada,kn,Dravidian,Kannada-Dataset,Agrawal et al (2022),hubert-base-ls960,HuBERT,0.21,0.29,0.36,0.36,0.28,0.25,0.43,0.19,0.11,0.17,0.52
+kn_Kannada-Dataset_hubert-large-ls960-ft,Kannada,kn,Dravidian,Kannada-Dataset,Agrawal et al (2022),hubert-large-ls960-ft,HuBERT,0.19,0.19,0.19,0.18,0.16,0.17,0.3,0.15,0.07,0.2,0.06
+kn_Kannada-Dataset_wav2vec2-base,Kannada,kn,Dravidian,Kannada-Dataset,Agrawal et al (2022),wav2vec2-base,wav2vec 2.0,0.18,0.22,0.21,0.24,0.17,0.17,0.34,0.25,0.16,0.0,0.1
+kn_Kannada-Dataset_wav2vec2-large-960h,Kannada,kn,Dravidian,Kannada-Dataset,Agrawal et al (2022),wav2vec2-large-960h,wav2vec 2.0,0.16,0.27,0.21,0.23,0.19,0.2,0.43,0.26,0.0,0.19,0.05
+kn_Kannada-Dataset_wav2vec2-large-lv60,Kannada,kn,Dravidian,Kannada-Dataset,Agrawal et al (2022),wav2vec2-large-lv60,wav2vec 2.0,0.18,0.23,0.2,0.22,0.19,0.21,0.28,0.04,0.14,0.29,0.19
+kn_Kannada-Dataset_wav2vec2-xls-r-300m,Kannada,kn,Dravidian,Kannada-Dataset,Agrawal et al (2022),wav2vec2-xls-r-300m,wav2vec 2.0,0.26,0.17,0.22,0.21,0.17,0.16,0.19,0.2,0.19,0.15,0.09
+kn_Kannada-Dataset_wav2vec2-xls-r-1b,Kannada,kn,Dravidian,Kannada-Dataset,Agrawal et al (2022),wav2vec2-xls-r-1b,wav2vec 2.0,0.15,0.26,0.21,0.22,0.2,0.25,0.24,0.34,0.0,0.14,0.3
+kn_Kannada-Dataset_wavlm-base-plus,Kannada,kn,Dravidian,Kannada-Dataset,Agrawal et al (2022),wavlm-base-plus,WavLM,0.19,0.26,0.18,0.32,0.2,0.16,0.43,0.32,0.0,0.08,0.16
+kn_Kannada-Dataset_wavlm-large,Kannada,kn,Dravidian,Kannada-Dataset,Agrawal et al (2022),wavlm-large,WavLM,0.36,0.48,0.45,0.44,0.44,0.47,0.6,0.56,0.15,0.31,0.56
+kn_Kannada-Dataset_whisper-small,Kannada,kn,Dravidian,Kannada-Dataset,Agrawal et al (2022),whisper-small,Whisper,0.41,0.3,0.32,0.31,0.3,0.31,0.35,0.41,0.31,0.29,0.14
+kn_Kannada-Dataset_whisper-large,Kannada,kn,Dravidian,Kannada-Dataset,Agrawal et al (2022),whisper-large,Whisper,0.37,0.36,0.36,0.36,0.35,0.35,0.4,0.44,0.39,0.26,0.24
+kk_KazakhEmotionalTTS_hubert-base-ls960,Kazakh,kk,Turkic,KazakhEmotionalTTS,KazEmoTTS,hubert-base-ls960,HuBERT,0.54,0.51,0.64,0.51,0.5,0.5,0.63,0.31,0.71,0.5,0.35
+kk_KazakhEmotionalTTS_hubert-large-ls960-ft,Kazakh,kk,Turkic,KazakhEmotionalTTS,KazEmoTTS,hubert-large-ls960-ft,HuBERT,0.28,0.29,0.36,0.29,0.25,0.25,0.23,0.24,0.23,0.4,0.13
+kk_KazakhEmotionalTTS_wav2vec2-base,Kazakh,kk,Turkic,KazakhEmotionalTTS,KazEmoTTS,wav2vec2-base,wav2vec 2.0,0.52,0.53,0.59,0.52,0.52,0.52,0.56,0.51,0.51,0.56,0.47
+kk_KazakhEmotionalTTS_wav2vec2-large-960h,Kazakh,kk,Turkic,KazakhEmotionalTTS,KazEmoTTS,wav2vec2-large-960h,wav2vec 2.0,0.22,0.24,0.27,0.23,0.2,0.2,0.21,0.14,0.16,0.34,0.15
+kk_KazakhEmotionalTTS_wav2vec2-large-lv60,Kazakh,kk,Turkic,KazakhEmotionalTTS,KazEmoTTS,wav2vec2-large-lv60,wav2vec 2.0,0.21,0.21,0.24,0.22,0.14,0.14,0.05,0.08,0.25,0.33,0.0
+kk_KazakhEmotionalTTS_wav2vec2-xls-r-300m,Kazakh,kk,Turkic,KazakhEmotionalTTS,KazEmoTTS,wav2vec2-xls-r-300m,wav2vec 2.0,0.37,0.35,0.4,0.36,0.34,0.33,0.27,0.19,0.48,0.37,0.37
+kk_KazakhEmotionalTTS_wav2vec2-xls-r-1b,Kazakh,kk,Turkic,KazakhEmotionalTTS,KazEmoTTS,wav2vec2-xls-r-1b,wav2vec 2.0,0.3,0.32,0.3,0.31,0.3,0.3,0.39,0.16,0.26,0.37,0.31
+kk_KazakhEmotionalTTS_wavlm-base-plus,Kazakh,kk,Turkic,KazakhEmotionalTTS,KazEmoTTS,wavlm-base-plus,WavLM,0.52,0.51,0.56,0.51,0.49,0.5,0.61,0.45,0.48,0.57,0.35
+kk_KazakhEmotionalTTS_wavlm-large,Kazakh,kk,Turkic,KazakhEmotionalTTS,KazEmoTTS,wavlm-large,WavLM,0.58,0.58,0.67,0.58,0.57,0.56,0.69,0.43,0.77,0.58,0.37
+kk_KazakhEmotionalTTS_whisper-small,Kazakh,kk,Turkic,KazakhEmotionalTTS,KazEmoTTS,whisper-small,Whisper,0.7,0.65,0.65,0.65,0.64,0.65,0.7,0.55,0.83,0.62,0.52
+kk_KazakhEmotionalTTS_whisper-large,Kazakh,kk,Turkic,KazakhEmotionalTTS,KazEmoTTS,whisper-large,Whisper,0.7,0.65,0.64,0.65,0.63,0.64,0.71,0.55,0.85,0.65,0.41
+ko_KESDy18_hubert-base-ls960,Korean,ko,Koreanic,KESDy18,KESDy18,hubert-base-ls960,HuBERT,0.76,0.8,0.8,0.79,0.79,0.8,0.81,,0.67,0.81,0.88
+ko_KESDy18_hubert-large-ls960-ft,Korean,ko,Koreanic,KESDy18,KESDy18,hubert-large-ls960-ft,HuBERT,0.46,0.46,0.55,0.48,0.45,0.45,0.41,,0.39,0.49,0.51
+ko_KESDy18_wav2vec2-base,Korean,ko,Koreanic,KESDy18,KESDy18,wav2vec2-base,wav2vec 2.0,0.67,0.7,0.69,0.69,0.68,0.69,0.75,,0.54,0.66,0.78
+ko_KESDy18_wav2vec2-large-960h,Korean,ko,Koreanic,KESDy18,KESDy18,wav2vec2-large-960h,wav2vec 2.0,0.25,0.23,0.39,0.27,0.14,0.12,0.03,,0.06,0.35,0.11
+ko_KESDy18_wav2vec2-large-lv60,Korean,ko,Koreanic,KESDy18,KESDy18,wav2vec2-large-lv60,wav2vec 2.0,0.25,0.24,0.28,0.26,0.2,0.19,0.21,,0.04,0.33,0.21
+ko_KESDy18_wav2vec2-xls-r-300m,Korean,ko,Koreanic,KESDy18,KESDy18,wav2vec2-xls-r-300m,wav2vec 2.0,0.4,0.39,0.43,0.4,0.38,0.38,0.43,,0.22,0.39,0.47
+ko_KESDy18_wav2vec2-xls-r-1b,Korean,ko,Koreanic,KESDy18,KESDy18,wav2vec2-xls-r-1b,wav2vec 2.0,0.43,0.43,0.51,0.42,0.42,0.42,0.38,,0.3,0.48,0.53
+ko_KESDy18_wavlm-base-plus,Korean,ko,Koreanic,KESDy18,KESDy18,wavlm-base-plus,WavLM,0.7,0.74,0.74,0.72,0.72,0.74,0.74,,0.54,0.77,0.84
+ko_KESDy18_wavlm-large,Korean,ko,Koreanic,KESDy18,KESDy18,wavlm-large,WavLM,0.77,0.76,0.78,0.77,0.75,0.76,0.78,,0.68,0.73,0.83
+ko_KESDy18_whisper-small,Korean,ko,Koreanic,KESDy18,KESDy18,whisper-small,Whisper,0.81,0.81,0.81,0.82,0.81,0.81,0.79,,0.73,0.81,0.93
+ko_KESDy18_whisper-large,Korean,ko,Koreanic,KESDy18,KESDy18,whisper-large,Whisper,0.78,0.79,0.79,0.79,0.79,0.79,0.76,,0.73,0.75,0.91
+or_SITB-OSED_hubert-base-ls960,Odia,or,Indo-European,SITB-OSED,SITB-OSED,hubert-base-ls960,HuBERT,0.76,0.75,0.78,0.73,0.74,0.75,0.72,0.72,0.74,,0.79
+or_SITB-OSED_hubert-large-ls960-ft,Odia,or,Indo-European,SITB-OSED,SITB-OSED,hubert-large-ls960-ft,HuBERT,0.61,0.62,0.65,0.62,0.62,0.62,0.64,0.56,0.62,,0.66
+or_SITB-OSED_wav2vec2-base,Odia,or,Indo-European,SITB-OSED,SITB-OSED,wav2vec2-base,wav2vec 2.0,0.65,0.64,0.69,0.6,0.6,0.62,0.63,0.42,0.62,,0.73
+or_SITB-OSED_wav2vec2-large-960h,Odia,or,Indo-European,SITB-OSED,SITB-OSED,wav2vec2-large-960h,wav2vec 2.0,0.44,0.43,0.47,0.41,0.39,0.4,0.46,0.18,0.45,,0.48
+or_SITB-OSED_wav2vec2-large-lv60,Odia,or,Indo-European,SITB-OSED,SITB-OSED,wav2vec2-large-lv60,wav2vec 2.0,0.29,0.28,0.24,0.26,0.2,0.21,0.12,0.0,0.41,,0.25
+or_SITB-OSED_wav2vec2-xls-r-300m,Odia,or,Indo-European,SITB-OSED,SITB-OSED,wav2vec2-xls-r-300m,wav2vec 2.0,0.5,0.51,0.62,0.49,0.48,0.49,0.51,0.27,0.51,,0.63
+or_SITB-OSED_wav2vec2-xls-r-1b,Odia,or,Indo-European,SITB-OSED,SITB-OSED,wav2vec2-xls-r-1b,wav2vec 2.0,0.54,0.58,0.61,0.54,0.53,0.55,0.65,0.33,0.51,,0.65
+or_SITB-OSED_wavlm-base-plus,Odia,or,Indo-European,SITB-OSED,SITB-OSED,wavlm-base-plus,WavLM,0.79,0.78,0.8,0.76,0.77,0.77,0.79,0.73,0.75,,0.81
+or_SITB-OSED_wavlm-large,Odia,or,Indo-European,SITB-OSED,SITB-OSED,wavlm-large,WavLM,0.82,0.83,0.84,0.83,0.83,0.83,0.86,0.8,0.83,,0.84
+or_SITB-OSED_whisper-small,Odia,or,Indo-European,SITB-OSED,SITB-OSED,whisper-small,Whisper,0.83,0.83,0.83,0.82,0.83,0.83,0.88,0.77,0.81,,0.85
+or_SITB-OSED_whisper-large,Odia,or,Indo-European,SITB-OSED,SITB-OSED,whisper-large,Whisper,0.84,0.83,0.83,0.82,0.83,0.83,0.88,0.78,0.8,,0.85
+fa_SHEMO_hubert-base-ls960,Persian,fa,Indo-European,SHEMO,ShEMO,hubert-base-ls960,HuBERT,0.77,0.8,0.58,0.53,0.54,0.78,0.88,0.0,0.34,0.84,0.65
+fa_SHEMO_hubert-large-ls960-ft,Persian,fa,Indo-European,SHEMO,ShEMO,hubert-large-ls960-ft,HuBERT,0.57,0.58,0.45,0.32,0.31,0.53,0.62,0.0,0.08,0.66,0.2
+fa_SHEMO_wav2vec2-base,Persian,fa,Indo-European,SHEMO,ShEMO,wav2vec2-base,wav2vec 2.0,0.71,0.76,0.46,0.47,0.46,0.73,0.83,0.0,0.0,0.79,0.69
+fa_SHEMO_wav2vec2-large-960h,Persian,fa,Indo-European,SHEMO,ShEMO,wav2vec2-large-960h,wav2vec 2.0,0.44,0.44,0.25,0.23,0.18,0.33,0.24,0.0,0.0,0.6,0.06
+fa_SHEMO_wav2vec2-large-lv60,Persian,fa,Indo-European,SHEMO,ShEMO,wav2vec2-large-lv60,wav2vec 2.0,0.43,0.43,0.24,0.22,0.16,0.3,0.22,0.0,0.0,0.57,0.0
+fa_SHEMO_wav2vec2-xls-r-300m,Persian,fa,Indo-European,SHEMO,ShEMO,wav2vec2-xls-r-300m,wav2vec 2.0,0.44,0.46,0.4,0.24,0.19,0.35,0.29,0.0,0.0,0.59,0.09
+fa_SHEMO_wav2vec2-xls-r-1b,Persian,fa,Indo-European,SHEMO,ShEMO,wav2vec2-xls-r-1b,wav2vec 2.0,0.6,0.67,0.47,0.36,0.36,0.63,0.7,0.0,0.01,0.74,0.36
+fa_SHEMO_wavlm-base-plus,Persian,fa,Indo-European,SHEMO,ShEMO,wavlm-base-plus,WavLM,0.77,0.79,0.57,0.5,0.52,0.77,0.89,0.0,0.26,0.84,0.6
+fa_SHEMO_wavlm-large,Persian,fa,Indo-European,SHEMO,ShEMO,wavlm-large,WavLM,0.72,0.8,0.71,0.55,0.59,0.79,0.88,0.15,0.45,0.84,0.62
+fa_SHEMO_whisper-small,Persian,fa,Indo-European,SHEMO,ShEMO,whisper-small,Whisper,0.79,0.83,0.63,0.62,0.62,0.82,0.91,0.0,0.62,0.85,0.71
+fa_SHEMO_whisper-large,Persian,fa,Indo-European,SHEMO,ShEMO,whisper-large,Whisper,0.8,0.82,0.63,0.6,0.61,0.81,0.9,0.0,0.62,0.84,0.68
+pl_nEMO_hubert-base-ls960,Polish,pl,Indo-European,nEMO,nEMO,hubert-base-ls960,HuBERT,0.77,0.79,0.8,0.79,0.79,0.79,0.86,0.8,0.73,0.76,0.78
+pl_nEMO_hubert-large-ls960-ft,Polish,pl,Indo-European,nEMO,nEMO,hubert-large-ls960-ft,HuBERT,0.4,0.39,0.49,0.4,0.37,0.37,0.42,0.17,0.36,0.43,0.47
+pl_nEMO_wav2vec2-base,Polish,pl,Indo-European,nEMO,nEMO,wav2vec2-base,wav2vec 2.0,0.67,0.69,0.69,0.69,0.68,0.68,0.77,0.75,0.47,0.69,0.7
+pl_nEMO_wav2vec2-large-960h,Polish,pl,Indo-European,nEMO,nEMO,wav2vec2-large-960h,wav2vec 2.0,0.24,0.24,0.29,0.25,0.16,0.16,0.29,0.0,0.05,0.35,0.13
+pl_nEMO_wav2vec2-large-lv60,Polish,pl,Indo-European,nEMO,nEMO,wav2vec2-large-lv60,wav2vec 2.0,0.23,0.22,0.21,0.22,0.15,0.15,0.01,0.18,0.19,0.34,0.03
+pl_nEMO_wav2vec2-xls-r-300m,Polish,pl,Indo-European,nEMO,nEMO,wav2vec2-xls-r-300m,wav2vec 2.0,0.36,0.37,0.44,0.38,0.36,0.36,0.35,0.22,0.34,0.42,0.44
+pl_nEMO_wav2vec2-xls-r-1b,Polish,pl,Indo-European,nEMO,nEMO,wav2vec2-xls-r-1b,wav2vec 2.0,0.43,0.41,0.54,0.41,0.4,0.4,0.43,0.36,0.4,0.43,0.38
+pl_nEMO_wavlm-base-plus,Polish,pl,Indo-European,nEMO,nEMO,wavlm-base-plus,WavLM,0.73,0.74,0.75,0.73,0.73,0.74,0.81,0.7,0.69,0.72,0.74
+pl_nEMO_wavlm-large,Polish,pl,Indo-European,nEMO,nEMO,wavlm-large,WavLM,0.66,0.66,0.8,0.66,0.67,0.67,0.77,0.59,0.71,0.58,0.74
+pl_nEMO_whisper-small,Polish,pl,Indo-European,nEMO,nEMO,whisper-small,Whisper,0.85,0.85,0.85,0.85,0.85,0.85,0.88,0.82,0.87,0.82,0.86
+pl_nEMO_whisper-large,Polish,pl,Indo-European,nEMO,nEMO,whisper-large,Whisper,0.88,0.87,0.87,0.87,0.87,0.87,0.89,0.85,0.89,0.85,0.88
+pt_emoUERJ_hubert-base-ls960,Portuguese,pt,Indo-European,emoUERJ,emoUERJ,hubert-base-ls960,HuBERT,0.91,0.74,0.72,0.73,0.72,0.74,0.61,,0.7,0.66,0.91
+pt_emoUERJ_hubert-large-ls960-ft,Portuguese,pt,Indo-European,emoUERJ,emoUERJ,hubert-large-ls960-ft,HuBERT,0.59,0.51,0.6,0.6,0.5,0.51,0.71,,0.46,0.38,0.44
+pt_emoUERJ_wav2vec2-base,Portuguese,pt,Indo-European,emoUERJ,emoUERJ,wav2vec2-base,wav2vec 2.0,0.7,0.63,0.62,0.56,0.56,0.6,0.7,,0.56,0.21,0.76
+pt_emoUERJ_wav2vec2-large-960h,Portuguese,pt,Indo-European,emoUERJ,emoUERJ,wav2vec2-large-960h,wav2vec 2.0,0.41,0.23,0.5,0.34,0.23,0.24,0.29,,0.15,0.22,0.27
+pt_emoUERJ_wav2vec2-large-lv60,Portuguese,pt,Indo-European,emoUERJ,emoUERJ,wav2vec2-large-lv60,wav2vec 2.0,0.2,0.29,0.19,0.25,0.21,0.25,0.34,,0.0,0.11,0.39
+pt_emoUERJ_wav2vec2-xls-r-300m,Portuguese,pt,Indo-European,emoUERJ,emoUERJ,wav2vec2-xls-r-300m,wav2vec 2.0,0.42,0.47,0.43,0.44,0.43,0.47,0.45,,0.33,0.32,0.61
+pt_emoUERJ_wav2vec2-xls-r-1b,Portuguese,pt,Indo-European,emoUERJ,emoUERJ,wav2vec2-xls-r-1b,wav2vec 2.0,0.49,0.44,0.44,0.45,0.43,0.43,0.29,,0.48,0.49,0.48
+pt_emoUERJ_wavlm-base-plus,Portuguese,pt,Indo-European,emoUERJ,emoUERJ,wavlm-base-plus,WavLM,0.88,0.74,0.72,0.72,0.72,0.74,0.62,,0.74,0.62,0.89
+pt_emoUERJ_wavlm-large,Portuguese,pt,Indo-European,emoUERJ,emoUERJ,wavlm-large,WavLM,0.88,0.76,0.77,0.81,0.75,0.77,0.85,,0.75,0.61,0.76
+pt_emoUERJ_whisper-small,Portuguese,pt,Indo-European,emoUERJ,emoUERJ,whisper-small,Whisper,0.74,0.91,0.92,0.93,0.93,0.91,0.89,,0.89,0.99,0.94
+pt_emoUERJ_whisper-large,Portuguese,pt,Indo-European,emoUERJ,emoUERJ,whisper-large,Whisper,0.73,0.88,0.87,0.89,0.87,0.88,0.88,,0.87,0.82,0.94
+qu_Quechua-Collao-Corpus_hubert-base-ls960,Quechua,qu,Quechuan,Quechua-Collao-Corpus,Quechua Collao Corpus,hubert-base-ls960,HuBERT,0.81,0.8,0.81,0.79,0.79,0.8,0.84,0.75,0.83,0.83,0.72
+qu_Quechua-Collao-Corpus_hubert-large-ls960-ft,Quechua,qu,Quechuan,Quechua-Collao-Corpus,Quechua Collao Corpus,hubert-large-ls960-ft,HuBERT,0.5,0.5,0.51,0.5,0.47,0.47,0.62,0.33,0.56,0.55,0.3
+qu_Quechua-Collao-Corpus_wav2vec2-base,Quechua,qu,Quechuan,Quechua-Collao-Corpus,Quechua Collao Corpus,wav2vec2-base,wav2vec 2.0,0.78,0.76,0.78,0.76,0.76,0.76,0.78,0.8,0.7,0.78,0.75
+qu_Quechua-Collao-Corpus_wav2vec2-large-960h,Quechua,qu,Quechuan,Quechua-Collao-Corpus,Quechua Collao Corpus,wav2vec2-large-960h,wav2vec 2.0,0.39,0.36,0.39,0.36,0.33,0.33,0.52,0.17,0.4,0.32,0.26
+qu_Quechua-Collao-Corpus_wav2vec2-large-lv60,Quechua,qu,Quechuan,Quechua-Collao-Corpus,Quechua Collao Corpus,wav2vec2-large-lv60,wav2vec 2.0,0.22,0.22,0.23,0.22,0.18,0.18,0.07,0.18,0.33,0.12,0.18
+qu_Quechua-Collao-Corpus_wav2vec2-xls-r-300m,Quechua,qu,Quechuan,Quechua-Collao-Corpus,Quechua Collao Corpus,wav2vec2-xls-r-300m,wav2vec 2.0,0.43,0.43,0.44,0.43,0.43,0.43,0.46,0.4,0.46,0.46,0.35
+qu_Quechua-Collao-Corpus_wav2vec2-xls-r-1b,Quechua,qu,Quechuan,Quechua-Collao-Corpus,Quechua Collao Corpus,wav2vec2-xls-r-1b,wav2vec 2.0,0.28,0.3,0.35,0.3,0.23,0.23,0.32,0.02,0.4,0.39,0.02
+qu_Quechua-Collao-Corpus_wavlm-base-plus,Quechua,qu,Quechuan,Quechua-Collao-Corpus,Quechua Collao Corpus,wavlm-base-plus,WavLM,0.75,0.71,0.71,0.7,0.7,0.71,0.75,0.66,0.75,0.74,0.61
+qu_Quechua-Collao-Corpus_wavlm-large,Quechua,qu,Quechuan,Quechua-Collao-Corpus,Quechua Collao Corpus,wavlm-large,WavLM,0.76,0.73,0.77,0.73,0.73,0.73,0.75,0.76,0.8,0.73,0.6
+qu_Quechua-Collao-Corpus_whisper-small,Quechua,qu,Quechuan,Quechua-Collao-Corpus,Quechua Collao Corpus,whisper-small,Whisper,0.82,0.82,0.82,0.82,0.81,0.82,0.83,0.8,0.83,0.84,0.77
+qu_Quechua-Collao-Corpus_whisper-large,Quechua,qu,Quechuan,Quechua-Collao-Corpus,Quechua Collao Corpus,whisper-large,Whisper,0.84,0.83,0.84,0.84,0.83,0.83,0.85,0.82,0.84,0.87,0.79
+ru_RESD_hubert-base-ls960,Russian,ru,Indo-European,RESD,RESD,hubert-base-ls960,HuBERT,0.48,0.51,0.52,0.52,0.51,0.51,0.67,0.51,0.44,0.51,0.42
+ru_RESD_hubert-large-ls960-ft,Russian,ru,Indo-European,RESD,RESD,hubert-large-ls960-ft,HuBERT,0.26,0.22,0.22,0.24,0.19,0.19,0.28,0.23,0.18,0.25,0.0
+ru_RESD_wav2vec2-base,Russian,ru,Indo-European,RESD,RESD,wav2vec2-base,wav2vec 2.0,0.4,0.41,0.42,0.41,0.4,0.41,0.56,0.45,0.39,0.31,0.32
+ru_RESD_wav2vec2-large-960h,Russian,ru,Indo-European,RESD,RESD,wav2vec2-large-960h,wav2vec 2.0,0.23,0.24,0.41,0.24,0.21,0.22,0.26,0.2,0.24,0.32,0.02
+ru_RESD_wav2vec2-large-lv60,Russian,ru,Indo-European,RESD,RESD,wav2vec2-large-lv60,wav2vec 2.0,0.2,0.2,0.17,0.2,0.17,0.18,0.24,0.17,0.24,0.2,0.0
+ru_RESD_wav2vec2-xls-r-300m,Russian,ru,Indo-European,RESD,RESD,wav2vec2-xls-r-300m,wav2vec 2.0,0.22,0.21,0.18,0.21,0.18,0.19,0.23,0.21,0.24,0.23,0.0
+ru_RESD_wav2vec2-xls-r-1b,Russian,ru,Indo-European,RESD,RESD,wav2vec2-xls-r-1b,wav2vec 2.0,0.29,0.26,0.26,0.27,0.26,0.25,0.37,0.29,0.13,0.27,0.22
+ru_RESD_wavlm-base-plus,Russian,ru,Indo-European,RESD,RESD,wavlm-base-plus,WavLM,0.46,0.43,0.42,0.43,0.41,0.41,0.59,0.5,0.34,0.37,0.26
+ru_RESD_wavlm-large,Russian,ru,Indo-European,RESD,RESD,wavlm-large,WavLM,0.43,0.4,0.48,0.44,0.38,0.36,0.52,0.31,0.22,0.55,0.3
+ru_RESD_whisper-small,Russian,ru,Indo-European,RESD,RESD,whisper-small,Whisper,0.49,0.45,0.45,0.46,0.45,0.45,0.6,0.38,0.41,0.55,0.3
+ru_RESD_whisper-large,Russian,ru,Indo-European,RESD,RESD,whisper-large,Whisper,0.48,0.46,0.45,0.45,0.43,0.43,0.56,0.41,0.43,0.59,0.15
+es_MESD_hubert-base-ls960,Spanish,es,Indo-European,MESD,MESD,hubert-base-ls960,HuBERT,0.63,0.58,0.57,0.57,0.56,0.58,0.48,0.6,0.62,0.65,0.45
+es_MESD_hubert-large-ls960-ft,Spanish,es,Indo-European,MESD,MESD,hubert-large-ls960-ft,HuBERT,0.33,0.26,0.3,0.28,0.23,0.24,0.15,0.12,0.3,0.4,0.19
+es_MESD_wav2vec2-base,Spanish,es,Indo-European,MESD,MESD,wav2vec2-base,wav2vec 2.0,0.38,0.27,0.37,0.29,0.26,0.26,0.35,0.15,0.28,0.29,0.23
+es_MESD_wav2vec2-large-960h,Spanish,es,Indo-European,MESD,MESD,wav2vec2-large-960h,wav2vec 2.0,0.32,0.26,0.31,0.27,0.23,0.24,0.37,0.09,0.26,0.31,0.13
+es_MESD_wav2vec2-large-lv60,Spanish,es,Indo-European,MESD,MESD,wav2vec2-large-lv60,wav2vec 2.0,0.15,0.13,0.1,0.2,0.1,0.09,0.2,0.14,0.0,0.0,0.17
+es_MESD_wav2vec2-xls-r-300m,Spanish,es,Indo-European,MESD,MESD,wav2vec2-xls-r-300m,wav2vec 2.0,0.29,0.24,0.12,0.22,0.14,0.15,0.13,0.0,0.4,0.0,0.15
+es_MESD_wav2vec2-xls-r-1b,Spanish,es,Indo-European,MESD,MESD,wav2vec2-xls-r-1b,wav2vec 2.0,0.27,0.24,0.21,0.26,0.22,0.21,0.26,0.0,0.23,0.3,0.31
+es_MESD_wavlm-base-plus,Spanish,es,Indo-European,MESD,MESD,wavlm-base-plus,WavLM,0.4,0.28,0.33,0.29,0.27,0.28,0.32,0.05,0.44,0.36,0.2
+es_MESD_wavlm-large,Spanish,es,Indo-European,MESD,MESD,wavlm-large,WavLM,0.51,0.41,0.41,0.41,0.38,0.38,0.43,0.19,0.44,0.51,0.32
+es_MESD_whisper-small,Spanish,es,Indo-European,MESD,MESD,whisper-small,Whisper,0.67,0.68,0.7,0.7,0.68,0.67,0.58,0.64,0.59,0.84,0.77
+es_MESD_whisper-large,Spanish,es,Indo-European,MESD,MESD,whisper-large,Whisper,0.69,0.67,0.67,0.69,0.67,0.66,0.66,0.55,0.72,0.78,0.66
+sw_Swahili-Dataset_hubert-base-ls960,Swahili,sw,Niger-Congo,Swahili-Dataset,Kenyan Swahili SER,hubert-base-ls960,HuBERT,0.75,0.81,0.79,0.77,0.78,0.81,0.86,,0.81,,0.67
+sw_Swahili-Dataset_hubert-large-ls960-ft,Swahili,sw,Niger-Congo,Swahili-Dataset,Kenyan Swahili SER,hubert-large-ls960-ft,HuBERT,0.61,0.6,0.63,0.6,0.59,0.59,0.62,,0.65,,0.48
+sw_Swahili-Dataset_wav2vec2-base,Swahili,sw,Niger-Congo,Swahili-Dataset,Kenyan Swahili SER,wav2vec2-base,wav2vec 2.0,0.65,0.72,0.71,0.69,0.69,0.71,0.8,,0.61,,0.66
+sw_Swahili-Dataset_wav2vec2-large-960h,Swahili,sw,Niger-Congo,Swahili-Dataset,Kenyan Swahili SER,wav2vec2-large-960h,wav2vec 2.0,0.37,0.44,0.45,0.44,0.43,0.44,0.42,,0.5,,0.39
+sw_Swahili-Dataset_wav2vec2-large-lv60,Swahili,sw,Niger-Congo,Swahili-Dataset,Kenyan Swahili SER,wav2vec2-large-lv60,wav2vec 2.0,0.41,0.35,0.46,0.38,0.26,0.24,0.48,,0.04,,0.27
+sw_Swahili-Dataset_wav2vec2-xls-r-300m,Swahili,sw,Niger-Congo,Swahili-Dataset,Kenyan Swahili SER,wav2vec2-xls-r-300m,wav2vec 2.0,0.35,0.33,0.34,0.34,0.33,0.33,0.34,,0.33,,0.32
+sw_Swahili-Dataset_wav2vec2-xls-r-1b,Swahili,sw,Niger-Congo,Swahili-Dataset,Kenyan Swahili SER,wav2vec2-xls-r-1b,wav2vec 2.0,0.35,0.45,0.44,0.42,0.41,0.42,0.29,,0.55,,0.38
+sw_Swahili-Dataset_wavlm-base-plus,Swahili,sw,Niger-Congo,Swahili-Dataset,Kenyan Swahili SER,wavlm-base-plus,WavLM,0.8,0.83,0.82,0.79,0.8,0.83,0.89,,0.86,,0.64
+sw_Swahili-Dataset_wavlm-large,Swahili,sw,Niger-Congo,Swahili-Dataset,Kenyan Swahili SER,wavlm-large,WavLM,0.78,0.74,0.74,0.74,0.74,0.74,0.7,,0.77,,0.75
+sw_Swahili-Dataset_whisper-small,Swahili,sw,Niger-Congo,Swahili-Dataset,Kenyan Swahili SER,whisper-small,Whisper,0.71,0.69,0.71,0.69,0.69,0.69,0.63,,0.71,,0.71
+sw_Swahili-Dataset_whisper-large,Swahili,sw,Niger-Congo,Swahili-Dataset,Kenyan Swahili SER,whisper-large,Whisper,0.78,0.8,0.81,0.79,0.79,0.79,0.73,,0.82,,0.82
+ta_EmoTa_hubert-base-ls960,Tamil,ta,Dravidian,EmoTa,EmoTa,hubert-base-ls960,HuBERT,0.42,0.38,0.41,0.39,0.38,0.38,0.45,0.41,0.37,0.37,0.31
+ta_EmoTa_hubert-large-ls960-ft,Tamil,ta,Dravidian,EmoTa,EmoTa,hubert-large-ls960-ft,HuBERT,0.26,0.25,0.24,0.21,0.18,0.22,0.33,0.0,0.13,0.28,0.18
+ta_EmoTa_wav2vec2-base,Tamil,ta,Dravidian,EmoTa,EmoTa,wav2vec2-base,wav2vec 2.0,0.39,0.38,0.41,0.37,0.37,0.37,0.4,0.36,0.35,0.4,0.36
+ta_EmoTa_wav2vec2-large-960h,Tamil,ta,Dravidian,EmoTa,EmoTa,wav2vec2-large-960h,wav2vec 2.0,0.3,0.24,0.24,0.2,0.15,0.18,0.35,0.0,0.07,0.22,0.13
+ta_EmoTa_wav2vec2-large-lv60,Tamil,ta,Dravidian,EmoTa,EmoTa,wav2vec2-large-lv60,wav2vec 2.0,0.22,0.19,0.16,0.16,0.15,0.17,0.2,0.0,0.12,0.25,0.18
+ta_EmoTa_wav2vec2-xls-r-300m,Tamil,ta,Dravidian,EmoTa,EmoTa,wav2vec2-xls-r-300m,wav2vec 2.0,0.19,0.24,0.15,0.21,0.17,0.19,0.0,0.0,0.24,0.32,0.27
+ta_EmoTa_wav2vec2-xls-r-1b,Tamil,ta,Dravidian,EmoTa,EmoTa,wav2vec2-xls-r-1b,wav2vec 2.0,0.23,0.2,0.13,0.2,0.14,0.14,0.11,0.0,0.28,0.0,0.28
+ta_EmoTa_wavlm-base-plus,Tamil,ta,Dravidian,EmoTa,EmoTa,wavlm-base-plus,WavLM,0.33,0.35,0.36,0.35,0.35,0.35,0.31,0.42,0.28,0.29,0.45
+ta_EmoTa_wavlm-large,Tamil,ta,Dravidian,EmoTa,EmoTa,wavlm-large,WavLM,0.33,0.29,0.38,0.27,0.27,0.27,0.37,0.22,0.33,0.19,0.22
+ta_EmoTa_whisper-small,Tamil,ta,Dravidian,EmoTa,EmoTa,whisper-small,Whisper,0.4,0.44,0.43,0.44,0.43,0.43,0.35,0.51,0.43,0.56,0.32
+ta_EmoTa_whisper-large,Tamil,ta,Dravidian,EmoTa,EmoTa,whisper-large,Whisper,0.4,0.41,0.4,0.41,0.4,0.4,0.28,0.5,0.35,0.55,0.3
+te_Telugu-Dataset_hubert-base-ls960,Telugu,te,Dravidian,Telugu-Dataset,Sowmith et al (2024),hubert-base-ls960,HuBERT,0.48,0.53,0.52,0.51,0.52,0.53,0.58,,0.54,0.53,0.42
+te_Telugu-Dataset_hubert-large-ls960-ft,Telugu,te,Dravidian,Telugu-Dataset,Sowmith et al (2024),hubert-large-ls960-ft,HuBERT,0.41,0.35,0.34,0.34,0.3,0.3,0.32,,0.32,0.48,0.06
+te_Telugu-Dataset_wav2vec2-base,Telugu,te,Dravidian,Telugu-Dataset,Sowmith et al (2024),wav2vec2-base,wav2vec 2.0,0.46,0.44,0.43,0.43,0.42,0.43,0.48,,0.29,0.53,0.37
+te_Telugu-Dataset_wav2vec2-large-960h,Telugu,te,Dravidian,Telugu-Dataset,Sowmith et al (2024),wav2vec2-large-960h,wav2vec 2.0,0.28,0.35,0.33,0.32,0.27,0.27,0.39,,0.1,0.49,0.09
+te_Telugu-Dataset_wav2vec2-large-lv60,Telugu,te,Dravidian,Telugu-Dataset,Sowmith et al (2024),wav2vec2-large-lv60,wav2vec 2.0,0.22,0.28,0.19,0.25,0.2,0.21,0.16,,0.22,0.42,0.0
+te_Telugu-Dataset_wav2vec2-xls-r-300m,Telugu,te,Dravidian,Telugu-Dataset,Sowmith et al (2024),wav2vec2-xls-r-300m,wav2vec 2.0,0.28,0.29,0.21,0.28,0.24,0.25,0.25,,0.26,0.44,0.0
+te_Telugu-Dataset_wav2vec2-xls-r-1b,Telugu,te,Dravidian,Telugu-Dataset,Sowmith et al (2024),wav2vec2-xls-r-1b,wav2vec 2.0,0.19,0.29,0.23,0.28,0.24,0.26,0.38,,0.3,0.3,0.0
+te_Telugu-Dataset_wavlm-base-plus,Telugu,te,Dravidian,Telugu-Dataset,Sowmith et al (2024),wavlm-base-plus,WavLM,0.44,0.53,0.52,0.5,0.5,0.52,0.65,,0.57,0.41,0.38
+te_Telugu-Dataset_wavlm-large,Telugu,te,Dravidian,Telugu-Dataset,Sowmith et al (2024),wavlm-large,WavLM,0.46,0.43,0.56,0.45,0.4,0.39,0.54,,0.43,0.46,0.18
+te_Telugu-Dataset_whisper-small,Telugu,te,Dravidian,Telugu-Dataset,Sowmith et al (2024),whisper-small,Whisper,0.5,0.52,0.52,0.52,0.51,0.52,0.6,,0.55,0.5,0.41
+te_Telugu-Dataset_whisper-large,Telugu,te,Dravidian,Telugu-Dataset,Sowmith et al (2024),whisper-large,Whisper,0.46,0.45,0.44,0.43,0.43,0.45,0.62,,0.47,0.43,0.19
+tr_TurEV-DB_hubert-base-ls960,Turkish,tr,Turkic,TurEV-DB,TurEV-DB,hubert-base-ls960,HuBERT,0.66,0.68,0.7,0.66,0.66,0.67,0.68,,0.55,,0.76
+tr_TurEV-DB_hubert-large-ls960-ft,Turkish,tr,Turkic,TurEV-DB,TurEV-DB,hubert-large-ls960-ft,HuBERT,0.44,0.44,0.48,0.4,0.34,0.37,0.53,,0.03,,0.47
+tr_TurEV-DB_wav2vec2-base,Turkish,tr,Turkic,TurEV-DB,TurEV-DB,wav2vec2-base,wav2vec 2.0,0.43,0.48,0.49,0.46,0.41,0.43,0.46,,0.18,,0.6
+tr_TurEV-DB_wav2vec2-large-960h,Turkish,tr,Turkic,TurEV-DB,TurEV-DB,wav2vec2-large-960h,wav2vec 2.0,0.36,0.4,0.4,0.36,0.29,0.31,0.54,,0.2,,0.14
+tr_TurEV-DB_wav2vec2-large-lv60,Turkish,tr,Turkic,TurEV-DB,TurEV-DB,wav2vec2-large-lv60,wav2vec 2.0,0.37,0.39,0.25,0.35,0.27,0.3,0.52,,0.0,,0.3
+tr_TurEV-DB_wav2vec2-xls-r-300m,Turkish,tr,Turkic,TurEV-DB,TurEV-DB,wav2vec2-xls-r-300m,wav2vec 2.0,0.39,0.34,0.24,0.33,0.25,0.26,0.29,,0.0,,0.46
+tr_TurEV-DB_wav2vec2-xls-r-1b,Turkish,tr,Turkic,TurEV-DB,TurEV-DB,wav2vec2-xls-r-1b,wav2vec 2.0,0.47,0.48,0.52,0.46,0.44,0.45,0.56,,0.27,,0.5
+tr_TurEV-DB_wavlm-base-plus,Turkish,tr,Turkic,TurEV-DB,TurEV-DB,wavlm-base-plus,WavLM,0.58,0.52,0.52,0.51,0.51,0.51,0.49,,0.46,,0.59
+tr_TurEV-DB_wavlm-large,Turkish,tr,Turkic,TurEV-DB,TurEV-DB,wavlm-large,WavLM,0.65,0.63,0.69,0.6,0.55,0.57,0.7,,0.2,,0.74
+tr_TurEV-DB_whisper-small,Turkish,tr,Turkic,TurEV-DB,TurEV-DB,whisper-small,Whisper,0.88,0.84,0.85,0.84,0.84,0.84,0.82,,0.81,,0.89
+tr_TurEV-DB_whisper-large,Turkish,tr,Turkic,TurEV-DB,TurEV-DB,whisper-large,Whisper,0.87,0.84,0.85,0.84,0.84,0.84,0.83,,0.8,,0.9
+ur_Urdu-Dataset_hubert-base-ls960,Urdu,ur,Indo-European,Urdu-Dataset,URDU-Dataset,hubert-base-ls960,HuBERT,0.79,0.87,0.87,0.87,0.86,0.87,0.92,,0.82,0.93,0.78
+ur_Urdu-Dataset_hubert-large-ls960-ft,Urdu,ur,Indo-European,Urdu-Dataset,URDU-Dataset,hubert-large-ls960-ft,HuBERT,0.35,0.43,0.4,0.38,0.38,0.42,0.24,,0.42,0.67,0.19
+ur_Urdu-Dataset_wav2vec2-base,Urdu,ur,Indo-European,Urdu-Dataset,URDU-Dataset,wav2vec2-base,wav2vec 2.0,0.72,0.88,0.9,0.88,0.88,0.87,0.96,,0.86,0.89,0.81
+ur_Urdu-Dataset_wav2vec2-large-960h,Urdu,ur,Indo-European,Urdu-Dataset,URDU-Dataset,wav2vec2-large-960h,wav2vec 2.0,0.26,0.34,0.37,0.28,0.25,0.3,0.08,,0.27,0.52,0.15
+ur_Urdu-Dataset_wav2vec2-large-lv60,Urdu,ur,Indo-European,Urdu-Dataset,URDU-Dataset,wav2vec2-large-lv60,wav2vec 2.0,0.18,0.35,0.28,0.3,0.27,0.3,0.24,,0.33,0.48,0.0
+ur_Urdu-Dataset_wav2vec2-xls-r-300m,Urdu,ur,Indo-European,Urdu-Dataset,URDU-Dataset,wav2vec2-xls-r-300m,wav2vec 2.0,0.29,0.41,0.46,0.37,0.36,0.38,0.24,,0.24,0.52,0.44
+ur_Urdu-Dataset_wav2vec2-xls-r-1b,Urdu,ur,Indo-European,Urdu-Dataset,URDU-Dataset,wav2vec2-xls-r-1b,wav2vec 2.0,0.23,0.35,0.27,0.29,0.26,0.32,0.0,,0.29,0.44,0.32
+ur_Urdu-Dataset_wavlm-base-plus,Urdu,ur,Indo-European,Urdu-Dataset,URDU-Dataset,wavlm-base-plus,WavLM,0.72,0.76,0.78,0.77,0.75,0.76,0.78,,0.66,0.86,0.71
+ur_Urdu-Dataset_wavlm-large,Urdu,ur,Indo-European,Urdu-Dataset,URDU-Dataset,wavlm-large,WavLM,0.64,0.5,0.68,0.54,0.5,0.49,0.61,,0.39,0.51,0.49
+ur_Urdu-Dataset_whisper-small,Urdu,ur,Indo-European,Urdu-Dataset,URDU-Dataset,whisper-small,Whisper,0.87,0.78,0.75,0.79,0.76,0.78,0.74,,0.85,0.79,0.67
+ur_Urdu-Dataset_whisper-large,Urdu,ur,Indo-European,Urdu-Dataset,URDU-Dataset,whisper-large,Whisper,0.85,0.82,0.78,0.81,0.79,0.83,0.67,,0.92,0.82,0.77
+ur_UrduSER_hubert-base-ls960,Urdu,ur,Indo-European,UrduSER,UrduSER,hubert-base-ls960,HuBERT,0.53,0.51,0.52,0.5,0.5,0.51,0.63,0.35,0.41,0.58,0.52
+ur_UrduSER_hubert-large-ls960-ft,Urdu,ur,Indo-European,UrduSER,UrduSER,hubert-large-ls960-ft,HuBERT,0.31,0.32,0.35,0.33,0.27,0.26,0.4,0.11,0.25,0.44,0.16
+ur_UrduSER_wav2vec2-base,Urdu,ur,Indo-European,UrduSER,UrduSER,wav2vec2-base,wav2vec 2.0,0.44,0.46,0.46,0.45,0.44,0.45,0.62,0.27,0.25,0.52,0.53
+ur_UrduSER_wav2vec2-large-960h,Urdu,ur,Indo-European,UrduSER,UrduSER,wav2vec2-large-960h,wav2vec 2.0,0.23,0.24,0.27,0.26,0.19,0.18,0.26,0.04,0.25,0.4,0.02
+ur_UrduSER_wav2vec2-large-lv60,Urdu,ur,Indo-European,UrduSER,UrduSER,wav2vec2-large-lv60,wav2vec 2.0,0.22,0.23,0.16,0.25,0.16,0.15,0.31,0.01,0.15,0.35,0.0
+ur_UrduSER_wav2vec2-xls-r-300m,Urdu,ur,Indo-European,UrduSER,UrduSER,wav2vec2-xls-r-300m,wav2vec 2.0,0.27,0.28,0.29,0.28,0.27,0.27,0.33,0.12,0.25,0.34,0.32
+ur_UrduSER_wav2vec2-xls-r-1b,Urdu,ur,Indo-European,UrduSER,UrduSER,wav2vec2-xls-r-1b,wav2vec 2.0,0.28,0.26,0.38,0.28,0.19,0.19,0.1,0.02,0.15,0.36,0.33
+ur_UrduSER_wavlm-base-plus,Urdu,ur,Indo-European,UrduSER,UrduSER,wavlm-base-plus,WavLM,0.52,0.52,0.51,0.5,0.49,0.51,0.67,0.29,0.39,0.61,0.52
+ur_UrduSER_wavlm-large,Urdu,ur,Indo-European,UrduSER,UrduSER,wavlm-large,WavLM,0.44,0.45,0.5,0.46,0.44,0.44,0.62,0.18,0.39,0.51,0.5
+ur_UrduSER_whisper-small,Urdu,ur,Indo-European,UrduSER,UrduSER,whisper-small,Whisper,0.59,0.56,0.55,0.55,0.55,0.56,0.74,0.36,0.45,0.54,0.67
+ur_UrduSER_whisper-large,Urdu,ur,Indo-European,UrduSER,UrduSER,whisper-large,Whisper,0.6,0.6,0.59,0.59,0.59,0.6,0.78,0.4,0.51,0.6,0.66

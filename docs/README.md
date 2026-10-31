@@ -1,98 +1,46 @@
 # KuralHub website (`docs/`)
 
-This folder is the **public website** for KuralHub, served by **GitHub Pages**.
-It is fully self-contained (no build step, no framework) and works both locally
-and on Pages.
+The public website at https://aaivu.github.io/KuralHub/, served by GitHub Pages from the `docs/` folder on `main`. Plain HTML and CSS, no framework, no build step on the server.
 
-**Live URL:** https://aaivu.github.io/KuralHub/
+## Pages
 
-## Enable GitHub Pages (one-time)
+| File | What it is | Edited by |
+|---|---|---|
+| `index.html` | The paper as a web page (abstract, method, results, FAQ, citation) | hand, plus generated tables |
+| `benchmark.html` | Best model per language, dataset × model matrix, all 363 runs | hand, plus generated tables |
+| `datasets.html` | Searchable tables of all languages and datasets | hand, plus generated tables |
+| `languages/<slug>.html` | One page per language with every dataset entry | fully generated |
+| `paper.md` | Markdown version of `index.html` (also folded into `llms-full.txt`) | hand |
+| `llms.txt`, `llms-full.txt` | Plain-text versions for LLMs and agents ([llmstxt.org](https://llmstxt.org/)) | generated |
+| `data/` | `runs.csv`, `runs.json`, `datasets.json`, `languages.json`, `language_families.json` | generated |
+| `sitemap.xml`, `robots.txt` | Crawling | generated / hand |
+| `datasets/` | Mirror of the repository's `datasets/*.md` | generated |
 
-> GitHub Pages on the free plan requires the repository to be **public**.
+Blocks between `<!-- NAME:START -->` and `<!-- NAME:END -->` in the hand-written pages are overwritten by the build. Edit everything else directly.
 
-1. Make the repository public (Settings → General → Danger Zone → Change visibility).
-2. Go to **Settings → Pages**.
-3. Under **Build and deployment → Source**, choose **Deploy from a branch**.
-4. Set **Branch = `main`** and **Folder = `/docs`**, then **Save**.
-5. Wait ~1 minute; the site goes live at `https://aaivu.github.io/KuralHub/`.
+## Rebuilding
 
-## Structure
-
-```
-docs/
-├── index.html          Landing page (about, methodology, findings, team, citation)
-├── benchmark.html      Interactive benchmark (filter by family / model)
-├── datasets.html       Dataset catalog (search + browse 70+ languages)
-├── css/styles.css      Design system
-├── js/                 main.js · data.js · benchmark.js · datasets.js
-├── data/               benchmark.json · language_families.json · languages.json
-├── datasets/           Mirror of repo /datasets markdown (generated — see below)
-└── assets/             favicon, charts (img/), profile photos (profiles/)
-```
-
-## Updating the site after changing data
-
-The dataset docs and benchmark are **mirrored/generated** into `docs/` so the site
-is self-contained. After editing `datasets/` or regenerating the benchmark, run:
+After changing anything in `datasets/` or `results/`:
 
 ```bash
 ./scripts/sync-datasets.sh
 ```
 
-This re-mirrors `datasets/*.md` into `docs/datasets/`, rebuilds
-`docs/data/languages.json`, and refreshes `docs/data/benchmark.json` from
-`results/benchmark.json`.
+This mirrors the dataset Markdown and runs `scripts/build_site.py` (standard library only, Python 3.9+). The script parses the dataset files and the 363 classification reports in `results/train_val_test_logs/` and regenerates everything listed above. `make site` does the same.
 
-## Researcher photos
+If you add a new language folder, also add it to `FAMILY` in `scripts/build_site.py`. If you add a benchmark run on a new dataset, map its run ID to the catalog file in `RUN_DATASET_FILE`.
 
-Add square photos to `docs/assets/profiles/` — see the README there for the exact
-filenames. Missing photos fall back to initials automatically.
+If you change prose in `index.html`, update `paper.md` to match.
 
 ## Local preview
 
 ```bash
-make run_ui          # serves docs/ at http://localhost:8000
-# or:
-python3 -m http.server 8000 --directory docs
+make run_ui    # http://localhost:8000
 ```
 
-## SEO & AI / agent discovery (GEO/AEO)
+## Search and AI discoverability
 
-The site is optimized for both classic search engines and AI answer engines:
-
-- **Static, crawlable content** — the 70-language catalog (datasets page) and the
-  "best model per language" table (benchmark page) are pre-rendered into the HTML
-  by `scripts/build_site.py`, so bots that don't run JavaScript (most AI crawlers,
-  and Google's first pass) still see the content. JS only enhances it.
-- **Structured data (JSON-LD)** — `Dataset` (incl. an `ItemList` of all 90+
-  datasets for Google Dataset Search), `ScholarlyArticle`, `FAQPage`, `WebSite`
-  (+ sitelinks SearchAction), `Organization`, `CollectionPage`, `BreadcrumbList`.
-- **`llms.txt` / `llms-full.txt`** — concise, structured summaries for LLMs/agents
-  (per the llmstxt.org convention).
-- **`robots.txt`** — explicitly *welcomes* AI crawlers (GPTBot, ClaudeBot,
-  PerplexityBot, Google-Extended, CCBot, …) plus search bots; links the sitemap.
-- **FAQ** with `FAQPage` schema targeting common queries ("what speech emotion
-  datasets exist", "best model for SER", …) for featured snippets and AI answers.
-- Per-page titles/descriptions/keywords, canonical URLs, Open Graph + Twitter
-  cards, `sitemap.xml`, and `?q=` / `?lang=` deep links on the datasets page.
-
-These regenerate via `./scripts/sync-datasets.sh` (which runs `build_site.py`).
-
-### After the site is live — off-page steps (these drive ranking)
-
-On-page is done; ranking #1 also needs these (do them once the repo is public):
-
-1. **Google Search Console** — verify the site, submit `sitemap.xml`.
-2. **Bing Webmaster Tools** — verify + submit sitemap.
-3. **Google Dataset Search** — it auto-discovers via the `Dataset` JSON-LD once
-   indexed; confirm at datasetsearch.research.google.com.
-4. **Backlinks** — link the site from the paper, the GitHub repo's About/website
-   field, your Google Scholar/lab pages, and list it on Papers with Code and
-   Hugging Face. Backlinks + citations are the biggest ranking factor.
-
-## To finalize once the paper is public
-
-- Replace the "To appear" BibTeX note and the *Interspeech 2026 / Accepted* badge
-  with the final citation, DOI / arXiv link.
-- Fill in real Google Scholar profile links in `index.html` (`TEAM` array).
-- Optionally replace `assets/img/og-image.png` with a custom social card.
+- Every page is static HTML, so crawlers that do not run JavaScript see all content. `js/site.js` only adds sorting, filtering, copy buttons and figure zoom.
+- `index.html` carries Google Scholar `citation_*` meta tags and JSON-LD for `ScholarlyArticle`, `Dataset`, `SoftwareSourceCode`, `FAQPage` and `WebSite`. Each language page has `BreadcrumbList` and one `Dataset` node per catalogued dataset (for Google Dataset Search).
+- `llms.txt` and `llms-full.txt` are linked from every page footer and from `<link rel="alternate">` in the page heads.
+- `robots.txt` only takes effect at a host root. For a project site like this one, crawlers read `https://aaivu.github.io/robots.txt` instead, so submit `sitemap.xml` directly in Google Search Console and Bing Webmaster Tools.

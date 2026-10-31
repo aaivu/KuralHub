@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>German Speech Emotion Recognition Datasets | KuralHub</title>
+<meta name="description" content="1 speech emotion recognition dataset for German: EmoDB. Benchmark results for 11 models.">
+<link rel="canonical" href="https://aaivu.github.io/KuralHub/languages/german.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="KuralHub">
+<meta property="og:title" content="German speech emotion recognition datasets">
+<meta property="og:description" content="1 speech emotion recognition dataset for German: EmoDB. Benchmark results for 11 models.">
+<meta property="og:url" content="https://aaivu.github.io/KuralHub/languages/german.html">
+<meta property="og:image" content="https://aaivu.github.io/KuralHub/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="text/markdown" href="../datasets/German/Readme.md" title="Source Markdown">
+<link rel="alternate" type="text/plain" href="../llms.txt" title="llms.txt">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "KuralHub", "item": "https://aaivu.github.io/KuralHub/"}, {"@type": "ListItem", "position": 2, "name": "Datasets", "item": "https://aaivu.github.io/KuralHub/datasets.html"}, {"@type": "ListItem", "position": 3, "name": "German", "item": "https://aaivu.github.io/KuralHub/languages/german.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "EmoDB", "description": "EmoDB is a German speech emotion recognition dataset (Audio). Emotion labels: Anger, Boredom, Anxiety, Happy, Sadness, Disgust, and Neutral. Size: samples - 535 speakers - 10. The EMODB database is a freely available German emotional speech dataset created by the Institute of Communication Science at the Technical University of Berlin, Germany. It contains 535 utterances recorded by 10 professional speakers (5 males and 5 females), representing seven emotions: anger, boredom, anxiety, happiness, sadness, disgust, and neutral. The recordings were made at a 48-kHz sampling rate and later down-sampled to 16 kHz. This dataset is widely used for emotion recognition tasks in speech processing.", "url": "https://aaivu.github.io/KuralHub/languages/german.html#emodb", "sameAs": "https://www.researchgate.net/profile/Felix-Burkhardt-2/publication/221491017_A_database_of_German_emotional_speech/links/00b7d5226f45d66e38000000/A-database-of-German-emotional-speech.pdf", "inLanguage": "de", "keywords": ["German speech emotion recognition", "speech emotion recognition dataset", "emotional speech corpus"], "isAccessibleForFree": true, "includedInDataCatalog": {"@type": "DataCatalog", "name": "KuralHub", "url": "https://aaivu.github.io/KuralHub/datasets.html"}}</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="../index.html">KuralHub</a><nav aria-label="Site"><a href="../index.html">Paper</a><a href="../benchmark.html">Results</a><a href="../datasets.html" aria-current=page>Datasets</a><a href="../index.html#cite">Cite</a><a href="https://github.com/aaivu/KuralHub">GitHub</a></nav></div></header>
+<div class="layout with-toc">
+<aside class="toc"><nav aria-label="On this page"><ol><li><a href="#top">Overview</a></li><li><a href="#datasets">Datasets at a glance</a></li><li><a href="#benchmark">Benchmark results</a></li><li>Dataset entries<ol><li><a href="#emodb">EmoDB</a></li></ol></li></ol></nav></aside>
+<main id="content">
+<p class="crumbs" id="top"><a href="../index.html">KuralHub</a><span aria-hidden="true">/</span><a href="../datasets.html">Datasets</a><span aria-hidden="true">/</span>German</p>
+<h1>German speech emotion recognition datasets</h1>
+<p class="lede">KuralHub lists <b>1</b> speech emotion recognition dataset for German. Each entry below gives the emotion labels, size, recording setup, licence, where to get it and how to cite it. German is also part of the benchmark. The best of 11 models reached 86.0% test accuracy (<code>whisper-large</code>).</p>
+<dl class="facts"><dt>Language family</dt><dd>Indo-European (Germanic)</dd><dt>ISO code</dt><dd>de</dd><dt>Spoken mainly in</dt><dd>Germany</dd><dt>Datasets listed</dt><dd>1</dd><dt>In benchmark</dt><dd>Yes</dd></dl>
+<h2 id="datasets">Datasets at a glance</h2><div class="table-wrap"><table><thead><tr><th data-sort=text>Dataset</th><th data-sort=text>Type</th><th class=num data-sort=num>Samples</th><th class=num data-sort=num>Speakers</th><th data-sort=text>Recording</th><th data-sort=text>Access</th><th data-sort=text>Licence</th></tr></thead><tbody><tr><td><a href="#emodb">EmoDB</a></td><td>Audio</td><td class="num" data-v="535">535</td><td class="num" data-v="10">10</td><td>Acted</td><td>Open</td><td></td></tr></tbody></table></div>
+<h2 id="benchmark">Benchmark results</h2>
+<p>German is one of the 29 languages in the KuralHub benchmark. Each of the 11 frozen speech models was trained with a small classification head on the shared emotions and scored on a held-out test split. Over all 11 runs the mean test accuracy was <b>55.5%</b> (median 53.0%). The best run reached <b>86.0%</b> with <code>whisper-large</code>. <a href="../benchmark.html">Compare with other languages</a>.</p>
+<div class="table-wrap"><table><caption><b><a href="#emodb">EmoDB</a></b> (run ID <code>EmoDB</code>). Scores on the test split, best run highlighted.</caption><thead><tr><th data-sort=text>Model</th><th data-sort=text>Family</th><th class=num data-sort=num>Val acc.</th><th class=num data-sort=num>Test acc.</th><th class=num data-sort=num>Macro-F1</th><th class=num data-sort=num>Weighted-F1</th><th>Logs</th></tr></thead><tbody><tr><td class="mono">hubert-base-ls960</td><td>HuBERT</td><td class="num">0.75</td><td class="num">0.78</td><td class="num">0.76</td><td class="num">0.78</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/de_EmoDB_hubert-base-ls960">logs</a></td></tr><tr><td class="mono">hubert-large-ls960-ft</td><td>HuBERT</td><td class="num">0.43</td><td class="num">0.44</td><td class="num">0.39</td><td class="num">0.38</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/de_EmoDB_hubert-large-ls960-ft">logs</a></td></tr><tr><td class="mono">wav2vec2-base</td><td>wav2vec 2.0</td><td class="num">0.68</td><td class="num">0.70</td><td class="num">0.68</td><td class="num">0.70</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/de_EmoDB_wav2vec2-base">logs</a></td></tr><tr><td class="mono">wav2vec2-large-960h</td><td>wav2vec 2.0</td><td class="num">0.31</td><td class="num">0.34</td><td class="num">0.30</td><td class="num">0.30</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/de_EmoDB_wav2vec2-large-960h">logs</a></td></tr><tr><td class="mono">wav2vec2-large-lv60</td><td>wav2vec 2.0</td><td class="num">0.30</td><td class="num">0.26</td><td class="num">0.09</td><td class="num">0.11</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/de_EmoDB_wav2vec2-large-lv60">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-300m</td><td>wav2vec 2.0</td><td class="num">0.33</td><td class="num">0.35</td><td class="num">0.26</td><td class="num">0.27</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/de_EmoDB_wav2vec2-xls-r-300m">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-1b</td><td>wav2vec 2.0</td><td class="num">0.33</td><td class="num">0.30</td><td class="num">0.28</td><td class="num">0.24</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/de_EmoDB_wav2vec2-xls-r-1b">logs</a></td></tr><tr><td class="mono">wavlm-base-plus</td><td>WavLM</td><td class="num">0.71</td><td class="num">0.70</td><td class="num">0.64</td><td class="num">0.67</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/de_EmoDB_wavlm-base-plus">logs</a></td></tr><tr><td class="mono">wavlm-large</td><td>WavLM</td><td class="num">0.52</td><td class="num">0.53</td><td class="num">0.44</td><td class="num">0.44</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/de_EmoDB_wavlm-large">logs</a></td></tr><tr><td class="mono">whisper-small</td><td>Whisper</td><td class="num">0.82</td><td class="num">0.84</td><td class="num">0.83</td><td class="num">0.84</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/de_EmoDB_whisper-small">logs</a></td></tr><tr class=hl><td class="mono">whisper-large<span class="tag best">best</span></td><td>Whisper</td><td class="num">0.84</td><td class="num">0.86</td><td class="num">0.85</td><td class="num">0.86</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/de_EmoDB_whisper-large">logs</a></td></tr></tbody></table></div>
+<section class="entry" id="emodb">
+<h2>EmoDB</h2>
+<dl class="facts"><dt>Type</dt><dd>Audio</dd><dt>Emotion labels</dt><dd>Anger, Boredom, Anxiety, Happy, Sadness, Disgust, and Neutral</dd><dt>Size</dt><dd>samples - 535 speakers - 10</dd><dt>Speakers</dt><dd>10</dd><dt>Recording</dt><dd>Acted</dd><dt>Access</dt><dd>Open</dd><dt>Licence</dt><dd>Not stated</dd><dt>File format</dt><dd>.wav</dd><dt>Website</dt><dd><a href="https://www.researchgate.net/profile/Felix-Burkhardt-2/publication/221491017_A_database_of_German_emotional_speech/links/00b7d5226f45d66e38000000/A-database-of-German-emotional-speech.pdf">Dataset Homepage</a></dd><dt>Paper</dt><dd><a href="https://www.researchgate.net/profile/Felix-Burkhardt-2/publication/221491017_A_database_of_German_emotional_speech/links/00b7d5226f45d66e38000000/A-database-of-German-emotional-speech.pdf">Paper Link</a></dd><dt>Download</dt><dd><a href="https://www.kaggle.com/datasets/piyushagni5/berlin-database-of-emotional-speech-emodb">Download</a></dd></dl>
+<p>The EMODB database is a freely available German emotional speech dataset created by the Institute of Communication Science at the Technical University of Berlin, Germany. It contains 535 utterances recorded by 10 professional speakers (5 males and 5 females), representing seven emotions: anger, boredom, anxiety, happiness, sadness, disgust, and neutral. The recordings were made at a 48-kHz sampling rate and later down-sampled to 16 kHz. This dataset is widely used for emotion recognition tasks in speech processing.</p>
+
+<p class="callout small">Used in the KuralHub benchmark (run ID <code>EmoDB</code>). See the results above.</p>
+<h3>Citation</h3>
+<div class="cite-box"><button class="copy-btn" data-copy="#emodb-bib0">Copy</button><pre id="emodb-bib0"><code>@inproceedings{burkhardt2005database,
+  title={A database of German emotional speech.},
+  author={Burkhardt, Felix and Paeschke, Astrid and Rolfes, Miriam and Sendlmeier, Walter F and Weiss, Benjamin and others},
+  booktitle={Interspeech},
+  volume={5},
+  pages={1517--1520},
+  year={2005}
+}</code></pre></div>
+<p class="small muted">Source: <a href="https://github.com/aaivu/KuralHub/blob/main/datasets/German/EmoDB.md">datasets/German/EmoDB.md</a> · <a href="https://github.com/aaivu/KuralHub/edit/main/datasets/German/EmoDB.md">Suggest an edit</a></p>
+</section>
+<hr>
+<p class="small muted">This page is generated from <a href="https://github.com/aaivu/KuralHub/tree/main/datasets/German"><code>datasets/German/</code></a> in the KuralHub repository.
+If you use a dataset, cite its authors. If KuralHub helped you find it, please also <a href="../index.html#cite">cite the KuralHub paper</a>.</p>
+</main>
+</div>
+<footer class="site"><div class="inner">
+  <span>KuralHub · Interspeech 2026 · <a href="https://doi.org/10.21437/Interspeech.2026-3502">doi:10.21437/Interspeech.2026-3502</a> · MIT License</span>
+  <nav aria-label="Footer">
+    <a href="../index.html">Paper</a>
+    <a href="../benchmark.html">Results</a>
+    <a href="../datasets.html">Datasets</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+    <a href="https://github.com/aaivu/KuralHub">GitHub</a>
+    <a href="https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md">Contribute</a>
+  </nav>
+</div></footer>
+<script src="../js/site.js" defer></script>
+</body>
+</html>

@@ -22,9 +22,9 @@ The recording process has been done in a quiet room without restriction in the r
 ---
 
 ## 📥 **Access & Download**
-🔗 **Official Website:** [Not Specified](...)  <br/> 
+🔗 **Official Website:** Not Specified  <br/> 
 📄 **Paper:** [Paper Link](https://ieeexplore.ieee.org/abstract/document/6659464) <br/> 
-🗂️ **Download Link:** [Not Specified](..) <br/> 
+🗂️ **Download Link:** Not Specified <br/> 
 💾 **File Format:** Not Specified  <br/> 
 📧 Contact: [abdulbasit.al-talabani@buckingham.ac.uk](mailto:abdulbasit.al-talabani@buckingham.ac.uk?subject=Dataset%20Access%20Request), 
 [harin.sellahewa@buckingham.ac.uk](mailto:harin.sellahewa@buckingham.ac.uk?subject=Dataset%20Access%20Request), 
@@ -34,7 +34,7 @@ The recording process has been done in a quiet room without restriction in the r
 ---
 
 ## 📜 **Citation**
-If you're using this dataset, please cite both the original authors and our survey paper, as it contributed to making the dataset accessible.
+If you use this dataset, cite the original authors (first entry below). If you found it through KuralHub, please also cite the KuralHub paper (second entry).
 
 ```
 @inproceedings{al2013excitation,
@@ -44,6 +44,18 @@ If you're using this dataset, please cite both the original authors and our surv
   pages={156--161},
   year={2013},
   organization={IEEE}
+}
+```
+
+```bibtex
+@inproceedings{thavarasa26_interspeech,
+  title     = {{KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition}},
+  author    = {Luxshan Thavarasa and Jubeerathan Thevakumar and Thanikan Sivatheepan and Uthayasanker Thayasivam},
+  year      = {2026},
+  booktitle = {{Interspeech 2026}},
+  pages     = {4673--4678},
+  doi       = {10.21437/Interspeech.2026-3502},
+  issn      = {2958-1796},
 }
 ```
 

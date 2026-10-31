@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Japanese Speech Emotion Recognition Datasets | KuralHub</title>
+<meta name="description" content="2 speech emotion recognition datasets for Japanese: JVNV and Keio-ESD. Benchmark results for 11 models.">
+<link rel="canonical" href="https://aaivu.github.io/KuralHub/languages/japanese.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="KuralHub">
+<meta property="og:title" content="Japanese speech emotion recognition datasets">
+<meta property="og:description" content="2 speech emotion recognition datasets for Japanese: JVNV and Keio-ESD. Benchmark results for 11 models.">
+<meta property="og:url" content="https://aaivu.github.io/KuralHub/languages/japanese.html">
+<meta property="og:image" content="https://aaivu.github.io/KuralHub/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="text/markdown" href="../datasets/Japanese/Readme.md" title="Source Markdown">
+<link rel="alternate" type="text/plain" href="../llms.txt" title="llms.txt">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "KuralHub", "item": "https://aaivu.github.io/KuralHub/"}, {"@type": "ListItem", "position": 2, "name": "Datasets", "item": "https://aaivu.github.io/KuralHub/datasets.html"}, {"@type": "ListItem", "position": 3, "name": "Japanese", "item": "https://aaivu.github.io/KuralHub/languages/japanese.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "A Corpus of Japanese Emotional Speech with Verbal Content and Nonverbal Expressions", "alternateName": "JVNV", "description": "JVNV is a Japanese speech emotion recognition dataset (Audio). Emotion labels: Anger, Disgust, Fear, Happiness, Sadness, and Surprise. Size: samples - 1615, speakers - 4, duration - 3.94h. The JVNV dataset is a Japanese emotional speech corpus that uniquely integrates both verbal expressions and nonverbal vocalizations, such as laughter and sobbing, to capture a richer emotional spectrum. It contains 3.94 hours of high-quality speech recorded at 48 kHz in WAV format from four speakers (two male, two female), covering six emotions: anger, disgust, fear, happiness, sadness, and surprise. The dataset comprises 1,615 utterances, each expressing a specific emotion, with annotated time intervals for nonverbal sounds. JVNV also features two recording conditions: a regular session, where nonverbal phrases are predefined, and a phrase-free session, where speakers decide their own expressions. Notably, the dataset’s phoneme-balanced scripts were generated using a large language model, making JVNV the first emotional speech corpus to utilize AI-generated content. With a 94% subjective emotion recognition accuracy—surpassing previous Japanese emotional speech datasets—JVNV stands as a valuable resource for speech emotion recognition research.", "url": "https://aaivu.github.io/KuralHub/languages/japanese.html#jvnv", "sameAs": "https://sites.google.com/site/shinnosuketakamichi/research-topics/jvnv_corpus", "inLanguage": "ja", "keywords": ["Japanese speech emotion recognition", "speech emotion recognition dataset", "emotional speech corpus"], "isAccessibleForFree": true, "includedInDataCatalog": {"@type": "DataCatalog", "name": "KuralHub", "url": "https://aaivu.github.io/KuralHub/datasets.html"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "Keio-ESD", "description": "Keio-ESD is a Japanese speech emotion recognition dataset (Audio). Emotion labels: Anger, joy, disgust, contempt, amusement, worry, kindness, relief, indignation, shame, ... (47 types in total). Size: speakers - 1 (Male). This dataset contains human and artificial speech samples with emotional expressions. The human speech was recorded from a single Japanese male speaker in a soundproof room, while the artificial speech was synthesized using a subset of the dataset for training. It includes words with different syllables and accent types, covering 47 distinct emotions such as anger, joy, worry, and relief. The audio files are in WAV format (16 kHz, 16-bit, mono).", "url": "https://aaivu.github.io/KuralHub/languages/japanese.html#keio-esd", "sameAs": "https://research.nii.ac.jp/src/Keio-ESD.html", "inLanguage": "ja", "keywords": ["Japanese speech emotion recognition", "speech emotion recognition dataset", "emotional speech corpus"], "isAccessibleForFree": true, "includedInDataCatalog": {"@type": "DataCatalog", "name": "KuralHub", "url": "https://aaivu.github.io/KuralHub/datasets.html"}}</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="../index.html">KuralHub</a><nav aria-label="Site"><a href="../index.html">Paper</a><a href="../benchmark.html">Results</a><a href="../datasets.html" aria-current=page>Datasets</a><a href="../index.html#cite">Cite</a><a href="https://github.com/aaivu/KuralHub">GitHub</a></nav></div></header>
+<div class="layout with-toc">
+<aside class="toc"><nav aria-label="On this page"><ol><li><a href="#top">Overview</a></li><li><a href="#datasets">Datasets at a glance</a></li><li><a href="#benchmark">Benchmark results</a></li><li>Dataset entries<ol><li><a href="#jvnv">JVNV</a></li><li><a href="#keio-esd">Keio-ESD</a></li></ol></li></ol></nav></aside>
+<main id="content">
+<p class="crumbs" id="top"><a href="../index.html">KuralHub</a><span aria-hidden="true">/</span><a href="../datasets.html">Datasets</a><span aria-hidden="true">/</span>Japanese</p>
+<h1>Japanese speech emotion recognition datasets</h1>
+<p class="lede">KuralHub lists <b>2</b> speech emotion recognition datasets for Japanese, 2 of them openly available. Each entry below gives the emotion labels, size, recording setup, licence, where to get it and how to cite it. Japanese is also part of the benchmark. The best of 11 models reached 87.0% test accuracy (<code>whisper-large</code>).</p>
+<dl class="facts"><dt>Language family</dt><dd>Japonic</dd><dt>ISO code</dt><dd>ja</dd><dt>Spoken mainly in</dt><dd>Japan</dd><dt>Datasets listed</dt><dd>2</dd><dt>In benchmark</dt><dd>Yes</dd></dl>
+<h2 id="datasets">Datasets at a glance</h2><div class="table-wrap"><table><thead><tr><th data-sort=text>Dataset</th><th data-sort=text>Type</th><th class=num data-sort=num>Samples</th><th class=num data-sort=num>Speakers</th><th data-sort=text>Recording</th><th data-sort=text>Access</th><th data-sort=text>Licence</th></tr></thead><tbody><tr><td><a href="#jvnv">JVNV</a></td><td>Audio</td><td class="num" data-v="1615">1615</td><td class="num" data-v="4">4</td><td>Acted</td><td>Open</td><td>CC-BY-SA 4.0</td></tr><tr><td><a href="#keio-esd">Keio-ESD</a></td><td>Audio</td><td class="num" data-v=""></td><td class="num" data-v=""></td><td>Acted</td><td>Open</td><td></td></tr></tbody></table></div>
+<h2 id="benchmark">Benchmark results</h2>
+<p>Japanese is one of the 29 languages in the KuralHub benchmark. Each of the 11 frozen speech models was trained with a small classification head on the shared emotions and scored on a held-out test split. Over all 11 runs the mean test accuracy was <b>61.9%</b> (median 67.0%). The best run reached <b>87.0%</b> with <code>whisper-large</code>. <a href="../benchmark.html">Compare with other languages</a>.</p>
+<div class="table-wrap"><table><caption><b><a href="#jvnv">JVNV</a></b> (run ID <code>JVNV</code>). Scores on the test split, best run highlighted.</caption><thead><tr><th data-sort=text>Model</th><th data-sort=text>Family</th><th class=num data-sort=num>Val acc.</th><th class=num data-sort=num>Test acc.</th><th class=num data-sort=num>Macro-F1</th><th class=num data-sort=num>Weighted-F1</th><th>Logs</th></tr></thead><tbody><tr><td class="mono">hubert-base-ls960</td><td>HuBERT</td><td class="num">0.77</td><td class="num">0.86</td><td class="num">0.86</td><td class="num">0.86</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ja_JVNV_hubert-base-ls960">logs</a></td></tr><tr><td class="mono">hubert-large-ls960-ft</td><td>HuBERT</td><td class="num">0.46</td><td class="num">0.49</td><td class="num">0.47</td><td class="num">0.46</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ja_JVNV_hubert-large-ls960-ft">logs</a></td></tr><tr><td class="mono">wav2vec2-base</td><td>wav2vec 2.0</td><td class="num">0.61</td><td class="num">0.67</td><td class="num">0.65</td><td class="num">0.66</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ja_JVNV_wav2vec2-base">logs</a></td></tr><tr><td class="mono">wav2vec2-large-960h</td><td>wav2vec 2.0</td><td class="num">0.33</td><td class="num">0.39</td><td class="num">0.30</td><td class="num">0.29</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ja_JVNV_wav2vec2-large-960h">logs</a></td></tr><tr><td class="mono">wav2vec2-large-lv60</td><td>wav2vec 2.0</td><td class="num">0.31</td><td class="num">0.26</td><td class="num">0.22</td><td class="num">0.22</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ja_JVNV_wav2vec2-large-lv60">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-300m</td><td>wav2vec 2.0</td><td class="num">0.42</td><td class="num">0.43</td><td class="num">0.40</td><td class="num">0.40</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ja_JVNV_wav2vec2-xls-r-300m">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-1b</td><td>wav2vec 2.0</td><td class="num">0.40</td><td class="num">0.34</td><td class="num">0.31</td><td class="num">0.29</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ja_JVNV_wav2vec2-xls-r-1b">logs</a></td></tr><tr><td class="mono">wavlm-base-plus</td><td>WavLM</td><td class="num">0.75</td><td class="num">0.84</td><td class="num">0.84</td><td class="num">0.84</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ja_JVNV_wavlm-base-plus">logs</a></td></tr><tr><td class="mono">wavlm-large</td><td>WavLM</td><td class="num">0.87</td><td class="num">0.85</td><td class="num">0.85</td><td class="num">0.85</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ja_JVNV_wavlm-large">logs</a></td></tr><tr><td class="mono">whisper-small</td><td>Whisper</td><td class="num">0.80</td><td class="num">0.81</td><td class="num">0.81</td><td class="num">0.81</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ja_JVNV_whisper-small">logs</a></td></tr><tr class=hl><td class="mono">whisper-large<span class="tag best">best</span></td><td>Whisper</td><td class="num">0.83</td><td class="num">0.87</td><td class="num">0.87</td><td class="num">0.87</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/ja_JVNV_whisper-large">logs</a></td></tr></tbody></table></div>
+<section class="entry" id="jvnv">
+<h2>JVNV</h2>
+<p class="alt-name">A Corpus of Japanese Emotional Speech with Verbal Content and Nonverbal Expressions</p><dl class="facts"><dt>Type</dt><dd>Audio</dd><dt>Emotion labels</dt><dd>Anger, Disgust, Fear, Happiness, Sadness, and Surprise</dd><dt>Size</dt><dd>samples - 1615, speakers - 4, duration - 3.94h</dd><dt>Speakers</dt><dd>4</dd><dt>Recording</dt><dd>Acted</dd><dt>Access</dt><dd>Open</dd><dt>Licence</dt><dd>CC-BY-SA 4.0</dd><dt>File format</dt><dd>.wav</dd><dt>Website</dt><dd><a href="https://sites.google.com/site/shinnosuketakamichi/research-topics/jvnv_corpus">Dataset Homepage</a></dd><dt>Paper</dt><dd><a href="https://arxiv.org/pdf/2310.06072">Paper Link</a></dd><dt>Download</dt><dd><a href="https://sites.google.com/site/shinnosuketakamichi/research-topics/jvnv_corpus">Download</a></dd></dl>
+<p>The JVNV dataset is a Japanese emotional speech corpus that uniquely integrates both verbal expressions and nonverbal vocalizations, such as laughter and sobbing, to capture a richer emotional spectrum. It contains 3.94 hours of high-quality speech recorded at 48 kHz in WAV format from four speakers (two male, two female), covering six emotions: anger, disgust, fear, happiness, sadness, and surprise. The dataset comprises 1,615 utterances, each expressing a specific emotion, with annotated time intervals for nonverbal sounds. JVNV also features two recording conditions: a regular session, where nonverbal phrases are predefined, and a phrase-free session, where speakers decide their own expressions. Notably, the dataset’s phoneme-balanced scripts were generated using a large language model, making JVNV the first emotional speech corpus to utilize AI-generated content. With a 94% subjective emotion recognition accuracy—surpassing previous Japanese emotional speech datasets—JVNV stands as a valuable resource for speech emotion recognition research.</p>
+
+<p class="callout small">Used in the KuralHub benchmark (run ID <code>JVNV</code>). See the results above.</p>
+<h3>Citation</h3>
+<div class="cite-box"><button class="copy-btn" data-copy="#jvnv-bib0">Copy</button><pre id="jvnv-bib0"><code>@article{xin2024jvnv,
+  title={JVNV: A corpus of japanese emotional speech with verbal content and nonverbal expressions},
+  author={Xin, Detai and Jiang, Junfeng and Takamichi, Shinnosuke and Saito, Yuki and Aizawa, Akiko and Saruwatari, Hiroshi},
+  journal={IEEE Access},
+  volume={12},
+  pages={19752--19764},
+  year={2024},
+  publisher={IEEE}
+}</code></pre></div>
+<p class="small muted">Source: <a href="https://github.com/aaivu/KuralHub/blob/main/datasets/Japanese/JVNV.md">datasets/Japanese/JVNV.md</a> · <a href="https://github.com/aaivu/KuralHub/edit/main/datasets/Japanese/JVNV.md">Suggest an edit</a></p>
+</section><section class="entry" id="keio-esd">
+<h2>Keio-ESD</h2>
+<dl class="facts"><dt>Type</dt><dd>Audio</dd><dt>Emotion labels</dt><dd>Anger, joy, disgust, contempt, amusement, worry, kindness, relief, indignation, shame, ... (47 types in total)</dd><dt>Size</dt><dd>speakers - 1 (Male)</dd><dt>Recording</dt><dd>Acted</dd><dt>Access</dt><dd>Open</dd><dt>Licence</dt><dd>Not stated</dd><dt>File format</dt><dd>.wav</dd><dt>Website</dt><dd><a href="https://research.nii.ac.jp/src/Keio-ESD.html">Dataset Homepage</a></dd><dt>Download</dt><dd><a href="https://research.nii.ac.jp/src/Keio-ESD.html">Download</a></dd></dl>
+<p>This dataset contains human and artificial speech samples with emotional expressions. The human speech was recorded from a single Japanese male speaker in a soundproof room, while the artificial speech was synthesized using a subset of the dataset for training. It includes words with different syllables and accent types, covering 47 distinct emotions such as anger, joy, worry, and relief. The audio files are in WAV format (16 kHz, 16-bit, mono).</p>
+
+
+<h3>Citation</h3>
+<div class="cite-box"><button class="copy-btn" data-copy="#keio-esd-bib0">Copy</button><pre id="keio-esd-bib0"><code>@article{moriyama2011keio,
+  title={Keio University Japanese Emotional Speech Database (Keio-ESD)},
+  author={Moriyama, T},
+  journal={Speech Resources Consortium, National Institute of Informatics,(dataset)},
+  year={2011}
+}</code></pre></div>
+<p class="small muted">Source: <a href="https://github.com/aaivu/KuralHub/blob/main/datasets/Japanese/Keio-ESD.md">datasets/Japanese/Keio-ESD.md</a> · <a href="https://github.com/aaivu/KuralHub/edit/main/datasets/Japanese/Keio-ESD.md">Suggest an edit</a></p>
+</section>
+<hr>
+<p class="small muted">This page is generated from <a href="https://github.com/aaivu/KuralHub/tree/main/datasets/Japanese"><code>datasets/Japanese/</code></a> in the KuralHub repository.
+If you use a dataset, cite its authors. If KuralHub helped you find it, please also <a href="../index.html#cite">cite the KuralHub paper</a>.</p>
+</main>
+</div>
+<footer class="site"><div class="inner">
+  <span>KuralHub · Interspeech 2026 · <a href="https://doi.org/10.21437/Interspeech.2026-3502">doi:10.21437/Interspeech.2026-3502</a> · MIT License</span>
+  <nav aria-label="Footer">
+    <a href="../index.html">Paper</a>
+    <a href="../benchmark.html">Results</a>
+    <a href="../datasets.html">Datasets</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+    <a href="https://github.com/aaivu/KuralHub">GitHub</a>
+    <a href="https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md">Contribute</a>
+  </nav>
+</div></footer>
+<script src="../js/site.js" defer></script>
+</body>
+</html>

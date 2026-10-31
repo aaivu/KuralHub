@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portuguese Speech Emotion Recognition Datasets | KuralHub</title>
+<meta name="description" content="2 speech emotion recognition datasets for Portuguese: VERBO and emoUERJ. Benchmark results for 11 models.">
+<link rel="canonical" href="https://aaivu.github.io/KuralHub/languages/portuguese.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="KuralHub">
+<meta property="og:title" content="Portuguese speech emotion recognition datasets">
+<meta property="og:description" content="2 speech emotion recognition datasets for Portuguese: VERBO and emoUERJ. Benchmark results for 11 models.">
+<meta property="og:url" content="https://aaivu.github.io/KuralHub/languages/portuguese.html">
+<meta property="og:image" content="https://aaivu.github.io/KuralHub/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="text/markdown" href="../datasets/Portuguese/Readme.md" title="Source Markdown">
+<link rel="alternate" type="text/plain" href="../llms.txt" title="llms.txt">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "KuralHub", "item": "https://aaivu.github.io/KuralHub/"}, {"@type": "ListItem", "position": 2, "name": "Datasets", "item": "https://aaivu.github.io/KuralHub/datasets.html"}, {"@type": "ListItem", "position": 3, "name": "Portuguese", "item": "https://aaivu.github.io/KuralHub/languages/portuguese.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "VERBO", "description": "VERBO is a Portuguese speech emotion recognition dataset (Audio). Emotion labels: Happy, Disgust, Fear, Neutral, Anger, Surprise, and Sadness. Size: samples - 1176, speakers - 12. The VERBO database is a speech emotion dataset designed to evaluate the effectiveness of Speech Emotion Recognition (SER) systems. It comprises recordings of 14 sentences spoken by 12 professional speakers, including six actors and six actresses. Each speaker expresses six basic emotions—happiness, sadness, anger, fear, disgust, and surprise—along with a neutral state. In total, the dataset contains 1,176 audio recordings. A statistical analysis was conducted to assess how well these recordings represent emotional speech, making the VERBO database a valuable resource for training and evaluating SER models.", "url": "https://aaivu.github.io/KuralHub/languages/portuguese.html#verbo", "sameAs": "https://sites.google.com/view/verbodatabase/home/download?authuser=0", "inLanguage": "pt", "keywords": ["Portuguese speech emotion recognition", "speech emotion recognition dataset", "emotional speech corpus"], "includedInDataCatalog": {"@type": "DataCatalog", "name": "KuralHub", "url": "https://aaivu.github.io/KuralHub/datasets.html"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "emoUERJ", "description": "emoUERJ is a Portuguese speech emotion recognition dataset (Audio). Emotion labels: Happy, Sad, Angry, Neutral. Size: samples - 377, speakers - 4. The dataset was developed at the State University of Rio de Janeiro to address the challenge of language specificity in Speech Emotion Recognition (SER), particularly for Portuguese, where existing databases are limited. It consists of 377 audio recordings, each featuring an actor expressing one of four emotions: happiness (91 samples), anger (94 samples), sadness (100 samples), and neutrality (92 samples). Each file is named using a structured format that encodes the actor's gender, ID, expressed emotion, and recording number. For example, \"w04a11\" represents the eleventh recording of actress 04 portraying anger. This dataset aims to facilitate the development of SER models tailored to the Portuguese language.", "url": "https://aaivu.github.io/KuralHub/languages/portuguese.html#emouerj", "sameAs": "https://zenodo.org/records/5427549", "inLanguage": "pt", "keywords": ["Portuguese speech emotion recognition", "speech emotion recognition dataset", "emotional speech corpus"], "isAccessibleForFree": true, "includedInDataCatalog": {"@type": "DataCatalog", "name": "KuralHub", "url": "https://aaivu.github.io/KuralHub/datasets.html"}}</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="../index.html">KuralHub</a><nav aria-label="Site"><a href="../index.html">Paper</a><a href="../benchmark.html">Results</a><a href="../datasets.html" aria-current=page>Datasets</a><a href="../index.html#cite">Cite</a><a href="https://github.com/aaivu/KuralHub">GitHub</a></nav></div></header>
+<div class="layout with-toc">
+<aside class="toc"><nav aria-label="On this page"><ol><li><a href="#top">Overview</a></li><li><a href="#datasets">Datasets at a glance</a></li><li><a href="#benchmark">Benchmark results</a></li><li>Dataset entries<ol><li><a href="#verbo">VERBO</a></li><li><a href="#emouerj">emoUERJ</a></li></ol></li></ol></nav></aside>
+<main id="content">
+<p class="crumbs" id="top"><a href="../index.html">KuralHub</a><span aria-hidden="true">/</span><a href="../datasets.html">Datasets</a><span aria-hidden="true">/</span>Portuguese</p>
+<h1>Portuguese speech emotion recognition datasets</h1>
+<p class="lede">KuralHub lists <b>2</b> speech emotion recognition datasets for Portuguese, 1 of them openly available. Each entry below gives the emotion labels, size, recording setup, licence, where to get it and how to cite it. Portuguese is also part of the benchmark. The best of 11 models reached 91.0% test accuracy (<code>whisper-small</code>).</p>
+<dl class="facts"><dt>Language family</dt><dd>Indo-European (Romance)</dd><dt>ISO code</dt><dd>pt</dd><dt>Spoken mainly in</dt><dd>Brazil, Angola, Mozambique, and Portugal</dd><dt>Datasets listed</dt><dd>2</dd><dt>In benchmark</dt><dd>Yes</dd></dl>
+<h2 id="datasets">Datasets at a glance</h2><div class="table-wrap"><table><thead><tr><th data-sort=text>Dataset</th><th data-sort=text>Type</th><th class=num data-sort=num>Samples</th><th class=num data-sort=num>Speakers</th><th data-sort=text>Recording</th><th data-sort=text>Access</th><th data-sort=text>Licence</th></tr></thead><tbody><tr><td><a href="#verbo">VERBO</a></td><td>Audio</td><td class="num" data-v="1176">1176</td><td class="num" data-v="12">12</td><td>Acted</td><td>On request</td><td></td></tr><tr><td><a href="#emouerj">emoUERJ</a></td><td>Audio</td><td class="num" data-v="377">377</td><td class="num" data-v="4">4</td><td>Acted</td><td>Open</td><td>CC-BY 4.0</td></tr></tbody></table></div>
+<h2 id="benchmark">Benchmark results</h2>
+<p>Portuguese is one of the 29 languages in the KuralHub benchmark. Each of the 11 frozen speech models was trained with a small classification head on the shared emotions and scored on a held-out test split. Over all 11 runs the mean test accuracy was <b>60.0%</b> (median 63.0%). The best run reached <b>91.0%</b> with <code>whisper-small</code>. <a href="../benchmark.html">Compare with other languages</a>.</p>
+<div class="table-wrap"><table><caption><b><a href="#emouerj">emoUERJ</a></b> (run ID <code>emoUERJ</code>). Scores on the test split, best run highlighted.</caption><thead><tr><th data-sort=text>Model</th><th data-sort=text>Family</th><th class=num data-sort=num>Val acc.</th><th class=num data-sort=num>Test acc.</th><th class=num data-sort=num>Macro-F1</th><th class=num data-sort=num>Weighted-F1</th><th>Logs</th></tr></thead><tbody><tr><td class="mono">hubert-base-ls960</td><td>HuBERT</td><td class="num">0.91</td><td class="num">0.74</td><td class="num">0.72</td><td class="num">0.74</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/pt_emoUERJ_hubert-base-ls960">logs</a></td></tr><tr><td class="mono">hubert-large-ls960-ft</td><td>HuBERT</td><td class="num">0.59</td><td class="num">0.51</td><td class="num">0.50</td><td class="num">0.51</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/pt_emoUERJ_hubert-large-ls960-ft">logs</a></td></tr><tr><td class="mono">wav2vec2-base</td><td>wav2vec 2.0</td><td class="num">0.70</td><td class="num">0.63</td><td class="num">0.56</td><td class="num">0.60</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/pt_emoUERJ_wav2vec2-base">logs</a></td></tr><tr><td class="mono">wav2vec2-large-960h</td><td>wav2vec 2.0</td><td class="num">0.41</td><td class="num">0.23</td><td class="num">0.23</td><td class="num">0.24</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/pt_emoUERJ_wav2vec2-large-960h">logs</a></td></tr><tr><td class="mono">wav2vec2-large-lv60</td><td>wav2vec 2.0</td><td class="num">0.20</td><td class="num">0.29</td><td class="num">0.21</td><td class="num">0.25</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/pt_emoUERJ_wav2vec2-large-lv60">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-300m</td><td>wav2vec 2.0</td><td class="num">0.42</td><td class="num">0.47</td><td class="num">0.43</td><td class="num">0.47</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/pt_emoUERJ_wav2vec2-xls-r-300m">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-1b</td><td>wav2vec 2.0</td><td class="num">0.49</td><td class="num">0.44</td><td class="num">0.43</td><td class="num">0.43</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/pt_emoUERJ_wav2vec2-xls-r-1b">logs</a></td></tr><tr><td class="mono">wavlm-base-plus</td><td>WavLM</td><td class="num">0.88</td><td class="num">0.74</td><td class="num">0.72</td><td class="num">0.74</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/pt_emoUERJ_wavlm-base-plus">logs</a></td></tr><tr><td class="mono">wavlm-large</td><td>WavLM</td><td class="num">0.88</td><td class="num">0.76</td><td class="num">0.75</td><td class="num">0.77</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/pt_emoUERJ_wavlm-large">logs</a></td></tr><tr class=hl><td class="mono">whisper-small<span class="tag best">best</span></td><td>Whisper</td><td class="num">0.74</td><td class="num">0.91</td><td class="num">0.93</td><td class="num">0.91</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/pt_emoUERJ_whisper-small">logs</a></td></tr><tr><td class="mono">whisper-large</td><td>Whisper</td><td class="num">0.73</td><td class="num">0.88</td><td class="num">0.87</td><td class="num">0.88</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/pt_emoUERJ_whisper-large">logs</a></td></tr></tbody></table></div>
+<section class="entry" id="verbo">
+<h2>VERBO</h2>
+<dl class="facts"><dt>Type</dt><dd>Audio</dd><dt>Emotion labels</dt><dd>Happy, Disgust, Fear, Neutral, Anger, Surprise, and Sadness</dd><dt>Size</dt><dd>samples - 1176, speakers - 12</dd><dt>Speakers</dt><dd>12</dd><dt>Recording</dt><dd>Acted</dd><dt>Access</dt><dd>On request</dd><dt>Licence</dt><dd>Not stated</dd><dt>File format</dt><dd>.wav</dd><dt>Website</dt><dd><a href="https://sites.google.com/view/verbodatabase/home/download?authuser=0">Dataset Homepage</a></dd><dt>Paper</dt><dd><a href="https://thescipub.com/pdf/jcssp.2018.1420.1430.pdf">Paper Link</a></dd><dt>Download</dt><dd><a href="https://sites.google.com/view/verbodatabase/home/download?authuser=0">Download</a></dd></dl>
+<p>The VERBO database is a speech emotion dataset designed to evaluate the effectiveness of Speech Emotion Recognition (SER) systems. It comprises recordings of 14 sentences spoken by 12 professional speakers, including six actors and six actresses. Each speaker expresses six basic emotions—happiness, sadness, anger, fear, disgust, and surprise—along with a neutral state. In total, the dataset contains 1,176 audio recordings. A statistical analysis was conducted to assess how well these recordings represent emotional speech, making the VERBO database a valuable resource for training and evaluating SER models.</p>
+
+
+<h3>Citation</h3>
+<div class="cite-box"><button class="copy-btn" data-copy="#verbo-bib0">Copy</button><pre id="verbo-bib0"><code>@article{torres2018verbo,
+  title={Verbo: voice emotion recognition database in Portuguese language},
+  author={Torres Neto, Jos{\&#x27;e} R and Mano, Leandro Y and Ueyama, J{\&#x27;o} and others},
+  journal={Journal of Computer Science},
+  volume={14},
+  number={11},
+  pages={1420--1430},
+  year={2018}
+}</code></pre></div>
+<p class="small muted">Source: <a href="https://github.com/aaivu/KuralHub/blob/main/datasets/Portuguese/VERBO.md">datasets/Portuguese/VERBO.md</a> · <a href="https://github.com/aaivu/KuralHub/edit/main/datasets/Portuguese/VERBO.md">Suggest an edit</a></p>
+</section><section class="entry" id="emouerj">
+<h2>emoUERJ</h2>
+<dl class="facts"><dt>Type</dt><dd>Audio</dd><dt>Emotion labels</dt><dd>Happy, Sad, Angry, Neutral</dd><dt>Size</dt><dd>samples - 377, speakers - 4</dd><dt>Speakers</dt><dd>4</dd><dt>Recording</dt><dd>Acted</dd><dt>Access</dt><dd>Open</dd><dt>Licence</dt><dd>CC-BY 4.0</dd><dt>File format</dt><dd>.wav</dd><dt>Website</dt><dd><a href="https://zenodo.org/records/5427549">Dataset Homepage</a></dd><dt>Paper</dt><dd><a href="https://zenodo.org/records/5427549">Paper Link</a></dd><dt>Download</dt><dd><a href="https://zenodo.org/records/5427549">Download</a></dd></dl>
+<p>The dataset was developed at the State University of Rio de Janeiro to address the challenge of language specificity in Speech Emotion Recognition (SER), particularly for Portuguese, where existing databases are limited. It consists of 377 audio recordings, each featuring an actor expressing one of four emotions: happiness (91 samples), anger (94 samples), sadness (100 samples), and neutrality (92 samples). Each file is named using a structured format that encodes the actor&#x27;s gender, ID, expressed emotion, and recording number. For example, &quot;w04a11&quot; represents the eleventh recording of actress 04 portraying anger. This dataset aims to facilitate the development of SER models tailored to the Portuguese language.</p>
+
+<p class="callout small">Used in the KuralHub benchmark (run ID <code>emoUERJ</code>). See the results above.</p>
+<h3>Citation</h3>
+<div class="cite-box"><button class="copy-btn" data-copy="#emouerj-bib0">Copy</button><pre id="emouerj-bib0"><code>@article{bastos2021emouerj,
+  title={emoUERJ: an emotional speech database in Portuguese},
+  author={Bastos Germano, RG and Pompeu Tcheou, M and da Rocha Henriques, F and Pinto Gomes Jr, S},
+  journal={Zenodo. Sep},
+  year={2021}
+}</code></pre></div>
+<p class="small muted">Source: <a href="https://github.com/aaivu/KuralHub/blob/main/datasets/Portuguese/emoUERJ.md">datasets/Portuguese/emoUERJ.md</a> · <a href="https://github.com/aaivu/KuralHub/edit/main/datasets/Portuguese/emoUERJ.md">Suggest an edit</a></p>
+</section>
+<hr>
+<p class="small muted">This page is generated from <a href="https://github.com/aaivu/KuralHub/tree/main/datasets/Portuguese"><code>datasets/Portuguese/</code></a> in the KuralHub repository.
+If you use a dataset, cite its authors. If KuralHub helped you find it, please also <a href="../index.html#cite">cite the KuralHub paper</a>.</p>
+</main>
+</div>
+<footer class="site"><div class="inner">
+  <span>KuralHub · Interspeech 2026 · <a href="https://doi.org/10.21437/Interspeech.2026-3502">doi:10.21437/Interspeech.2026-3502</a> · MIT License</span>
+  <nav aria-label="Footer">
+    <a href="../index.html">Paper</a>
+    <a href="../benchmark.html">Results</a>
+    <a href="../datasets.html">Datasets</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+    <a href="https://github.com/aaivu/KuralHub">GitHub</a>
+    <a href="https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md">Contribute</a>
+  </nav>
+</div></footer>
+<script src="../js/site.js" defer></script>
+</body>
+</html>

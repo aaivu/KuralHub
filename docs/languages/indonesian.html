@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indonesian Speech Emotion Recognition Datasets | KuralHub</title>
+<meta name="description" content="2 speech emotion recognition datasets for Indonesian: Fahmi et al (2020) and IndoWaveSentiment. Benchmark results for 11 models.">
+<link rel="canonical" href="https://aaivu.github.io/KuralHub/languages/indonesian.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="KuralHub">
+<meta property="og:title" content="Indonesian speech emotion recognition datasets">
+<meta property="og:description" content="2 speech emotion recognition datasets for Indonesian: Fahmi et al (2020) and IndoWaveSentiment. Benchmark results for 11 models.">
+<meta property="og:url" content="https://aaivu.github.io/KuralHub/languages/indonesian.html">
+<meta property="og:image" content="https://aaivu.github.io/KuralHub/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="text/markdown" href="../datasets/Indonesian/Readme.md" title="Source Markdown">
+<link rel="alternate" type="text/plain" href="../llms.txt" title="llms.txt">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "KuralHub", "item": "https://aaivu.github.io/KuralHub/"}, {"@type": "ListItem", "position": 2, "name": "Datasets", "item": "https://aaivu.github.io/KuralHub/datasets.html"}, {"@type": "ListItem", "position": 3, "name": "Indonesian", "item": "https://aaivu.github.io/KuralHub/languages/indonesian.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "Fahmi et al (2020)", "description": "Fahmi et al (2020) is a Indonesian speech emotion recognition dataset (Audio). Emotion labels: Happy, Sad, Angry, Neutral. Size: samples - 965, speakers - 10. The dataset consists of audio recordings extracted from the Indonesian widescreen movie Cek Toko Sebelah. It was chosen for its well-structured dialogues, high audio quality, and minimal background noise. The dataset is designed to limit variations in speakers, accents, and recording techniques by using a single movie, ensuring consistency. This approach is similar to past studies that controlled variations by using a limited number of speakers and sentences per emotion class. However, restricting the dataset to one film also limits the total amount of data collected.", "url": "https://aaivu.github.io/KuralHub/languages/indonesian.html#fahmi-et-al-2020", "inLanguage": "id", "keywords": ["Indonesian speech emotion recognition", "speech emotion recognition dataset", "emotional speech corpus"], "includedInDataCatalog": {"@type": "DataCatalog", "name": "KuralHub", "url": "https://aaivu.github.io/KuralHub/datasets.html"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "IndoWaveSentiment", "description": "IndoWaveSentiment is a Indonesian speech emotion recognition dataset (Audio). Emotion labels: Neutral, Happy, Surprised, Disgusted, and Disappointed. Size: samples - 300, speakers - 10. IndoWaveSentiment is an Indonesian speech dataset for emotion classification, featuring 300 mono-channel 16 kHz audio recordings from 10 actors (5 male, 5 female). Each actor repeated a sentence three times across five emotions: neutral, happy, surprised, disgusted, and disappointed. Designed for deep learning and signal processing, it supports research in sentiment analysis and voice emotion classification.", "url": "https://aaivu.github.io/KuralHub/languages/indonesian.html#indowavesentiment", "sameAs": "https://data.mendeley.com/datasets/j9ytfdzy27/1", "inLanguage": "id", "keywords": ["Indonesian speech emotion recognition", "speech emotion recognition dataset", "emotional speech corpus"], "isAccessibleForFree": true, "includedInDataCatalog": {"@type": "DataCatalog", "name": "KuralHub", "url": "https://aaivu.github.io/KuralHub/datasets.html"}}</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="../index.html">KuralHub</a><nav aria-label="Site"><a href="../index.html">Paper</a><a href="../benchmark.html">Results</a><a href="../datasets.html" aria-current=page>Datasets</a><a href="../index.html#cite">Cite</a><a href="https://github.com/aaivu/KuralHub">GitHub</a></nav></div></header>
+<div class="layout with-toc">
+<aside class="toc"><nav aria-label="On this page"><ol><li><a href="#top">Overview</a></li><li><a href="#datasets">Datasets at a glance</a></li><li><a href="#benchmark">Benchmark results</a></li><li>Dataset entries<ol><li><a href="#fahmi-et-al-2020">Fahmi et al (2020)</a></li><li><a href="#indowavesentiment">IndoWaveSentiment</a></li></ol></li></ol></nav></aside>
+<main id="content">
+<p class="crumbs" id="top"><a href="../index.html">KuralHub</a><span aria-hidden="true">/</span><a href="../datasets.html">Datasets</a><span aria-hidden="true">/</span>Indonesian</p>
+<h1>Indonesian speech emotion recognition datasets</h1>
+<p class="lede">KuralHub lists <b>2</b> speech emotion recognition datasets for Indonesian, 1 of them openly available. Each entry below gives the emotion labels, size, recording setup, licence, where to get it and how to cite it. Indonesian is also part of the benchmark. The best of 11 models reached 99.0% test accuracy (<code>hubert-base-ls960</code>).</p>
+<dl class="facts"><dt>Language family</dt><dd>Austronesian (Malayic)</dd><dt>ISO code</dt><dd>id</dd><dt>Spoken mainly in</dt><dd>Indonesia</dd><dt>Datasets listed</dt><dd>2</dd><dt>In benchmark</dt><dd>Yes</dd></dl>
+<h2 id="datasets">Datasets at a glance</h2><div class="table-wrap"><table><thead><tr><th data-sort=text>Dataset</th><th data-sort=text>Type</th><th class=num data-sort=num>Samples</th><th class=num data-sort=num>Speakers</th><th data-sort=text>Recording</th><th data-sort=text>Access</th><th data-sort=text>Licence</th></tr></thead><tbody><tr><td><a href="#fahmi-et-al-2020">Fahmi et al (2020)</a></td><td>Audio</td><td class="num" data-v="965">965</td><td class="num" data-v="10">10</td><td>Acted</td><td>On request</td><td></td></tr><tr><td><a href="#indowavesentiment">IndoWaveSentiment</a></td><td>Audio</td><td class="num" data-v="300">300</td><td class="num" data-v="10">10</td><td>Acted</td><td>Open</td><td>CC-BY 4.0</td></tr></tbody></table></div>
+<h2 id="benchmark">Benchmark results</h2>
+<p>Indonesian is one of the 29 languages in the KuralHub benchmark. Each of the 11 frozen speech models was trained with a small classification head on the shared emotions and scored on a held-out test split. Over all 11 runs the mean test accuracy was <b>72.1%</b> (median 77.0%). The best run reached <b>99.0%</b> with <code>hubert-base-ls960</code>. <a href="../benchmark.html">Compare with other languages</a>.</p>
+<div class="table-wrap"><table><caption><b><a href="#indowavesentiment">IndoWaveSentiment</a></b> (run ID <code>IndoWaveSentiment</code>). Scores on the test split, best run highlighted.</caption><thead><tr><th data-sort=text>Model</th><th data-sort=text>Family</th><th class=num data-sort=num>Val acc.</th><th class=num data-sort=num>Test acc.</th><th class=num data-sort=num>Macro-F1</th><th class=num data-sort=num>Weighted-F1</th><th>Logs</th></tr></thead><tbody><tr class=hl><td class="mono">hubert-base-ls960<span class="tag best">best</span></td><td>HuBERT</td><td class="num">0.97</td><td class="num">0.99</td><td class="num">0.99</td><td class="num">0.99</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/id_IndoWaveSentiment_hubert-base-ls960">logs</a></td></tr><tr><td class="mono">hubert-large-ls960-ft</td><td>HuBERT</td><td class="num">0.63</td><td class="num">0.46</td><td class="num">0.45</td><td class="num">0.41</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/id_IndoWaveSentiment_hubert-large-ls960-ft">logs</a></td></tr><tr><td class="mono">wav2vec2-base</td><td>wav2vec 2.0</td><td class="num">0.78</td><td class="num">0.77</td><td class="num">0.76</td><td class="num">0.76</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/id_IndoWaveSentiment_wav2vec2-base">logs</a></td></tr><tr><td class="mono">wav2vec2-large-960h</td><td>wav2vec 2.0</td><td class="num">0.61</td><td class="num">0.37</td><td class="num">0.32</td><td class="num">0.26</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/id_IndoWaveSentiment_wav2vec2-large-960h">logs</a></td></tr><tr><td class="mono">wav2vec2-large-lv60</td><td>wav2vec 2.0</td><td class="num">0.50</td><td class="num">0.57</td><td class="num">0.53</td><td class="num">0.57</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/id_IndoWaveSentiment_wav2vec2-large-lv60">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-300m</td><td>wav2vec 2.0</td><td class="num">0.58</td><td class="num">0.46</td><td class="num">0.46</td><td class="num">0.45</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/id_IndoWaveSentiment_wav2vec2-xls-r-300m">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-1b</td><td>wav2vec 2.0</td><td class="num">0.63</td><td class="num">0.59</td><td class="num">0.58</td><td class="num">0.59</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/id_IndoWaveSentiment_wav2vec2-xls-r-1b">logs</a></td></tr><tr><td class="mono">wavlm-base-plus</td><td>WavLM</td><td class="num">0.94</td><td class="num">0.94</td><td class="num">0.94</td><td class="num">0.94</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/id_IndoWaveSentiment_wavlm-base-plus">logs</a></td></tr><tr><td class="mono">wavlm-large</td><td>WavLM</td><td class="num">0.97</td><td class="num">0.94</td><td class="num">0.94</td><td class="num">0.95</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/id_IndoWaveSentiment_wavlm-large">logs</a></td></tr><tr><td class="mono">whisper-small</td><td>Whisper</td><td class="num">0.96</td><td class="num">0.97</td><td class="num">0.97</td><td class="num">0.98</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/id_IndoWaveSentiment_whisper-small">logs</a></td></tr><tr><td class="mono">whisper-large</td><td>Whisper</td><td class="num">0.85</td><td class="num">0.87</td><td class="num">0.86</td><td class="num">0.87</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/id_IndoWaveSentiment_whisper-large">logs</a></td></tr></tbody></table></div>
+<section class="entry" id="fahmi-et-al-2020">
+<h2>Fahmi et al (2020)</h2>
+<dl class="facts"><dt>Type</dt><dd>Audio</dd><dt>Emotion labels</dt><dd>Happy, Sad, Angry, Neutral</dd><dt>Size</dt><dd>samples - 965, speakers - 10</dd><dt>Speakers</dt><dd>10</dd><dt>Recording</dt><dd>Acted</dd><dt>Access</dt><dd>On request</dd><dt>Licence</dt><dd>Not stated</dd><dt>File format</dt><dd>.wav</dd><dt>Paper</dt><dd><a href="https://aclanthology.org/2020.sltu-1.26.pdf">Paper Link</a></dd><dt>Contact</dt><dd><a href="mailto:fahmi51@ui.ac.id?subject=Dataset%20Access%20Request">fahmi51@ui.ac.id</a>, <a href="mailto:meganingrum@cs.ui.ac.id?subject=Dataset%20Access%20Request">meganingrum@cs.ui.ac.id</a>, <a href="mailto:mirna@cs.ui.ac.id?subject=Dataset%20Access%20Request">mirna@cs.ui.ac.id</a></dd></dl>
+<p>The dataset consists of audio recordings extracted from the Indonesian widescreen movie Cek Toko Sebelah. It was chosen for its well-structured dialogues, high audio quality, and minimal background noise. The dataset is designed to limit variations in speakers, accents, and recording techniques by using a single movie, ensuring consistency. This approach is similar to past studies that controlled variations by using a limited number of speakers and sentences per emotion class. However, restricting the dataset to one film also limits the total amount of data collected.</p>
+
+
+<h3>Citation</h3>
+<div class="cite-box"><button class="copy-btn" data-copy="#fahmi-et-al-2020-bib0">Copy</button><pre id="fahmi-et-al-2020-bib0"><code>@inproceedings{fahmi2020speech,
+  title={Speech-Emotion Detection in an Indonesian Movie},
+  author={Fahmi, Fahmi and Jiwanggi, Meganingrum Arista and Adriani, Mirna},
+  booktitle={Proceedings of the 1st Joint Workshop on Spoken Language Technologies for Under-resourced languages (SLTU) and Collaboration and Computing for Under-Resourced Languages (CCURL)},
+  pages={185--193},
+  year={2020}
+}</code></pre></div>
+<p class="small muted">Source: <a href="https://github.com/aaivu/KuralHub/blob/main/datasets/Indonesian/Fahmi_et_al_2020.md">datasets/Indonesian/Fahmi_et_al_2020.md</a> · <a href="https://github.com/aaivu/KuralHub/edit/main/datasets/Indonesian/Fahmi_et_al_2020.md">Suggest an edit</a></p>
+</section><section class="entry" id="indowavesentiment">
+<h2>IndoWaveSentiment</h2>
+<dl class="facts"><dt>Type</dt><dd>Audio</dd><dt>Emotion labels</dt><dd>Neutral, Happy, Surprised, Disgusted, and Disappointed</dd><dt>Size</dt><dd>samples - 300, speakers - 10</dd><dt>Speakers</dt><dd>10</dd><dt>Recording</dt><dd>Acted</dd><dt>Access</dt><dd>Open</dd><dt>Licence</dt><dd>CC-BY 4.0</dd><dt>File format</dt><dd>.wav</dd><dt>Website</dt><dd><a href="https://data.mendeley.com/datasets/j9ytfdzy27/1">Dataset Homepage</a></dd><dt>Paper</dt><dd><a href="https://www.sciencedirect.com/science/article/pii/S2352340924011004">Paper Link</a></dd><dt>Download</dt><dd><a href="https://data.mendeley.com/datasets/j9ytfdzy27/1">Download</a></dd></dl>
+<p>IndoWaveSentiment is an Indonesian speech dataset for emotion classification, featuring 300 mono-channel 16 kHz audio recordings from 10 actors (5 male, 5 female). Each actor repeated a sentence three times across five emotions: neutral, happy, surprised, disgusted, and disappointed. Designed for deep learning and signal processing, it supports research in sentiment analysis and voice emotion classification.</p>
+
+<p class="callout small">Used in the KuralHub benchmark (run ID <code>IndoWaveSentiment</code>). See the results above.</p>
+<h3>Citation</h3>
+<div class="cite-box"><button class="copy-btn" data-copy="#indowavesentiment-bib0">Copy</button><pre id="indowavesentiment-bib0"><code>@article{bustamin2024indowavesentiment,
+  title={IndoWaveSentiment: Indonesian audio dataset for emotion classification},
+  author={Bustamin, Anugrayani and Rizky, Andi M and Warni, Elly and Areni, Intan Sari and others},
+  journal={Data in Brief},
+  volume={57},
+  pages={111138},
+  year={2024},
+  publisher={Elsevier}
+}</code></pre></div>
+<p class="small muted">Source: <a href="https://github.com/aaivu/KuralHub/blob/main/datasets/Indonesian/IndoWaveSentiment.md">datasets/Indonesian/IndoWaveSentiment.md</a> · <a href="https://github.com/aaivu/KuralHub/edit/main/datasets/Indonesian/IndoWaveSentiment.md">Suggest an edit</a></p>
+</section>
+<hr>
+<p class="small muted">This page is generated from <a href="https://github.com/aaivu/KuralHub/tree/main/datasets/Indonesian"><code>datasets/Indonesian/</code></a> in the KuralHub repository.
+If you use a dataset, cite its authors. If KuralHub helped you find it, please also <a href="../index.html#cite">cite the KuralHub paper</a>.</p>
+</main>
+</div>
+<footer class="site"><div class="inner">
+  <span>KuralHub · Interspeech 2026 · <a href="https://doi.org/10.21437/Interspeech.2026-3502">doi:10.21437/Interspeech.2026-3502</a> · MIT License</span>
+  <nav aria-label="Footer">
+    <a href="../index.html">Paper</a>
+    <a href="../benchmark.html">Results</a>
+    <a href="../datasets.html">Datasets</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+    <a href="https://github.com/aaivu/KuralHub">GitHub</a>
+    <a href="https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md">Contribute</a>
+  </nav>
+</div></footer>
+<script src="../js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quechua Speech Emotion Recognition Datasets | KuralHub</title>
+<meta name="description" content="1 speech emotion recognition dataset for Quechua: Quechua Collao Corpus. Benchmark results for 11 models.">
+<link rel="canonical" href="https://aaivu.github.io/KuralHub/languages/quechua.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="KuralHub">
+<meta property="og:title" content="Quechua speech emotion recognition datasets">
+<meta property="og:description" content="1 speech emotion recognition dataset for Quechua: Quechua Collao Corpus. Benchmark results for 11 models.">
+<meta property="og:url" content="https://aaivu.github.io/KuralHub/languages/quechua.html">
+<meta property="og:image" content="https://aaivu.github.io/KuralHub/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="text/markdown" href="../datasets/Quechua/Readme.md" title="Source Markdown">
+<link rel="alternate" type="text/plain" href="../llms.txt" title="llms.txt">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "KuralHub", "item": "https://aaivu.github.io/KuralHub/"}, {"@type": "ListItem", "position": 2, "name": "Datasets", "item": "https://aaivu.github.io/KuralHub/datasets.html"}, {"@type": "ListItem", "position": 3, "name": "Quechua", "item": "https://aaivu.github.io/KuralHub/languages/quechua.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "A speech corpus of Quechua Collao for automatic dimensional emotion recognition", "alternateName": "Quechua Collao Corpus", "description": "Quechua Collao Corpus is a Quechua speech emotion recognition dataset (Audio). Emotion labels: Happy, Sad, Bored, Fear, Sleepy, Calm, Excited, Angry, and Neutral. Size: Number of samples: 12420, speakers: 6, duration: 15 hours. The dataset comprises recordings of words and sentences in the Quechua Collao language. These utterances were specifically collected to represent nine categorical emotions, aiming to facilitate research in automatic emotion recognition systems for this language. Quechua Collao corpus for automatic emotion recognition in speech. Audios are provided, alongside csv files with labels from 4 annotators for valence, arousal, and dominance values, using a 1 to 5 scale. Categorical labels are also included, as well as the script used for recording. This script contains sets of words and sentences written in Quechua Collao for 9 emotions.", "url": "https://aaivu.github.io/KuralHub/languages/quechua.html#quechua-collao", "sameAs": "https://figshare.com/articles/media/Quechua_Collao_for_Speech_Emotion_Recognition/20292516?file=37361143", "inLanguage": "qu", "keywords": ["Quechua speech emotion recognition", "speech emotion recognition dataset", "emotional speech corpus"], "license": "https://creativecommons.org/licenses/by/4.0/", "isAccessibleForFree": true, "includedInDataCatalog": {"@type": "DataCatalog", "name": "KuralHub", "url": "https://aaivu.github.io/KuralHub/datasets.html"}}</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="../index.html">KuralHub</a><nav aria-label="Site"><a href="../index.html">Paper</a><a href="../benchmark.html">Results</a><a href="../datasets.html" aria-current=page>Datasets</a><a href="../index.html#cite">Cite</a><a href="https://github.com/aaivu/KuralHub">GitHub</a></nav></div></header>
+<div class="layout with-toc">
+<aside class="toc"><nav aria-label="On this page"><ol><li><a href="#top">Overview</a></li><li><a href="#datasets">Datasets at a glance</a></li><li><a href="#benchmark">Benchmark results</a></li><li>Dataset entries<ol><li><a href="#quechua-collao">Quechua Collao Corpus</a></li></ol></li></ol></nav></aside>
+<main id="content">
+<p class="crumbs" id="top"><a href="../index.html">KuralHub</a><span aria-hidden="true">/</span><a href="../datasets.html">Datasets</a><span aria-hidden="true">/</span>Quechua</p>
+<h1>Quechua speech emotion recognition datasets</h1>
+<p class="lede">KuralHub lists <b>1</b> speech emotion recognition dataset for Quechua. Each entry below gives the emotion labels, size, recording setup, licence, where to get it and how to cite it. Quechua is also part of the benchmark. The best of 11 models reached 83.0% test accuracy (<code>whisper-large</code>).</p>
+<dl class="facts"><dt>Language family</dt><dd>Quechuan</dd><dt>ISO code</dt><dd>qu</dd><dt>Spoken mainly in</dt><dd>Throughout the central Andes Mountains including Argentina, Bolivia, Chile, Colombia, Ecuador, and Peru</dd><dt>Datasets listed</dt><dd>1</dd><dt>In benchmark</dt><dd>Yes</dd></dl>
+<h2 id="datasets">Datasets at a glance</h2><div class="table-wrap"><table><thead><tr><th data-sort=text>Dataset</th><th data-sort=text>Type</th><th class=num data-sort=num>Samples</th><th class=num data-sort=num>Speakers</th><th data-sort=text>Recording</th><th data-sort=text>Access</th><th data-sort=text>Licence</th></tr></thead><tbody><tr><td><a href="#quechua-collao">Quechua Collao Corpus</a></td><td>Audio</td><td class="num" data-v="12420">12420</td><td class="num" data-v="6">6</td><td>Acted</td><td>Open</td><td>CC BY 4.0</td></tr></tbody></table></div>
+<h2 id="benchmark">Benchmark results</h2>
+<p>Quechua is one of the 29 languages in the KuralHub benchmark. Each of the 11 frozen speech models was trained with a small classification head on the shared emotions and scored on a held-out test split. Over all 11 runs the mean test accuracy was <b>58.7%</b> (median 71.0%). The best run reached <b>83.0%</b> with <code>whisper-large</code>. <a href="../benchmark.html">Compare with other languages</a>.</p>
+<div class="table-wrap"><table><caption><b><a href="#quechua-collao">Quechua Collao Corpus</a></b> (run ID <code>Quechua-Collao-Corpus</code>). Scores on the test split, best run highlighted.</caption><thead><tr><th data-sort=text>Model</th><th data-sort=text>Family</th><th class=num data-sort=num>Val acc.</th><th class=num data-sort=num>Test acc.</th><th class=num data-sort=num>Macro-F1</th><th class=num data-sort=num>Weighted-F1</th><th>Logs</th></tr></thead><tbody><tr><td class="mono">hubert-base-ls960</td><td>HuBERT</td><td class="num">0.81</td><td class="num">0.80</td><td class="num">0.79</td><td class="num">0.80</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/qu_Quechua-Collao-Corpus_hubert-base-ls960">logs</a></td></tr><tr><td class="mono">hubert-large-ls960-ft</td><td>HuBERT</td><td class="num">0.50</td><td class="num">0.50</td><td class="num">0.47</td><td class="num">0.47</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/qu_Quechua-Collao-Corpus_hubert-large-ls960-ft">logs</a></td></tr><tr><td class="mono">wav2vec2-base</td><td>wav2vec 2.0</td><td class="num">0.78</td><td class="num">0.76</td><td class="num">0.76</td><td class="num">0.76</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/qu_Quechua-Collao-Corpus_wav2vec2-base">logs</a></td></tr><tr><td class="mono">wav2vec2-large-960h</td><td>wav2vec 2.0</td><td class="num">0.39</td><td class="num">0.36</td><td class="num">0.33</td><td class="num">0.33</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/qu_Quechua-Collao-Corpus_wav2vec2-large-960h">logs</a></td></tr><tr><td class="mono">wav2vec2-large-lv60</td><td>wav2vec 2.0</td><td class="num">0.22</td><td class="num">0.22</td><td class="num">0.18</td><td class="num">0.18</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/qu_Quechua-Collao-Corpus_wav2vec2-large-lv60">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-300m</td><td>wav2vec 2.0</td><td class="num">0.43</td><td class="num">0.43</td><td class="num">0.43</td><td class="num">0.43</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/qu_Quechua-Collao-Corpus_wav2vec2-xls-r-300m">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-1b</td><td>wav2vec 2.0</td><td class="num">0.28</td><td class="num">0.30</td><td class="num">0.23</td><td class="num">0.23</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/qu_Quechua-Collao-Corpus_wav2vec2-xls-r-1b">logs</a></td></tr><tr><td class="mono">wavlm-base-plus</td><td>WavLM</td><td class="num">0.75</td><td class="num">0.71</td><td class="num">0.70</td><td class="num">0.71</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/qu_Quechua-Collao-Corpus_wavlm-base-plus">logs</a></td></tr><tr><td class="mono">wavlm-large</td><td>WavLM</td><td class="num">0.76</td><td class="num">0.73</td><td class="num">0.73</td><td class="num">0.73</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/qu_Quechua-Collao-Corpus_wavlm-large">logs</a></td></tr><tr><td class="mono">whisper-small</td><td>Whisper</td><td class="num">0.82</td><td class="num">0.82</td><td class="num">0.81</td><td class="num">0.82</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/qu_Quechua-Collao-Corpus_whisper-small">logs</a></td></tr><tr class=hl><td class="mono">whisper-large<span class="tag best">best</span></td><td>Whisper</td><td class="num">0.84</td><td class="num">0.83</td><td class="num">0.83</td><td class="num">0.83</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/qu_Quechua-Collao-Corpus_whisper-large">logs</a></td></tr></tbody></table></div>
+<section class="entry" id="quechua-collao">
+<h2>Quechua Collao Corpus</h2>
+<p class="alt-name">A speech corpus of Quechua Collao for automatic dimensional emotion recognition</p><dl class="facts"><dt>Type</dt><dd>Audio</dd><dt>Emotion labels</dt><dd>Happy, Sad, Bored, Fear, Sleepy, Calm, Excited, Angry, and Neutral</dd><dt>Size</dt><dd>Number of samples: 12420, speakers: 6, duration: 15 hours</dd><dt>Speakers</dt><dd>6</dd><dt>Recording</dt><dd>Acted</dd><dt>Access</dt><dd>Open</dd><dt>Licence</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></dd><dt>File format</dt><dd>.wav</dd><dt>Website</dt><dd><a href="https://figshare.com/articles/media/Quechua_Collao_for_Speech_Emotion_Recognition/20292516?file=37361143">Dataset Homepage</a></dd><dt>Paper</dt><dd><a href="https://www.nature.com/articles/s41597-022-01855-9.pdf">Paper Link</a></dd><dt>Download</dt><dd><a href="https://figshare.com/ndownloader/files/37361143">Download</a></dd><dt>Contact</dt><dd><a href="mailto:rpaccotacya@unsa.edu.pe?subject=Dataset%20Access%20Request">rpaccotacya@unsa.edu.pe</a></dd></dl>
+<p>The dataset comprises recordings of words and sentences in the Quechua Collao language. These utterances were specifically collected to represent nine categorical emotions, aiming to facilitate research in automatic emotion recognition systems for this language. Quechua Collao corpus for automatic emotion recognition in speech. Audios are provided, alongside csv files with labels from 4 annotators for valence, arousal, and dominance values, using a 1 to 5 scale. Categorical labels are also included, as well as the script used for recording. This script contains sets of words and sentences written in Quechua Collao for 9 emotions.</p>
+
+<p class="callout small">Used in the KuralHub benchmark (run ID <code>Quechua-Collao-Corpus</code>). See the results above.</p>
+<h3>Citation</h3>
+<div class="cite-box"><button class="copy-btn" data-copy="#quechua-collao-bib0">Copy</button><pre id="quechua-collao-bib0"><code>@article{paccotacya2022speech,
+  title={A speech corpus of quechua collao for automatic dimensional emotion recognition},
+  author={Paccotacya-Yanque, Rosa YG and Huanca-Anquise, Candy A and Escalante-Calcina, Judith and Ramos-Lov{\&#x27;o}n, Wilber R and Cuno-Parari, {\&#x27;A}lvaro E},
+  journal={Scientific Data},
+  volume={9},
+  number={1},
+  pages={778},
+  year={2022},
+  publisher={Nature Publishing Group UK London}
+}</code></pre></div>
+<p class="small muted">Source: <a href="https://github.com/aaivu/KuralHub/blob/main/datasets/Quechua/Quechua-Collao.md">datasets/Quechua/Quechua-Collao.md</a> · <a href="https://github.com/aaivu/KuralHub/edit/main/datasets/Quechua/Quechua-Collao.md">Suggest an edit</a></p>
+</section>
+<hr>
+<p class="small muted">This page is generated from <a href="https://github.com/aaivu/KuralHub/tree/main/datasets/Quechua"><code>datasets/Quechua/</code></a> in the KuralHub repository.
+If you use a dataset, cite its authors. If KuralHub helped you find it, please also <a href="../index.html#cite">cite the KuralHub paper</a>.</p>
+</main>
+</div>
+<footer class="site"><div class="inner">
+  <span>KuralHub · Interspeech 2026 · <a href="https://doi.org/10.21437/Interspeech.2026-3502">doi:10.21437/Interspeech.2026-3502</a> · MIT License</span>
+  <nav aria-label="Footer">
+    <a href="../index.html">Paper</a>
+    <a href="../benchmark.html">Results</a>
+    <a href="../datasets.html">Datasets</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+    <a href="https://github.com/aaivu/KuralHub">GitHub</a>
+    <a href="https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md">Contribute</a>
+  </nav>
+</div></footer>
+<script src="../js/site.js" defer></script>
+</body>
+</html>

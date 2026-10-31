@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Afrikaans Speech Emotion Recognition Datasets | KuralHub</title>
+<meta name="description" content="1 speech emotion recognition dataset for Afrikaans: AfrikaansSE. Benchmark results for 11 models.">
+<link rel="canonical" href="https://aaivu.github.io/KuralHub/languages/afrikaans.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="KuralHub">
+<meta property="og:title" content="Afrikaans speech emotion recognition datasets">
+<meta property="og:description" content="1 speech emotion recognition dataset for Afrikaans: AfrikaansSE. Benchmark results for 11 models.">
+<meta property="og:url" content="https://aaivu.github.io/KuralHub/languages/afrikaans.html">
+<meta property="og:image" content="https://aaivu.github.io/KuralHub/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="text/markdown" href="../datasets/Afrikaans/Readme.md" title="Source Markdown">
+<link rel="alternate" type="text/plain" href="../llms.txt" title="llms.txt">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "KuralHub", "item": "https://aaivu.github.io/KuralHub/"}, {"@type": "ListItem", "position": 2, "name": "Datasets", "item": "https://aaivu.github.io/KuralHub/datasets.html"}, {"@type": "ListItem", "position": 3, "name": "Afrikaans", "item": "https://aaivu.github.io/KuralHub/languages/afrikaans.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "Creation of an Afrikaans speech corpora for Speech Emotion Recognition", "alternateName": "AfrikaansSE", "description": "AfrikaansSE is a Afrikaans speech emotion recognition dataset (Audio). Emotion labels: Anticipation, Joy, Trust, Fear, Surprise, Sadness, Disgust and Anger. Size: Number of samples: 800. This dataset was created to support research in automatic speech emotion recognition (SER) for the Afrikaans language. It comprises high-quality audio recordings captured in a controlled studio environment. The recordings include both acted and spontaneous speech, covering eight emotional categories: Anticipation, Joy, Trust, Fear, Surprise, Sadness, Disgust, and Anger. The corpus is designed to facilitate the development and evaluation of SER systems tailored to Afrikaans, providing researchers with a valuable resource that reflects natural as well as expressive emotional speech patterns.", "url": "https://aaivu.github.io/KuralHub/languages/afrikaans.html#afrikaansse", "inLanguage": "af", "keywords": ["Afrikaans speech emotion recognition", "speech emotion recognition dataset", "emotional speech corpus"], "includedInDataCatalog": {"@type": "DataCatalog", "name": "KuralHub", "url": "https://aaivu.github.io/KuralHub/datasets.html"}}</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="../index.html">KuralHub</a><nav aria-label="Site"><a href="../index.html">Paper</a><a href="../benchmark.html">Results</a><a href="../datasets.html" aria-current=page>Datasets</a><a href="../index.html#cite">Cite</a><a href="https://github.com/aaivu/KuralHub">GitHub</a></nav></div></header>
+<div class="layout with-toc">
+<aside class="toc"><nav aria-label="On this page"><ol><li><a href="#top">Overview</a></li><li><a href="#datasets">Datasets at a glance</a></li><li><a href="#benchmark">Benchmark results</a></li><li>Dataset entries<ol><li><a href="#afrikaansse">AfrikaansSE</a></li></ol></li></ol></nav></aside>
+<main id="content">
+<p class="crumbs" id="top"><a href="../index.html">KuralHub</a><span aria-hidden="true">/</span><a href="../datasets.html">Datasets</a><span aria-hidden="true">/</span>Afrikaans</p>
+<h1>Afrikaans speech emotion recognition datasets</h1>
+<p class="lede">KuralHub lists <b>1</b> speech emotion recognition dataset for Afrikaans. Each entry below gives the emotion labels, size, recording setup, licence, where to get it and how to cite it. Afrikaans is also part of the benchmark. The best of 11 models reached 71.0% test accuracy (<code>whisper-small</code>).</p>
+<dl class="facts"><dt>Language family</dt><dd>Indo-European (Germanic)</dd><dt>ISO code</dt><dd>af</dd><dt>Spoken mainly in</dt><dd>South Africa, Namibia</dd><dt>Datasets listed</dt><dd>1</dd><dt>In benchmark</dt><dd>Yes</dd></dl>
+<h2 id="datasets">Datasets at a glance</h2><div class="table-wrap"><table><thead><tr><th data-sort=text>Dataset</th><th data-sort=text>Type</th><th class=num data-sort=num>Samples</th><th class=num data-sort=num>Speakers</th><th data-sort=text>Recording</th><th data-sort=text>Access</th><th data-sort=text>Licence</th></tr></thead><tbody><tr><td><a href="#afrikaansse">AfrikaansSE</a></td><td>Audio</td><td class="num" data-v="800">800</td><td class="num" data-v=""></td><td>Studio (Local Youtube Channel)</td><td>On request</td><td>Creative Commons Attribution license</td></tr></tbody></table></div>
+<h2 id="benchmark">Benchmark results</h2>
+<p>Afrikaans is one of the 29 languages in the KuralHub benchmark. Each of the 11 frozen speech models was trained with a small classification head on the shared emotions and scored on a held-out test split. Over all 11 runs the mean test accuracy was <b>52.4%</b> (median 59.0%). The best run reached <b>71.0%</b> with <code>whisper-small</code>. <a href="../benchmark.html">Compare with other languages</a>.</p>
+<div class="table-wrap"><table><caption><b><a href="#afrikaansse">AfrikaansSE</a></b> (run ID <code>AfrikaansEmotionalSpeechCorpus</code>). Scores on the test split, best run highlighted.</caption><thead><tr><th data-sort=text>Model</th><th data-sort=text>Family</th><th class=num data-sort=num>Val acc.</th><th class=num data-sort=num>Test acc.</th><th class=num data-sort=num>Macro-F1</th><th class=num data-sort=num>Weighted-F1</th><th>Logs</th></tr></thead><tbody><tr><td class="mono">hubert-base-ls960</td><td>HuBERT</td><td class="num">0.65</td><td class="num">0.67</td><td class="num">0.62</td><td class="num">0.66</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/af_AfrikaansEmotionalSpeechCorpus_hubert-base-ls960">logs</a></td></tr><tr><td class="mono">hubert-large-ls960-ft</td><td>HuBERT</td><td class="num">0.32</td><td class="num">0.41</td><td class="num">0.41</td><td class="num">0.41</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/af_AfrikaansEmotionalSpeechCorpus_hubert-large-ls960-ft">logs</a></td></tr><tr><td class="mono">wav2vec2-base</td><td>wav2vec 2.0</td><td class="num">0.57</td><td class="num">0.66</td><td class="num">0.67</td><td class="num">0.67</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/af_AfrikaansEmotionalSpeechCorpus_wav2vec2-base">logs</a></td></tr><tr><td class="mono">wav2vec2-large-960h</td><td>wav2vec 2.0</td><td class="num">0.38</td><td class="num">0.43</td><td class="num">0.41</td><td class="num">0.41</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/af_AfrikaansEmotionalSpeechCorpus_wav2vec2-large-960h">logs</a></td></tr><tr><td class="mono">wav2vec2-large-lv60</td><td>wav2vec 2.0</td><td class="num">0.36</td><td class="num">0.40</td><td class="num">0.40</td><td class="num">0.40</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/af_AfrikaansEmotionalSpeechCorpus_wav2vec2-large-lv60">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-300m</td><td>wav2vec 2.0</td><td class="num">0.38</td><td class="num">0.37</td><td class="num">0.37</td><td class="num">0.37</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/af_AfrikaansEmotionalSpeechCorpus_wav2vec2-xls-r-300m">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-1b</td><td>wav2vec 2.0</td><td class="num">0.35</td><td class="num">0.24</td><td class="num">0.15</td><td class="num">0.11</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/af_AfrikaansEmotionalSpeechCorpus_wav2vec2-xls-r-1b">logs</a></td></tr><tr><td class="mono">wavlm-base-plus</td><td>WavLM</td><td class="num">0.53</td><td class="num">0.59</td><td class="num">0.60</td><td class="num">0.60</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/af_AfrikaansEmotionalSpeechCorpus_wavlm-base-plus">logs</a></td></tr><tr><td class="mono">wavlm-large</td><td>WavLM</td><td class="num">0.29</td><td class="num">0.63</td><td class="num">0.58</td><td class="num">0.61</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/af_AfrikaansEmotionalSpeechCorpus_wavlm-large">logs</a></td></tr><tr class=hl><td class="mono">whisper-small<span class="tag best">best</span></td><td>Whisper</td><td class="num">0.75</td><td class="num">0.71</td><td class="num">0.70</td><td class="num">0.70</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/af_AfrikaansEmotionalSpeechCorpus_whisper-small">logs</a></td></tr><tr><td class="mono">whisper-large</td><td>Whisper</td><td class="num">0.68</td><td class="num">0.65</td><td class="num">0.63</td><td class="num">0.63</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/af_AfrikaansEmotionalSpeechCorpus_whisper-large">logs</a></td></tr></tbody></table></div>
+<section class="entry" id="afrikaansse">
+<h2>AfrikaansSE</h2>
+<p class="alt-name">Creation of an Afrikaans speech corpora for Speech Emotion Recognition</p><dl class="facts"><dt>Type</dt><dd>Audio</dd><dt>Emotion labels</dt><dd>Anticipation, Joy, Trust, Fear, Surprise, Sadness, Disgust and Anger</dd><dt>Size</dt><dd>Number of samples: 800</dd><dt>Recording</dt><dd>Studio (Local Youtube Channel)</dd><dt>Access</dt><dd>On request</dd><dt>Licence</dt><dd>Creative Commons Attribution license</dd><dt>File format</dt><dd>.wav</dd><dt>Paper</dt><dd><a href="https://drive.google.com/file/d/178ObKjeWx1m7Faek45IsJ53B2fZiViPS/view">Paper Link</a></dd><dt>Contact</dt><dd><a href="mailto:mnorval@gmail.com?subject=Dataset%20Access%20Request">mail1</a>, <a href="mailto:wangzengh@gmail.com?subject=Dataset%20Access%20Request">mail2</a></dd></dl>
+<p>This dataset was created to support research in automatic speech emotion recognition (SER) for the Afrikaans language. It comprises high-quality audio recordings captured in a controlled studio environment. The recordings include both acted and spontaneous speech, covering eight emotional categories: Anticipation, Joy, Trust, Fear, Surprise, Sadness, Disgust, and Anger. The corpus is designed to facilitate the development and evaluation of SER systems tailored to Afrikaans, providing researchers with a valuable resource that reflects natural as well as expressive emotional speech patterns.</p>
+
+<p class="callout small">Used in the KuralHub benchmark (run ID <code>AfrikaansEmotionalSpeechCorpus</code>). See the results above.</p>
+<h3>Citation</h3>
+<div class="cite-box"><button class="copy-btn" data-copy="#afrikaansse-bib0">Copy</button><pre id="afrikaansse-bib0"><code>@inproceedings{norval2022creation,
+  title={Creation of an afrikaans speech corpora for speech emotion recognition},
+  author={Norval, Michael and Wang, Zenghui},
+  booktitle={2022 2nd International Conference on Robotics, Automation and Artificial Intelligence (RAAI)},
+  pages={193--196},
+  year={2022},
+  organization={IEEE}
+}</code></pre></div>
+<p class="small muted">Source: <a href="https://github.com/aaivu/KuralHub/blob/main/datasets/Afrikaans/AfrikaansSE.md">datasets/Afrikaans/AfrikaansSE.md</a> · <a href="https://github.com/aaivu/KuralHub/edit/main/datasets/Afrikaans/AfrikaansSE.md">Suggest an edit</a></p>
+</section>
+<hr>
+<p class="small muted">This page is generated from <a href="https://github.com/aaivu/KuralHub/tree/main/datasets/Afrikaans"><code>datasets/Afrikaans/</code></a> in the KuralHub repository.
+If you use a dataset, cite its authors. If KuralHub helped you find it, please also <a href="../index.html#cite">cite the KuralHub paper</a>.</p>
+</main>
+</div>
+<footer class="site"><div class="inner">
+  <span>KuralHub · Interspeech 2026 · <a href="https://doi.org/10.21437/Interspeech.2026-3502">doi:10.21437/Interspeech.2026-3502</a> · MIT License</span>
+  <nav aria-label="Footer">
+    <a href="../index.html">Paper</a>
+    <a href="../benchmark.html">Results</a>
+    <a href="../datasets.html">Datasets</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+    <a href="https://github.com/aaivu/KuralHub">GitHub</a>
+    <a href="https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md">Contribute</a>
+  </nav>
+</div></footer>
+<script src="../js/site.js" defer></script>
+</body>
+</html>

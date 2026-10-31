@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hungarian Speech Emotion Recognition Datasets | KuralHub</title>
+<meta name="description" content="2 speech emotion recognition datasets for Hungarian: HESD and SEWA. Benchmark results for 11 models.">
+<link rel="canonical" href="https://aaivu.github.io/KuralHub/languages/hungarian.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="KuralHub">
+<meta property="og:title" content="Hungarian speech emotion recognition datasets">
+<meta property="og:description" content="2 speech emotion recognition datasets for Hungarian: HESD and SEWA. Benchmark results for 11 models.">
+<meta property="og:url" content="https://aaivu.github.io/KuralHub/languages/hungarian.html">
+<meta property="og:image" content="https://aaivu.github.io/KuralHub/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="text/markdown" href="../datasets/Hungarian/Readme.md" title="Source Markdown">
+<link rel="alternate" type="text/plain" href="../llms.txt" title="llms.txt">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "KuralHub", "item": "https://aaivu.github.io/KuralHub/"}, {"@type": "ListItem", "position": 2, "name": "Datasets", "item": "https://aaivu.github.io/KuralHub/datasets.html"}, {"@type": "ListItem", "position": 3, "name": "Hungarian", "item": "https://aaivu.github.io/KuralHub/languages/hungarian.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "Hungarian Emotional Speech Database", "alternateName": "HESD", "description": "HESD is a Hungarian speech emotion recognition dataset (Audio). Emotion labels: Fear, Sadness, Anger, Surprise, Disgust, Joy, Excitement, Neutral. Size: Number of samples: 760 , speakers: 38. This dataset comprises recordings of three Hungarian sentences, each articulated to express eight fundamental emotions: happiness, sadness, anger, fear, surprise, disgust, contempt, and neutral. These recordings were performed by nonprofessional speakers. The primary objective of this dataset is to facilitate the examination of human emotion perception and to support the development of automatic emotion recognition systems. To achieve this, the dataset was utilized in perception tests comparing human recognition of emotions and in training Hidden Markov Models (HMM) for automatic emotion recognition, optimizing parameters such as acoustic preprocessing and the number of states in the models.", "url": "https://aaivu.github.io/KuralHub/languages/hungarian.html#hesd", "inLanguage": "hu", "keywords": ["Hungarian speech emotion recognition", "speech emotion recognition dataset", "emotional speech corpus"], "includedInDataCatalog": {"@type": "DataCatalog", "name": "KuralHub", "url": "https://aaivu.github.io/KuralHub/datasets.html"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "SEWA", "description": "SEWA is a Hungarian speech emotion recognition dataset (Multimodal (Audio, Video)). Emotion labels: emotions are characterized using valence and arousal.. Size: duration: 44 hours, samples: 1990, speakers:398. The SEWA dataset is a multimodal dataset designed for emotion recognition and analysis. It includes audio and video data collected from participants during natural interactions. The dataset aims to study emotional states in real-world scenarios, focusing on cross-cultural differences and spontaneous emotional expressions. Data was collected using wearable devices and audio-visual recordings, making it a rich resource for affective computing research.", "url": "https://aaivu.github.io/KuralHub/languages/hungarian.html#sewa", "sameAs": "https://db.sewaproject.eu/", "inLanguage": "hu", "keywords": ["Hungarian speech emotion recognition", "speech emotion recognition dataset", "emotional speech corpus"], "license": "https://db.sewaproject.eu/media/doc/eula.pdf", "includedInDataCatalog": {"@type": "DataCatalog", "name": "KuralHub", "url": "https://aaivu.github.io/KuralHub/datasets.html"}}</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="../index.html">KuralHub</a><nav aria-label="Site"><a href="../index.html">Paper</a><a href="../benchmark.html">Results</a><a href="../datasets.html" aria-current=page>Datasets</a><a href="../index.html#cite">Cite</a><a href="https://github.com/aaivu/KuralHub">GitHub</a></nav></div></header>
+<div class="layout with-toc">
+<aside class="toc"><nav aria-label="On this page"><ol><li><a href="#top">Overview</a></li><li><a href="#datasets">Datasets at a glance</a></li><li><a href="#benchmark">Benchmark results</a></li><li>Dataset entries<ol><li><a href="#hesd">HESD</a></li><li><a href="#sewa">SEWA</a></li></ol></li></ol></nav></aside>
+<main id="content">
+<p class="crumbs" id="top"><a href="../index.html">KuralHub</a><span aria-hidden="true">/</span><a href="../datasets.html">Datasets</a><span aria-hidden="true">/</span>Hungarian</p>
+<h1>Hungarian speech emotion recognition datasets</h1>
+<p class="lede">KuralHub lists <b>2</b> speech emotion recognition datasets for Hungarian. Each entry below gives the emotion labels, size, recording setup, licence, where to get it and how to cite it. Hungarian is also part of the benchmark. The best of 11 models reached 52.0% test accuracy (<code>hubert-base-ls960</code>).</p>
+<dl class="facts"><dt>Language family</dt><dd>Uralic (Ugric)</dd><dt>ISO code</dt><dd>hu</dd><dt>Spoken mainly in</dt><dd>Hungary, Serbia (in Vojvodina), Austria (in Burgenland), Slovenia (in Prekmurje), Romania (in Transylvania),</dd><dt>Datasets listed</dt><dd>2</dd><dt>In benchmark</dt><dd>Yes</dd></dl>
+<h2 id="datasets">Datasets at a glance</h2><div class="table-wrap"><table><thead><tr><th data-sort=text>Dataset</th><th data-sort=text>Type</th><th class=num data-sort=num>Samples</th><th class=num data-sort=num>Speakers</th><th data-sort=text>Recording</th><th data-sort=text>Access</th><th data-sort=text>Licence</th></tr></thead><tbody><tr><td><a href="#hesd">HESD</a></td><td>Audio</td><td class="num" data-v="888">888</td><td class="num" data-v="37">37</td><td>Acted(Non Professional Speakers - Quiet Office Room)</td><td>On request</td><td></td></tr><tr><td><a href="#sewa">SEWA</a></td><td>Multimodal (Audio, Video)</td><td class="num" data-v="1990">1990</td><td class="num" data-v="398">398</td><td>Spontaneous (natural interactions)</td><td>On request</td><td>Dataset-Specific - SEWA EULA</td></tr></tbody></table></div>
+<h2 id="benchmark">Benchmark results</h2>
+<p>Hungarian is one of the 29 languages in the KuralHub benchmark. Each of the 11 frozen speech models was trained with a small classification head on the shared emotions and scored on a held-out test split. Over all 11 runs the mean test accuracy was <b>36.7%</b> (median 43.0%). The best run reached <b>52.0%</b> with <code>hubert-base-ls960</code>. <a href="../benchmark.html">Compare with other languages</a>.</p>
+<div class="table-wrap"><table><caption><b><a href="#hesd">HESD</a></b> (run ID <code>HungarianEmotionalSpeechCorpus</code>). Scores on the test split, best run highlighted.</caption><thead><tr><th data-sort=text>Model</th><th data-sort=text>Family</th><th class=num data-sort=num>Val acc.</th><th class=num data-sort=num>Test acc.</th><th class=num data-sort=num>Macro-F1</th><th class=num data-sort=num>Weighted-F1</th><th>Logs</th></tr></thead><tbody><tr class=hl><td class="mono">hubert-base-ls960<span class="tag best">best</span></td><td>HuBERT</td><td class="num">0.54</td><td class="num">0.52</td><td class="num">0.52</td><td class="num">0.51</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/hu_HungarianEmotionalSpeechCorpus_hubert-base-ls960">logs</a></td></tr><tr><td class="mono">hubert-large-ls960-ft</td><td>HuBERT</td><td class="num">0.29</td><td class="num">0.21</td><td class="num">0.19</td><td class="num">0.18</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/hu_HungarianEmotionalSpeechCorpus_hubert-large-ls960-ft">logs</a></td></tr><tr><td class="mono">wav2vec2-base</td><td>wav2vec 2.0</td><td class="num">0.42</td><td class="num">0.43</td><td class="num">0.40</td><td class="num">0.41</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/hu_HungarianEmotionalSpeechCorpus_wav2vec2-base">logs</a></td></tr><tr><td class="mono">wav2vec2-large-960h</td><td>wav2vec 2.0</td><td class="num">0.28</td><td class="num">0.24</td><td class="num">0.22</td><td class="num">0.21</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/hu_HungarianEmotionalSpeechCorpus_wav2vec2-large-960h">logs</a></td></tr><tr><td class="mono">wav2vec2-large-lv60</td><td>wav2vec 2.0</td><td class="num">0.22</td><td class="num">0.23</td><td class="num">0.17</td><td class="num">0.16</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/hu_HungarianEmotionalSpeechCorpus_wav2vec2-large-lv60">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-300m</td><td>wav2vec 2.0</td><td class="num">0.28</td><td class="num">0.23</td><td class="num">0.22</td><td class="num">0.21</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/hu_HungarianEmotionalSpeechCorpus_wav2vec2-xls-r-300m">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-1b</td><td>wav2vec 2.0</td><td class="num">0.19</td><td class="num">0.22</td><td class="num">0.14</td><td class="num">0.13</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/hu_HungarianEmotionalSpeechCorpus_wav2vec2-xls-r-1b">logs</a></td></tr><tr><td class="mono">wavlm-base-plus</td><td>WavLM</td><td class="num">0.52</td><td class="num">0.51</td><td class="num">0.50</td><td class="num">0.49</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/hu_HungarianEmotionalSpeechCorpus_wavlm-base-plus">logs</a></td></tr><tr><td class="mono">wavlm-large</td><td>WavLM</td><td class="num">0.45</td><td class="num">0.49</td><td class="num">0.48</td><td class="num">0.47</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/hu_HungarianEmotionalSpeechCorpus_wavlm-large">logs</a></td></tr><tr><td class="mono">whisper-small</td><td>Whisper</td><td class="num">0.41</td><td class="num">0.52</td><td class="num">0.51</td><td class="num">0.51</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/hu_HungarianEmotionalSpeechCorpus_whisper-small">logs</a></td></tr><tr><td class="mono">whisper-large</td><td>Whisper</td><td class="num">0.48</td><td class="num">0.44</td><td class="num">0.43</td><td class="num">0.43</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/hu_HungarianEmotionalSpeechCorpus_whisper-large">logs</a></td></tr></tbody></table></div>
+<section class="entry" id="hesd">
+<h2>HESD</h2>
+<p class="alt-name">Hungarian Emotional Speech Database</p><dl class="facts"><dt>Type</dt><dd>Audio</dd><dt>Emotion labels</dt><dd>Fear, Sadness, Anger, Surprise, Disgust, Joy, Excitement, Neutral</dd><dt>Size</dt><dd>Number of samples: 760 , speakers: 38</dd><dt>Speakers</dt><dd>37</dd><dt>Recording</dt><dd>Acted(Non Professional Speakers - Quiet Office Room)</dd><dt>Access</dt><dd>On request</dd><dt>Licence</dt><dd>Not stated</dd><dt>File format</dt><dd>.wav</dd><dt>Paper</dt><dd><a href="https://www.researchgate.net/profile/Klara-Vicsi/publication/225204892_Speech_Emotion_Perception_by_Human_and_Machine/links/09e4150b71db991837000000/Speech-Emotion-Perception-by-Human-and-Machine.pdf">Speech Emotion Perception by Human and Machine</a></dd><dt>Contact</dt><dd><a href="mailto:toth.sz@tmit.bme.hu?subject=Dataset%20Access%20Request">toth.sz@tmit.bme.hu</a>, <a href="mailto:vicsi@tmit.bme.hu?subject=Dataset%20Access%20Request">vicsi@tmit.bme.hu</a>, <a href="mailto:sztaho.david@tmit.bme.hu?subject=Dataset%20Access%20Request">sztaho.david@tmit.bme.hu</a></dd></dl>
+<p>This dataset comprises recordings of three Hungarian sentences, each articulated to express eight fundamental emotions: happiness, sadness, anger, fear, surprise, disgust, contempt, and neutral. These recordings were performed by nonprofessional speakers. The primary objective of this dataset is to facilitate the examination of human emotion perception and to support the development of automatic emotion recognition systems. To achieve this, the dataset was utilized in perception tests comparing human recognition of emotions and in training Hidden Markov Models (HMM) for automatic emotion recognition, optimizing parameters such as acoustic preprocessing and the number of states in the models.</p>
+
+<p class="callout small">Used in the KuralHub benchmark (run ID <code>HungarianEmotionalSpeechCorpus</code>). See the results above.</p>
+<h3>Citation</h3>
+<div class="cite-box"><button class="copy-btn" data-copy="#hesd-bib0">Copy</button><pre id="hesd-bib0"><code>@inproceedings{toth2008speech,
+  title={Speech emotion perception by human and machine},
+  author={T{\&#x27;o}th, Szabolcs Levente and Sztah{\&#x27;o}, David and Vicsi, Kl{\&#x27;a}ra},
+  booktitle={Verbal and Nonverbal Features of Human-Human and Human-Machine Interaction: COST Action 2102 International Conference, Patras, Greece, October 29-31, 2007. Revised Papers},
+  pages={213--224},
+  year={2008},
+  organization={Springer}
+}</code></pre></div>
+<p class="small muted">Source: <a href="https://github.com/aaivu/KuralHub/blob/main/datasets/Hungarian/HESD.md">datasets/Hungarian/HESD.md</a> · <a href="https://github.com/aaivu/KuralHub/edit/main/datasets/Hungarian/HESD.md">Suggest an edit</a></p>
+</section><section class="entry" id="sewa">
+<h2>SEWA</h2>
+<dl class="facts"><dt>Type</dt><dd>Multimodal (Audio, Video)</dd><dt>Emotion labels</dt><dd>emotions are characterized using valence and arousal.</dd><dt>Size</dt><dd>duration: 44 hours, samples: 1990, speakers:398</dd><dt>Speakers</dt><dd>398</dd><dt>Recording</dt><dd>Spontaneous (natural interactions)</dd><dt>Access</dt><dd>On request</dd><dt>Licence</dt><dd><a href="https://db.sewaproject.eu/media/doc/eula.pdf">Dataset-Specific - SEWA EULA</a></dd><dt>File format</dt><dd>.wav</dd><dt>Website</dt><dd><a href="https://db.sewaproject.eu/">Dataset Homepage</a></dd><dt>Paper</dt><dd><a href="http://arxiv.org/pdf/1901.02839">Paper Link</a></dd><dt>Download</dt><dd><a href="https://db.sewaproject.eu/">Request Access</a></dd><dt>Contact</dt><dd><a href="mailto:sewa@mahnob-db.eu?subject=Dataset%20Access%20Request">mail</a></dd></dl>
+<p>The SEWA dataset is a multimodal dataset designed for emotion recognition and analysis. It includes audio and video data collected from participants during natural interactions. The dataset aims to study emotional states in real-world scenarios, focusing on cross-cultural differences and spontaneous emotional expressions. Data was collected using wearable devices and audio-visual recordings, making it a rich resource for affective computing research.</p>
+
+
+<h3>Citation</h3>
+<div class="cite-box"><button class="copy-btn" data-copy="#sewa-bib0">Copy</button><pre id="sewa-bib0"><code>@article{kossaifi2019sewa,
+  title={Sewa db: A rich database for audio-visual emotion and sentiment research in the wild},
+  author={Kossaifi, Jean and Walecki, Robert and Panagakis, Yannis and Shen, Jie and Schmitt, Maximilian and Ringeval, Fabien and Han, Jing and Pandit, Vedhas and Toisoul, Antoine and Schuller, Bj{\&quot;o}rn and others},
+  journal={IEEE transactions on pattern analysis and machine intelligence},
+  volume={43},
+  number={3},
+  pages={1022--1040},
+  year={2019},
+  publisher={IEEE}
+}</code></pre></div>
+<p class="small muted">Source: <a href="https://github.com/aaivu/KuralHub/blob/main/datasets/Hungarian/SEWA.md">datasets/Hungarian/SEWA.md</a> · <a href="https://github.com/aaivu/KuralHub/edit/main/datasets/Hungarian/SEWA.md">Suggest an edit</a></p>
+</section>
+<hr>
+<p class="small muted">This page is generated from <a href="https://github.com/aaivu/KuralHub/tree/main/datasets/Hungarian"><code>datasets/Hungarian/</code></a> in the KuralHub repository.
+If you use a dataset, cite its authors. If KuralHub helped you find it, please also <a href="../index.html#cite">cite the KuralHub paper</a>.</p>
+</main>
+</div>
+<footer class="site"><div class="inner">
+  <span>KuralHub · Interspeech 2026 · <a href="https://doi.org/10.21437/Interspeech.2026-3502">doi:10.21437/Interspeech.2026-3502</a> · MIT License</span>
+  <nav aria-label="Footer">
+    <a href="../index.html">Paper</a>
+    <a href="../benchmark.html">Results</a>
+    <a href="../datasets.html">Datasets</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+    <a href="https://github.com/aaivu/KuralHub">GitHub</a>
+    <a href="https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md">Contribute</a>
+  </nav>
+</div></footer>
+<script src="../js/site.js" defer></script>
+</body>
+</html>

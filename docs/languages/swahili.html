@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swahili Speech Emotion Recognition Datasets | KuralHub</title>
+<meta name="description" content="1 speech emotion recognition dataset for Swahili: Kenyan Swahili SER. Benchmark results for 11 models.">
+<link rel="canonical" href="https://aaivu.github.io/KuralHub/languages/swahili.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="KuralHub">
+<meta property="og:title" content="Swahili speech emotion recognition datasets">
+<meta property="og:description" content="1 speech emotion recognition dataset for Swahili: Kenyan Swahili SER. Benchmark results for 11 models.">
+<meta property="og:url" content="https://aaivu.github.io/KuralHub/languages/swahili.html">
+<meta property="og:image" content="https://aaivu.github.io/KuralHub/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="text/markdown" href="../datasets/Swahili/Readme.md" title="Source Markdown">
+<link rel="alternate" type="text/plain" href="../llms.txt" title="llms.txt">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "KuralHub", "item": "https://aaivu.github.io/KuralHub/"}, {"@type": "ListItem", "position": 2, "name": "Datasets", "item": "https://aaivu.github.io/KuralHub/datasets.html"}, {"@type": "ListItem", "position": 3, "name": "Swahili", "item": "https://aaivu.github.io/KuralHub/languages/swahili.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "Kenyan Swahili SER", "description": "Kenyan Swahili SER is a Swahili speech emotion recognition dataset (Audio). Emotion labels: Sad, Happy, Surprised, Angry, Calm. Size: Samples: 300. TBD", "url": "https://aaivu.github.io/KuralHub/languages/swahili.html#kenyan-swahili", "sameAs": "https://github.com/estherdatascientist/Swahili-Speech-Emotion-Recognition-System", "inLanguage": "sw", "keywords": ["Swahili speech emotion recognition", "speech emotion recognition dataset", "emotional speech corpus"], "includedInDataCatalog": {"@type": "DataCatalog", "name": "KuralHub", "url": "https://aaivu.github.io/KuralHub/datasets.html"}}</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="../index.html">KuralHub</a><nav aria-label="Site"><a href="../index.html">Paper</a><a href="../benchmark.html">Results</a><a href="../datasets.html" aria-current=page>Datasets</a><a href="../index.html#cite">Cite</a><a href="https://github.com/aaivu/KuralHub">GitHub</a></nav></div></header>
+<div class="layout with-toc">
+<aside class="toc"><nav aria-label="On this page"><ol><li><a href="#top">Overview</a></li><li><a href="#datasets">Datasets at a glance</a></li><li><a href="#benchmark">Benchmark results</a></li><li>Dataset entries<ol><li><a href="#kenyan-swahili">Kenyan Swahili SER</a></li></ol></li></ol></nav></aside>
+<main id="content">
+<p class="crumbs" id="top"><a href="../index.html">KuralHub</a><span aria-hidden="true">/</span><a href="../datasets.html">Datasets</a><span aria-hidden="true">/</span>Swahili</p>
+<h1>Swahili speech emotion recognition datasets</h1>
+<p class="lede">KuralHub lists <b>1</b> speech emotion recognition dataset for Swahili. Each entry below gives the emotion labels, size, recording setup, licence, where to get it and how to cite it. Swahili is also part of the benchmark. The best of 11 models reached 83.0% test accuracy (<code>wavlm-base-plus</code>).</p>
+<dl class="facts"><dt>Language family</dt><dd>Niger-Congo (Bantu)</dd><dt>ISO code</dt><dd>sw</dd><dt>Spoken mainly in</dt><dd>Tanzania, Kenya, Uganda, Rwanda, Burundi, the Democratic Republic of Congo, and parts of Mozambique, Malawi, and Somalia</dd><dt>Datasets listed</dt><dd>1</dd><dt>In benchmark</dt><dd>Yes</dd></dl>
+<h2 id="datasets">Datasets at a glance</h2><div class="table-wrap"><table><thead><tr><th data-sort=text>Dataset</th><th data-sort=text>Type</th><th class=num data-sort=num>Samples</th><th class=num data-sort=num>Speakers</th><th data-sort=text>Recording</th><th data-sort=text>Access</th><th data-sort=text>Licence</th></tr></thead><tbody><tr><td><a href="#kenyan-swahili">Kenyan Swahili SER</a></td><td>Audio</td><td class="num" data-v=""></td><td class="num" data-v=""></td><td>Studio / Acted / Spontaneous</td><td>On request</td><td></td></tr></tbody></table></div>
+<h2 id="benchmark">Benchmark results</h2>
+<p>Swahili is one of the 29 languages in the KuralHub benchmark. Each of the 11 frozen speech models was trained with a small classification head on the shared emotions and scored on a held-out test split. Over all 11 runs the mean test accuracy was <b>61.5%</b> (median 69.0%). The best run reached <b>83.0%</b> with <code>wavlm-base-plus</code>. <a href="../benchmark.html">Compare with other languages</a>.</p>
+<div class="table-wrap"><table><caption><b><a href="#kenyan-swahili">Kenyan Swahili SER</a></b> (run ID <code>Swahili-Dataset</code>). Scores on the test split, best run highlighted.</caption><thead><tr><th data-sort=text>Model</th><th data-sort=text>Family</th><th class=num data-sort=num>Val acc.</th><th class=num data-sort=num>Test acc.</th><th class=num data-sort=num>Macro-F1</th><th class=num data-sort=num>Weighted-F1</th><th>Logs</th></tr></thead><tbody><tr><td class="mono">hubert-base-ls960</td><td>HuBERT</td><td class="num">0.75</td><td class="num">0.81</td><td class="num">0.78</td><td class="num">0.81</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/sw_Swahili-Dataset_hubert-base-ls960">logs</a></td></tr><tr><td class="mono">hubert-large-ls960-ft</td><td>HuBERT</td><td class="num">0.61</td><td class="num">0.60</td><td class="num">0.59</td><td class="num">0.59</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/sw_Swahili-Dataset_hubert-large-ls960-ft">logs</a></td></tr><tr><td class="mono">wav2vec2-base</td><td>wav2vec 2.0</td><td class="num">0.65</td><td class="num">0.72</td><td class="num">0.69</td><td class="num">0.71</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/sw_Swahili-Dataset_wav2vec2-base">logs</a></td></tr><tr><td class="mono">wav2vec2-large-960h</td><td>wav2vec 2.0</td><td class="num">0.37</td><td class="num">0.44</td><td class="num">0.43</td><td class="num">0.44</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/sw_Swahili-Dataset_wav2vec2-large-960h">logs</a></td></tr><tr><td class="mono">wav2vec2-large-lv60</td><td>wav2vec 2.0</td><td class="num">0.41</td><td class="num">0.35</td><td class="num">0.26</td><td class="num">0.24</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/sw_Swahili-Dataset_wav2vec2-large-lv60">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-300m</td><td>wav2vec 2.0</td><td class="num">0.35</td><td class="num">0.33</td><td class="num">0.33</td><td class="num">0.33</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/sw_Swahili-Dataset_wav2vec2-xls-r-300m">logs</a></td></tr><tr><td class="mono">wav2vec2-xls-r-1b</td><td>wav2vec 2.0</td><td class="num">0.35</td><td class="num">0.45</td><td class="num">0.41</td><td class="num">0.42</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/sw_Swahili-Dataset_wav2vec2-xls-r-1b">logs</a></td></tr><tr class=hl><td class="mono">wavlm-base-plus<span class="tag best">best</span></td><td>WavLM</td><td class="num">0.80</td><td class="num">0.83</td><td class="num">0.80</td><td class="num">0.83</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/sw_Swahili-Dataset_wavlm-base-plus">logs</a></td></tr><tr><td class="mono">wavlm-large</td><td>WavLM</td><td class="num">0.78</td><td class="num">0.74</td><td class="num">0.74</td><td class="num">0.74</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/sw_Swahili-Dataset_wavlm-large">logs</a></td></tr><tr><td class="mono">whisper-small</td><td>Whisper</td><td class="num">0.71</td><td class="num">0.69</td><td class="num">0.69</td><td class="num">0.69</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/sw_Swahili-Dataset_whisper-small">logs</a></td></tr><tr><td class="mono">whisper-large</td><td>Whisper</td><td class="num">0.78</td><td class="num">0.80</td><td class="num">0.79</td><td class="num">0.79</td><td><a href="https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs/sw_Swahili-Dataset_whisper-large">logs</a></td></tr></tbody></table></div>
+<section class="entry" id="kenyan-swahili">
+<h2>Kenyan Swahili SER</h2>
+<dl class="facts"><dt>Type</dt><dd>Audio</dd><dt>Emotion labels</dt><dd>Sad, Happy, Surprised, Angry, Calm</dd><dt>Size</dt><dd>Samples: 300</dd><dt>Recording</dt><dd>Studio / Acted / Spontaneous</dd><dt>Access</dt><dd>On request</dd><dt>Licence</dt><dd>Not stated</dd><dt>File format</dt><dd>.wav</dd><dt>Website</dt><dd><a href="https://github.com/estherdatascientist/Swahili-Speech-Emotion-Recognition-System">Dataset Homepage</a></dd><dt>Contact</dt><dd><a href="https://www.linkedin.com/in/gregorymikuro?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_sent_invitations%3BxXp39ZKQTDaFz3fh3vvuoA%3D%3D">Gregory Mikuro</a></dd></dl>
+<p>TBD</p>
+
+<p class="callout small">Used in the KuralHub benchmark (run ID <code>Swahili-Dataset</code>). See the results above.</p>
+<h3>Citation</h3>
+<div class="cite-box"><button class="copy-btn" data-copy="#kenyan-swahili-bib0">Copy</button><pre id="kenyan-swahili-bib0"><code>@misc{mikuro2023swahiliSER,
+  author       = {Gregory Mikuro},
+  title        = {Swahili Speech Emotion Recognition System},
+  year         = {2023},
+  howpublished = {\url{https://github.com/estherdatascientist/Swahili-Speech-Emotion-Recognition-System}},
+  note         = {GitHub repository},
+  url          = {https://github.com/estherdatascientist/Swahili-Speech-Emotion-Recognition-System}
+}</code></pre></div>
+<p class="small muted">Source: <a href="https://github.com/aaivu/KuralHub/blob/main/datasets/Swahili/Kenyan_Swahili.md">datasets/Swahili/Kenyan_Swahili.md</a> · <a href="https://github.com/aaivu/KuralHub/edit/main/datasets/Swahili/Kenyan_Swahili.md">Suggest an edit</a></p>
+</section>
+<hr>
+<p class="small muted">This page is generated from <a href="https://github.com/aaivu/KuralHub/tree/main/datasets/Swahili"><code>datasets/Swahili/</code></a> in the KuralHub repository.
+If you use a dataset, cite its authors. If KuralHub helped you find it, please also <a href="../index.html#cite">cite the KuralHub paper</a>.</p>
+</main>
+</div>
+<footer class="site"><div class="inner">
+  <span>KuralHub · Interspeech 2026 · <a href="https://doi.org/10.21437/Interspeech.2026-3502">doi:10.21437/Interspeech.2026-3502</a> · MIT License</span>
+  <nav aria-label="Footer">
+    <a href="../index.html">Paper</a>
+    <a href="../benchmark.html">Results</a>
+    <a href="../datasets.html">Datasets</a>
+    <a href="../llms.txt">llms.txt</a>
+    <a href="../llms-full.txt">llms-full.txt</a>
+    <a href="https://github.com/aaivu/KuralHub">GitHub</a>
+    <a href="https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md">Contribute</a>
+  </nav>
+</div></footer>
+<script src="../js/site.js" defer></script>
+</body>
+</html>

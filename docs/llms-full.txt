@@ -1,132 +1,794 @@
-# KuralHub
+# KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition
 
-> KuralHub is a comprehensive survey and benchmark of Speech Emotion Recognition (SER) datasets across the world's languages. It catalogs 90+ SER datasets spanning 70+ languages and benchmarks 11 pretrained speech models (HuBERT, wav2vec 2.0, WavLM, Whisper) on 29 languages across 363 fine-tuning experiments. Maintained by the aaivu lab, University of Moratuwa, Sri Lanka. To appear at Interspeech 2026.
+> KuralHub is an open catalog of speech emotion recognition (SER) datasets for the 70 most widely spoken languages, plus a benchmark of 11 self-supervised speech models (HuBERT, wav2vec 2.0, WavLM, Whisper) on 33 datasets in 29 languages (363 runs). It accompanies the Interspeech 2026 paper "KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition" (doi:10.21437/Interspeech.2026-3502) by Luxshan Thavarasa, Jubeerathan Thevakumar, Thanikan Sivatheepan and Uthayasanker Thayasivam, University of Moratuwa, Sri Lanka.
 
-KuralHub helps researchers and practitioners (1) find speech emotion / emotion-speech datasets for a given language, and (2) see which speech model performs best per language.
+Short index for agents: https://aaivu.github.io/KuralHub/llms.txt
 
-## Key facts
-- Languages surveyed: 70+
-- Datasets cataloged: 90+
-- Languages benchmarked: 29
-- Speech models benchmarked: 11 (hubert-base-ls960, hubert-large-ls960-ft, wav2vec2-base, wav2vec2-large-960h, wav2vec2-large-lv60, wav2vec2-xls-r-1b, wav2vec2-xls-r-300m, wavlm-base-plus, wavlm-large, whisper-large, whisper-small)
-- Fine-tuning experiments: 363
-- Protocol: each pretrained speech encoder is fine-tuned per language (monolingual) with a classification head on a frozen backbone; validation and test accuracy reported.
+Luxshan Thavarasa\*, Jubeerathan Thevakumar\*, Thanikan Sivatheepan, Uthayasanker Thayasivam
+Department of Computer Science and Engineering, University of Moratuwa, Colombo, Sri Lanka
+\*Equal contribution
 
-## Pages
-- [Home / overview](https://aaivu.github.io/KuralHub/): project summary, methodology, key findings, team, citation.
-- [Benchmark](https://aaivu.github.io/KuralHub/benchmark.html): validation/test accuracy for every model on every benchmarked dataset; best model per language.
-- [Datasets catalog](https://aaivu.github.io/KuralHub/datasets.html): all 70+ languages with dataset metadata and access links.
+Interspeech 2026, Sydney, Australia, pages 4673-4678. DOI: [10.21437/Interspeech.2026-3502](https://doi.org/10.21437/Interspeech.2026-3502).
+PDF: https://www.isca-archive.org/interspeech_2026/thavarasa26_interspeech.pdf
+Website: https://aaivu.github.io/KuralHub/ · Code and data: https://github.com/aaivu/KuralHub
 
-## Machine-readable data
-- Benchmark results (JSON): https://aaivu.github.io/KuralHub/data/benchmark.json
-- Language manifest (JSON): https://aaivu.github.io/KuralHub/data/languages.json
-- Language families (JSON): https://aaivu.github.io/KuralHub/data/language_families.json
+In numbers: 70 languages surveyed, 90 datasets documented, 29 languages and 33 datasets benchmarked, 11 models, 363 training runs.
+
+## Abstract
+
+Speech Emotion Recognition (SER) advancements are constrained by high-resource bias, limiting global access. To address this, we introduce KuralHub, an open-science initiative democratizing SER for under-resourced languages. We evaluate 11 self-supervised models (WavLM, HuBERT, Wav2vec 2.0, Whisper) across 33 datasets in 29 diverse languages. Beyond standard benchmarking, our study reveals a critical typological bias: cross-lingual transferability is dictated more by structural linguistic properties than pre-training data volume. While models easily adapt to Mandarin or Amharic, they systematically fail on the Dravidian family. Crucially, we demonstrate that simply scaling model parameters fails to resolve this bottleneck. By exposing these linguistic capability frontiers, KuralHub provides a vital roadmap for developing equitable, typologically-aware speech technologies for all speakers.
+
+Index terms: speech emotion recognition, under-resourced languages, benchmarking
+
+## Key findings
+
+1. **No model is best everywhere.** Whisper had the highest mean F1 (0.70 for both whisper-small and whisper-large), followed by HuBERT-base (0.68) and WavLM (0.64 large, 0.63 base-plus). Even so, HuBERT came out on top for nine languages and WavLM for English and Swahili (Table 2).
+2. **Dravidian languages fail across the board.** Kannada averaged 0.275 test accuracy and Tamil 0.306 (best single run 0.44). Telugu never got above 0.53. The spread between models is small, so they fail in the same way.
+3. **More pre-training data does not guarantee better results.** Mandarin (0.755) and Indonesian (0.720) were easy. French (0.421), Spanish (0.365) and Russian (0.344) were not, and Persian, Arabic, Odia, Amharic and Quechua all beat several European languages.
+4. **Bigger models are not better.** The log of parameter count is negatively correlated with F1 (r = −0.18, p = 0.0007). wav2vec2-base (0.58) beat both wav2vec2-large-960h (0.30) and wav2vec2-large-lv60 (0.25).
+5. **Fear is the hardest emotion.** Its mean F1 was 0.38, against 0.54 for anger and 0.52 for neutral. The order holds across languages.
+
+## 1 Introduction
+
+Speech emotion recognition (SER) means working out from a voice alone whether the speaker sounds angry, happy, sad, afraid or neutral. Voice assistants, call-centre analytics and health monitoring all depend on it. Most SER research, though, covers a handful of high-resource languages, and the world has more than 7,000.
+
+Emotional speech datasets for other languages are scattered across papers, Kaggle pages and lab websites, and each is described differently, so just finding them is slow. It is also unclear how well self-supervised speech models such as HuBERT, wav2vec 2.0, WavLM and Whisper carry over to emotion recognition in languages they saw little of during pre-training.
+
+KuralHub (*kural*, குரல், is Tamil for "voice") addresses both problems. We looked for emotional speech datasets in the 70 most widely spoken languages and documented every one we found in the same format. We then trained emotion classifiers on top of 11 frozen pretrained models for 33 of those datasets, covering 29 languages, with a single recipe, and studied where they work and where they break.
+
+## 2 The dataset survey
+
+We took the 70 most widely spoken languages listed in Ethnologue and searched academic repositories and public sources for emotional speech corpora in each. 45 of the 70 have at least one dataset. For the remaining 25 we found none. The catalog documents 90 datasets in total.
+
+The repository is organised by language. Each language has a folder (`datasets/<Language>/`) whose `Readme.md` gives the language family, ISO code, where it is spoken and a table of its datasets. Every dataset then gets its own Markdown file with the emotion labels, size, speakers, recording setup (acted, elicited or spontaneous), licence, how to get it, the original paper and a BibTeX entry. The website builds one page per language from those files: https://aaivu.github.io/KuralHub/datasets.html
+
+### Which datasets were benchmarked
+
+A dataset was included in the benchmark if it (i) had clearly annotated emotion labels, (ii) covered at least three of five target emotions (anger, happiness, sadness, neutral and fear), and (iii) had at least 50 utterances per emotion. 33 datasets in 29 languages qualified. They differ in recording conditions, in how emotion was elicited (acted or spontaneous), in speaker demographics and in their emotion labels, which makes them a fair test of how well a model generalises.
+
+**Table 1.** The datasets used in the benchmark, part of the full survey (from the paper). \* marks high-resource languages. #Emo: emotions. #Samples: samples.
+
+| Language | Dataset | #Emo | #Samples |
+|---|---|---|---|
+| Afrikaans | AfrikaansSE | 8 | 800 |
+| Amharic | ASED | 5 | 2,474 |
+| Arabic | ANAD | 3 | 1,384 |
+| Bengali | BANSpEmo | 6 | 792 |
+| Bengali | SUBESCO | 7 | 7,000 |
+| Chinese\* | ESD | 5 | 17,500 |
+| English\* | IESC | 5 | 600 |
+| English\* | RAVDESS | 7 | 1,440 |
+| French\* | CaFE | 7 | 936 |
+| German\* | EmoDB | 7 | 535 |
+| Greek | AESDD | 5 | 500 |
+| Hindi\* | IITKGP-SEHSC | 8 | 12,000 |
+| Hungarian | HESD | 8 | 760 |
+| Indonesian | IndoWaveSentiment | 5 | 300 |
+| Italian\* | EMOVO | 7 | 564 |
+| Italian\* | Emozionalmente | 7 | 6,902 |
+| Japanese\* | JVNV | 6 | 1,615 |
+| Kannada | Agrawal et al. | 6 | 468 |
+| Kazakh | KazEmoTTS | 6 | 54,760 |
+| Korean\* | KESDy18 | 7 | 2,880 |
+| Odia | SITB-OSED | 6 | 12,110 |
+| Persian | ShEMO | 6 | 3,000 |
+| Polish | nEMO | 6 | 4,481 |
+| Portuguese\* | emoUERJ | 4 | 377 |
+| Quechua | Quechua Collao | 9 | 12,420 |
+| Russian\* | Dusha | 4 | 300,000 |
+| Spanish\* | MESD | 6 | 432 |
+| Swahili | Kenyan Swahili SER | 5 | 300 |
+| Tamil | EmoTa | 5 | 936 |
+| Telugu | Sowmith et al. | 5 | 468 |
+| Turkish | TurEV-DB | 4 | 1,735 |
+| Urdu | URDU-Dataset | 4 | 400 |
+| Urdu | UrduSER | 7 | 3,500 |
+
+## 3 Benchmark setup
+
+### Models
+
+11 pretrained speech encoders from four families: HuBERT (hubert-base-ls960, hubert-large-ls960-ft), wav2vec 2.0 (wav2vec2-base, wav2vec2-large-960h, wav2vec2-large-lv60, wav2vec2-xls-r-300m, wav2vec2-xls-r-1b), WavLM (wavlm-base-plus, wavlm-large) and Whisper (whisper-small, whisper-large). All are the public Hugging Face checkpoints under facebook/, microsoft/ and openai/.
+
+### Training and evaluation
+
+Every backbone stays frozen. Only a small classification head on top is trained, which keeps the comparison cheap and fair and needs far less labelled data than full fine-tuning.
+
+1. Audio is resampled to 16 kHz, normalised with librosa and passed through the frozen backbone.
+2. The last-layer hidden states are averaged over time, giving one embedding per clip.
+3. A two-layer feed-forward head maps the embedding to emotion classes: linear (to 512 units), GELU, dropout (0.3), linear.
+4. The head is trained with cross-entropy loss and Adam (learning rate 1e-3, halved when validation loss stalls for 2 epochs) for up to 30 epochs, with early stopping after 5 epochs without improvement.
+
+Each dataset is split 70% / 15% / 15% into training, validation and test sets. Runs use whichever of the five target emotions a dataset contains. We report precision, recall, F1 and accuracy on the held-out test set, per emotion and as macro and weighted averages. The hidden size, dropout, learning rate schedule, patience and pooling come from the released code rather than the paper.
+
+## 4 Results
+
+### 4.1 The language matters more than how much pre-training data it had
+
+Mean test accuracy over all models and languages was 0.52 (σ = 0.19). A common assumption is that languages with more pre-training data will do better. The results only partly support that.
+
+Mandarin Chinese, a high-resource language, was easy (mean 0.755, median 0.90), and so was Indonesian (0.720, median 0.77). Other high-resource languages were not. French (0.421), Spanish (0.365) and Russian (0.344) were all mediocre. Several lower-resource languages did well instead: Persian (0.67, median 0.76) and Arabic (0.66, σ = 0.08) were stable, and Odia (0.643, best 0.83), Amharic (0.636, best 0.90) and Quechua all beat several European languages.
+
+Pre-training volume alone does not decide the outcome. Languages with stable phonetics, consistent pronunciation rules and standardised corpora seem easier for self-supervised models to learn. High dialect variation and spontaneous speech add acoustic noise that pulls performance down.
+
+Figure 1 (radar chart): model accuracy across languages. https://aaivu.github.io/KuralHub/assets/fig/fig1-model-accuracy-by-language.png
+
+### 4.2 Systematic failure on Dravidian languages
+
+The clearest pattern is that every model does badly on the Dravidian languages. Kannada (μ = 0.275, σ = 0.085, median 0.26) and Tamil (μ = 0.306, σ = 0.088, max 0.44) are among the worst languages in the benchmark, and Telugu peaks at 0.53.
+
+The small standard deviations matter. Almost every model fails on Kannada and Tamil in much the same way, which points to a limitation in current self-supervised architectures rather than an unlucky choice of model. Dravidian languages are morphologically complex, highly agglutinative and rich in retroflex consonants. Handling that takes fine-grained temporal modelling, and the strided CNN front-ends these models use may throw away the phonetic detail needed.
+
+Figure 2 (heatmap): mean macro-F1 of each model across language families. Dravidian and Uralic consistently score lower than the other families. https://aaivu.github.io/KuralHub/assets/fig/fig2-f1-by-language-family.png
+
+The shape of each language's score distribution sorts languages into two groups:
+
+- **Widely solved (negative skew).** Mandarin (skew −0.87) and Amharic (−0.39). Most models do well, so the language is easy to reach.
+- **Capability frontier (positive skew).** Kannada (+1.17) and Spanish (+0.72). Median scores sit near the bottom (Kannada 0.26, Spanish 0.27), and only a few larger or specialised models do better.
+
+**Table 2.** Best model family for each language (from the paper).
+
+| Best model | Languages |
+|---|---|
+| HuBERT | French, Greek, Hindi, Hungarian, Indonesian, Japanese, Russian, Telugu, Urdu |
+| WavLM | English, Swahili |
+| Whisper | Afrikaans, Amharic, Arabic, Bengali, Chinese, German, Italian, Kannada, Kazakh, Korean, Odia, Persian, Polish, Portuguese, Quechua, Spanish, Tamil, Turkish |
+
+No single model is best for every language, so model choice for multilingual SER has to depend on the language.
+
+### 4.3 Architecture matters, size does not
+
+Across all 33 datasets, the Whisper models had the highest mean F1 (0.70 for both whisper-small and whisper-large), followed by HuBERT-base (0.68) and WavLM (0.64 for wavlm-large, 0.63 for wavlm-base-plus). Whisper and HuBERT held up well across languages, while the wav2vec 2.0 models generalised worst.
+
+To separate architecture from dataset and language effects we fitted a linear mixed-effects model, F1 ~ Family + (1|Dataset) + (1|Language). The reference family had a mean F1 of 0.524. Against it, wav2vec 2.0 was clearly worse (β = −0.195, p < .001) while WavLM (β = +0.091) and Whisper (β = +0.170) were better (both p < .001). About 40% of the total variance came from differences between datasets and languages.
+
+Bigger models within a family were not reliably better. wav2vec2-base (μ = 0.58, σ = 0.17) beat wav2vec2-large-960h (μ = 0.30, σ = 0.11) and wav2vec2-large-lv60 (μ = 0.25, σ = 0.10). Across all models:
+
+- Raw parameter count had no significant linear relationship with F1 (r = 0.035, 95% CI [−0.068, 0.138], p = 0.50).
+- Log parameter count was significantly negatively correlated with F1 (r = −0.177, 95% CI [−0.275, −0.075], p = 0.0007). Spearman's ρ = −0.344 (p = 1.6 × 10⁻¹¹) agrees.
+- A second mixed-effects model, F1 ~ log(ModelSize) + (1|Dataset) + (1|Language), gave β = −0.048 (SE = 0.0125, p = 0.000125). Multiplying the parameter count by e (about 2.7×) lowered F1 by roughly 4.8 points.
+
+Dataset-level variance (0.0113) dominated language-level variance (≈ 0), largely because 25 of the 29 languages had only one dataset. Adding parameters does not, by itself, improve multilingual emotion recognition.
+
+Figure 3 (line chart): mean macro-F1 of each model against its parameter count, grouped by architecture family. https://aaivu.github.io/KuralHub/assets/fig/fig3-f1-vs-parameters.png
+
+### 4.4 Which emotions are hard
+
+**Table 3.** Precision, recall and F1 per emotion, averaged across datasets (from the paper).
+
+| Emotion | Precision | Recall | F1 |
+|---|---|---|---|
+| Anger | 0.57 | 0.57 | 0.54 |
+| Fear | 0.47 | 0.37 | 0.38 |
+| Happiness | 0.52 | 0.43 | 0.44 |
+| Neutral | 0.46 | 0.65 | 0.52 |
+| Sadness | 0.54 | 0.48 | 0.46 |
+
+Neutral and anger were the easiest to recognise and fear the hardest. The same order shows up across languages, which fits cross-cultural studies of emotion perception and suggests some acoustic cues are shared.
+
+Errors came mainly from three sources: low-resource languages with little pre-training data, spontaneous rather than acted speech, and emotional expressions that are not prototypical. For example, the acted Amharic ASED dataset scored 24% higher than spontaneous-speech datasets with similar resources.
+
+## 5 Limitations and future work
+
+Across 11 models and 29 languages, the structure of a language limited cross-lingual transfer in SER more than the amount of pre-training data or the number of model parameters did. Some families, Dravidian in particular, sit at a "capability frontier" where current models fail systematically.
+
+The study has limits:
+
+- To keep evaluation cheap and comparable we used frozen last-layer features. Paralinguistic cues that live in intermediate layers may be under-represented.
+- Dataset conditions, such as acted versus spontaneous speech, account for about 40% of the variance in performance, which complicates clean comparisons between languages.
+- 25 of the 29 languages are represented by a single dataset.
+
+Better multilingual SER will need more than larger models. We hope KuralHub helps others work on typology-aware pre-training and layer-wise fine-tuning.
+
+## 6 Using KuralHub
+
+- Find a dataset: https://aaivu.github.io/KuralHub/datasets.html (one page per language, e.g. https://aaivu.github.io/KuralHub/languages/tamil.html)
+- All runs: https://aaivu.github.io/KuralHub/benchmark.html, https://aaivu.github.io/KuralHub/data/runs.csv, https://aaivu.github.io/KuralHub/data/runs.json
+- Dataset catalog as JSON: https://aaivu.github.io/KuralHub/data/datasets.json
+- Per-run logs: https://github.com/aaivu/KuralHub/tree/main/results/train_val_test_logs
+- Re-run an experiment: `make setup`, `make download_dataset` (needs a Kaggle API key), `make meta_extract`, `DATASET=EMOTA BASE_MODEL=WAVLM_LARGE make train_model` (names from `src/utils/constant.py`). Requires Python 3.12+.
+- Add a dataset: https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md
 
 ## Citation
-Thavarasa, L., Thevakumar, J., Sivatheepan, T., Thayasivam, U. "KuralHub: A Comprehensive Review of Speech Emotion Recognition Datasets." To appear, Interspeech 2026.
 
-## Repository
-https://github.com/aaivu/KuralHub
+Thavarasa, L., Thevakumar, J., Sivatheepan, T., Thayasivam, U. (2026) KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition. Proc. Interspeech 2026, 4673-4678, doi: 10.21437/Interspeech.2026-3502
 
-## All languages and dataset counts
-- Afrikaans (Indo-European) — 1 dataset(s)
-- Amharic (Afro-Asiatic) — 1 dataset(s)
-- Arabic (Afro-Asiatic) — 2 dataset(s)
-- Assamese — 2 dataset(s)
-- Azerbaijani — 0 dataset(s)
-- Bambara — 0 dataset(s)
-- Bengali (Indo-European) — 4 dataset(s)
-- Bhojpuri — 0 dataset(s)
-- Burmese — 3 dataset(s)
-- Cebuano — 0 dataset(s)
-- Chinese (Sino-Tibetan) — 8 dataset(s)
-- Czech — 2 dataset(s)
-- Dutch — 1 dataset(s)
-- English (Indo-European) — 3 dataset(s)
-- Filipino — 1 dataset(s)
-- French (Indo-European) — 2 dataset(s)
-- Fulflude — 0 dataset(s)
-- German (Indo-European) — 1 dataset(s)
-- Greek (Indo-European) — 3 dataset(s)
-- Gujarati — 1 dataset(s)
-- Hausa — 0 dataset(s)
-- Hindi (Indo-European) — 3 dataset(s)
-- Hungarian (Uralic) — 2 dataset(s)
-- Igbo — 0 dataset(s)
-- Indonesian (Austronesian) — 2 dataset(s)
-- Italian (Indo-European) — 3 dataset(s)
-- Japanese (Japonic) — 2 dataset(s)
-- Javanese — 1 dataset(s)
-- Kannada (Dravidian) — 2 dataset(s)
-- Kazakh (Turkic) — 2 dataset(s)
-- Khmer — 0 dataset(s)
-- Korean (Koreanic) — 1 dataset(s)
-- Kurdish — 2 dataset(s)
-- Magahi — 0 dataset(s)
-- Maithili — 0 dataset(s)
-- Malay — 1 dataset(s)
-- Malayalam — 4 dataset(s)
-- Nepali — 0 dataset(s)
-- Nigerian Pidgin — 0 dataset(s)
-- Northern Pashto — 0 dataset(s)
-- Northern Uzbek — 0 dataset(s)
-- Odia (Other) — 1 dataset(s)
-- Persian (Indo-European) — 1 dataset(s)
-- Polish (Indo-European) — 3 dataset(s)
-- Portuguese (Indo-European) — 2 dataset(s)
-- Punjabi — 1 dataset(s)
-- Quechua (Quechuan) — 1 dataset(s)
-- Romanian — 1 dataset(s)
-- Russian (Indo-European) — 2 dataset(s)
-- Saraiki — 0 dataset(s)
-- Sindhi — 1 dataset(s)
-- Sinhala — 0 dataset(s)
-- Somali — 0 dataset(s)
-- Sotho — 0 dataset(s)
-- Spanish (Indo-European) — 3 dataset(s)
-- Sunda — 0 dataset(s)
-- Swahili (Niger-Congo) — 1 dataset(s)
-- Swedish — 2 dataset(s)
-- Tagalog — 0 dataset(s)
-- Tamil (Dravidian) — 3 dataset(s)
-- Telugu (Dravidian) — 2 dataset(s)
-- Thai — 1 dataset(s)
-- Tswana — 0 dataset(s)
-- Turkish (Turkic) — 2 dataset(s)
-- Ukrainian — 0 dataset(s)
-- Urdu (Indo-European) — 2 dataset(s)
-- Vietnamese — 1 dataset(s)
-- Xhosa — 0 dataset(s)
-- Yoruba — 0 dataset(s)
-- Zulu — 0 dataset(s)
+```bibtex
+@inproceedings{thavarasa26_interspeech,
+  title     = {{KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition}},
+  author    = {Luxshan Thavarasa and Jubeerathan Thevakumar and Thanikan Sivatheepan and Uthayasanker Thayasivam},
+  year      = {2026},
+  booktitle = {{Interspeech 2026}},
+  pages     = {4673--4678},
+  doi       = {10.21437/Interspeech.2026-3502},
+  issn      = {2958-1796},
+}
+```
 
-## Best model per benchmarked language
-- Afrikaans: best model whisper-small on AfrikaansEmotionalSpeechCorpus — 71.0% test accuracy
-- Amharic: best model whisper-small on ASED — 90.0% test accuracy
-- Arabic: best model whisper-large on ANAD — 82.0% test accuracy
-- Bengali: best model whisper-large on SUBESCO — 89.0% test accuracy
-- Chinese: best model whisper-large on ESD — 98.0% test accuracy
-- English: best model hubert-base-ls960 on IESC — 82.0% test accuracy
-- French: best model wavlm-large on CaFE — 70.0% test accuracy
-- German: best model whisper-large on EmoDB — 86.0% test accuracy
-- Greek: best model hubert-base-ls960 on AESDD — 75.0% test accuracy
-- Hindi: best model whisper-small on Hindi-Dataset — 71.0% test accuracy
-- Hungarian: best model hubert-base-ls960 on HungarianEmotionalSpeechCorpus — 52.0% test accuracy
-- Indonesian: best model hubert-base-ls960 on IndoWaveSentiment — 99.0% test accuracy
-- Italian: best model whisper-large on Emozionalmente — 80.0% test accuracy
-- Japanese: best model whisper-large on JVNV — 87.0% test accuracy
-- Kannada: best model wavlm-large on Kannada-Dataset — 48.0% test accuracy
-- Kazakh: best model whisper-large on KazakhEmotionalTTS — 65.0% test accuracy
-- Korean: best model whisper-small on KESDy18 — 81.0% test accuracy
-- Odia: best model wavlm-large on SITB-OSED — 83.0% test accuracy
-- Persian: best model whisper-small on SHEMO — 83.0% test accuracy
-- Polish: best model whisper-large on nEMO — 87.0% test accuracy
-- Portuguese: best model whisper-small on emoUERJ — 91.0% test accuracy
-- Quechua: best model whisper-large on Quechua-Collao-Corpus — 83.0% test accuracy
-- Russian: best model hubert-base-ls960 on RESD — 51.0% test accuracy
-- Spanish: best model whisper-small on MESD — 68.0% test accuracy
-- Swahili: best model wavlm-base-plus on Swahili-Dataset — 83.0% test accuracy
-- Tamil: best model whisper-small on EmoTa — 44.0% test accuracy
-- Telugu: best model hubert-base-ls960 on Telugu-Dataset — 53.0% test accuracy
-- Turkish: best model whisper-large on TurEV-DB — 84.0% test accuracy
-- Urdu: best model wav2vec2-base on Urdu-Dataset — 88.0% test accuracy
+## Authors
+
+- Luxshan Thavarasa\* (luxshan.20@cse.mrt.ac.lk)
+- Jubeerathan Thevakumar\* (jubeerathan.25@cse.mrt.ac.lk)
+- Thanikan Sivatheepan (thanikan.20@cse.mrt.ac.lk)
+- Uthayasanker Thayasivam, supervisor (rtuthaya@cse.mrt.ac.lk)
+
+\*Equal contribution. Department of Computer Science and Engineering, University of Moratuwa, Sri Lanka.
+
+## Mean test score per model (computed from the released logs)
+
+| Model | Family | Params (approx.) | Accuracy | Macro-F1 | Weighted-F1 |
+|---|---|---|---|---|---|
+| hubert-base-ls960 | HuBERT | 95M | 0.68 | 0.67 | 0.68 |
+| hubert-large-ls960-ft | HuBERT | 316M | 0.42 | 0.38 | 0.39 |
+| wav2vec2-base | wav2vec 2.0 | 95M | 0.59 | 0.56 | 0.57 |
+| wav2vec2-large-960h | wav2vec 2.0 | 317M | 0.32 | 0.26 | 0.26 |
+| wav2vec2-large-lv60 | wav2vec 2.0 | 317M | 0.29 | 0.21 | 0.23 |
+| wav2vec2-xls-r-300m | wav2vec 2.0 | 300M | 0.35 | 0.31 | 0.32 |
+| wav2vec2-xls-r-1b | wav2vec 2.0 | 1000M | 0.36 | 0.31 | 0.32 |
+| wavlm-base-plus | WavLM | 95M | 0.64 | 0.62 | 0.63 |
+| wavlm-large | WavLM | 316M | 0.64 | 0.61 | 0.62 |
+| whisper-small | Whisper | 244M | 0.71 | 0.69 | 0.71 |
+| whisper-large | Whisper | 1550M | 0.71 | 0.69 | 0.71 |
+
+## Test accuracy per language (all models, all datasets)
+
+| Language | Family | Datasets | Mean | SD | Median | Best | Best run |
+|---|---|---|---|---|---|---|---|
+| Chinese | Sino-Tibetan | 1 | 0.755 | 0.233 | 0.90 | 0.98 | whisper-large |
+| Indonesian | Austronesian | 1 | 0.721 | 0.235 | 0.77 | 0.99 | hubert-base-ls960 |
+| Persian | Indo-European | 1 | 0.671 | 0.163 | 0.76 | 0.83 | whisper-small |
+| Arabic | Afro-Asiatic | 1 | 0.661 | 0.081 | 0.64 | 0.82 | whisper-large |
+| Odia | Indo-European | 1 | 0.644 | 0.183 | 0.64 | 0.83 | wavlm-large |
+| Amharic | Afro-Asiatic | 1 | 0.636 | 0.257 | 0.75 | 0.90 | whisper-small |
+| Japanese | Japonic | 1 | 0.619 | 0.240 | 0.67 | 0.87 | whisper-large |
+| Swahili | Niger-Congo | 1 | 0.615 | 0.190 | 0.69 | 0.83 | wavlm-base-plus |
+| Portuguese | Indo-European | 1 | 0.600 | 0.229 | 0.63 | 0.91 | whisper-small |
+| Quechua | Quechuan | 1 | 0.587 | 0.229 | 0.71 | 0.83 | whisper-large |
+| Korean | Koreanic | 1 | 0.577 | 0.230 | 0.70 | 0.81 | whisper-small |
+| Polish | Indo-European | 1 | 0.566 | 0.244 | 0.66 | 0.87 | whisper-large |
+| German | Indo-European | 1 | 0.555 | 0.228 | 0.53 | 0.86 | whisper-large |
+| Turkish | Turkic | 1 | 0.549 | 0.175 | 0.48 | 0.84 | whisper-small |
+| Afrikaans | Indo-European | 1 | 0.524 | 0.157 | 0.59 | 0.71 | whisper-small |
+| English | Indo-European | 2 | 0.510 | 0.223 | 0.57 | 0.82 | hubert-base-ls960 |
+| Italian | Indo-European | 2 | 0.504 | 0.194 | 0.56 | 0.80 | whisper-large |
+| Urdu | Indo-European | 2 | 0.496 | 0.208 | 0.46 | 0.88 | wav2vec2-base |
+| Hindi | Indo-European | 1 | 0.488 | 0.222 | 0.61 | 0.71 | whisper-small |
+| Greek | Indo-European | 1 | 0.466 | 0.169 | 0.54 | 0.75 | hubert-base-ls960 |
+| Bengali | Indo-European | 2 | 0.460 | 0.228 | 0.39 | 0.89 | whisper-large |
+| Kazakh | Turkic | 1 | 0.440 | 0.162 | 0.51 | 0.65 | whisper-small |
+| French | Indo-European | 1 | 0.421 | 0.178 | 0.38 | 0.70 | wavlm-large |
+| Telugu | Dravidian | 1 | 0.405 | 0.098 | 0.43 | 0.53 | hubert-base-ls960 |
+| Hungarian | Uralic | 1 | 0.367 | 0.138 | 0.43 | 0.52 | hubert-base-ls960 |
+| Spanish | Indo-European | 1 | 0.365 | 0.191 | 0.27 | 0.68 | whisper-small |
+| Russian | Indo-European | 1 | 0.345 | 0.118 | 0.40 | 0.51 | hubert-base-ls960 |
+| Tamil | Dravidian | 1 | 0.306 | 0.089 | 0.29 | 0.44 | whisper-small |
+| Kannada | Dravidian | 1 | 0.275 | 0.086 | 0.26 | 0.48 | wavlm-large |
+
+## All runs (test accuracy / macro-F1)
+
+| Language | Dataset | hubert-base-ls960 | hubert-large-ls960-ft | wav2vec2-base | wav2vec2-large-960h | wav2vec2-large-lv60 | wav2vec2-xls-r-300m | wav2vec2-xls-r-1b | wavlm-base-plus | wavlm-large | whisper-small | whisper-large |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Afrikaans | AfrikaansSE | 0.67 / 0.62 | 0.41 / 0.41 | 0.66 / 0.67 | 0.43 / 0.41 | 0.40 / 0.40 | 0.37 / 0.37 | 0.24 / 0.15 | 0.59 / 0.60 | 0.63 / 0.58 | 0.71 / 0.70 | 0.65 / 0.63 |
+| Amharic | Amharic Speech Emotion Dataset (ASED) | 0.89 / 0.89 | 0.63 / 0.63 | 0.75 / 0.75 | 0.32 / 0.27 | 0.27 / 0.25 | 0.32 / 0.29 | 0.40 / 0.32 | 0.84 / 0.84 | 0.82 / 0.82 | 0.90 / 0.90 | 0.86 / 0.86 |
+| Arabic | ANAD | 0.58 / 0.58 | 0.66 / 0.51 | 0.57 / 0.45 | 0.65 / 0.54 | 0.64 / 0.39 | 0.61 / 0.46 | 0.63 / 0.47 | 0.61 / 0.54 | 0.71 / 0.57 | 0.79 / 0.78 | 0.82 / 0.81 |
+| Bengali | BANSpEmo | 0.41 / 0.42 | 0.23 / 0.22 | 0.32 / 0.31 | 0.23 / 0.23 | 0.25 / 0.25 | 0.23 / 0.23 | 0.26 / 0.25 | 0.35 / 0.36 | 0.40 / 0.38 | 0.38 / 0.34 | 0.40 / 0.36 |
+| Bengali | SUBESCO | 0.78 / 0.78 | 0.54 / 0.53 | 0.68 / 0.68 | 0.24 / 0.18 | 0.27 / 0.23 | 0.48 / 0.47 | 0.38 / 0.33 | 0.78 / 0.77 | 0.74 / 0.74 | 0.89 / 0.88 | 0.89 / 0.89 |
+| Chinese | ESD | 0.92 / 0.91 | 0.73 / 0.74 | 0.90 / 0.90 | 0.45 / 0.42 | 0.28 / 0.18 | 0.59 / 0.58 | 0.68 / 0.68 | 0.90 / 0.90 | 0.91 / 0.91 | 0.97 / 0.97 | 0.98 / 0.98 |
+| English | IESC | 0.82 / 0.81 | 0.53 / 0.49 | 0.66 / 0.66 | 0.31 / 0.27 | 0.25 / 0.20 | 0.25 / 0.24 | 0.24 / 0.22 | 0.78 / 0.78 | 0.81 / 0.79 | 0.71 / 0.69 | 0.74 / 0.73 |
+| English | RAVDESS | 0.65 / 0.65 | 0.35 / 0.34 | 0.59 / 0.58 | 0.15 / 0.12 | 0.27 / 0.21 | 0.34 / 0.27 | 0.23 / 0.18 | 0.69 / 0.69 | 0.55 / 0.54 | 0.61 / 0.58 | 0.68 / 0.64 |
+| French | CaFE | 0.60 / 0.60 | 0.33 / 0.32 | 0.38 / 0.36 | 0.24 / 0.22 | 0.21 / 0.17 | 0.25 / 0.21 | 0.25 / 0.19 | 0.53 / 0.52 | 0.70 / 0.69 | 0.61 / 0.60 | 0.53 / 0.52 |
+| German | EmoDB | 0.78 / 0.76 | 0.44 / 0.39 | 0.70 / 0.68 | 0.34 / 0.30 | 0.26 / 0.09 | 0.35 / 0.26 | 0.30 / 0.28 | 0.70 / 0.64 | 0.53 / 0.44 | 0.84 / 0.83 | 0.86 / 0.85 |
+| Greek | AESDD | 0.75 / 0.73 | 0.32 / 0.27 | 0.54 / 0.53 | 0.32 / 0.22 | 0.25 / 0.24 | 0.36 / 0.28 | 0.26 / 0.20 | 0.63 / 0.60 | 0.57 / 0.52 | 0.57 / 0.56 | 0.56 / 0.56 |
+| Hindi | VishalB | 0.70 / 0.70 | 0.31 / 0.26 | 0.61 / 0.60 | 0.23 / 0.13 | 0.20 / 0.12 | 0.22 / 0.14 | 0.35 / 0.34 | 0.65 / 0.64 | 0.70 / 0.70 | 0.71 / 0.70 | 0.69 / 0.68 |
+| Hungarian | HESD | 0.52 / 0.52 | 0.21 / 0.19 | 0.43 / 0.40 | 0.24 / 0.22 | 0.23 / 0.17 | 0.23 / 0.22 | 0.22 / 0.14 | 0.51 / 0.50 | 0.49 / 0.48 | 0.52 / 0.51 | 0.44 / 0.43 |
+| Indonesian | IndoWaveSentiment | 0.99 / 0.99 | 0.46 / 0.45 | 0.77 / 0.76 | 0.37 / 0.32 | 0.57 / 0.53 | 0.46 / 0.46 | 0.59 / 0.58 | 0.94 / 0.94 | 0.94 / 0.94 | 0.97 / 0.97 | 0.87 / 0.86 |
+| Italian | EMOVO | 0.57 / 0.60 | 0.28 / 0.24 | 0.56 / 0.52 | 0.28 / 0.20 | 0.26 / 0.18 | 0.25 / 0.22 | 0.24 / 0.23 | 0.58 / 0.57 | 0.55 / 0.55 | 0.64 / 0.64 | 0.70 / 0.71 |
+| Italian | Emozionalmente | 0.71 / 0.71 | 0.49 / 0.46 | 0.61 / 0.61 | 0.32 / 0.24 | 0.30 / 0.25 | 0.47 / 0.47 | 0.28 / 0.19 | 0.72 / 0.72 | 0.73 / 0.73 | 0.75 / 0.75 | 0.80 / 0.80 |
+| Japanese | JVNV | 0.86 / 0.86 | 0.49 / 0.47 | 0.67 / 0.65 | 0.39 / 0.30 | 0.26 / 0.22 | 0.43 / 0.40 | 0.34 / 0.31 | 0.84 / 0.84 | 0.85 / 0.85 | 0.81 / 0.81 | 0.87 / 0.87 |
+| Kannada | Agrawal et al (2022) | 0.29 / 0.28 | 0.19 / 0.16 | 0.22 / 0.17 | 0.27 / 0.19 | 0.23 / 0.19 | 0.17 / 0.17 | 0.26 / 0.20 | 0.26 / 0.20 | 0.48 / 0.44 | 0.30 / 0.30 | 0.36 / 0.35 |
+| Kazakh | KazEmoTTS | 0.51 / 0.50 | 0.29 / 0.25 | 0.53 / 0.52 | 0.24 / 0.20 | 0.21 / 0.14 | 0.35 / 0.34 | 0.32 / 0.30 | 0.51 / 0.49 | 0.58 / 0.57 | 0.65 / 0.64 | 0.65 / 0.63 |
+| Korean | KESDy18 | 0.80 / 0.79 | 0.46 / 0.45 | 0.70 / 0.68 | 0.23 / 0.14 | 0.24 / 0.20 | 0.39 / 0.38 | 0.43 / 0.42 | 0.74 / 0.72 | 0.76 / 0.75 | 0.81 / 0.81 | 0.79 / 0.79 |
+| Odia | SITB-OSED | 0.75 / 0.74 | 0.62 / 0.62 | 0.64 / 0.60 | 0.43 / 0.39 | 0.28 / 0.20 | 0.51 / 0.48 | 0.58 / 0.53 | 0.78 / 0.77 | 0.83 / 0.83 | 0.83 / 0.83 | 0.83 / 0.83 |
+| Persian | ShEMO | 0.80 / 0.54 | 0.58 / 0.31 | 0.76 / 0.46 | 0.44 / 0.18 | 0.43 / 0.16 | 0.46 / 0.19 | 0.67 / 0.36 | 0.79 / 0.52 | 0.80 / 0.59 | 0.83 / 0.62 | 0.82 / 0.61 |
+| Polish | nEMO | 0.79 / 0.79 | 0.39 / 0.37 | 0.69 / 0.68 | 0.24 / 0.16 | 0.22 / 0.15 | 0.37 / 0.36 | 0.41 / 0.40 | 0.74 / 0.73 | 0.66 / 0.67 | 0.85 / 0.85 | 0.87 / 0.87 |
+| Portuguese | emoUERJ | 0.74 / 0.72 | 0.51 / 0.50 | 0.63 / 0.56 | 0.23 / 0.23 | 0.29 / 0.21 | 0.47 / 0.43 | 0.44 / 0.43 | 0.74 / 0.72 | 0.76 / 0.75 | 0.91 / 0.93 | 0.88 / 0.87 |
+| Quechua | Quechua Collao Corpus | 0.80 / 0.79 | 0.50 / 0.47 | 0.76 / 0.76 | 0.36 / 0.33 | 0.22 / 0.18 | 0.43 / 0.43 | 0.30 / 0.23 | 0.71 / 0.70 | 0.73 / 0.73 | 0.82 / 0.81 | 0.83 / 0.83 |
+| Russian | RESD | 0.51 / 0.51 | 0.22 / 0.19 | 0.41 / 0.40 | 0.24 / 0.21 | 0.20 / 0.17 | 0.21 / 0.18 | 0.26 / 0.26 | 0.43 / 0.41 | 0.40 / 0.38 | 0.45 / 0.45 | 0.46 / 0.43 |
+| Spanish | MESD | 0.58 / 0.56 | 0.26 / 0.23 | 0.27 / 0.26 | 0.26 / 0.23 | 0.13 / 0.10 | 0.24 / 0.14 | 0.24 / 0.22 | 0.28 / 0.27 | 0.41 / 0.38 | 0.68 / 0.68 | 0.67 / 0.67 |
+| Swahili | Kenyan Swahili SER | 0.81 / 0.78 | 0.60 / 0.59 | 0.72 / 0.69 | 0.44 / 0.43 | 0.35 / 0.26 | 0.33 / 0.33 | 0.45 / 0.41 | 0.83 / 0.80 | 0.74 / 0.74 | 0.69 / 0.69 | 0.80 / 0.79 |
+| Tamil | EmoTa | 0.38 / 0.38 | 0.25 / 0.18 | 0.38 / 0.37 | 0.24 / 0.15 | 0.19 / 0.15 | 0.24 / 0.17 | 0.20 / 0.14 | 0.35 / 0.35 | 0.29 / 0.27 | 0.44 / 0.43 | 0.41 / 0.40 |
+| Telugu | Sowmith et al (2024) | 0.53 / 0.52 | 0.35 / 0.30 | 0.44 / 0.42 | 0.35 / 0.27 | 0.28 / 0.20 | 0.29 / 0.24 | 0.29 / 0.24 | 0.53 / 0.50 | 0.43 / 0.40 | 0.52 / 0.51 | 0.45 / 0.43 |
+| Turkish | TurEV-DB | 0.68 / 0.66 | 0.44 / 0.34 | 0.48 / 0.41 | 0.40 / 0.29 | 0.39 / 0.27 | 0.34 / 0.25 | 0.48 / 0.44 | 0.52 / 0.51 | 0.63 / 0.55 | 0.84 / 0.84 | 0.84 / 0.84 |
+| Urdu | URDU-Dataset | 0.87 / 0.86 | 0.43 / 0.38 | 0.88 / 0.88 | 0.34 / 0.25 | 0.35 / 0.27 | 0.41 / 0.36 | 0.35 / 0.26 | 0.76 / 0.75 | 0.50 / 0.50 | 0.78 / 0.76 | 0.82 / 0.79 |
+| Urdu | UrduSER | 0.51 / 0.50 | 0.32 / 0.27 | 0.46 / 0.44 | 0.24 / 0.19 | 0.23 / 0.16 | 0.28 / 0.27 | 0.26 / 0.19 | 0.52 / 0.49 | 0.45 / 0.44 | 0.56 / 0.55 | 0.60 / 0.59 |
+
+## Dataset catalog
+
+### Afrikaans
+
+Family: Indo-European, Germanic. ISO: af. Spoken in: South Africa, Namibia. Page: https://aaivu.github.io/KuralHub/languages/afrikaans.html
+
+- **AfrikaansSE (Creation of an Afrikaans speech corpora for Speech Emotion Recognition)**. Type: Audio. Emotions: Anticipation, Joy, Trust, Fear, Surprise, Sadness, Disgust and Anger. Size: Number of samples: 800. Access: On request. Licence: Creative Commons Attribution license. Paper: https://drive.google.com/file/d/178ObKjeWx1m7Faek45IsJ53B2fZiViPS/view.
+
+### Amharic
+
+Family: Afro-Asiatic, Semitic. ISO: am. Spoken in: Ethiopia. Page: https://aaivu.github.io/KuralHub/languages/amharic.html
+
+- **Amharic Speech Emotion Dataset (ASED)**. Type: Audio. Emotions: Neutral, Fearful, Happy, Sad, Angry. Size: 2,474 audio samples; 65 speakers (25 female, 40 male); each sample 2-4 seconds. Access: Open. Paper: https://arxiv.org/abs/2201.02710. Download: https://github.com/Ethio2021/ASED_V1.
+
+### Arabic
+
+Family: Afro-Asiatic, Semitic. ISO: ar. Spoken in: Arab World, Middle East and North Africa. Page: https://aaivu.github.io/KuralHub/languages/arabic.html
+
+- **ANAD (Arabic Natural Audio Dataset)**. Type: Audio. Emotions: Happy, Angry, Surprised. Size: Number of samples: 1384. Access: Open. Licence: CC BY-NC-SA 4.0. Website: https://www.kaggle.com/datasets/suso172/arabic-natural-audio-dataset. Download: https://www.kaggle.com/datasets/suso172/arabic-natural-audio-dataset.
+- **BAVED (Basic Arabic Vocal Emotions Dataset)**. Type: Audio. Emotions: Low, Neutral, High. Size: Number of samples 1935, speakers: 61. Access: Open. Download: https://github.com/40uf411/Basic-Arabic-Vocal-Emotions-Dataset.
+
+### Assamese
+
+Family: Indo-European, Indo-Aryan. ISO: as. Spoken in: India (Northeast India: Assam, Arunachal Pradesh, Meghalaya, Nagaland). Page: https://aaivu.github.io/KuralHub/languages/assamese.html
+
+- **Assamese Emotional Speech Corpus**. Type: Audio. Emotions: Angry, Happy, Sad, Neutral. Size: samples: approximately 800, speakers: 20. Access: On request. Licence: CC BY 4.0. Paper: https://indjst.org/download-article.php?Article_Unique_Id=INDJST13193&Full_Text_Pdf_Download=True.
+- **Assamese Emotional Speech Dataset**. Type: Audio. Emotions: Calm, Neutral, Anger, Sad, Happy, Surprise, Disgust. Size: samples: 1750, speakers: 25. Access: On request. Paper: https://www.ijcse.com/docs/INDJCSE21-12-01-187.pdf.
+
+### Azerbaijani
+
+Family: Turkic, Oghuz. ISO: az. Spoken in: Azerbaijan. Page: https://aaivu.github.io/KuralHub/languages/azerbaijani.html
+
+No SER dataset found in the survey.
+
+
+### Bambara
+
+Family: Niger-Congo, Mande. ISO: bm. Spoken in: Mali. Page: https://aaivu.github.io/KuralHub/languages/bambara.html
+
+No SER dataset found in the survey.
+
+
+### Bengali
+
+Family: Indo-European, Indo-Aryan. ISO: bn. Spoken in: Bangladesh, and India. Page: https://aaivu.github.io/KuralHub/languages/bengali.html
+
+- **BANSpEmo**. Type: Audio. Emotions: Disgust, Happy, Sad, Surprised, Anger, Fear. Size: samples - 792, speakers - 22. Access: Open. Licence: CC-BY 4.0. Website: https://data.mendeley.com/datasets/rdwn4bs5ky/2. Paper: https://arxiv.org/pdf/2312.14020. Download: https://data.mendeley.com/datasets/rdwn4bs5ky/2.
+- **BanglaSER**. Type: Audio. Emotions: Angry, Happy, Neutral, Sad, and Surprise. Size: samples - 1467, speakers - 34. Access: Open. Licence: CC-BY 4.0. Website: https://data.mendeley.com/datasets/t9h6p943xy/5. Paper: https://www.sciencedirect.com/science/article/pii/S235234092200302X. Download: https://data.mendeley.com/datasets/t9h6p943xy/5.
+- **KBES**. Type: Audio. Emotions: Neutral, Happy (Low), Happy (High), Sad (Low), Sad (High), Angry (Low), Angry (High), Disgust (Low), Disgust (High). Size: samples - 900, speakers - 35. Access: Open. Licence: CC-BY 4.0. Website: https://data.mendeley.com/datasets/vsn37ps3rx/4. Paper: https://www.sciencedirect.com/science/article/pii/S2352340923008107. Download: https://data.mendeley.com/datasets/vsn37ps3rx/4.
+- **SUBESCO**. Type: Audio. Emotions: Anger, Disgust, Fear, Happiness, Neutral, Sadness, and Surprise. Size: samples - 7000, speakers - 20, duration - 7h 40min. Access: Open. Licence: CC-BY 4.0. Website: https://zenodo.org/records/4526477. Paper: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0250173. Download: https://zenodo.org/records/4526477.
+
+### Bhojpuri
+
+Family: Indo-European, Indo-Aryan. ISO: bho. Spoken in: India and Nepal. Page: https://aaivu.github.io/KuralHub/languages/bhojpuri.html
+
+No SER dataset found in the survey.
+
+
+### Burmese
+
+Family: Sino-Tibetan, Lolo-Burmese. ISO: mya. Spoken in: Myanmar (Burma). Page: https://aaivu.github.io/KuralHub/languages/burmese.html
+
+- **BMISEC (Burmese Movies Interviews Speech Emotion Corpus (BMISEC))**. Type: Audio. Emotions: Angry, Happy, Disgust, Fear, Sad, Surprise, Neutral. Size: 1,332 utterances, 2.585 MB, 1 hour 56.645 seconds total. Access: Open. Website: https://onlineresource.ucsy.edu.mm/handle/123456789/2809. Paper: https://ieeexplore.ieee.org/document/10182163. Download: https://onlineresource.ucsy.edu.mm/handle/123456789/2809.
+- **ESMBS (Emotional Speech of Mandarin and Burmese Speakers (ESMBS))**. Type: Audio. Emotions: Anger, happiness, sadness, disgust, fear, surprise. Access: On request. Paper: https://www.sciencedirect.com/science/article/pii/S0167639303000992.
+- **New et al. (2001)**. Type: Audio. Emotions: Anger, Dislike, Fear, Happiness, Sadness and Surprise. Access: On request. Paper: https://dr.ntu.edu.sg/bitstream/10356/90745/1/C48-S13P02-Tencon2001-TLN.pdf.
+
+### Cebuano
+
+Family: Austronesian, Philippine. ISO: ceb. Spoken in: Philippines. Page: https://aaivu.github.io/KuralHub/languages/cebuano.html
+
+No SER dataset found in the survey.
+
+
+### Chinese
+
+Family: Sino-Tibetan, Sinitic. ISO: zh (ISO 639-1), zho (ISO 639-2). Spoken in: China, Taiwan, Singapore, Malaysia. Page: https://aaivu.github.io/KuralHub/languages/chinese.html
+
+- **CASIA (CASIA Chinese Emotion Corpus)**. Type: Audio. Emotions: Anger, Fear, Happy, Neutral, Sad, Surprise. Size: 7,200 recordings, 8 speakers (4 male, 4 female). Access: Open. Licence: Apache 2.0. Website: http://www.chineseldc.org/. Download: https://www.kaggle.com/datasets/xiangminjie/casia-ser.
+- **CHEAVD (CHEAVD: a Chinese natural emotional audio–visual database)**. Type: Audio-Visual. Emotions: Anger, Anxious, Sadness, Surprise, Disgust, Fear, Happiness, Worried. Size: 2322 samples, 238 speakers, 140 mins, average duration of 3.3s, 44.1 kHz. Access: Open. Website: http://www.chineseldc.org/. Paper: https://www.researchgate.net/profile/Jianhua-Tao/publication/308013330_CHEAVD_a_Chinese_natural_emotional_audio-visual_database/links/642c276920f25554da0b9e35/CHEAVD-a-Chinese-natural-emotional-audio-visual-database.pdf. Download: http://www.chineseldc.org/.
+- **CHEAVD 2.0**. Type: Audio-Visual. Emotions: Anger, Anxious, Sadness, Surprise, Disgust, Happiness, Worried, Neutral. Size: 7030 samples, 527 speakers, 474 mins, average duration of 3.3s. Access: Open. Paper: https://opus.bibliothek.uni-augsburg.de/opus4/files/45049/45049.pdf.
+- **EESDB (Chinese Elderly emotion database)**. Type: Audio. Emotions: Anger, Disgust, Fear, Happiness, Neutral, Sadness, and Surprise. Size: 400 utterances, 16 speakers, 8 old men and 8 old women. Access: On request. Paper: https://www.researchgate.net/profile/Kunxia-Wang/publication/324415994_A_Database_of_elderly_emotional_speech/links/5acce7f6a6fdcc8784092596/A-Database-of-elderly-emotional-speech.pdf.
+- **EMOVIE (EMOVIE (Mandarin Emotional Movie Speech Dataset))**. Type: Audio / Text. Emotions: 5-point polarity scale (Strong Negative to Strong Positive). Size: 9,724 utterances, 4.18 hours total. Access: Open. Website: https://viem-ccy.github.io/EMOVIE/dataset_release.html. Paper: https://arxiv.org/abs/2106.09317. Download: https://drive.google.com/file/d/1rvGwYulgfif_5Gqlp_yesoLQM8S6xczH/view?usp=sharing.
+- **ESD (Emotional Speech Database (ESD))**. Type: Audio. Emotions: Neutral, Anger, Happiness, Sadness, Surprise. Size: 17500 utterances, 10 speakers, average of 3.22s. Access: On request. Website: https://kunzhou9646.github.io/controllable-evc/. Paper: https://www.sciencedirect.com/science/article/pii/S0167639321001308. Download: https://drive.google.com/file/d/1scuFwqh8s7KIYAfZW1Eu6088ZAK2SI-v/view?usp=sharing.
+- **M3ED (Multi-modal Multi-scene Multi-label Emotional Dialogue Database (RUCM3ED))**. Type: Multimodal. Emotions: Happy, Neutral, Sad, Disgust, Anger, Fear, Surprise. Size: 24,449 utterances, 990 dialogues, 626 speakers, from ~500 TV episodes. Access: Open. Website: https://github.com/AIM3-RUC/RUCM3ED. Paper: https://arxiv.org/abs/2205.10237. Download: https://pan.baidu.com/s/1xip42FAEBeBteSMUNYtHtQ.
+- **SECEPDB (A Database for Emotional Interactions of the Elderly)**. Type: Multimodal. Emotions: Anxiety, boredom, Anger, Disgust, Happiness, Neutral, Sadness. Size: 810 utterances, 16 speakers, 8 old men and 8 old women. Access: On request. Paper: https://www.researchgate.net/profile/Kunxia-Wang/publication/306926438_A_database_for_emotional_interactions_of_the_elderly/links/5acce6270f7e9b1896546a27/A-database-for-emotional-interactions-of-the-elderly.pdf.
+
+### Czech
+
+Family: Indo-European, Slavic. ISO: cs. Spoken in: Czech Republic, European Union, Austria, Bosnia and Herzegovina, Croatia, Poland, Romania, Slovakia. Page: https://aaivu.github.io/KuralHub/languages/czech.html
+
+- **CDSE (Czech Database of Speech Emotions)**. Type: Audio. Emotions: Happiness, Anger, Sadness, Neutral. Access: On request. Paper: https://ieeexplore.ieee.org/document/7034463.
+- **Slavic Call Center Emotional Speech Corpus**. Type: Audio. Emotions: Anger, Happiness, Sadness, Surprise, Neutral. Size: Number of samples: 600. Access: On request. Paper: https://ieeexplore.ieee.org/document/6422011/.
+
+### Dutch
+
+Family: Indo-European, Germanic. ISO: nl. Spoken in: Netherlands, Belgium, Suriname. Page: https://aaivu.github.io/KuralHub/languages/dutch.html
+
+- **PICKA-NH**. Type: Audio. Emotions: Happiness, Anger, Sadness. Access: Open. Licence: MIT, CC-BY. Website: https://hdl.handle.net/10411/WZVUGN. Paper: https://peerj.com/articles/8773/. Download: https://hdl.handle.net/10411/WZVUGN.
+
+### English
+
+Family: Indo-European, Germanic. ISO: en. Spoken in: United States, United Kingdom, Canada, Australia, New Zealand. Page: https://aaivu.github.io/KuralHub/languages/english.html
+
+- **IEMOCAP**. Type: Audio. Emotions: Happy, Anger, Sadness, Frustration, and Neutral. Size: samples - 12000+, speakers - 10, duration - 12h. Access: On request. Licence: Dataset-Specific. Website: https://sail.usc.edu/iemocap/iemocap_release.htm. Paper: https://sail.usc.edu/iemocap/Busso_2008_iemocap.pdf. Download: https://sail.usc.edu/iemocap/iemocap_release.htm.
+- **IESC (Indian Emotional Speech Corpora)**. Type: Audio. Emotions: Neutral, Happy, Angry, Sad,and Fear. Size: samples - 600, speakers - 8. Access: Open. Website: https://www.kaggle.com/datasets/ybsingh/indian-emotional-speech-corpora-iesc. Paper: https://link.springer.com/article/10.1007/s11042-023-14577-w. Download: https://www.kaggle.com/datasets/ybsingh/indian-emotional-speech-corpora-iesc.
+- **RAVDESS**. Type: Audio. Emotions: Calm, Happy, Sad, Angry, Fearful, Surprise, and Disgust. Size: samples - 1440, speakers - 24. Access: Open. Licence: CC-BY 4.0. Website: https://www.kaggle.com/datasets/uwrfkaggler/ravdess-emotional-speech-audio. Paper: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0196391. Download: https://www.kaggle.com/datasets/uwrfkaggler/ravdess-emotional-speech-audio.
+
+### Filipino
+
+Family: Austronesian, Philippine. ISO: fil. Spoken in: Philippines. Page: https://aaivu.github.io/KuralHub/languages/filipino.html
+
+- **Filipino Multimodal Emotion Database (FilMED)**. Type: Multimodal (Audio-Video). Emotions: kasiyahan (happiness), kalungkutan (sadness), galit (anger), takot (fear), gulat (surprise), pandidiri (disgust). Size: 11,430 audio-video clips; 25 subjects. Access: On request. Paper: https://link.springer.com/article/10.1007/s12193-012-0114-8.
+
+### French
+
+Family: Indo-European, Romance. ISO: fr. Spoken in: France. Page: https://aaivu.github.io/KuralHub/languages/french.html
+
+- **CaFE (A Canadian French Emotional Speech Dataset)**. Type: Audio. Emotions: Sadness, Happiness, Anger, Fear, Disgust, Surprise, and Neutral. Size: samples - 936, speakers - 12. Access: Open. Licence: CC-BY 4.0. Website: https://zenodo.org/records/1478765. Paper: https://www.researchgate.net/profile/Philippe-Gournay/publication/326022359_A_canadian_french_emotional_speech_dataset/links/5ba3b08845851574f7d96df7/A-canadian-french-emotional-speech-dataset.pdf. Download: https://zenodo.org/records/1478765.
+- **OréauFR (French Emotional Speech Database)**. Type: Audio. Emotions: Anger, Disgust, Fear, Happiness, Sadness, Surprise, Neutral. Size: samples - 502. Access: Open. Licence: CC-BY 4.0. Website: https://zenodo.org/records/4405783#.Yqjq_9JBxph. Download: https://zenodo.org/records/4405783#.Yqjq_9JBxph.
+
+### Fulfulde
+
+Family: Niger-Congo, Atlantic. ISO: ff. Spoken in: Burkina Faso Mali, Senegal, guinea Conakry, Niger, Cameroon. Page: https://aaivu.github.io/KuralHub/languages/fulfulde.html
+
+No SER dataset found in the survey.
+
+
+### German
+
+Family: Indo-European, Germanic. ISO: de. Spoken in: Germany. Page: https://aaivu.github.io/KuralHub/languages/german.html
+
+- **EmoDB**. Type: Audio. Emotions: Anger, Boredom, Anxiety, Happy, Sadness, Disgust, and Neutral. Size: samples - 535 speakers - 10. Access: Open. Website: https://www.researchgate.net/profile/Felix-Burkhardt-2/publication/221491017_A_database_of_German_emotional_speech/links/00b7d5226f45d66e38000000/A-database-of-German-emotional-speech.pdf. Paper: https://www.researchgate.net/profile/Felix-Burkhardt-2/publication/221491017_A_database_of_German_emotional_speech/links/00b7d5226f45d66e38000000/A-database-of-German-emotional-speech.pdf. Download: https://www.kaggle.com/datasets/piyushagni5/berlin-database-of-emotional-speech-emodb.
+
+### Greek
+
+Family: Indo-European, Hellenic. ISO: el. Spoken in: Greece, Cyprus. Page: https://aaivu.github.io/KuralHub/languages/greek.html
+
+- **AESDD (Acted Emotional Speech Dynamic Database)**. Type: Audio. Emotions: Happy, Sad, Angry, Fear, Disgust. Size: utterances - 500, speakers - 05. Access: Open. Website: https://m3c.web.auth.gr/research/aesdd-speech-emotion-recognition/. Paper: https://ieeexplore.ieee.org/abstract/document/8501881. Download: https://mega.nz/folder/0ShVXY7C#-73kVoK05OjTPEA95UUvMw.
+- **GreThE (Greek Theatrical Emotion Dataset)**. Type: Audio. Emotions: emotions are characterized using Valence(Negative/Neutral/Positive) and Arousal(Weak/Neutral/Strong).. Size: 500 samples, 90 speakers, 46 minutes duration. Access: Open. Paper: https://aclanthology.org/2022.lrec-1.111/. Download: https://github.com/magcil/GreThE.
+- **SEWA**. Type: Multimodal (Audio, Video). Emotions: emotions are characterized using valence and arousal.. Size: duration: 44 hours, samples: 1990, speakers:398. Access: On request. Licence: Dataset-Specific - SEWA EULA. Website: https://db.sewaproject.eu/. Paper: http://arxiv.org/pdf/1901.02839. Download: https://db.sewaproject.eu/.
+
+### Gujarati
+
+Family: Indo-European, Indo-Aryan. ISO: gu. Spoken in: India. Page: https://aaivu.github.io/KuralHub/languages/gujarati.html
+
+- **Tank et al. (2020)**. Type: Audio. Emotions: Sadness, Surprise, Anger, Disgust, Fear, Happiness. Size: samples: 1296, speakers: 9. Access: On request. Paper: https://www.researchgate.net/publication/343080634_Creation_of_speech_corpus_for_emotion_analysis_in_Gujarati_language_and_its_evaluation_by_various_speech_parameters.
+
+### Hausa
+
+Family: Afro-Asiatic, Chadic. ISO: ha. Spoken in: Nigeria, Niger, Ghana, Cameroon, Chad, Sudan, Benin, Burkina Faso, Togo, Central African Republic, and parts of other West and Central African countries.. Page: https://aaivu.github.io/KuralHub/languages/hausa.html
+
+No SER dataset found in the survey.
+
+
+### Hindi
+
+Family: Indo-European, Indo-Aryan. ISO: hi. Spoken in: India. Page: https://aaivu.github.io/KuralHub/languages/hindi.html
+
+- **Bansal And Dev et al.**. Type: Audio. Size: samples - 6048, speakers - 28. Access: On request. Paper: https://ieeexplore.ieee.org/document/6709867.
+- **IITKGP-SEHSC**. Type: Audio. Emotions: Anger, Disgust, Fear, Happy, Neutral, Sad, Sarcastic and Surprise. Size: samples - 12000, speakers - 10, duration - 9hour. Access: On request. Website: https://cse.iitkgp.ac.in/~ksrao/res.html. Paper: https://ieeexplore.ieee.org/document/5738540. Download: https://cse.iitkgp.ac.in/~ksrao/pdf/declaration.pdf.
+- **VishalB (Vishal B. (2021). Speech Emotion Recognition (Hindi) Dataset. Kaggle.)**. Type: Audio. Emotions: Anger, Disgust, Fear, Happy, Neutral, Sad, Sarcastic and Surprise. Size: samples - 3200. Access: Open. Website: https://github.com/aaivu/KuralHub/blob/add/lux/hindi/datasets/Hindi/VishalB.md. Download: https://github.com/aaivu/KuralHub/blob/add/lux/hindi/datasets/Hindi/VishalB.md.
+
+### Hungarian
+
+Family: Uralic, Ugric. ISO: hu. Spoken in: Hungary, Serbia (in Vojvodina), Austria (in Burgenland), Slovenia (in Prekmurje), Romania (in Transylvania),. Page: https://aaivu.github.io/KuralHub/languages/hungarian.html
+
+- **HESD (Hungarian Emotional Speech Database)**. Type: Audio. Emotions: Fear, Sadness, Anger, Surprise, Disgust, Joy, Excitement, Neutral. Size: Number of samples: 760 , speakers: 38. Access: On request. Paper: https://www.researchgate.net/profile/Klara-Vicsi/publication/225204892_Speech_Emotion_Perception_by_Human_and_Machine/links/09e4150b71db991837000000/Speech-Emotion-Perception-by-Human-and-Machine.pdf.
+- **SEWA**. Type: Multimodal (Audio, Video). Emotions: emotions are characterized using valence and arousal.. Size: duration: 44 hours, samples: 1990, speakers:398. Access: On request. Licence: Dataset-Specific - SEWA EULA. Website: https://db.sewaproject.eu/. Paper: http://arxiv.org/pdf/1901.02839. Download: https://db.sewaproject.eu/.
+
+### Igbo
+
+Family: Niger-Congo, Volta-Niger. ISO: ig. Spoken in: Nigeria (southeastern regions). Page: https://aaivu.github.io/KuralHub/languages/igbo.html
+
+No SER dataset found in the survey.
+
+
+### Indonesian
+
+Family: Austronesian, Malayic. ISO: id. Spoken in: Indonesia. Page: https://aaivu.github.io/KuralHub/languages/indonesian.html
+
+- **Fahmi et al (2020)**. Type: Audio. Emotions: Happy, Sad, Angry, Neutral. Size: samples - 965, speakers - 10. Access: On request. Paper: https://aclanthology.org/2020.sltu-1.26.pdf.
+- **IndoWaveSentiment**. Type: Audio. Emotions: Neutral, Happy, Surprised, Disgusted, and Disappointed. Size: samples - 300, speakers - 10. Access: Open. Licence: CC-BY 4.0. Website: https://data.mendeley.com/datasets/j9ytfdzy27/1. Paper: https://www.sciencedirect.com/science/article/pii/S2352340924011004. Download: https://data.mendeley.com/datasets/j9ytfdzy27/1.
+
+### Italian
+
+Family: Indo-European, Romance. ISO: it. Spoken in: Italy. Page: https://aaivu.github.io/KuralHub/languages/italian.html
+
+- **DEMoS**. Type: Audio. Emotions: Anger, Sadness, Happiness, Fear, Surprise, Disgust, Guilt. Size: samples - 6697, speakers - 68. Access: On request. Website: https://zenodo.org/records/2544829. Paper: https://link.springer.com/article/10.1007/s10579-019-09450-y. Download: https://zenodo.org/records/2544829.
+- **EMOVO**. Type: Audio. Emotions: Disgust, Fear, Anger, Joy, Surprise, Sadness, Neutral. Size: samples - 564, speakers - 6. Access: Open. Website: https://dagshub.com/kingabzpro/EMOVO. Paper: https://aclanthology.org/L14-1478/. Download: https://dagshub.com/kingabzpro/EMOVO.
+- **Emozionalmente**. Type: Audio. Emotions: Anger, Disgust, Fear, Joy, Sadness, Surprise, Neutral. Size: samples - 6902, speakers - 431. Access: Open. Licence: CC-BY 4.0. Website: https://zenodo.org/records/6569824. Paper: https://ieeexplore.ieee.org/document/10879457. Download: https://zenodo.org/records/6569824.
+
+### Japanese
+
+Family: Japonic. ISO: ja. Spoken in: Japan. Page: https://aaivu.github.io/KuralHub/languages/japanese.html
+
+- **JVNV (A Corpus of Japanese Emotional Speech with Verbal Content and Nonverbal Expressions)**. Type: Audio. Emotions: Anger, Disgust, Fear, Happiness, Sadness, and Surprise. Size: samples - 1615, speakers - 4, duration - 3.94h. Access: Open. Licence: CC-BY-SA 4.0. Website: https://sites.google.com/site/shinnosuketakamichi/research-topics/jvnv_corpus. Paper: https://arxiv.org/pdf/2310.06072. Download: https://sites.google.com/site/shinnosuketakamichi/research-topics/jvnv_corpus.
+- **Keio-ESD**. Type: Audio. Emotions: Anger, joy, disgust, contempt, amusement, worry, kindness, relief, indignation, shame, ... (47 types in total). Size: speakers - 1 (Male). Access: Open. Website: https://research.nii.ac.jp/src/Keio-ESD.html. Download: https://research.nii.ac.jp/src/Keio-ESD.html.
+
+### Javanese
+
+Family: Austronesian, Malayo-Polynesian. ISO: jv. Spoken in: Indonesia. Page: https://aaivu.github.io/KuralHub/languages/javanese.html
+
+- **Java-SED**. Type: Audio. Emotions: Neutral, Sad, Happy, Surprised, Fear and Anger. Size: samples - 1680, speakers -20. Access: On request. Website: https://beais-uny.id/dataset/. Paper: https://www.researchgate.net/publication/364399980_Development_of_Javanese_Speech_Emotion_Database_Java-SED. Download: https://beais-uny.id/dataset/.
+
+### Kannada
+
+Family: Dravidian, South Dravidian. ISO: kn. Spoken in: India. Page: https://aaivu.github.io/KuralHub/languages/kannada.html
+
+- **Agrawal et al (2022)**. Type: Audio. Emotions: Anger, Sadness, Surprise, Happiness, Fear, Neutral. Size: samples: 468, speakers: 13. Access: Open. Licence: CC-BY 4.0. Website: https://zenodo.org/records/6345107. Paper: https://zenodo.org/records/6345107. Download: https://zenodo.org/records/6345107.
+- **KES (Kannada Emotional Speech database)**. Type: Audio. Access: On request. Paper: https://link.springer.com/chapter/10.1007/978-981-10-5146-3_14.
+
+### Kazakh
+
+Family: Turkic, Kipchak. ISO: kk. Spoken in: Kazakhstan, Russia, China, Uzbekistan. Page: https://aaivu.github.io/KuralHub/languages/kazakh.html
+
+- **KazEmoTTS (Kazakh Emotional Text-to-Speech Synthesis)**. Type: Audio + Text. Emotions: Happy, Sad, Angry, Neutral, Scared, and Surprised. Size: Number of samples: 54,760, speakers: 3(2M,1F), duration: 74.85h. Access: On request. Licence: CC-BY 4.0. Paper: https://arxiv.org/pdf/2404.01033. Download: https://docs.google.com/forms/d/e/1FAIpQLSeTg88cvRbZkR5Go1p0IkQxFnOJv2KL6j2WVcsa6ut4XzQp5g/viewform.
+- **Kazakh-Russian Emotion Corpus**. Type: Audio. Emotions: Happiness, Sadness, Anger, Neutral, Boredom, Disgust, Fear. Size: Number of samples: 16160, speakers: 101, duration: 14+ hours. Access: On request. Website: https://digitalcommons.aaru.edu.jo/amis/vol14/iss1/8/. Paper: https://digitalcommons.aaru.edu.jo/cgi/viewcontent.cgi?article=2829&context=amis.
+
+### Khmer
+
+Family: Austroasiatic, Khmeric. ISO: km. Spoken in: Cambodia, Thailand, Vietnam. Page: https://aaivu.github.io/KuralHub/languages/khmer.html
+
+No SER dataset found in the survey.
+
+
+### Korean
+
+Family: Koreanic. ISO: ko. Spoken in: South Korea. Page: https://aaivu.github.io/KuralHub/languages/korean.html
+
+- **KESDy18**. Type: Audio. Emotions: Angry, happy, neutral, sad, disgust, fear, surprise. Size: samples - 2880, speakers - 30. Access: Open. Licence: Dataset-Specific. Website: https://nanum.etri.re.kr/share/kjnoh2/KESDy18?lang=En_us. Paper: https://www.mdpi.com/1424-8220/21/5/1579/pdf. Download: https://nanum.etri.re.kr/share/kjnoh2/KESDy18?lang=En_us.
+
+### Kurdish
+
+Family: Indo-European, Iranian. ISO: ku. Spoken in: Iraq, Rojava, Armenia. Page: https://aaivu.github.io/KuralHub/languages/kurdish.html
+
+- **Kurdish Emotional Speech Database**. Type: Audio. Emotions: Anger, Happiness, Sad, Fear, Boredom, Surprise, and Neutral. Size: Number of samples: 3360, speakers: 12. Access: On request. Paper: https://ieeexplore.ieee.org/abstract/document/6659464.
+- **Nematullah et al. (2024)**. Type: Audio. Emotions: Neutral, Sadness, Happiness, and Anger. Size: Number of samples: 287, Duration: 16 minutes. Access: On request. Paper: https://www.iraqoaj.net/iasj/download/d7df705d2d594266.
+
+### Magahi
+
+Family: Indo-European, Indo-Aryan. ISO: mag (639-3). Spoken in: India (Bihar, Jharkhand, and West Bengal). Page: https://aaivu.github.io/KuralHub/languages/magahi.html
+
+No SER dataset found in the survey.
+
+
+### Maithili
+
+Family: Indo-European, Indo-Aryan. ISO: mai. Spoken in: India, Nepal. Page: https://aaivu.github.io/KuralHub/languages/maithili.html
+
+No SER dataset found in the survey.
+
+
+### Malay
+
+Family: Austronesian, Malayic. ISO: ms. Spoken in: Malaysia, Indonesia, Brunei, Singapore, Thailand. Page: https://aaivu.github.io/KuralHub/languages/malay.html
+
+- **Emolah**. Type: Audio. Emotions: Happy, Sad, Angry, Neutral. Size: duration - 4 hours and 13 seconds. Access: On request. Licence: Creative Commons Attribution License. Paper: https://izzadramli.uitm-apps.com/wp-content/uploads/2021/03/Emolah_A_Malay_Language_Spontaneous_Speech_Emotion.pdf.
+
+### Malayalam
+
+Family: Dravidian, South Dravidian. ISO: ml. Spoken in: India (Kerala, Lakshadweep, Puducherry). Page: https://aaivu.github.io/KuralHub/languages/malayalam.html
+
+- **IIITSaint-EmoMDB (IIITSaint-EmoMDB - Malayalam)**. Type: Audio. Emotions: Happy, Sad, Angry and Neutral or emotion ratings at valence and arousal. Access: On request. Paper: https://ieeexplore.ieee.org/document/10800549.
+- **Kannur Malayalam Speech Emotion Recognition (KMSER) Dataset**. Type: Audio. Emotions: Happy, Angry, Sad, Neutral. Access: On request. Paper: https://thegrenze.com/pages/servej.php?association=GRENZE&fn=380.pdf&id=1958&issue=2&journal=GIJET&name=Malayalam+Kannur+Dialect+Speech+EmotionRecognition+using+Machine+Learning&volume=9&year=2023.
+- **MAVES DB (Malayalam Audio-Visual Emotional Speech Data (MAVES DB))**. Type: Multimodal (Audio-Visual). Access: Open. Licence: CC BY 4.0. Paper: https://data.mendeley.com/datasets/6hm2xt5hd8/1. Download: https://data.mendeley.com/datasets/6hm2xt5hd8/1.
+- **Malayalam Speech Emotion Dataset (Automatic Emotion Recognition from Speech Using Artificial Neural Networks with Gender-Dependent Databases)**. Type: Audio. Emotions: Happy, Sad, Angry, Neutral. Size: 340 male speech samples, 300 female speech samples, 10 male and 8 female, 8KHz. Access: On request. Paper: https://ieeexplore.ieee.org/abstract/document/5376782.
+
+### Nepali
+
+Family: Indo-European, Indo-Aryan. ISO: ne (639-1), nep (639-2/3). Spoken in: Nepal (official), India (parts of Sikkim, Darjeeling), Bhutan. Page: https://aaivu.github.io/KuralHub/languages/nepali.html
+
+No SER dataset found in the survey.
+
+
+### Nigerian Pidgin
+
+Family: English-based creole. ISO: pcm (West African Pidgin Creole). Spoken in: Nigeria. Page: https://aaivu.github.io/KuralHub/languages/nigerian-pidgin.html
+
+No SER dataset found in the survey.
+
+
+### Northern Pashto
+
+Family: Indo-European, Iranian. ISO: ps (639-1), pus (639-2/3). Spoken in: Afghanistan (eastern and southern regions), Pakistan (Khyber Pakhtunkhwa). Page: https://aaivu.github.io/KuralHub/languages/northern-pashto.html
+
+No SER dataset found in the survey.
+
+
+### Northern Uzbek
+
+Family: Turkic, Karluk. ISO: uzn. Spoken in: Uzbekistan, Kazakhstan, Kyrgyzstan, Tajikistan. Page: https://aaivu.github.io/KuralHub/languages/northern-uzbek.html
+
+No SER dataset found in the survey.
+
+
+### Odia
+
+Family: Indo-European, Indo-Aryan. ISO: or (ISO 639-1), ori (ISO 639-2). Spoken in: India (primarily in Odisha state). Page: https://aaivu.github.io/KuralHub/languages/odia.html
+
+- **SITB-OSED (Odia Speech Emotion Database (SITB-OSED))**. Type: Audio. Emotions: Anger, Surprise, Happy, Sadness, Disgust, Fear. Size: 12,110 utterances, 20 speakers (10 male, 10 female). Access: Open. Website: http://www.speal.org/download-sitb-osed-dataset/. Paper: https://doi.org/10.1109/CSDE56538.2022.10089254. Download: https://zenodo.org/records/14953940.
+
+### Persian
+
+Family: Indo-European, Iranian. ISO: fa. Spoken in: Iran, Afghanistan, and Tajikistan. Page: https://aaivu.github.io/KuralHub/languages/persian.html
+
+- **ShEMO (Sharif Emotional Speech Database)**. Type: Audio. Emotions: Anger, Fear, Happiness, Sadness, Surprise, Neutral. Size: samples: 3000, speakers: 87, duration: 3 h and 25 min. Access: Open. Paper: https://link.springer.com/article/10.1007/s10579-018-9427-x. Download: https://www.kaggle.com/datasets/mansourehk/shemo-persian-speech-emotion-detection-database.
+
+### Polish
+
+Family: Indo-European, Slavic. ISO: pl. Spoken in: Poland. Page: https://aaivu.github.io/KuralHub/languages/polish.html
+
+- **Cichosz and Slot (2005) (Polish Emotional Database)**. Type: Audio. Emotions: Neutral, Joy, Anger, Sadness, Fear, Boredom. Size: 240 utterances recorded by 8 speakers (4 female, 4 male). Access: On request. Paper: https://www.isca-speech.org/archive/interspeech_2005/cichosz05_interspeech.html.
+- **Sapinski et al. (2019)**. Type: Audio-Visual. Emotions: Happy, Sad, Angry, Disgust, Fear, Surprise. Size: 16 professional actors, 8 males, 8 females, 560 samples per modality (face, speech and gestures). Access: On request. Paper: https://repository.lboro.ac.uk/articles/conference_contribution/Multimodal_database_of_emotional_speech_video_and_gestures/9464504/1/files/17088239.pdf.
+- **nEMO**. Type: Audio. Emotions: Anger, Fear, Happiness, Sadness, Surprise, Neutral. Size: Over 3 hours, 9 actors, 4481 samples, average length of 2.47s. Access: Open. Licence: CC BY-NC-SA 4.0. Website: https://github.com/amu-cai/nEMO. Paper: https://aclanthology.org/2024.lrec-main.1059/. Download: https://github.com/amu-cai/nEMO.
+
+### Portuguese
+
+Family: Indo-European, Romance. ISO: pt. Spoken in: Brazil, Angola, Mozambique, and Portugal. Page: https://aaivu.github.io/KuralHub/languages/portuguese.html
+
+- **VERBO**. Type: Audio. Emotions: Happy, Disgust, Fear, Neutral, Anger, Surprise, and Sadness. Size: samples - 1176, speakers - 12. Access: On request. Website: https://sites.google.com/view/verbodatabase/home/download?authuser=0. Paper: https://thescipub.com/pdf/jcssp.2018.1420.1430.pdf. Download: https://sites.google.com/view/verbodatabase/home/download?authuser=0.
+- **emoUERJ**. Type: Audio. Emotions: Happy, Sad, Angry, Neutral. Size: samples - 377, speakers - 4. Access: Open. Licence: CC-BY 4.0. Website: https://zenodo.org/records/5427549. Paper: https://zenodo.org/records/5427549. Download: https://zenodo.org/records/5427549.
+
+### Punjabi
+
+Family: Indo-European, Indo-Aryan. ISO: pa. Spoken in: India (Punjab). Page: https://aaivu.github.io/KuralHub/languages/punjabi.html
+
+- **PEMO**. Type: Audio. Emotions: Anger, Sad, Happy, Neutral. Size: sample - 22000, speakers - 60, duration - 12h 35min. Access: On request. Paper: https://www.researchgate.net/publication/366257963_PEMO_A_New_Validated_Dataset_for_Punjabi_Speech_Emotion_Detection.
+
+### Quechua
+
+Family: Quechuan. ISO: qu. Spoken in: Throughout the central Andes Mountains including Argentina, Bolivia, Chile, Colombia, Ecuador, and Peru. Page: https://aaivu.github.io/KuralHub/languages/quechua.html
+
+- **Quechua Collao Corpus (A speech corpus of Quechua Collao for automatic dimensional emotion recognition)**. Type: Audio. Emotions: Happy, Sad, Bored, Fear, Sleepy, Calm, Excited, Angry, and Neutral. Size: Number of samples: 12420, speakers: 6, duration: 15 hours. Access: Open. Licence: CC BY 4.0. Website: https://figshare.com/articles/media/Quechua_Collao_for_Speech_Emotion_Recognition/20292516?file=37361143. Paper: https://www.nature.com/articles/s41597-022-01855-9.pdf. Download: https://figshare.com/ndownloader/files/37361143.
+
+### Romanian
+
+Family: Indo-European, Romance. ISO: ro (ISO 639-1), ron (ISO 639-2/T and ISO 639-3). Spoken in: Romania, Moldova, Serbia (Vojvodina), Ukraine. Page: https://aaivu.github.io/KuralHub/languages/romanian.html
+
+- **SRoL (Romanian Language Sounds (SRoL))**. Type: Audio. Emotions: Happiness, Sadness, Fury, Nutral. Size: Over 300 folders with emotional states, totaling approximately 900 speech recrdings. 14 male and 11 female. Access: Open. Website: http://www.etc.tuiasi.ro/sibm/romanian_spoken_language/en/arhiva_tot_en.htm. Paper: https://univagora.ro/jour/index.php/ijccc/article/download/2483/950. Download: http://www.etc.tuiasi.ro/sibm/romanian_spoken_language/en/arhiva_tot_en.htm.
+
+### Russian
+
+Family: Indo-European, Slavic. ISO: ru. Spoken in: Russia, Belarus, Ukraine, Kazakhstan, and Kyrgyzstan. Page: https://aaivu.github.io/KuralHub/languages/russian.html
+
+- **Dusha (Dusha (Dusha Crowd, Dusha Podcast))**. Type: Audio. Emotions: Happiness (Positive), Sadness, Anger and Neutral. Size: samples - 300000, duration - 350h. Access: Open. Website: https://huggingface.co/datasets/KELONMYOSA/dusha_emotion_audio/tree/main/data. Download: https://huggingface.co/datasets/KELONMYOSA/dusha_emotion_audio/tree/main/data.
+- **RESD (Russian Emotional Speech Dialogs with annotated text)**. Type: Audio. Emotions: Anger, Disgust, Fear, Enthusiasm, Happiness, Neutral, and Sadness. Size: samples - 1120, duration - 3.5h. Access: Open. Website: https://huggingface.co/datasets/Aniemore/resd. Download: https://huggingface.co/datasets/Aniemore/resd.
+
+### Saraiki
+
+Family: Indo-European, Indo-Aryan. ISO: skr. Spoken in: Pakistan (Southern Punjab), India. Page: https://aaivu.github.io/KuralHub/languages/saraiki.html
+
+No SER dataset found in the survey.
+
+
+### Sindhi
+
+Family: Indo-European, Indo-Aryan. ISO: sd (ISO 639-1), snd (ISO 639-2). Spoken in: Pakistan (Sindh Province), India (Gujarat, Rajasthan). Page: https://aaivu.github.io/KuralHub/languages/sindhi.html
+
+- **Urdu-Sindhi Speech Emotion Corpus**. Type: Audio. Emotions: Anger, Disgust, Happiness, Neutral, Sarcasm, Sadness, and Surprise. Size: 701 samples. Access: On request. Download: https://zenodo.org/records/3685274.
+
+### Sinhala
+
+Family: Indo-European, Indo-Aryan. ISO: si. Spoken in: Sri Lanka. Page: https://aaivu.github.io/KuralHub/languages/sinhala.html
+
+No SER dataset found in the survey.
+
+
+### Somali
+
+Family: Afro-Asiatic, Cushitic. ISO: so. Spoken in: Somalia, Somaliland, Djibouti, Ethiopia, Kenya. Page: https://aaivu.github.io/KuralHub/languages/somali.html
+
+No SER dataset found in the survey.
+
+
+### Sotho
+
+Family: Niger-Congo, Bantu. ISO: st. Spoken in: Lesotho, South Africa, Zimbabwe. Page: https://aaivu.github.io/KuralHub/languages/sotho.html
+
+No SER dataset found in the survey.
+
+
+### Spanish
+
+Family: Indo-European, Romance. ISO: es. Spoken in: Spain, Andorra, Gibraltar. Page: https://aaivu.github.io/KuralHub/languages/spanish.html
+
+- **EMOVOME (Emotional Voice Messages (EMOVOME) database)**. Type: Audio. Emotions: Covering valence and arousal dimensions. Size: samples - 999, speakers - 100. Access: Open. Licence: CC-BY 4.0. Website: https://zenodo.org/records/10694370. Paper: https://arxiv.org/pdf/2403.02167. Download: https://zenodo.org/records/10694370.
+- **ESCorpus-PE**. Type: Audio. Emotions: three emotional dimensions Valence, Arousal, Dominance. Size: samples - 3749, speakers - 80. Access: Open. Licence: CC BY 4.0. Website: https://zenodo.org/records/5793223. Download: https://zenodo.org/records/5793223.
+- **MESD (Mexican Emotional Speech Database)**. Type: Audio. Emotions: Happy, Sad, Angry, Neutral, Fear, Disgust. Size: samples - 432, speakers - 11. Access: Open. Licence: CC-BY 4.0. Website: https://data.mendeley.com/datasets/cy34mh68j9/5. Paper: https://www.researchgate.net/publication/356814365_Mexican_Emotional_Speech_Database_Based_on_Semantic_Frequency_Familiarity_Concreteness_and_Cultural_Shaping_of_Affective_Prosody. Download: https://data.mendeley.com/datasets/cy34mh68j9/5.
+
+### Sundanese
+
+Family: Austronesian, Malayo-Polynesian. ISO: sun. Spoken in: Indonesia (West Java). Page: https://aaivu.github.io/KuralHub/languages/sundanese.html
+
+No SER dataset found in the survey.
+
+
+### Swahili
+
+Family: Niger-Congo, Bantu. ISO: sw. Spoken in: Tanzania, Kenya, Uganda, Rwanda, Burundi, the Democratic Republic of Congo, and parts of Mozambique, Malawi, and Somalia. Page: https://aaivu.github.io/KuralHub/languages/swahili.html
+
+- **Kenyan Swahili SER**. Type: Audio. Emotions: Sad, Happy, Surprised, Angry, Calm. Size: Samples: 300. Access: On request. Website: https://github.com/estherdatascientist/Swahili-Speech-Emotion-Recognition-System.
+
+### Swedish
+
+Family: Indo-European, Germanic. ISO: sv. Spoken in: Finland, Sweden, Åland, European Union, Nordic Council. Page: https://aaivu.github.io/KuralHub/languages/swedish.html
+
+- **EU-Emotion Voice Database**. Type: Audio. Emotions: Admiration, Amusement, Anger, Anxiety, Awe, Boredom, Disgust, Fear, Interest, Joy, Pleasure, Relief, Sadness, Satisfaction, Surprise, Triumph, Contempt, Embarrassment, Neutral, Pride. Size: 2,159 validated emotional voice stimuli from 54 actors. Access: On request. Paper: https://link.springer.com/content/pdf/10.3758/s13428-018-1048-1.pdf.
+- **Swedish Voice Provider Emotional Speech Corpus**. Type: Audio. Emotions: Not explicitly labeled; inferred categories include Neutral, Emphatic, and Negative. Size: Approximately 10,000 utterances from real-life voice-controlled telephone services. Access: On request. Paper: https://www.cs.cmu.edu/~kornel/pubs/is061581.pdf.
+
+### Tagalog
+
+Family: Austronesian, Philippine. ISO: tl (ISO 639-1), tgl (ISO 639-2). Spoken in: Philippines, United States, Canada, Saudi Arabia, UAE. Page: https://aaivu.github.io/KuralHub/languages/tagalog.html
+
+No SER dataset found in the survey.
+
+
+### Tamil
+
+Family: Dravidian, South Dravidian. ISO: ta. Spoken in: India, Sri Lanka. Page: https://aaivu.github.io/KuralHub/languages/tamil.html
+
+- **EmoTa**. Type: Audio. Emotions: Happy, Sad, Angry, Fear, Neutral. Size: Samples: 936, Speakers: 22, duration: 48min. Access: Open. Licence: EmoTa Academic-Commercial. Website: https://aaivu.github.io/EmoTa/. Paper: https://aclanthology.org/2025.chipsal-1.19.pdf. Download: https://rtuthaya.staff.uom.lk/contact-for-resources.
+- **Ram, C. Sunitha, et al.**. Type: Audio. Emotions: Joy, Sad, Angry, Neutral, Fear. Size: Samples: 95. Access: On request. Paper: https://ieeexplore.ieee.org/document/6781245.
+- **TaMaR-EmoDB**. Type: Audio. Emotions: Anger, Happy, Anxiety, Sad, Neutral. Size: Samples: 1202, Speakers: 12, duration: approx 200min. Access: On request. Paper: https://www.isca-archive.org/interspeech_2019/rajan19_interspeech.pdf.
+
+### Telugu
+
+Family: Dravidian, South-Central Dravidian. ISO: te. Spoken in: India. Page: https://aaivu.github.io/KuralHub/languages/telugu.html
+
+- **IITKGP-SESC (Indian Institute of Technology Kharagpur Simulated Emotion Speech Corpus)**. Type: Audio. Emotions: Happiness, Surprise, Anger, Disgust, Sadness, Fear, Sarcasm, Neutral. Size: samples - 12000, speakers - 10. Access: On request. Website: https://cse.iitkgp.ac.in/~ksrao/res.html. Paper: https://link.springer.com/chapter/10.1007/978-3-642-03547-0_46.
+- **Sowmith et al (2024)**. Type: Audio. Emotions: Happy, Sad, Angry, Neutral, Surprised. Size: samples-468. Access: Open. Licence: Apache 2.0. Website: https://www.kaggle.com/datasets/jettysowmith/telugu-emotion-speech/data. Download: https://www.kaggle.com/datasets/jettysowmith/telugu-emotion-speech/data.
+
+### Thai
+
+Family: Kra-Dai, Tai. ISO: th. Spoken in: Thailand. Page: https://aaivu.github.io/KuralHub/languages/thai.html
+
+- **Thai Speech Emotion Dataset**. Type: Audio. Emotions: Neutral, Anger, Happiness, Sadness, and Frustration. Size: samples: 27854, speakers: 200, duration: 41h 36min. Access: Open. Licence: CC-BY-SA 4.0. Website: https://airesearch.in.th/releases/speech-emotion-dataset/. Download: https://airesearch.in.th/releases/speech-emotion-dataset/.
+
+### Tswana
+
+Family: Niger-Congo, Bantu. ISO: tn. Spoken in: Botswana, South Africa, Zimbabwe, Namibia. Page: https://aaivu.github.io/KuralHub/languages/tswana.html
+
+No SER dataset found in the survey.
+
+
+### Turkish
+
+Family: Turkic, Oghuz. ISO: tr. Spoken in: Turkey. Page: https://aaivu.github.io/KuralHub/languages/turkish.html
+
+- **Oflazoglu et al (2011)**. Type: Audio. Emotions: Happy, Surprised, Sad, Angry, Fear, Neutral. Size: samples - 5304, Movies - 55. Access: On request. Paper: https://ieeexplore.ieee.org/document/5929860.
+- **TurEV-DB (Turkish Emotion-Voice Database)**. Type: Audio. Emotions: Angry, Calm, Happy, Sad. Size: samples - 1735, speakers - 6. Access: Open. Licence: CC-BY 4.0. Website: https://github.com/Xeonen/TurEV-DB/tree/master/Sound%20Source/Angry. Paper: https://aclanthology.org/2020.sltu-1.52.pdf. Download: https://github.com/Xeonen/TurEV-DB/tree/master/Sound%20Source/Angry.
+
+### Ukrainian
+
+Family: Indo-European, Slavic. ISO: uk (ISO 639-1), ukr (ISO 639-2). Spoken in: Ukraine, parts of Russia, Poland, Canada, USA. Page: https://aaivu.github.io/KuralHub/languages/ukrainian.html
+
+No SER dataset found in the survey.
+
+
+### Urdu
+
+Family: Indo-European, Indo-Aryan. ISO: ur. Spoken in: Pakistan, and India (Uttar Pradesh). Page: https://aaivu.github.io/KuralHub/languages/urdu.html
+
+- **URDU-Dataset**. Type: Audio. Emotions: Happy, Sad, Angry, Neutral. Size: samples - 400, speakers - 38 -. Access: Open. Website: https://dagshub.com/kingabzpro/URDU-Dataset. Paper: https://arxiv.org/pdf/1812.10411. Download: https://www.kaggle.com/datasets/kingabzpro/urdu-emotion-dataset.
+- **UrduSER**. Type: Audio. Emotions: Angry, Fear, Boredom, Disgust, Happy, Neutral, and Sad. Size: samples - 3500, speakers - 10. Access: Open. Licence: CC-BY 4.0. Website: https://data.mendeley.com/datasets/jcpfjnk5c2/3. Paper: https://data.mendeley.com/datasets/jcpfjnk5c2/3. Download: https://data.mendeley.com/datasets/jcpfjnk5c2/3.
+
+### Vietnamese
+
+Family: Austroasiatic, Vietic. ISO: vi. Spoken in: Vietnam. Page: https://aaivu.github.io/KuralHub/languages/vietnamese.html
+
+- **VNEMOS (Vietnamese Emotional Speech)**. Type: Audio. Emotions: Happy, Sad, Angry, Neutral, Anxiety. Size: samples - 250, duration - 30min. Access: On request. Website: https://docs.google.com/spreadsheets/d/1MhAdICuP7eQ1RVSXu_PJSnpI-Mp5bnlNuqqfp38eSHw/edit?gid=0#gid=0. Paper: https://ieeexplore.ieee.org/document/10616411.
+
+### Xhosa
+
+Family: Niger-Congo, Bantu. ISO: xho. Spoken in: South Africa, Lesotho, Zimbabwe. Page: https://aaivu.github.io/KuralHub/languages/xhosa.html
+
+No SER dataset found in the survey.
+
+
+### Yoruba
+
+Family: Niger-Congo, Volta-Niger. ISO: yo. Spoken in: Nigeria, Benin, Togo. Page: https://aaivu.github.io/KuralHub/languages/yoruba.html
+
+No SER dataset found in the survey.
+
+
+### Zulu
+
+Family: Niger-Congo, Bantu. ISO: zul. Spoken in: South Africa (KwaZulu-Natal), Lesotho, Eswatini, Zimbabwe. Page: https://aaivu.github.io/KuralHub/languages/zulu.html
+
+No SER dataset found in the survey.

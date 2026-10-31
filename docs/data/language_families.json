@@ -1,118 +1,282 @@
 {
-  "Afrikaans (af)": {
+  "Afrikaans": {
     "family": "Indo-European",
-    "subfamily": "Germanic"
+    "branch": "Germanic"
   },
-  "German (de)": {
-    "family": "Indo-European",
-    "subfamily": "Germanic"
-  },
-  "English (en)": {
-    "family": "Indo-European",
-    "subfamily": "Germanic"
-  },
-  "Spanish (es)": {
-    "family": "Indo-European",
-    "subfamily": "Romance"
-  },
-  "French (fr)": {
-    "family": "Indo-European",
-    "subfamily": "Romance"
-  },
-  "Italian (it)": {
-    "family": "Indo-European",
-    "subfamily": "Romance"
-  },
-  "Portuguese (pt)": {
-    "family": "Indo-European",
-    "subfamily": "Romance"
-  },
-  "Polish (pl)": {
-    "family": "Indo-European",
-    "subfamily": "Slavic"
-  },
-  "Russian (ru)": {
-    "family": "Indo-European",
-    "subfamily": "Slavic"
-  },
-  "Persian (fa)": {
-    "family": "Indo-European",
-    "subfamily": "Indo-Iranian"
-  },
-  "Hindi (hi)": {
-    "family": "Indo-European",
-    "subfamily": "Indo-Iranian"
-  },
-  "Urdu (ur)": {
-    "family": "Indo-European",
-    "subfamily": "Indo-Iranian"
-  },
-  "Bengali (bn)": {
-    "family": "Indo-European",
-    "subfamily": "Indo-Iranian"
-  },
-  "Greek (el)": {
-    "family": "Indo-European",
-    "subfamily": "Hellenic"
-  },
-  "Arabic (ar)": {
+  "Amharic": {
     "family": "Afro-Asiatic",
-    "subfamily": "Semitic"
+    "branch": "Semitic"
   },
-  "Amharic (am)": {
+  "Arabic": {
     "family": "Afro-Asiatic",
-    "subfamily": "Cushitic"
+    "branch": "Semitic"
   },
-  "Tamil (ta)": {
-    "family": "Dravidian",
-    "subfamily": null
+  "Assamese": {
+    "family": "Indo-European",
+    "branch": "Indo-Aryan"
   },
-  "Telugu (te)": {
-    "family": "Dravidian",
-    "subfamily": null
+  "Azerbaijani": {
+    "family": "Turkic",
+    "branch": "Oghuz"
   },
-  "Kannada (kn)": {
-    "family": "Dravidian",
-    "subfamily": null
-  },
-  "Chinese (zh)": {
-    "family": "Sino-Tibetan",
-    "subfamily": null
-  },
-  "Japanese (ja)": {
-    "family": "Japonic",
-    "subfamily": null
-  },
-  "Korean (ko)": {
-    "family": "Koreanic",
-    "subfamily": null
-  },
-  "Indonesian (id)": {
-    "family": "Austronesian",
-    "subfamily": null
-  },
-  "Hungarian (hu)": {
-    "family": "Uralic",
-    "subfamily": null
-  },
-  "Swahili (sw)": {
+  "Bambara": {
     "family": "Niger-Congo",
-    "subfamily": null
+    "branch": "Mande"
   },
-  "Odia (or)": {
-    "family": "Other",
-    "subfamily": null
+  "Bengali": {
+    "family": "Indo-European",
+    "branch": "Indo-Aryan"
   },
-  "Turkish (tr)": {
+  "Bhojpuri": {
+    "family": "Indo-European",
+    "branch": "Indo-Aryan"
+  },
+  "Burmese": {
+    "family": "Sino-Tibetan",
+    "branch": "Lolo-Burmese"
+  },
+  "Cebuano": {
+    "family": "Austronesian",
+    "branch": "Philippine"
+  },
+  "Chinese": {
+    "family": "Sino-Tibetan",
+    "branch": "Sinitic"
+  },
+  "Czech": {
+    "family": "Indo-European",
+    "branch": "Slavic"
+  },
+  "Dutch": {
+    "family": "Indo-European",
+    "branch": "Germanic"
+  },
+  "English": {
+    "family": "Indo-European",
+    "branch": "Germanic"
+  },
+  "Filipino": {
+    "family": "Austronesian",
+    "branch": "Philippine"
+  },
+  "French": {
+    "family": "Indo-European",
+    "branch": "Romance"
+  },
+  "Fulfulde": {
+    "family": "Niger-Congo",
+    "branch": "Atlantic"
+  },
+  "German": {
+    "family": "Indo-European",
+    "branch": "Germanic"
+  },
+  "Greek": {
+    "family": "Indo-European",
+    "branch": "Hellenic"
+  },
+  "Gujarati": {
+    "family": "Indo-European",
+    "branch": "Indo-Aryan"
+  },
+  "Hausa": {
+    "family": "Afro-Asiatic",
+    "branch": "Chadic"
+  },
+  "Hindi": {
+    "family": "Indo-European",
+    "branch": "Indo-Aryan"
+  },
+  "Hungarian": {
+    "family": "Uralic",
+    "branch": "Ugric"
+  },
+  "Igbo": {
+    "family": "Niger-Congo",
+    "branch": "Volta-Niger"
+  },
+  "Indonesian": {
+    "family": "Austronesian",
+    "branch": "Malayic"
+  },
+  "Italian": {
+    "family": "Indo-European",
+    "branch": "Romance"
+  },
+  "Japanese": {
+    "family": "Japonic",
+    "branch": null
+  },
+  "Javanese": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian"
+  },
+  "Kannada": {
+    "family": "Dravidian",
+    "branch": "South Dravidian"
+  },
+  "Kazakh": {
     "family": "Turkic",
-    "subfamily": null
+    "branch": "Kipchak"
   },
-  "Kazakh (kk)": {
+  "Khmer": {
+    "family": "Austroasiatic",
+    "branch": "Khmeric"
+  },
+  "Korean": {
+    "family": "Koreanic",
+    "branch": null
+  },
+  "Kurdish": {
+    "family": "Indo-European",
+    "branch": "Iranian"
+  },
+  "Magahi": {
+    "family": "Indo-European",
+    "branch": "Indo-Aryan"
+  },
+  "Maithili": {
+    "family": "Indo-European",
+    "branch": "Indo-Aryan"
+  },
+  "Malay": {
+    "family": "Austronesian",
+    "branch": "Malayic"
+  },
+  "Malayalam": {
+    "family": "Dravidian",
+    "branch": "South Dravidian"
+  },
+  "Nepali": {
+    "family": "Indo-European",
+    "branch": "Indo-Aryan"
+  },
+  "Nigerian Pidgin": {
+    "family": "English-based creole",
+    "branch": null
+  },
+  "Northern Pashto": {
+    "family": "Indo-European",
+    "branch": "Iranian"
+  },
+  "Northern Uzbek": {
     "family": "Turkic",
-    "subfamily": null
+    "branch": "Karluk"
   },
-  "Quechua (qu)": {
+  "Odia": {
+    "family": "Indo-European",
+    "branch": "Indo-Aryan"
+  },
+  "Persian": {
+    "family": "Indo-European",
+    "branch": "Iranian"
+  },
+  "Polish": {
+    "family": "Indo-European",
+    "branch": "Slavic"
+  },
+  "Portuguese": {
+    "family": "Indo-European",
+    "branch": "Romance"
+  },
+  "Punjabi": {
+    "family": "Indo-European",
+    "branch": "Indo-Aryan"
+  },
+  "Quechua": {
     "family": "Quechuan",
-    "subfamily": null
+    "branch": null
+  },
+  "Romanian": {
+    "family": "Indo-European",
+    "branch": "Romance"
+  },
+  "Russian": {
+    "family": "Indo-European",
+    "branch": "Slavic"
+  },
+  "Saraiki": {
+    "family": "Indo-European",
+    "branch": "Indo-Aryan"
+  },
+  "Sindhi": {
+    "family": "Indo-European",
+    "branch": "Indo-Aryan"
+  },
+  "Sinhala": {
+    "family": "Indo-European",
+    "branch": "Indo-Aryan"
+  },
+  "Somali": {
+    "family": "Afro-Asiatic",
+    "branch": "Cushitic"
+  },
+  "Sotho": {
+    "family": "Niger-Congo",
+    "branch": "Bantu"
+  },
+  "Spanish": {
+    "family": "Indo-European",
+    "branch": "Romance"
+  },
+  "Sundanese": {
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian"
+  },
+  "Swahili": {
+    "family": "Niger-Congo",
+    "branch": "Bantu"
+  },
+  "Swedish": {
+    "family": "Indo-European",
+    "branch": "Germanic"
+  },
+  "Tagalog": {
+    "family": "Austronesian",
+    "branch": "Philippine"
+  },
+  "Tamil": {
+    "family": "Dravidian",
+    "branch": "South Dravidian"
+  },
+  "Telugu": {
+    "family": "Dravidian",
+    "branch": "South-Central Dravidian"
+  },
+  "Thai": {
+    "family": "Kra-Dai",
+    "branch": "Tai"
+  },
+  "Tswana": {
+    "family": "Niger-Congo",
+    "branch": "Bantu"
+  },
+  "Turkish": {
+    "family": "Turkic",
+    "branch": "Oghuz"
+  },
+  "Ukrainian": {
+    "family": "Indo-European",
+    "branch": "Slavic"
+  },
+  "Urdu": {
+    "family": "Indo-European",
+    "branch": "Indo-Aryan"
+  },
+  "Vietnamese": {
+    "family": "Austroasiatic",
+    "branch": "Vietic"
+  },
+  "Xhosa": {
+    "family": "Niger-Congo",
+    "branch": "Bantu"
+  },
+  "Yoruba": {
+    "family": "Niger-Congo",
+    "branch": "Volta-Niger"
+  },
+  "Zulu": {
+    "family": "Niger-Congo",
+    "branch": "Bantu"
   }
 }
