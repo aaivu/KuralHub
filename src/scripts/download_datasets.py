@@ -7,15 +7,12 @@ import kaggle
 from src.utils.constant import DATASET
 from src.utils.utils import get_logger
 
-# Note: To Run This Script Please Download Kaggle API Key as kaggle.json and put it under ~/.kaggle/
-
 logger = get_logger(name=__name__)
 
 datasets = {dataset.value.name: dataset.value.url for dataset in DATASET}
 
 
 def download_and_extract(name: str, dataset: str):
-    """Downloads and extracts a single dataset if it does not already exist."""
     dataset_path = f"ser_datasets/{name}"
 
     if os.path.exists(dataset_path):
@@ -39,8 +36,7 @@ def download_and_extract(name: str, dataset: str):
 
 
 def download_datasets():
-    """Download all datasets in parallel."""
-    os.makedirs("datasets", exist_ok=True)
+    os.makedirs("ser_datasets", exist_ok=True)
     logger.info("Start downloading datasets")
 
     with concurrent.futures.ThreadPoolExecutor() as executor:

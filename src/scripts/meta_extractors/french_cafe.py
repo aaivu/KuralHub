@@ -61,7 +61,6 @@ def process_cafe_files(
 
 
 if __name__ == "__main__":
-    # Configure logging
     logging.basicConfig(level=logging.INFO)
 
     process_dataset(

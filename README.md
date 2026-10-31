@@ -1,133 +1,106 @@
 <div align="center">
 
-# 🎙️ KuralHub: A Comprehensive Review of Speech Emotion Recognition (SER) Datasets  
+# KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition
 
-[![Latest Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com/aaivu/KuralHub)  [![Interspeech 2026](https://img.shields.io/badge/Interspeech%202026-Accepted-orange)](https://aaivu.github.io/KuralHub/)  [![Website](https://img.shields.io/badge/🌐-Website-blue)](https://aaivu.github.io/KuralHub/)  [![License](https://img.shields.io/github/license/aaivu/KuralHub)](LICENSE)  [![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen)](CONTRIBUTING.md)  
+[![Interspeech 2026](https://img.shields.io/badge/Interspeech-2026-orange)](https://doi.org/10.21437/Interspeech.2026-3502)
+[![Paper](https://img.shields.io/badge/Paper-PDF-red)](https://www.isca-archive.org/interspeech_2026/thavarasa26_interspeech.pdf)
+[![DOI](https://img.shields.io/badge/DOI-10.21437%2FInterspeech.2026--3502-blue)](https://doi.org/10.21437/Interspeech.2026-3502)
+[![Website](https://img.shields.io/badge/Website-aaivu.github.io%2FKuralHub-blue)](https://aaivu.github.io/KuralHub/)
+[![Contributions welcome](https://img.shields.io/badge/Contributions-welcome-brightgreen)](CONTRIBUTING.md)
+
+**[Website](https://aaivu.github.io/KuralHub/) · [Paper (PDF)](https://www.isca-archive.org/interspeech_2026/thavarasa26_interspeech.pdf) · [Dataset catalog](https://aaivu.github.io/KuralHub/datasets.html) · [Results](https://aaivu.github.io/KuralHub/benchmark.html)**
 
 </div>
 
+KuralHub is an open catalog of speech emotion recognition (SER) datasets for the 70 most widely spoken languages, and a benchmark of 11 self-supervised speech models on 33 of those datasets in 29 languages. It accompanies our Interspeech 2026 paper.
 
----
+| | |
+|---|---|
+| Languages surveyed | 70 (45 with at least one dataset) |
+| Datasets documented | 90 |
+| Languages / datasets benchmarked | 29 / 33 |
+| Models | 11 (HuBERT, wav2vec 2.0, WavLM, Whisper) |
+| Training runs | 363 |
 
-## 🔥 **What is KuralHub?**
-**KuralHub** is a **comprehensive repository** that reviews and benchmarks **Speech Emotion Recognition (SER) datasets** across multiple languages.  
-It provides **detailed metadata, access links, and benchmarks** using **fine-tuned monolingual models** for SER.
+## Key findings
 
-**📄 Paper:** Accepted at Interspeech 2026 (to appear)
-**🌐 Website:** https://aaivu.github.io/KuralHub/
+- **No model is best everywhere.** Whisper had the highest mean F1 (0.70), then HuBERT-base (0.68) and WavLM (0.63 to 0.64), but HuBERT won for nine languages and WavLM for English and Swahili.
+- **Dravidian languages fail across the board.** Kannada averaged 0.275 accuracy and Tamil 0.306, with little spread between models.
+- **More pre-training data is not enough.** Mandarin and Indonesian were easy, while French, Spanish and Russian were not.
+- **Bigger models are not better.** log(parameters) is negatively correlated with F1 (r = −0.18, p = 0.0007).
+- **Fear is the hardest emotion** (F1 0.38). Anger and neutral are the easiest.
 
----
+The [website](https://aaivu.github.io/KuralHub/) has the full write-up with figures and tables.
 
-## 🗂 **Survey Organisation**
+## Repository layout
+
 ```
 KuralHub/
-│── datasets/             # Language-specific datasets
-│   ├── english/
-│   │   ├── README.md     # Overview of English SER datasets
-│   │   ├── ravdess.md    # Dataset-specific details
-│   ├── spanish/
-│   │   ├── README.md
-│   │   ├── dataset1.md
-....
+├── datasets/<Language>/        # the survey: one folder per language
+│   ├── Readme.md               #   language info + table of its datasets
+│   └── <Dataset>.md            #   one file per dataset (labels, size, licence, access, BibTeX)
+├── results/
+│   ├── train_val_test_logs/    # 363 runs: classification reports, confusion matrices, loss curves
+├── src/                        # data loading, model, training code
+├── template/sample/            # template for adding a language or dataset
+├── scripts/                    # website build (build_site.py, sync-datasets.sh)
+└── docs/                       # the website (GitHub Pages)
 ```
 
----
+## How to use
 
-## 📊 **SER Datasets Coverage**
-This survey covers **70+ languages** (with **29 benchmarked**), including **open-source and restricted** datasets.  
-If a language has **no available dataset**, it is marked accordingly.
+**Find a dataset.** Browse the [catalog](https://aaivu.github.io/KuralHub/datasets.html) or open `datasets/<Language>/Readme.md`. Each dataset file says how to get the data (direct download or request) and under which licence.
 
-![Language Coverage](https://github.com/aaivu/KuralHub/blob/main/assets/language_selection.png)
+**Use the results.** Every run is in [`docs/data/runs.csv`](docs/data/runs.csv) (accuracy, macro/weighted F1, per-emotion F1) and on the [results page](https://aaivu.github.io/KuralHub/benchmark.html). Raw reports are in `results/train_val_test_logs/`.
 
----
+**Re-run an experiment.**
 
-## 🚀 **Benchmarks**
-We fine-tune **pre-trained SER models** on datasets individually and report their **performance**.
+```bash
+make setup              # virtualenv + requirements (Python 3.12+)
+make download_dataset   # needs a Kaggle API key in ~/.kaggle/kaggle.json
+make meta_extract       # builds the per-dataset metadata CSVs
+DATASET=EMOTA BASE_MODEL=WAVLM_LARGE make train_model
+```
 
-### Performance by Datasets
-![Model Dataset Performance](https://github.com/aaivu/KuralHub/blob/main/assets/heatmap_model_dataset_performance.png)
+`DATASET` and `BASE_MODEL` take the names defined in `src/utils/constant.py`. `BATCH_SIZE`, `LEARNING_RATE`, `EPOCHS` and `EARLY_STOPPING_PATIENCE` can be set the same way.
 
+## Contributing
 
-### Average Performance by Languages
+Know of a dataset we missed, or found a mistake? Add it under `datasets/<Language>/` using the template in `template/sample/` and open a pull request. See [CONTRIBUTING.md](CONTRIBUTING.md). After changing `datasets/` or `results/`, run `./scripts/sync-datasets.sh` to rebuild the website.
 
-![Model Language Performance](https://github.com/aaivu/KuralHub/blob/main/assets/radar_chart_language_performance.png)
+## Citation
 
----
-
-## 📥 **How to Use**
-1. **Browse Datasets:** Navigate to `datasets/` for language-specific SER datasets.
-2. **Download Datasets:** Follow access links in each dataset file.
-3. **Run Benchmarks:** Check `benchmarks/` for model performance.
-
----
-
-## 🎯 **Contribute to KuralHub**
-💡 **Know of a missing dataset?** Help us expand KuralHub!  
-📩 **Submit a pull request** or open an issue with new datasets.  
-
-📖 **[Contribution Guidelines](CONTRIBUTING.md)**  
-
----
-
-## 📜 Citation
-
-If you are using our research findings, please cite the following paper:
-
-*Citation details will be finalized once the paper is published.*
+Thavarasa, L., Thevakumar, J., Sivatheepan, T., Thayasivam, U. (2026) KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition. Proc. Interspeech 2026, 4673-4678, doi: [10.21437/Interspeech.2026-3502](https://doi.org/10.21437/Interspeech.2026-3502)
 
 ```bibtex
-@inproceedings{kuralhub2026,
-  title     = {KuralHub: A Comprehensive Review of Speech Emotion Recognition Datasets},
-  author    = {Thavarasa, Luxshan and Thevakumar, Jubeerathan and Sivatheepan, Thanikan and Thayasivam, Uthayasanker},
-  booktitle = {Interspeech},
+@inproceedings{thavarasa26_interspeech,
+  title     = {{KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition}},
+  author    = {Luxshan Thavarasa and Jubeerathan Thevakumar and Thanikan Sivatheepan and Uthayasanker Thayasivam},
   year      = {2026},
-  note      = {To appear}
+  booktitle = {{Interspeech 2026}},
+  pages     = {4673--4678},
+  doi       = {10.21437/Interspeech.2026-3502},
+  issn      = {2958-1796},
 }
 ```
 
-## 📬 Contact
+If you use one of the catalogued datasets, please also cite its original authors. Each dataset file includes their BibTeX.
 
-<div style="width: 100%; overflow-x: auto;">
-    <table style="width: 100%; text-align: left; border-collapse: collapse; margin-top: 20px;">
-        <thead>
-            <tr>
-                <th style="padding: 10px; border: 1px solid #ddd; background-color: #f4f4f4;">🏷️ <strong>Name</strong></th>
-                <th style="padding: 10px; border: 1px solid #ddd; background-color: #f4f4f4;">📧 <strong>Email</strong></th>
-                <th style="padding: 10px; border: 1px solid #ddd; background-color: #f4f4f4;">🔗 <strong>LinkedIn</strong></th>
-                <th style="padding: 10px; border: 1px solid #ddd; background-color: #f4f4f4;">📚 <strong>Google Scholar</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Luxshan Thavarasa</strong></td>
-                <td style="padding: 10px; border: 1px solid #ddd;"><a href="mailto:luxshan.20@cse.mrt.ac.lk">luxshan.20@cse.mrt.ac.lk</a></td>
-                <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://linkedin.com/in/lux-thavarasa">LinkedIn</a></td>
-                <td style="padding: 10px; border: 1px solid #ddd;">—</td>
-            </tr>
-            <tr>
-                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Jubeerathan Thevakumar</strong></td>
-                <td style="padding: 10px; border: 1px solid #ddd;"><a href="mailto:jubeerathan.20@cse.mrt.ac.lk">jubeerathan.20@cse.mrt.ac.lk</a></td>
-                <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://lk.linkedin.com/in/jubeerathan-thevakumar-87b9b8255">LinkedIn</a></td>
-                <td style="padding: 10px; border: 1px solid #ddd;">—</td>
-            </tr>
-            <tr>
-                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Thanikan Sivatheepan</strong></td>
-                <td style="padding: 10px; border: 1px solid #ddd;"><a href="mailto:thanikan.20@cse.mrt.ac.lk">thanikan.20@cse.mrt.ac.lk</a></td>
-                <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://lk.linkedin.com/in/sthanikan2000">LinkedIn</a></td>
-                <td style="padding: 10px; border: 1px solid #ddd;">—</td>
-            </tr>
-            <tr>
-                <td style="padding: 10px; border: 1px solid #ddd;"><strong>Uthayasanker Thayasivam</strong> <em>(supervisor, corresponding author)</em></td>
-                <td style="padding: 10px; border: 1px solid #ddd;"><a href="mailto:rtuthaya@cse.mrt.ac.lk">rtuthaya@cse.mrt.ac.lk</a></td>
-                <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://lk.linkedin.com/in/rtuthaya">LinkedIn</a></td>
-                <td style="padding: 10px; border: 1px solid #ddd;">—</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+## Authors
 
-> All authors are with the Department of Computer Science & Engineering, University of Moratuwa, Sri Lanka.
+| Name | Email | LinkedIn |
+|---|---|---|
+| Luxshan Thavarasa\* | [luxshan.20@cse.mrt.ac.lk](mailto:luxshan.20@cse.mrt.ac.lk) | [LinkedIn](https://linkedin.com/in/lux-thavarasa) |
+| Jubeerathan Thevakumar\* | [jubeerathan.25@cse.mrt.ac.lk](mailto:jubeerathan.25@cse.mrt.ac.lk) | [LinkedIn](https://lk.linkedin.com/in/jubeerathan-thevakumar-87b9b8255) |
+| Thanikan Sivatheepan | [thanikan.20@cse.mrt.ac.lk](mailto:thanikan.20@cse.mrt.ac.lk) | [LinkedIn](https://lk.linkedin.com/in/sthanikan2000) |
+| Uthayasanker Thayasivam (supervisor) | [rtuthaya@cse.mrt.ac.lk](mailto:rtuthaya@cse.mrt.ac.lk) | [LinkedIn](https://lk.linkedin.com/in/rtuthaya) |
 
-## 🙏 Acknowledgment
+\*Equal contribution. All authors are with the Department of Computer Science and Engineering, University of Moratuwa, Sri Lanka.
 
-We would like to thank Dr. Uthayasanker Thayasivam for his guidance as my supervisor, Braveenan Sritharan for his mentorship, and all the dataset owners for making their datasets available for us through open access or upon request. Your support has been invaluable.
+## Acknowledgements
+
+We thank Braveenan Sritharan for mentorship, and the creators of every dataset listed here for releasing their data openly or on request.
+
+## License
+
+Code and documentation in this repository are released under the [MIT License](LICENSE). The datasets themselves are not redistributed here and keep their own licences.

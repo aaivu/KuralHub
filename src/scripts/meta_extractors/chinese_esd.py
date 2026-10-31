@@ -15,7 +15,6 @@ EMOTION_MAP = {
 
 
 def process_esd_files(dataset_path, emotion_map, selected_emotions):
-    # TODO: Refactor this function according to new format
     data = []
     dir_list = os.listdir(dataset_path)
     if ".DS_Store" in dir_list:
