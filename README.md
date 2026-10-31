@@ -62,6 +62,8 @@ DATASET=EMOTA BASE_MODEL=WAVLM_LARGE make train_model
 
 ## Citation
 
+Official BibTeX from the ISCA Archive (also in [`CITATION.bib`](CITATION.bib)):
+
 ```bibtex
 @inproceedings{thavarasa26_interspeech,
   title     = {{KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition}},
