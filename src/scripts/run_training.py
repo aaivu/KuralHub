@@ -1,3 +1,4 @@
+import copy
 import json
 import os
 import random
@@ -105,68 +106,61 @@ def train(
     with open(f"{MODELS_DIR}/{base_path}/{base_path}.json", "w") as f:
         json.dump(EMOTION_MAPPING, f)
 
-    best_loss, patience_counter = float("inf"), 0
-    train_losses, val_losses = [], []
-    y_true = {"val": [], "test": []}
-    y_pred = {"val": [], "test": []}
+    def run_epoch(phase):
+        training = phase == "train"
+        model.train() if training else model.eval()
+        running_loss, y_true, y_pred = 0.0, [], []
+        for batch in dataloaders[phase]:
+            audio = batch["audio"].to(device)
+            labels = batch["labels"].to(device).long()
+            optimizer.zero_grad()
+            with torch.set_grad_enabled(training):
+                outputs = model(audio)
+                loss = criterion(outputs.float(), labels)
+                if training:
+                    loss.backward()
+                    optimizer.step()
+            y_true.extend(labels.cpu().numpy())
+            y_pred.extend(torch.argmax(outputs, dim=1).cpu().numpy())
+            running_loss += loss.item() * audio.size(0)
+        epoch_loss = running_loss / len(dataloaders[phase].dataset)
+        logger.info(f"{phase} Loss: {epoch_loss:.4f}")
+        return epoch_loss, y_true, y_pred
 
-    def save_logs():
-        plot_loss(train_losses, val_losses, base_path)
-        for phase in ("val", "test"):
-            save_report(
-                y_true[phase],
-                y_pred[phase],
-                phase,
-                base_path,
-                ac_labels,
-                EMOTION_MAPPING,
-            )
-        logger.info("Logs Saved...")
+    best_loss, patience_counter = float("inf"), 0
+    best_state, best_val = None, ([], [])
+    train_losses, val_losses = [], []
 
     for epoch in range(EPOCHS):
         logger.info(f"Epoch {epoch + 1}/{EPOCHS}")
-        for phase in ("train", "val", "test"):
-            if phase not in dataloaders:
-                continue
-            model.train() if phase == "train" else model.eval()
-            running_loss = 0.0
-
-            for batch in dataloaders[phase]:
-                audio = batch["audio"].to(device)
-                labels = batch["labels"].to(device).long()
-                optimizer.zero_grad()
-                with torch.set_grad_enabled(phase == "train"):
-                    outputs = model(audio)
-                    loss = criterion(outputs.float(), labels)
-                    if phase == "train":
-                        loss.backward()
-                        optimizer.step()
-                    else:
-                        y_true[phase].extend(labels.cpu().numpy())
-                        y_pred[phase].extend(
-                            torch.argmax(outputs, dim=1).cpu().numpy()
-                        )
-                running_loss += loss.item() * audio.size(0)
-
-            epoch_loss = running_loss / len(dataloaders[phase].dataset)
-            logger.info(f"{phase} Loss: {epoch_loss:.4f}")
-
-            if phase == "train":
-                train_losses.append(epoch_loss)
-            elif phase == "val":
-                val_losses.append(epoch_loss)
-                scheduler.step(epoch_loss)
-                if epoch_loss < best_loss:
-                    best_loss, patience_counter = epoch_loss, 0
-                else:
-                    patience_counter += 1
-                    if patience_counter >= EARLY_STOPPING_PATIENCE:
-                        logger.info("Early stopping triggered!")
-                        save_logs()
-                        return
+        train_losses.append(run_epoch("train")[0])
+        val_loss, val_true, val_pred = run_epoch("val")
+        val_losses.append(val_loss)
+        scheduler.step(val_loss)
+        if val_loss < best_loss:
+            best_loss, patience_counter = val_loss, 0
+            best_state = copy.deepcopy(model.classifier.state_dict())
+            best_val = (val_true, val_pred)
+        else:
+            patience_counter += 1
+            if patience_counter >= EARLY_STOPPING_PATIENCE:
+                logger.info("Early stopping triggered!")
+                break
 
     logger.info("Finetuning Ended...")
-    save_logs()
+    if best_state is not None:
+        model.classifier.load_state_dict(best_state)
+    _, test_true, test_pred = run_epoch("test")
+
+    plot_loss(train_losses, val_losses, base_path)
+    for phase, (y_true, y_pred) in (
+        ("val", best_val),
+        ("test", (test_true, test_pred)),
+    ):
+        save_report(
+            y_true, y_pred, phase, base_path, ac_labels, EMOTION_MAPPING
+        )
+    logger.info("Logs Saved...")
 
 
 if __name__ == "__main__":
