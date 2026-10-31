@@ -90,6 +90,10 @@ Thavarasa, L., Thevakumar, J., Sivatheepan, T., Thayasivam, U. (2026) KuralHub: 
 
 No dataset found for: Azerbaijani, Bambara, Bhojpuri, Cebuano, Fulfulde, Hausa, Igbo, Khmer, Magahi, Maithili, Nepali, Nigerian Pidgin, Northern Pashto, Northern Uzbek, Saraiki, Sinhala, Somali, Sotho, Sundanese, Tagalog, Tswana, Ukrainian, Xhosa, Yoruba, Zulu.
 
+## Support the project
+
+KuralHub is free and maintained by its authors. People who find it useful can support it by starring the GitHub repository (https://github.com/aaivu/KuralHub), which helps other researchers find it, and by citing the Interspeech 2026 paper.
+
 ## Optional
 
 - [llms-full.txt](https://aaivu.github.io/KuralHub/llms-full.txt): the full paper text, every result table and every dataset entry in one file

@@ -10,6 +10,7 @@ University of Moratuwa, Sri Lanka · Interspeech 2026
 [![Paper](https://img.shields.io/badge/Paper-Interspeech%202026-orange)](https://www.isca-archive.org/interspeech_2026/thavarasa26_interspeech.pdf)
 [![DOI](https://img.shields.io/badge/DOI-10.21437%2FInterspeech.2026--3502-blue)](https://doi.org/10.21437/Interspeech.2026-3502)
 [![Website](https://img.shields.io/badge/Website-aaivu.github.io%2FKuralHub-black)](https://aaivu.github.io/KuralHub/)
+[![GitHub stars](https://img.shields.io/github/stars/aaivu/KuralHub?style=social)](https://github.com/aaivu/KuralHub/stargazers)
 
 [Website](https://aaivu.github.io/KuralHub/) · [Dataset catalog](https://aaivu.github.io/KuralHub/datasets.html) · [Results](https://aaivu.github.io/KuralHub/benchmark.html) · [Contribute](CONTRIBUTING.md)
 
@@ -57,6 +58,8 @@ DATASET=EMOTA BASE_MODEL=WAVLM_LARGE make train_model
 `DATASET` and `BASE_MODEL` take the names in `src/utils/constant.py`. The per-run results are also available as [`docs/data/runs.csv`](docs/data/runs.csv).
 
 ## Contributing
+
+If KuralHub is useful to you, please star the repository. It helps other researchers find it and keeps us adding languages, datasets and models.
 
 25 of the 70 languages still have no dataset we could find, and the benchmark covers 11 models so far. You can [suggest a dataset](https://github.com/aaivu/KuralHub/issues/new?template=add-dataset.yml) or [suggest a model](https://github.com/aaivu/KuralHub/issues/new?template=add-model.yml) with a short form, or add either one yourself by following [CONTRIBUTING.md](CONTRIBUTING.md).
 

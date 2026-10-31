@@ -362,3 +362,20 @@ footer.site nav { display: flex; flex-wrap: wrap; gap: 6px 16px; }
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
 }
+
+.star-btn {
+  flex: none; display: inline-flex; align-items: center; gap: 6px;
+  height: 34px; padding: 0 11px;
+  color: var(--fg); border: 1px solid var(--line); border-radius: 8px;
+  font-weight: 600; font-size: 0.85rem;
+}
+.star-btn:hover { border-color: var(--fg); text-decoration: none; }
+.star-btn svg { width: 15px; height: 15px; color: #e3a008; }
+.star-count {
+  font-weight: 500; color: var(--muted);
+  border-left: 1px solid var(--line); padding-left: 7px;
+}
+@media (max-width: 640px) {
+  .star-btn span:first-of-type { display: none; }
+}
+.star-note { font-family: var(--sans); font-size: 0.86rem; color: var(--muted); margin: 14px 0 0; }

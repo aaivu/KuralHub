@@ -196,6 +196,7 @@ KuralHub grows with outside help. 25 of the 70 surveyed languages still have no 
 - Suggest a dataset: https://github.com/aaivu/KuralHub/issues/new?template=add-dataset.yml
 - Suggest a model for the benchmark: https://github.com/aaivu/KuralHub/issues/new?template=add-model.yml
 - How to add either one yourself: https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md
+- Find it useful? Star the repository (https://github.com/aaivu/KuralHub). It helps other researchers find KuralHub.
 
 ## Citation
 

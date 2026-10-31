@@ -173,6 +173,14 @@ THEME_SCRIPT = (
     "if(t)document.documentElement.setAttribute('data-theme',t)}"
     "catch(e){}</script>"
 )
+STAR_BUTTON = (
+    f'<a class="star-btn" href="{REPO}" '
+    'aria-label="Star KuralHub on GitHub" title="Star KuralHub on GitHub">'
+    '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">'
+    '<path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5'
+    '-4.8-4.6 6.6-.9z"/></svg>'
+    '<span>Star</span><span class="star-count" hidden></span></a>'
+)
 THEME_BUTTON = (
     '<button class="theme-toggle" type="button" hidden '
     'aria-label="Switch theme">'
@@ -704,7 +712,8 @@ def nav_html(prefix, active):
     return (
         '<header class="topbar"><div class="topbar-inner">'
         f'<a class="brand" href="{prefix}index.html">KuralHub</a>'
-        f'<nav aria-label="Site">{items}</nav>{THEME_BUTTON}</div></header>'
+        f'<nav aria-label="Site">{items}</nav>{STAR_BUTTON}{THEME_BUTTON}'
+        "</div></header>"
     )
 
 
@@ -1454,6 +1463,10 @@ Cite as:
 {lang_lines}
 
 No dataset found for: {", ".join(without)}.
+
+## Support the project
+
+KuralHub is free and maintained by its authors. People who find it useful can support it by starring the GitHub repository ({REPO}), which helps other researchers find it, and by citing the Interspeech 2026 paper.
 
 ## Optional
 

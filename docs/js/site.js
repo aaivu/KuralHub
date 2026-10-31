@@ -26,6 +26,30 @@
     if (dark && dark.addEventListener) dark.addEventListener('change', sync);
   }
 
+  // Live GitHub star count next to the Star button, cached for the session.
+  var count = document.querySelector('.star-count');
+  if (count && window.fetch) {
+    var show = function (n) {
+      if (typeof n !== 'number') return;
+      count.textContent = n >= 1000 ? (n / 1000).toFixed(1) + 'k' : String(n);
+      count.hidden = false;
+    };
+    var cached = null;
+    try { cached = sessionStorage.getItem('kh-stars'); } catch (e) {}
+    if (cached) {
+      show(Number(cached));
+    } else {
+      fetch('https://api.github.com/repos/aaivu/KuralHub')
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (d) {
+          if (!d) return;
+          show(d.stargazers_count);
+          try { sessionStorage.setItem('kh-stars', d.stargazers_count); } catch (e) {}
+        })
+        .catch(function () {});
+    }
+  }
+
   // Copy buttons: <button class="copy-btn" data-copy="#id">
   document.querySelectorAll('[data-copy]').forEach(function (btn) {
     btn.addEventListener('click', function () {
