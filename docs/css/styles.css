@@ -371,11 +371,4 @@ footer.site nav { display: flex; flex-wrap: wrap; gap: 6px 16px; }
 }
 .star-btn:hover { border-color: var(--fg); text-decoration: none; }
 .star-btn svg { width: 15px; height: 15px; color: #e3a008; }
-.star-count {
-  font-weight: 500; color: var(--muted);
-  border-left: 1px solid var(--line); padding-left: 7px;
-}
-@media (max-width: 640px) {
-  .star-btn span:first-of-type { display: none; }
-}
 .star-note { font-family: var(--sans); font-size: 0.86rem; color: var(--muted); margin: 14px 0 0; }

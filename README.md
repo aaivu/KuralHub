@@ -10,7 +10,6 @@ University of Moratuwa, Sri Lanka · Interspeech 2026
 [![Paper](https://img.shields.io/badge/Paper-Interspeech%202026-orange)](https://www.isca-archive.org/interspeech_2026/thavarasa26_interspeech.pdf)
 [![DOI](https://img.shields.io/badge/DOI-10.21437%2FInterspeech.2026--3502-blue)](https://doi.org/10.21437/Interspeech.2026-3502)
 [![Website](https://img.shields.io/badge/Website-aaivu.github.io%2FKuralHub-black)](https://aaivu.github.io/KuralHub/)
-[![GitHub stars](https://img.shields.io/github/stars/aaivu/KuralHub?style=social)](https://github.com/aaivu/KuralHub/stargazers)
 
 [Website](https://aaivu.github.io/KuralHub/) · [Dataset catalog](https://aaivu.github.io/KuralHub/datasets.html) · [Results](https://aaivu.github.io/KuralHub/benchmark.html) · [Contribute](CONTRIBUTING.md)
 
