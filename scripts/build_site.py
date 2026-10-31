@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import csv
+import hashlib
 import html
 import io
 import json
@@ -153,6 +154,13 @@ RUN_DATASET_FILE = {
     "ESD": "ESD.md",
 }  # fmt: skip
 
+ASSET_VERSION = hashlib.sha1(
+    b"".join(
+        open(os.path.join(DOCS, f), "rb").read()
+        for f in ("css/styles.css", "js/site.js")
+    )
+).hexdigest()[:8]
+
 EMOTIONS = ["ANGER", "FEAR", "HAPPINESS", "NEUTRAL", "SADNESS"]
 EMOJI = re.compile(
     "[\U0001f000-\U0001faff\U00002600-\U000027bf\U0001f1e6-\U0001f1ff"
@@ -176,7 +184,8 @@ THEME_SCRIPT = (
 STAR_BUTTON = (
     f'<a class="star-btn" href="{REPO}" '
     'aria-label="Star KuralHub on GitHub" title="Star KuralHub on GitHub">'
-    '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">'
+    '<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" '
+    'aria-hidden="true">'
     '<path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5'
     '-4.8-4.6 6.6-.9z"/></svg>'
     "<span>Star</span></a>"
@@ -184,11 +193,13 @@ STAR_BUTTON = (
 THEME_BUTTON = (
     '<button class="theme-toggle" type="button" hidden '
     'aria-label="Switch theme">'
-    '<svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+    '<svg class="moon" width="17" height="17" viewBox="0 0 24 24" '
+    'fill="none" stroke="currentColor" '
     'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" '
     'aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>'
     "</svg>"
-    '<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+    '<svg class="sun" width="17" height="17" viewBox="0 0 24 24" '
+    'fill="none" stroke="currentColor" '
     'stroke-width="2" stroke-linecap="round" aria-hidden="true">'
     '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4'
     'M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>'
@@ -1359,7 +1370,7 @@ def language_page(L):
 <link rel="alternate" type="text/plain" href="../llms.txt" title="llms.txt">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="author" href="{AUTHOR_URL}">
-<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/styles.css?v={ASSET_VERSION}">
 {THEME_SCRIPT}
 {scripts}
 </head>
@@ -1383,11 +1394,26 @@ If you use a dataset, cite its authors. If KuralHub helped you find it, please a
 </main>
 </div>
 {footer_html(prefix)}
-<script src="../js/site.js" defer></script>
+<script src="../js/site.js?v={ASSET_VERSION}" defer></script>
 </body>
 </html>
 """
 
+
+for page in (
+    "index.html",
+    "benchmark.html",
+    "datasets.html",
+    "speech-emotion-recognition.html",
+):
+    path = os.path.join(DOCS, page)
+    text = open(path, encoding="utf-8").read()
+    text = re.sub(
+        r'(href="css/styles\.css|src="js/site\.js)(\?v=[0-9a-f]+)?"',
+        rf'\1?v={ASSET_VERSION}"',
+        text,
+    )
+    write(path, text)
 
 lang_dir = os.path.join(DOCS, "languages")
 os.makedirs(lang_dir, exist_ok=True)
