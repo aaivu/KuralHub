@@ -4,7 +4,7 @@
 🔹 **Language:** Kurdish  <br/> 
 🔹 **Dataset Type:** 🎙️ Audio <br/>
 🔹 **Emotion Categories:** Neutral, Sadness, Happiness, and Anger  <br/> 
-🔹 **Size:** Number of samples: 287, Duration: 16 mintues <br/> 
+🔹 **Size:** Number of samples: 287, Duration: 16 minutes <br/> 
 🔹 **Recording Environment:** 🎤 Studio <br/> 
 🔹 **License:** Not Specified  <br/> 
 🔹 **Access:** 🔒 Request <br/> 
@@ -23,9 +23,9 @@ By providing this specialized dataset, the study aims to bridge the gap in resou
 ---
 
 ## 📥 **Access & Download**
-🔗 **Official Website:** [Not Specified](...)  <br/> 
+🔗 **Official Website:** Not Specified  <br/> 
 📄 **Paper:** [Paper Link](https://www.iraqoaj.net/iasj/download/d7df705d2d594266) <br/> 
-🗂️ **Download Link:** [Not Specified](..) <br/> 
+🗂️ **Download Link:** Not Specified <br/> 
 💾 **File Format:** Not Specified  <br/> 
 📧 Contact: [Omar.mustafa@epu.edu.iq](mailto:Omar.mustafa@epu.edu.iq?subject=Dataset%20Access%20Request) </br>
 > ⚠️ **Note:** Fill the request process if the dataset is restricted.
@@ -33,7 +33,7 @@ By providing this specialized dataset, the study aims to bridge the gap in resou
 ---
 
 ## 📜 **Citation**
-If you're using this dataset, please cite both the original authors and our survey paper, as it contributed to making the dataset accessible.
+If you use this dataset, cite the original authors (first entry below). If you found it through KuralHub, please also cite the KuralHub paper (second entry).
 
 ```
 @article{nematullah2024emotion,
@@ -44,6 +44,18 @@ If you're using this dataset, please cite both the original authors and our surv
   number={5},
   pages={104--112},
   year={2024}
+}
+```
+
+```bibtex
+@inproceedings{thavarasa26_interspeech,
+  title     = {{KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition}},
+  author    = {Luxshan Thavarasa and Jubeerathan Thevakumar and Thanikan Sivatheepan and Uthayasanker Thayasivam},
+  year      = {2026},
+  booktitle = {{Interspeech 2026}},
+  pages     = {4673--4678},
+  doi       = {10.21437/Interspeech.2026-3502},
+  issn      = {2958-1796},
 }
 ```
 

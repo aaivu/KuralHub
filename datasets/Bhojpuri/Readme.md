@@ -7,7 +7,7 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 - **🗣 Language Name:** Bhojpuri  <br/>
 - **🌐 Language Family:** Indo-Aryan  <br/>
 - **🔤 ISO Code:** bho  <br/>
-- **📍 Major Spoken Countries:** India,and Nepal <br/>
+- **📍 Major Spoken Countries:** India and Nepal <br/>
 
 ---
 

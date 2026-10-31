@@ -17,9 +17,9 @@ This dataset was created to support research in automatic speech emotion recogni
 ---
 
 ## 📥 **Access & Download**
-🔗 **Official Website:** [Not Specified](...)  <br/> 
+🔗 **Official Website:** Not Specified  <br/> 
 📄 **Paper:** [Paper Link](https://drive.google.com/file/d/178ObKjeWx1m7Faek45IsJ53B2fZiViPS/view) <br/> 
-🗂️ **Download Link:** [Not Specified](..) <br/> 
+🗂️ **Download Link:** Not Specified <br/> 
 💾 **File Format:** `.wav` <br/> 
 📧 Contact: [mail1](mailto:mnorval@gmail.com?subject=Dataset%20Access%20Request), [mail2](mailto:wangzengh@gmail.com?subject=Dataset%20Access%20Request) </br>
 > ⚠️ **Note:** Fill the request process if the dataset is restricted.
@@ -27,7 +27,7 @@ This dataset was created to support research in automatic speech emotion recogni
 ---
 
 ## 📜 **Citation**
-If you're using this dataset, please cite both the original authors and our survey paper, as it contributed to making the dataset accessible.
+If you use this dataset, cite the original authors (first entry below). If you found it through KuralHub, please also cite the KuralHub paper (second entry).
 
 ```
 @inproceedings{norval2022creation,
@@ -40,6 +40,17 @@ If you're using this dataset, please cite both the original authors and our surv
 }
 ```
 
+```bibtex
+@inproceedings{thavarasa26_interspeech,
+  title     = {{KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition}},
+  author    = {Luxshan Thavarasa and Jubeerathan Thevakumar and Thanikan Sivatheepan and Uthayasanker Thayasivam},
+  year      = {2026},
+  booktitle = {{Interspeech 2026}},
+  pages     = {4673--4678},
+  doi       = {10.21437/Interspeech.2026-3502},
+  issn      = {2958-1796},
+}
+```
 
 ---
 

@@ -3,7 +3,7 @@
 🔹 **Dataset Name:** PICKA-NH <br/>
 🔹 **Language:** Dutch <br/>
 🔹 **Dataset Type:** 🎙️ Audio <br/>
-🔹 Emotion Categories: Happiness, Anger, Sadness <br/>
+🔹 **Emotion Categories:** Happiness, Anger, Sadness <br/>
 🔹 **Participants:** 58 Dutch & 25 English children (4-12 years), 15 Dutch & 15 English adults (20-30 years) <br/>
 🔹 **Recording Environment:** 🎤 Studio <br/>
 🔹 **License:** MIT, CC-BY <br/>
@@ -37,7 +37,7 @@ Testing was conducted in quiet environments: normal hearing children were assess
 
 ## 📜 **Citation**
 
-If you're using this dataset, please cite both the original authors and our survey paper, as it contributed to making the dataset accessible.
+If you use this dataset, cite the original authors (first entry below). If you found it through KuralHub, please also cite the KuralHub paper (second entry).
 
 ```
 @article{nagels2020development,
@@ -51,8 +51,16 @@ If you're using this dataset, please cite both the original authors and our surv
 }
 ```
 
-```
-TBD
+```bibtex
+@inproceedings{thavarasa26_interspeech,
+  title     = {{KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition}},
+  author    = {Luxshan Thavarasa and Jubeerathan Thevakumar and Thanikan Sivatheepan and Uthayasanker Thayasivam},
+  year      = {2026},
+  booktitle = {{Interspeech 2026}},
+  pages     = {4673--4678},
+  doi       = {10.21437/Interspeech.2026-3502},
+  issn      = {2958-1796},
+}
 ```
 
 ---

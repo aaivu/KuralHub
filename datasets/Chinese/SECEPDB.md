@@ -1,6 +1,6 @@
 # 🎙️ SECEPDB - Chinese
 
-🔹 **Dataset Name:** A Database Ior Emotional Interactions of the Elderly <br/>
+🔹 **Dataset Name:** A Database for Emotional Interactions of the Elderly <br/>
 🔹 **Language:** Chinese <br/>
 🔹 **Dataset Type:** 🎭 Multimodal <br/>
 🔹 **Emotion Categories:** Anxiety, boredom, Anger, Disgust, Happiness, Neutral, Sadness <br/>
@@ -24,7 +24,7 @@ A unique feature of SECEPDB is its documentation of emotional transitions during
 ## 📥 **Access & Download**
 
 🔗 **Official Website:** Not Specified <br/>
-📄 **Paper:** [A Database Ior Emotional Interactions of the Elderly](https://www.researchgate.net/profile/Kunxia-Wang/publication/306926438_A_database_for_emotional_interactions_of_the_elderly/links/5acce6270f7e9b1896546a27/A-database-for-emotional-interactions-of-the-elderly.pdf) <br/>
+📄 **Paper:** [A Database for Emotional Interactions of the Elderly](https://www.researchgate.net/profile/Kunxia-Wang/publication/306926438_A_database_for_emotional_interactions_of_the_elderly/links/5acce6270f7e9b1896546a27/A-database-for-emotional-interactions-of-the-elderly.pdf) <br/>
 🗂️ **Download Link:** Not Specified <br/>
 💾 **File Format:** Not Specified <br/>
 📧 **Contact:** [mail](mailto:kxwang@ahjzu.edu.cn?subject=Dataset%20Access%20Request) </br>
@@ -35,7 +35,7 @@ A unique feature of SECEPDB is its documentation of emotional transitions during
 
 ## 📜 **Citation**
 
-If you're using this dataset, please cite both the original authors and our survey paper, as it contributed to making the dataset accessible.
+If you use this dataset, cite the original authors (first entry below). If you found it through KuralHub, please also cite the KuralHub paper (second entry).
 
 ```
 @inproceedings{wang2016database,
@@ -48,8 +48,16 @@ If you're using this dataset, please cite both the original authors and our surv
 }
 ```
 
-```
-TBD
+```bibtex
+@inproceedings{thavarasa26_interspeech,
+  title     = {{KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition}},
+  author    = {Luxshan Thavarasa and Jubeerathan Thevakumar and Thanikan Sivatheepan and Uthayasanker Thayasivam},
+  year      = {2026},
+  booktitle = {{Interspeech 2026}},
+  pages     = {4673--4678},
+  doi       = {10.21437/Interspeech.2026-3502},
+  issn      = {2958-1796},
+}
 ```
 
 ---

@@ -26,7 +26,7 @@ Dusha is a bi-modal corpus suitable for speech emotion recognition (SER) tasks. 
 ---
 
 ## 📜 **Citation**
-If you're using this dataset, please cite both the original authors and our survey paper, as it contributed to making the dataset accessible.
+If you use this dataset, cite the original authors (first entry below). If you found it through KuralHub, please also cite the KuralHub paper (second entry).
 
 ```
 @misc{kelonmyosa_dusha_emotion_audio,
@@ -38,8 +38,16 @@ If you're using this dataset, please cite both the original authors and our surv
 }
 ```
 
-```
-TBD
+```bibtex
+@inproceedings{thavarasa26_interspeech,
+  title     = {{KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition}},
+  author    = {Luxshan Thavarasa and Jubeerathan Thevakumar and Thanikan Sivatheepan and Uthayasanker Thayasivam},
+  year      = {2026},
+  booktitle = {{Interspeech 2026}},
+  pages     = {4673--4678},
+  doi       = {10.21437/Interspeech.2026-3502},
+  issn      = {2958-1796},
+}
 ```
 
 ---
