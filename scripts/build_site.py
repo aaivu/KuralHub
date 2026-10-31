@@ -165,6 +165,26 @@ EMPTY = {
 }  # fmt: skip
 BOILERPLATE_NOTE = "fill the request process if the dataset is restricted"
 BEST_TAG = '<span class="tag best">best</span>'
+ISSUE_DATASET = f"{REPO}/issues/new?template=add-dataset.yml"
+ISSUE_MODEL = f"{REPO}/issues/new?template=add-model.yml"
+THEME_SCRIPT = (
+    "<script>try{var t=localStorage.getItem('kh-theme');"
+    "if(t)document.documentElement.setAttribute('data-theme',t)}"
+    "catch(e){}</script>"
+)
+THEME_BUTTON = (
+    '<button class="theme-toggle" type="button" hidden '
+    'aria-label="Switch theme">'
+    '<svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+    'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" '
+    'aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>'
+    "</svg>"
+    '<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+    'stroke-width="2" stroke-linecap="round" aria-hidden="true">'
+    '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4'
+    'M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>'
+    "</svg></button>"
+)
 
 
 def esc(s):
@@ -667,6 +687,7 @@ NAV = [
     ("index.html", "Paper", "home"),
     ("benchmark.html", "Results", "benchmark"),
     ("datasets.html", "Datasets", "datasets"),
+    ("index.html#contribute", "Contribute", "contribute"),
     ("index.html#cite", "Cite", "cite"),
     (REPO, "GitHub", "github"),
 ]
@@ -681,7 +702,7 @@ def nav_html(prefix, active):
     return (
         '<header class="topbar"><div class="topbar-inner">'
         f'<a class="brand" href="{prefix}index.html">KuralHub</a>'
-        f'<nav aria-label="Site">{items}</nav></div></header>'
+        f'<nav aria-label="Site">{items}</nav>{THEME_BUTTON}</div></header>'
     )
 
 
@@ -695,7 +716,7 @@ def footer_html(prefix):
     <a href="{prefix}llms.txt">llms.txt</a>
     <a href="{prefix}llms-full.txt">llms-full.txt</a>
     <a href="{REPO}">GitHub</a>
-    <a href="{REPO}/blob/main/CONTRIBUTING.md">Contribute</a>
+    <a href="{prefix}index.html#contribute">Contribute</a>
   </nav>
 </div></footer>"""
 
@@ -1239,9 +1260,14 @@ def language_page(L):
             "languages with no emotional speech corpus we could locate."
         )
         overview = f"""<h2 id="contribute">Know of a dataset?</h2>
-<p>If you know of an emotional speech corpus for {esc(name)}, please add it. Copy the template in
-<a href="{REPO}/tree/main/template/sample"><code>template/sample</code></a>, fill in what you know and open a pull request against
-<a href="{folder_url}"><code>datasets/{esc(L['folder'])}/</code></a>. Opening an issue with a link to the dataset works too.</p>"""
+<div class="callout cta">
+<p>Be the first to add a speech emotion dataset for {esc(name)}. Your own corpus, one from a paper, or one you found online all count. A link is enough to get started, and we will help with the rest.</p>
+<ul class="links">
+<li><a href="{ISSUE_DATASET}">Suggest a dataset (form)</a></li>
+<li><a href="{folder_url}">Open a pull request</a></li>
+</ul>
+</div>
+<p class="small muted">For a pull request, copy the template in <a href="{REPO}/tree/main/template/sample"><code>template/sample</code></a> into <code>datasets/{esc(L['folder'])}/</code> and fill in what you know.</p>"""
     if in_bench:
         s = lang_stats[L["folder"]]
         lede += (
@@ -1292,6 +1318,14 @@ def language_page(L):
     title = f"{name} Speech Emotion Recognition Datasets | KuralHub"
     scripts = "\n".join(jsonld(x) for x in ld)
     sections = "".join(dataset_section(L, d, prefix) for d in L["datasets"])
+    more_cta = (
+        f'<p class="callout cta">Know another {esc(name)} speech emotion '
+        f"dataset, or a newer version of one listed here? "
+        f'<a href="{ISSUE_DATASET}">Suggest it</a> or '
+        f'<a href="{folder_url}">open a pull request</a>.</p>'
+        if n
+        else ""
+    )
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1312,6 +1346,7 @@ def language_page(L):
 <link rel="alternate" type="text/plain" href="../llms.txt" title="llms.txt">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../css/styles.css">
+{THEME_SCRIPT}
 {scripts}
 </head>
 <body>
@@ -1328,6 +1363,7 @@ def language_page(L):
 {bench_section(L)}
 {sections}
 <hr>
+{more_cta}
 <p class="small muted">This page is generated from <a href="{folder_url}"><code>datasets/{esc(L['folder'])}/</code></a> in the KuralHub repository.
 If you use a dataset, cite its authors. If KuralHub helped you find it, please also <a href="../index.html#cite">cite the KuralHub paper</a>.</p>
 </main>
@@ -1415,7 +1451,9 @@ No dataset found for: {", ".join(without)}.
 
 - [llms-full.txt]({SITE}/llms-full.txt): the full paper text, every result table and every dataset entry in one file
 - [GitHub repository]({REPO}): code, per-run logs and the dataset Markdown sources
-- [Contributing]({REPO}/blob/main/CONTRIBUTING.md): how to add a dataset
+- [Contributing]({REPO}/blob/main/CONTRIBUTING.md): how to add a dataset or a model
+- [Suggest a dataset]({ISSUE_DATASET}): issue form for a dataset KuralHub is missing
+- [Suggest a model]({ISSUE_MODEL}): issue form for a model to add to the benchmark
 """
 
 paper_md = open(os.path.join(DOCS, "paper.md"), encoding="utf-8").read()

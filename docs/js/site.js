@@ -1,6 +1,31 @@
 (function () {
   'use strict';
 
+  // Light/dark switch. The head script applies a saved choice before paint.
+  var root = document.documentElement;
+  var toggle = document.querySelector('.theme-toggle');
+  var dark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  function mode() {
+    return root.getAttribute('data-theme') || (dark && dark.matches ? 'dark' : 'light');
+  }
+  function sync() {
+    var m = mode();
+    toggle.setAttribute('data-mode', m);
+    toggle.setAttribute('aria-label', m === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+    toggle.title = toggle.getAttribute('aria-label');
+  }
+  if (toggle) {
+    toggle.hidden = false;
+    sync();
+    toggle.addEventListener('click', function () {
+      var next = mode() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('kh-theme', next); } catch (e) {}
+      sync();
+    });
+    if (dark && dark.addEventListener) dark.addEventListener('change', sync);
+  }
+
   // Copy buttons: <button class="copy-btn" data-copy="#id">
   document.querySelectorAll('[data-copy]').forEach(function (btn) {
     btn.addEventListener('click', function () {

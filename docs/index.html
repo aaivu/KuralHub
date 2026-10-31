@@ -50,6 +50,7 @@
 
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/styles.css">
+<script>try{var t=localStorage.getItem('kh-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 
 <script type="application/ld+json">
 {
@@ -147,7 +148,7 @@
 <body>
 <a class="skip" href="#content">Skip to content</a>
 <!-- NAV:START -->
-<header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html">KuralHub</a><nav aria-label="Site"><a href="index.html" aria-current=page>Paper</a><a href="benchmark.html">Results</a><a href="datasets.html">Datasets</a><a href="index.html#cite">Cite</a><a href="https://github.com/aaivu/KuralHub">GitHub</a></nav></div></header>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html">KuralHub</a><nav aria-label="Site"><a href="index.html" aria-current=page>Paper</a><a href="benchmark.html">Results</a><a href="datasets.html">Datasets</a><a href="index.html#contribute">Contribute</a><a href="index.html#cite">Cite</a><a href="https://github.com/aaivu/KuralHub">GitHub</a></nav><button class="theme-toggle" type="button" hidden aria-label="Switch theme"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></div></header>
 <!-- NAV:END -->
 
 <div class="layout with-toc">
@@ -169,6 +170,7 @@
   </li>
   <li><a href="#limitations">5 Limitations</a></li>
   <li><a href="#use">6 Using KuralHub</a></li>
+  <li><a href="#contribute">Contribute</a></li>
   <li><a href="#faq">FAQ</a></li>
   <li><a href="#cite">Citation</a></li>
   <li><a href="#authors">Authors</a></li>
@@ -218,6 +220,7 @@
     <li><a href="#results">4 Results</a></li>
     <li><a href="#limitations">5 Limitations</a></li>
     <li><a href="#use">6 Using KuralHub</a></li>
+    <li><a href="#contribute">Contribute</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#cite">Citation</a></li>
     <li><a href="#authors">Authors</a></li>
@@ -431,11 +434,29 @@ make meta_extract       # builds the per-dataset metadata CSVs
 DATASET=EMOTA BASE_MODEL=WAVLM_LARGE make train_model</code></pre>
 <p><code>DATASET</code> and <code>BASE_MODEL</code> take the names defined in <code>src/utils/constant.py</code>. Batch size, learning rate, epochs and early-stopping patience can be set with <code>BATCH_SIZE</code>, <code>LEARNING_RATE</code>, <code>EPOCHS</code> and <code>EARLY_STOPPING_PATIENCE</code>.</p>
 
-<h3>Add a dataset</h3>
-<p>Know of a dataset we missed, or spotted a mistake? Copy the template in <a href="https://github.com/aaivu/KuralHub/tree/main/template/sample"><code>template/sample</code></a>, add it under the right language folder and open a pull request. See <a href="https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
-
 <h3>For AI assistants and agents</h3>
 <p>Plain-text versions of this site follow the <a href="https://llmstxt.org/">llms.txt</a> convention. <a href="llms.txt"><code>llms.txt</code></a> is a short index with the key facts and links. <a href="llms-full.txt"><code>llms-full.txt</code></a> holds the paper summary, every result table and every dataset entry in one file. This page is also available as <a href="paper.md">Markdown</a>.</p>
+
+<h2 id="contribute">Contribute a dataset or a model</h2>
+<p>KuralHub grows with outside help. 25 of the 70 surveyed languages still have no emotional speech dataset we could find, and the benchmark so far covers 11 models. If you have built a corpus, know of one we missed, or want to see another model in the results, we would like to hear from you.</p>
+<div class="callout cta">
+<div class="callout-title">Add a dataset</div>
+<p>Any language counts, including ones that already have datasets listed. Send a link through the form, or write the entry yourself from the template and open a pull request.</p>
+<ul class="links">
+<li><a href="https://github.com/aaivu/KuralHub/issues/new?template=add-dataset.yml">Suggest a dataset</a></li>
+<li><a href="https://github.com/aaivu/KuralHub/tree/main/template/sample">Dataset template</a></li>
+<li><a href="datasets.html?has=no">Languages with no dataset yet</a></li>
+</ul>
+</div>
+<div class="callout cta">
+<div class="callout-title">Add a model to the benchmark</div>
+<p>Know a speech encoder that might handle emotion better, especially for Dravidian or other low-scoring languages? Tell us which checkpoint to try, or run it yourself with the same recipe and send the logs.</p>
+<ul class="links">
+<li><a href="https://github.com/aaivu/KuralHub/issues/new?template=add-model.yml">Suggest a model</a></li>
+<li><a href="https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md#add-a-model-to-the-benchmark">How to run a model</a></li>
+</ul>
+</div>
+<p>Spotted a mistake in a dataset entry? Every dataset section has a "Suggest an edit" link. Contributions are reviewed and credited in the repository history. <a href="https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> has the details.</p>
 
 <h2 id="faq">Frequently asked questions</h2>
 <div class="faq">
@@ -527,7 +548,7 @@ DATASET=EMOTA BASE_MODEL=WAVLM_LARGE make train_model</code></pre>
     <a href="llms.txt">llms.txt</a>
     <a href="llms-full.txt">llms-full.txt</a>
     <a href="https://github.com/aaivu/KuralHub">GitHub</a>
-    <a href="https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md">Contribute</a>
+    <a href="index.html#contribute">Contribute</a>
   </nav>
 </div></footer>
 <!-- FOOTER:END -->

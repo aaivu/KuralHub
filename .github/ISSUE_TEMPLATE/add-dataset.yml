@@ -1,0 +1,66 @@
+name: Add a dataset
+description: Tell us about a speech emotion dataset KuralHub is missing
+title: "[Dataset] <dataset name> (<language>)"
+labels: ["dataset"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping KuralHub grow. Fill in what you know. A name and a link are enough to start.
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      placeholder: e.g. Sinhala
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Dataset name
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Where can it be found?
+      description: Website, download page, or the paper that introduces it
+    validations:
+      required: true
+  - type: input
+    id: paper
+    attributes:
+      label: Paper (if any)
+  - type: input
+    id: emotions
+    attributes:
+      label: Emotion labels
+      placeholder: e.g. anger, happiness, sadness, neutral, fear
+  - type: input
+    id: size
+    attributes:
+      label: Size
+      placeholder: e.g. 1,200 utterances from 20 speakers
+  - type: dropdown
+    id: access
+    attributes:
+      label: Access
+      options:
+        - Open download
+        - On request
+        - Paid
+        - Not sure
+  - type: input
+    id: license
+    attributes:
+      label: Licence
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Pull request
+      options:
+        - label: I am happy to open a pull request with the dataset entry myself

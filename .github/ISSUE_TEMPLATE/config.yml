@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Browse the dataset catalog
+    url: https://aaivu.github.io/KuralHub/datasets.html
+    about: Check whether a dataset is already listed before suggesting it

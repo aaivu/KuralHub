@@ -91,4 +91,6 @@ No dataset found for: Azerbaijani, Bambara, Bhojpuri, Cebuano, Fulfulde, Hausa, 
 
 - [llms-full.txt](https://aaivu.github.io/KuralHub/llms-full.txt): the full paper text, every result table and every dataset entry in one file
 - [GitHub repository](https://github.com/aaivu/KuralHub): code, per-run logs and the dataset Markdown sources
-- [Contributing](https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md): how to add a dataset
+- [Contributing](https://github.com/aaivu/KuralHub/blob/main/CONTRIBUTING.md): how to add a dataset or a model
+- [Suggest a dataset](https://github.com/aaivu/KuralHub/issues/new?template=add-dataset.yml): issue form for a dataset KuralHub is missing
+- [Suggest a model](https://github.com/aaivu/KuralHub/issues/new?template=add-model.yml): issue form for a model to add to the benchmark

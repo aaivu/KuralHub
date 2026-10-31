@@ -1,0 +1,45 @@
+name: Add a model to the benchmark
+description: Suggest a speech model to evaluate, or share results you ran yourself
+title: "[Model] <checkpoint>"
+labels: ["benchmark"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping extend the benchmark. See CONTRIBUTING.md for how runs are set up so results stay comparable.
+  - type: input
+    id: checkpoint
+    attributes:
+      label: Checkpoint
+      description: Hugging Face id or link
+      placeholder: e.g. facebook/w2v-bert-2.0
+    validations:
+      required: true
+  - type: input
+    id: family
+    attributes:
+      label: Model family and size
+      placeholder: e.g. w2v-BERT, 600M parameters
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this model?
+      description: For example, multilingual pre-training that covers low-scoring languages
+  - type: dropdown
+    id: status
+    attributes:
+      label: Have you run it?
+      options:
+        - Not yet, please consider it
+        - On some benchmark datasets
+        - On all 33 benchmark datasets
+  - type: input
+    id: results
+    attributes:
+      label: Link to results or logs (if any)
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Pull request
+      options:
+        - label: I am happy to open a pull request with the code and logs myself

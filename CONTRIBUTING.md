@@ -1,57 +1,47 @@
-# 🏗️ Contributing to KuralHub  
+# Contributing to KuralHub
 
-Thank you for your interest in contributing to **KuralHub**! Your contributions help improve our **Speech Emotion Recognition (SER) dataset repository** and make it more accessible for researchers worldwide.  
+KuralHub grows with outside help. 25 of the 70 languages we surveyed still have no speech emotion dataset we could find, and the benchmark so far covers 11 models. New datasets, new models and corrections are all welcome.
 
----
+## Suggest something quickly
 
-## 📜 **Contribution Guidelines**  
+You don't need to write any code to help.
 
-We welcome contributions in the following areas:  
-✅ Adding new SER datasets for multiple languages, including expanding with additional languages. <br>
-✅ Updating **metadata** for existing datasets  
-✅ Providing **benchmarking results** on SER models  
-✅ Fixing **errors** in dataset descriptions or links  
+- [Suggest a dataset](https://github.com/aaivu/KuralHub/issues/new?template=add-dataset.yml): a name and a link are enough.
+- [Suggest a model](https://github.com/aaivu/KuralHub/issues/new?template=add-model.yml): tell us which checkpoint to try.
+- Spotted a mistake? Every dataset section on the [website](https://aaivu.github.io/KuralHub/datasets.html) has a "Suggest an edit" link.
 
----
+## Add a dataset
 
-## 📝 **How to Contribute**  
+1. Fork the repository and create a branch, e.g. `add-dataset/<language>-<name>`.
+2. Copy `template/sample/dataset.md` to `datasets/<Language>/<DatasetName>.md` and fill in what you know. Leave a field as `Not Specified` rather than guessing.
+3. Add a row for it to the table in `datasets/<Language>/Readme.md`.
+4. For a language that has no folder yet, copy `template/sample/Readme.md` as well, and add the language to `FAMILY` in `scripts/build_site.py`.
+5. Run `make site` (or `./scripts/sync-datasets.sh`) to rebuild the website, then open a pull request.
 
-### 1️⃣ Fork the Repository  
-Click on the **"Fork"** button at the top-right of this repository.  
+## Add a model to the benchmark
 
-### 2️⃣ Clone Your Fork  
+Results are only comparable if every model uses the same recipe: frozen backbone, mean-pooled last-layer features, the two-layer head in `src/model/model.py`, and the default settings in `src/scripts/run_training.py`.
+
+1. Add the checkpoint to `BASE_MODEL` in `src/utils/constant.py`.
+2. Map it to a feature extractor in `FeatureExtractorFactory` in `src/model/base_models.py`. Encoders that take raw waveforms (`input_values`), like wav2vec 2.0, HuBERT and WavLM, work with the base class as is. Whisper-style models that take log-Mel features follow `WhisperFeatureExtractor`.
+3. Set up the data (`make download_dataset` needs a Kaggle API key, then `make meta_extract`).
+4. Train on each benchmark dataset, for example:
+
+   ```bash
+   DATASET=EMOTA BASE_MODEL=YOUR_MODEL make train_model
+   ```
+
+   Logs are written to `results/train_val_test_logs/<iso>_<dataset>_<model>/`.
+5. Add the model to `MODELS` in `scripts/build_site.py`, run `make site`, and open a pull request with the code changes and the new log folders.
+
+Running every dataset needs a GPU and some time. A pull request covering a few datasets is still useful, so say which ones you ran.
+
+## Before you open a pull request
+
 ```bash
-git clone https://github.com/aaivu/KuralHub.git
-cd KuralHub
+make setup          # Python 3.12+
+make lint
+make test
 ```
 
-### 3️⃣ Create a New Branch  
-```bash
-git checkout -b <add-lang|add-dataset|bug>/<nickname_short>/actual_issue_short
-```
-
-### 4️⃣ Add Your Contribution  
-- Add your changes to the relevant files (new datasets, updates to existing datasets, or improvements to documentation).  
-- Once you’ve made your changes, commit them with a meaningful message.  
-- Push the changes to your forked repository. 
-
-### 5️⃣ Open a Pull Request (PR)  
-Go to the **original repository**, navigate to **Pull Requests**, and click **"New Pull Request"**.  
-
----
-
-## 🏷 **Dataset Contribution Format**  
-
-When adding a **new dataset** or **language**, please follow the template provided in the `template/` folder.
-
----
-
-## 📢 **Code of Conduct**  
-Please follow our [Code of Conduct](CODE_OF_CONDUCT.md) to maintain a respectful and inclusive community.  
-
----
-
-## 🤝 **Join the Discussion**  
-📬 If you have any questions, create an **Issue** or join the discussion in our community.  
-
-🚀 **Thank you for contributing to KuralHub!**
+Please follow the [Code of Conduct](CODE_OF_CONDUCT.md). Questions are welcome as issues.

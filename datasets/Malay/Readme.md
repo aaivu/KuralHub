@@ -16,7 +16,6 @@ This directory contains **Speech Emotion Recognition (SER) datasets** available 
 | Dataset Name | Type       | # Speakers | # Samples | License    | Access  | Research Paper         | Dataset Access |
 |--------------|------------|------------|-----------|------------|---------|------------------------|---------------------|
 | [Emolah](Emolah.md) | 🎙️ Audio   |    -        | -       | Creative Commons Attribution License  | 🔒 Request | [Link to Paper](https://izzadramli.uitm-apps.com/wp-content/uploads/2021/03/Emolah_A_Malay_Language_Spontaneous_Speech_Emotion.pdf) | Not Specified |
-<!-- | [Dataset 2](dataset2.md) | 🎭 Multimodal | A          | B         | Restricted | 🔗 Open | [Link to Paper](paper2.md) | [Access Link](access2.md) | -->
 
 ---
 

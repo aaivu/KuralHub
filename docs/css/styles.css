@@ -35,6 +35,20 @@
   }
 }
 
+:root[data-theme="dark"] {
+  --bg: #0f1115;
+  --fg: #e6e8eb;
+  --muted: #a3abb5;
+  --faint: #7d8590;
+  --line: #2d333b;
+  --soft: #161b22;
+  --link: #79b0ff;
+  --link-visited: #b99cff;
+  --mark: #3a3216;
+  --heat: 88, 150, 255;
+  color-scheme: dark;
+}
+
 *, *::before, *::after { box-sizing: border-box; }
 
 html { -webkit-text-size-adjust: 100%; scroll-padding-top: 64px; }
@@ -81,8 +95,18 @@ mark { background: var(--mark); color: inherit; padding: 0 2px; }
   max-width: 1180px; margin: 0 auto; padding: 0 16px;
   display: flex; align-items: center; gap: 20px; height: 52px;
 }
-.topbar .brand { font-weight: 700; color: var(--fg); letter-spacing: -0.01em; }
-.topbar nav { display: flex; gap: 18px; overflow-x: auto; scrollbar-width: none; }
+.topbar .brand { font-weight: 700; color: var(--fg); letter-spacing: -0.01em; flex: none; }
+.topbar nav { display: flex; gap: 18px; overflow-x: auto; scrollbar-width: none; min-width: 0; flex: 1 1 auto; }
+.theme-toggle {
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; padding: 0; cursor: pointer;
+  color: var(--muted); background: transparent;
+  border: 1px solid var(--line); border-radius: 8px;
+}
+.theme-toggle:hover { color: var(--fg); border-color: var(--fg); }
+.theme-toggle svg { width: 17px; height: 17px; }
+.theme-toggle .sun, .theme-toggle[data-mode="dark"] .moon { display: none; }
+.theme-toggle[data-mode="dark"] .sun { display: block; }
 .topbar nav::-webkit-scrollbar { display: none; }
 .topbar nav a { color: var(--muted); white-space: nowrap; }
 .topbar nav a:hover, .topbar nav a[aria-current="page"] { color: var(--fg); text-decoration: none; }
@@ -185,6 +209,8 @@ li { margin: 4px 0; }
 }
 .callout > :last-child { margin-bottom: 0; }
 .callout-title { font-family: var(--sans); font-weight: 600; font-size: 0.85rem; margin-bottom: 6px; }
+.cta { border-left: 3px solid var(--link); background: var(--soft); }
+.cta .links { justify-content: flex-start; margin: 12px 0 2px; }
 
 .findings { padding-left: 0; list-style: none; counter-reset: f; }
 .findings li { counter-increment: f; position: relative; padding-left: 34px; margin: 0 0 14px; }
