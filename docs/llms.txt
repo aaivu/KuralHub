@@ -1,6 +1,6 @@
 # KuralHub
 
-> KuralHub is an open catalog of speech emotion recognition (SER) datasets for the 70 most widely spoken languages, plus a benchmark of 11 self-supervised speech models (HuBERT, wav2vec 2.0, WavLM, Whisper) on 33 datasets in 29 languages (363 runs). It accompanies the Interspeech 2026 paper "KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition" (doi:10.21437/Interspeech.2026-3502) by Luxshan Thavarasa, Jubeerathan Thevakumar, Thanikan Sivatheepan and Uthayasanker Thayasivam, University of Moratuwa, Sri Lanka.
+> KuralHub is an open catalog of speech emotion recognition (SER) datasets for the 70 most widely spoken languages, plus a benchmark of 11 self-supervised speech models (HuBERT, wav2vec 2.0, WavLM, Whisper) on 33 datasets in 29 languages (363 runs). It accompanies the Interspeech 2026 paper "KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition" (doi:10.21437/Interspeech.2026-3502) by Luxshan Thavarasa (https://luxshan2000.github.io/), Jubeerathan Thevakumar, Thanikan Sivatheepan and Uthayasanker Thayasivam, University of Moratuwa, Sri Lanka.
 
 Key findings (figures as published in the paper):
 
@@ -9,6 +9,8 @@ Key findings (figures as published in the paper):
 - More pre-training data does not guarantee better SER. Mandarin (0.755) and Indonesian (0.720) did well, while French (0.421), Spanish (0.365) and Russian (0.344) did not.
 - Larger models are not better. log(parameters) correlates negatively with F1 (r = -0.18, p = 0.0007), and wav2vec2-base (0.58) beat wav2vec2-large-960h (0.30) and wav2vec2-large-lv60 (0.25).
 - Fear is the hardest emotion (F1 0.38). Anger (0.54) and neutral (0.52) are the easiest.
+
+Topics: speech emotion recognition (SER), emotion recognition from speech, voice emotion detection, emotion detection and emotion classification models, emotional speech datasets, multilingual and low-resource SER benchmarks, self-supervised speech models.
 
 Survey coverage: 70 languages surveyed, 45 with at least one SER dataset, 25 with none, 90 datasets documented.
 
@@ -34,6 +36,7 @@ Thavarasa, L., Thevakumar, J., Sivatheepan, T., Thayasivam, U. (2026) KuralHub: 
 
 ## Pages
 
+- [Speech emotion recognition guide](https://aaivu.github.io/KuralHub/speech-emotion-recognition.html): what SER is, how emotion detection and emotion recognition models work, which datasets and models to use, how to evaluate, FAQ
 - [Results](https://aaivu.github.io/KuralHub/benchmark.html): best model per language, dataset x model accuracy matrix, all 363 runs
 - [Dataset catalog](https://aaivu.github.io/KuralHub/datasets.html): searchable tables of all languages and datasets
 

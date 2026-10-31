@@ -1,6 +1,6 @@
 # KuralHub: Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition
 
-Luxshan Thavarasa\*, Jubeerathan Thevakumar\*, Thanikan Sivatheepan, Uthayasanker Thayasivam
+[Luxshan Thavarasa](https://luxshan2000.github.io/)\*, Jubeerathan Thevakumar\*, Thanikan Sivatheepan, Uthayasanker Thayasivam
 Department of Computer Science and Engineering, University of Moratuwa, Colombo, Sri Lanka
 \*Equal contribution
 
@@ -211,7 +211,7 @@ Thavarasa, L., Thevakumar, J., Sivatheepan, T., Thayasivam, U. (2026) KuralHub: 
 
 ## Authors
 
-- Luxshan Thavarasa\* (luxshan.20@cse.mrt.ac.lk)
+- Luxshan Thavarasa\* (luxshan.20@cse.mrt.ac.lk, https://luxshan2000.github.io/)
 - Jubeerathan Thevakumar\* (jubeerathan.25@cse.mrt.ac.lk)
 - Thanikan Sivatheepan (thanikan.20@cse.mrt.ac.lk)
 - Uthayasanker Thayasivam, supervisor (rtuthaya@cse.mrt.ac.lk)

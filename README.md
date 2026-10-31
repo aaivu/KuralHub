@@ -4,7 +4,7 @@
 
 **Exposing Typological Capability Frontiers in Multilingual Speech Emotion Recognition**
 
-Luxshan Thavarasa\*, Jubeerathan Thevakumar\*, Thanikan Sivatheepan, Uthayasanker Thayasivam
+[Luxshan Thavarasa](https://luxshan2000.github.io/)\*, Jubeerathan Thevakumar\*, Thanikan Sivatheepan, Uthayasanker Thayasivam
 University of Moratuwa, Sri Lanka · Interspeech 2026
 
 [![Paper](https://img.shields.io/badge/Paper-Interspeech%202026-orange)](https://www.isca-archive.org/interspeech_2026/thavarasa26_interspeech.pdf)
@@ -29,7 +29,7 @@ KuralHub (*kural* is Tamil for "voice") collects speech emotion recognition (SER
 - Bigger models did not do better. log(parameters) is negatively correlated with F1 (r = −0.18, p = 0.0007).
 - Fear is the hardest emotion to recognise (F1 0.38). Anger and neutral are the easiest.
 
-The [website](https://aaivu.github.io/KuralHub/) has the full write-up, all 363 runs and one page per language.
+The [website](https://aaivu.github.io/KuralHub/) has the full write-up, all 363 runs, one page per language and a [guide to speech emotion recognition](https://aaivu.github.io/KuralHub/speech-emotion-recognition.html).
 
 ## Repository
 
@@ -78,7 +78,7 @@ If you use one of the catalogued datasets, please cite its authors too. Each dat
 
 ## Contact
 
-- Luxshan Thavarasa: luxshan.20@cse.mrt.ac.lk
+- [Luxshan Thavarasa](https://luxshan2000.github.io/): luxshan.20@cse.mrt.ac.lk
 - Jubeerathan Thevakumar: jubeerathan.25@cse.mrt.ac.lk
 - Thanikan Sivatheepan: thanikan.20@cse.mrt.ac.lk
 - Uthayasanker Thayasivam: rtuthaya@cse.mrt.ac.lk

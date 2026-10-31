@@ -165,6 +165,7 @@ EMPTY = {
 }  # fmt: skip
 BOILERPLATE_NOTE = "fill the request process if the dataset is restricted"
 BEST_TAG = '<span class="tag best">best</span>'
+AUTHOR_URL = "https://luxshan2000.github.io/"
 ISSUE_DATASET = f"{REPO}/issues/new?template=add-dataset.yml"
 ISSUE_MODEL = f"{REPO}/issues/new?template=add-model.yml"
 THEME_SCRIPT = (
@@ -685,6 +686,7 @@ write(os.path.join(DOCS, "data", "runs.csv"), buf.getvalue())
 
 NAV = [
     ("index.html", "Paper", "home"),
+    ("speech-emotion-recognition.html", "Guide", "guide"),
     ("benchmark.html", "Results", "benchmark"),
     ("datasets.html", "Datasets", "datasets"),
     ("index.html#contribute", "Contribute", "contribute"),
@@ -708,9 +710,10 @@ def nav_html(prefix, active):
 
 def footer_html(prefix):
     return f"""<footer class="site"><div class="inner">
-  <span>KuralHub · Interspeech 2026 · <a href="{DOI_URL}">doi:{DOI}</a> · MIT License</span>
+  <span>KuralHub · Interspeech 2026 · <a href="{DOI_URL}">doi:{DOI}</a> · Maintained by <a href="{AUTHOR_URL}" rel="author">Luxshan Thavarasa</a></span>
   <nav aria-label="Footer">
     <a href="{prefix}index.html">Paper</a>
+    <a href="{prefix}speech-emotion-recognition.html">Guide</a>
     <a href="{prefix}benchmark.html">Results</a>
     <a href="{prefix}datasets.html">Datasets</a>
     <a href="{prefix}llms.txt">llms.txt</a>
@@ -725,6 +728,7 @@ for page, active in [
     ("index.html", "home"),
     ("benchmark.html", "benchmark"),
     ("datasets.html", "datasets"),
+    ("speech-emotion-recognition.html", "guide"),
 ]:
     inject(os.path.join(DOCS, page), "NAV", nav_html("", active))
     inject(os.path.join(DOCS, page), "FOOTER", footer_html(""))
@@ -1345,6 +1349,7 @@ def language_page(L):
 <link rel="alternate" type="text/markdown" href="{md_alt}" title="Source Markdown">
 <link rel="alternate" type="text/plain" href="../llms.txt" title="llms.txt">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="author" href="{AUTHOR_URL}">
 <link rel="stylesheet" href="../css/styles.css">
 {THEME_SCRIPT}
 {scripts}
@@ -1391,9 +1396,9 @@ summary = (
     "of 11 self-supervised speech models (HuBERT, wav2vec 2.0, WavLM, "
     f"Whisper) on {n_bench_ds} datasets in {len(bench_langs)} languages "
     f'({n_runs} runs). It accompanies the Interspeech 2026 paper "{TITLE}" '
-    f"(doi:{DOI}) by Luxshan Thavarasa, Jubeerathan Thevakumar, Thanikan "
-    "Sivatheepan and Uthayasanker Thayasivam, University of Moratuwa, "
-    "Sri Lanka."
+    f"(doi:{DOI}) by Luxshan Thavarasa ({AUTHOR_URL}), Jubeerathan "
+    "Thevakumar, Thanikan Sivatheepan and Uthayasanker Thayasivam, "
+    "University of Moratuwa, Sri Lanka."
 )
 findings = """Key findings (figures as published in the paper):
 
@@ -1413,6 +1418,8 @@ llms = f"""# KuralHub
 > {summary}
 
 {findings}
+
+Topics: speech emotion recognition (SER), emotion recognition from speech, voice emotion detection, emotion detection and emotion classification models, emotional speech datasets, multilingual and low-resource SER benchmarks, self-supervised speech models.
 
 Survey coverage: {len(languages)} languages surveyed, {len(with_data)} with at least one SER dataset, {len(without)} with none, {len(all_datasets)} datasets documented.
 
@@ -1438,6 +1445,7 @@ Cite as:
 
 ## Pages
 
+- [Speech emotion recognition guide]({SITE}/speech-emotion-recognition.html): what SER is, how emotion detection and emotion recognition models work, which datasets and models to use, how to evaluate, FAQ
 - [Results]({SITE}/benchmark.html): best model per language, dataset x model accuracy matrix, all {n_runs} runs
 - [Dataset catalog]({SITE}/datasets.html): searchable tables of all languages and datasets
 
@@ -1539,7 +1547,12 @@ for L in by_name:
 write(os.path.join(DOCS, "llms.txt"), llms)
 write(os.path.join(DOCS, "llms-full.txt"), "\n".join(full).rstrip() + "\n")
 
-urls = [f"{SITE}/", f"{SITE}/benchmark.html", f"{SITE}/datasets.html"]
+urls = [
+    f"{SITE}/",
+    f"{SITE}/speech-emotion-recognition.html",
+    f"{SITE}/benchmark.html",
+    f"{SITE}/datasets.html",
+]
 urls += [f"{SITE}/languages/{L['slug']}.html" for L in languages]
 write(
     os.path.join(DOCS, "sitemap.xml"),
